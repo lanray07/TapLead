@@ -33,6 +33,7 @@ targets:
         TapLeadAPIURL: ''
         TapLeadPrivacyURL: 'https://github.com/lanray07/TapLead/blob/main/docs/PRIVACY.md'
         TapLeadTermsURL: 'https://github.com/lanray07/TapLead/blob/main/docs/TERMS.md'
+        ITSAppUsesNonExemptEncryption: false
         NSSpeechRecognitionUsageDescription: Transcribe the voice notes you choose to record.
         NSMicrophoneUsageDescription: Record a voice note after a conversation.
         NFCReaderUsageDescription: Write your published TapLead link to an NFC card.
@@ -43,7 +44,7 @@ targets:
       path: iOS/TapLead.entitlements
       properties:
         com.apple.developer.applesignin: [Default]
-        com.apple.developer.nfc.readersession.formats: [NDEF]
+        com.apple.developer.nfc.readersession.formats: [TAG]
         com.apple.security.application-groups: [group.com.taplead.shared]
   TapLeadWidget:
     type: app-extension

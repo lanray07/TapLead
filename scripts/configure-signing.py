@@ -70,7 +70,7 @@ for resource in ['certificates','bundleIds','profiles']:
         details=json.loads(error.read())
         reasons=[item.get('detail',item.get('title','Denied')) for item in details.get('errors',[])]
         print('Provisioning API access:',resource,'HTTP',error.code,'; '.join(reasons))
-print('Signed artifact export only; no App Store upload or submission.')
+print('Signing configuration ready. The workflow uploads only after exported signatures and capabilities pass verification; App Review submission is separate.')
 def api_get(path):
     request=urllib.request.Request('https://api.appstoreconnect.apple.com/v1/'+path,headers={'Authorization':'Bearer '+token})
     try:

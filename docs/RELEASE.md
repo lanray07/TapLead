@@ -10,7 +10,7 @@
 
 [GitHub run 37195819458](https://github.com/lanray07/TapLead/actions/runs/37195819458) successfully compiled the iOS app and widget with Apple SDKs, passed all three native simulator UI tests, and exported four native screen captures plus the XCTest result bundle. Five shared Swift tests and twelve backend tests also passed. Signing and real-device behavior require separate validation.
 
-The Release device archive also compiles. Distribution export is currently blocked: [run 37196823899](https://github.com/lanray07/TapLead/actions/runs/37196823899) identifies authentication failure specifically at Apple's `xcbuild/v1/appGroups` endpoint. The same API key successfully reads app/certificate/identifier resources and can use cloud-managed distribution signing. Configure `group.com.TapLead.app.shared` for both `com.TapLead.app` and `com.TapLead.app.widget` in the Apple Developer portal, then retry the archive workflow. An earlier experimental export omitted capabilities; it is not a release deliverable. The workflow now preserves entitlements and verifies app/widget signatures, identifiers, build numbers, App Group, NFC and Apple sign-in before reporting success.
+The distribution signing gap is resolved. `group.com.TapLead.app.shared` was registered and assigned to both `com.TapLead.app` and `com.TapLead.app.widget` in the Apple Developer portal. [Run 37205638304](https://github.com/lanray07/TapLead/actions/runs/37205638304) successfully exported the signed IPA and verified app/widget signatures, identifiers, matching build numbers, App Group, NFC and Apple sign-in. The workflow uses the current macOS runner and checks for an iOS SDK version of at least 26. Upload follows successful verification; Apple processing and build selection are separate steps. An earlier experimental export omitted capabilities and is not a release deliverable.
 
 ## Verified on this Windows machine
 
@@ -30,8 +30,8 @@ The NFC and speech implementations use documented Apple APIs with capability che
 
 | Area | Required work |
 | --- | --- |
-| iOS build | App/widget compilation and three simulator UI tests passed in GitHub. Complete distribution signing and real-device tests. |
-| Apple credentials | Register identifiers, App Group/NFC/sign-in entitlements; configure Apple code exchange and token revocation; verify credential-revocation handling. |
+| iOS build | App/widget compilation, 25 automated tests and distribution signature/capability verification passed in GitHub. Complete Apple upload processing, build selection and real-device tests. |
+| Apple credentials | Distribution app/widget identifiers and App Group/NFC/sign-in entitlements are configured. Configure backend Apple code exchange and token revocation; verify credential-revocation handling. |
 | Hosting | Deploy HTTPS service, set real profile domain/policy URLs, configure persistence, backups, migrations, monitoring and distributed abuse protection. |
 | Authentication | Email ownership verification, password recovery, session management and account-linking UX. Apple sign-in configuration is required before enabling it. |
 | Subscriptions | Signed transaction verification/account binding/renewal-revocation routes and Free/Pro server limits are implemented. Configure Apple roots/products/notifications, test real Sandbox receipts and add delivery reconciliation/grace-period policy. Purchase actions are disabled by default. |
