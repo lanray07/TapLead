@@ -1,5 +1,7 @@
 # Release status
 
+The [40-section master acceptance audit](MASTER_AUDIT.md) is the submission gate. Its current result is blocked; build upload alone does not satisfy the master prompt.
+
 ## Verified in GitHub Xcode
 
 [Run 37204032293](https://github.com/lanray07/TapLead/actions/runs/37204032293) passed app/widget compilation and all 25 tests: seven shared Swift, twelve backend and six native UI tests. Seven additional genuine card-style screenshot compositions were exported and uploaded, bringing both iPhone size sets to ten. The saved order was verified after reloading App Store Connect. See the [premium sample gallery](../marketing/PREMIUM_SAMPLES.md).
@@ -42,7 +44,7 @@ The NFC and speech implementations use documented Apple APIs with capability che
 | Personas/modes | Demo and verified-Pro persona creation/publication paths exist. Test cloud Pro limits and add explicit Sales/Recruiting/Event presets and company branding locks. |
 | Wallet | Build and deploy certificate-backed signing/update service, wire the client action, device test. No Wallet claim is published. |
 | AI | Configure approved provider gateway, publish processing terms, evaluate extraction/drafts and add quota/billing rules. |
-| Widgets/Spotlight | Widget privacy/size tests and Spotlight public-card index verification. Large widget currently shows identity/QR, no lead counts. |
+| Widgets/Spotlight | Large-widget aggregate recent-connection/due-follow-up counts are now implemented in source, with calendar-day boundary coverage. New Xcode compilation and widget privacy/size tests, plus Spotlight public-card index verification, remain. Build 1012 does not include this change. |
 | Advanced QR | Printable exports, QR-on-image compositions and configurable branded QR assets are incomplete. Native QR image/link sharing exists. |
 | Teams | Future organization/member/role architecture documented; no Teams admin/product implementation. |
 | Localisation | Human-reviewed translations, plural/interpolation extraction, translated public pages and locale/accessibility UI tests. |

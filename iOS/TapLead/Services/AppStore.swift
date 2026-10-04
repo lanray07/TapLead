@@ -151,6 +151,15 @@ import TapLeadCore
         defaults?.set(selectedCard?.name ?? "TapLead",forKey:"name")
         defaults?.set(selectedCard?.title ?? "",forKey:"title")
         defaults?.set(selectedCard.flatMap { card in api.base.map { card.published ? card.profileURL(base:$0,source:"qr").absoluteString : "" } } ?? "",forKey:"url")
+        // Refresh counts across midnight without storing any individual lead metadata.
+        let today = Calendar.current.startOfDay(for: Date())
+        let counts = (0...7).map { offset -> WidgetCountSnapshot in
+            let date = Calendar.current.date(byAdding: .day, value: offset, to: today)!
+            let now = offset == 0 ? Date() : date
+            let value = ConnectionCounts(leads: leads, now: now)
+            return WidgetCountSnapshot(date: date, recent: value.recent, due: value.due)
+        }
+        defaults?.set(try? JSONEncoder().encode(counts), forKey: "connectionCounts")
         WidgetCenter.shared.reloadAllTimelines()
     }
 }

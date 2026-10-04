@@ -4356,6 +4356,71 @@
         }
       }
     },
+    "Connections in 7 days": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Connections in 7 days"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connections in 7 days"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Connections in 7 days"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Connections in 7 days"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Connections in 7 days"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Connections in 7 days"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Connections in 7 days"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Connections in 7 days"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Connections in 7 days"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Connections in 7 days"
+          }
+        }
+      }
+    },
     "Consultant": {
       "extractionState": "manual",
       "localizations": {
@@ -5522,6 +5587,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Draft Follow-Up"
+          }
+        }
+      }
+    },
+    "Due today or overdue": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Due today or overdue"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Due today or overdue"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Due today or overdue"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Due today or overdue"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Due today or overdue"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Due today or overdue"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Due today or overdue"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Due today or overdue"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Due today or overdue"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Due today or overdue"
           }
         }
       }
@@ -9747,6 +9877,71 @@
           "stringUnit": {
             "state": "new",
             "value": "One introduction.\nMake it yours."
+          }
+        }
+      }
+    },
+    "Open TapLead to refresh counts": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Open TapLead to refresh counts"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open TapLead to refresh counts"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Open TapLead to refresh counts"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Open TapLead to refresh counts"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Open TapLead to refresh counts"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Open TapLead to refresh counts"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Open TapLead to refresh counts"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Open TapLead to refresh counts"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Open TapLead to refresh counts"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Open TapLead to refresh counts"
           }
         }
       }

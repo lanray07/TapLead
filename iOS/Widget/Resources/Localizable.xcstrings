@@ -2731,6 +2731,136 @@
         }
       }
     },
+    "Bottom left": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Bottom left"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bottom left"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Bottom left"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Bottom left"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Bottom left"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Bottom left"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Bottom left"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Bottom left"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Bottom left"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Bottom left"
+          }
+        }
+      }
+    },
+    "Bottom right": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Bottom right"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bottom right"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Bottom right"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Bottom right"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Bottom right"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Bottom right"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Bottom right"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Bottom right"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Bottom right"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Bottom right"
+          }
+        }
+      }
+    },
     "Cancel": {
       "extractionState": "manual",
       "localizations": {
@@ -2857,6 +2987,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Capture notes using text or your voice."
+          }
+        }
+      }
+    },
+    "Card image": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Card image"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Card image"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Card image"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Card image"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Card image"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Card image"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Card image"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Card image"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Card image"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Card image"
           }
         }
       }
@@ -3186,6 +3381,71 @@
         }
       }
     },
+    "Choose an image smaller than 20 MB.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose an image smaller than 20 MB."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose an image smaller than 20 MB."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose an image smaller than 20 MB."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose an image smaller than 20 MB."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose an image smaller than 20 MB."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose an image smaller than 20 MB."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose an image smaller than 20 MB."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose an image smaller than 20 MB."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose an image smaller than 20 MB."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose an image smaller than 20 MB."
+          }
+        }
+      }
+    },
     "Choose logo": {
       "extractionState": "manual",
       "localizations": {
@@ -3312,6 +3572,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Choose more room for your next connection."
+          }
+        }
+      }
+    },
+    "Choose photo": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose photo"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose photo"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose photo"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose photo"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose photo"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose photo"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose photo"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose photo"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose photo"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose photo"
           }
         }
       }
@@ -4027,6 +4352,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Connections"
+          }
+        }
+      }
+    },
+    "Connections in 7 days": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Connections in 7 days"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connections in 7 days"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Connections in 7 days"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Connections in 7 days"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Connections in 7 days"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Connections in 7 days"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Connections in 7 days"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Connections in 7 days"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Connections in 7 days"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Connections in 7 days"
           }
         }
       }
@@ -5197,6 +5587,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Draft Follow-Up"
+          }
+        }
+      }
+    },
+    "Due today or overdue": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Due today or overdue"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Due today or overdue"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Due today or overdue"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Due today or overdue"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Due today or overdue"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Due today or overdue"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Due today or overdue"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Due today or overdue"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Due today or overdue"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Due today or overdue"
           }
         }
       }
@@ -6696,6 +7151,201 @@
         }
       }
     },
+    "Image corner": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Image corner"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Image corner"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Image corner"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Image corner"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Image corner"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Image corner"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Image corner"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Image corner"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Image corner"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Image corner"
+          }
+        }
+      }
+    },
+    "Image type": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Image type"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Image type"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Image type"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Image type"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Image type"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Image type"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Image type"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Image type"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Image type"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Image type"
+          }
+        }
+      }
+    },
+    "Import image from Files": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Import image from Files"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Import image from Files"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Import image from Files"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Import image from Files"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Import image from Files"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Import image from Files"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Import image from Files"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Import image from Files"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Import image from Files"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Import image from Files"
+          }
+        }
+      }
+    },
     "Insights": {
       "extractionState": "manual",
       "localizations": {
@@ -7281,6 +7931,71 @@
         }
       }
     },
+    "Loading image…": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Loading image…"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Loading image…"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Loading image…"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Loading image…"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Loading image…"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Loading image…"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Loading image…"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Loading image…"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Loading image…"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Loading image…"
+          }
+        }
+      }
+    },
     "Location": {
       "extractionState": "manual",
       "localizations": {
@@ -7342,6 +8057,136 @@
           "stringUnit": {
             "state": "new",
             "value": "Location"
+          }
+        }
+      }
+    },
+    "Logo": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Logo"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Logo"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Logo"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Logo"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Logo"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Logo"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Logo"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Logo"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Logo"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Logo"
+          }
+        }
+      }
+    },
+    "Logo added": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Logo added"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Logo added"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Logo added"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Logo added"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Logo added"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Logo added"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Logo added"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Logo added"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Logo added"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Logo added"
           }
         }
       }
@@ -8646,6 +9491,71 @@
         }
       }
     },
+    "None": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "None"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "None"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "None"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "None"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "None"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "None"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "None"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "None"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "None"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "None"
+          }
+        }
+      }
+    },
     "Notes": {
       "extractionState": "manual",
       "localizations": {
@@ -8967,6 +9877,71 @@
           "stringUnit": {
             "state": "new",
             "value": "One introduction.\nMake it yours."
+          }
+        }
+      }
+    },
+    "Open TapLead to refresh counts": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Open TapLead to refresh counts"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open TapLead to refresh counts"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Open TapLead to refresh counts"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Open TapLead to refresh counts"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Open TapLead to refresh counts"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Open TapLead to refresh counts"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Open TapLead to refresh counts"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Open TapLead to refresh counts"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Open TapLead to refresh counts"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Open TapLead to refresh counts"
           }
         }
       }
@@ -9357,6 +10332,136 @@
           "stringUnit": {
             "state": "new",
             "value": "Phone"
+          }
+        }
+      }
+    },
+    "Photo": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Photo"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Photo"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Photo"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Photo"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Photo"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Photo"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Photo"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Photo"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Photo"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Photo"
+          }
+        }
+      }
+    },
+    "Photo added": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Photo added"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Photo added"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Photo added"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Photo added"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Photo added"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Photo added"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Photo added"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Photo added"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Photo added"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Photo added"
           }
         }
       }
@@ -10657,6 +11762,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Remember the conversation"
+          }
+        }
+      }
+    },
+    "Remove image": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Remove image"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remove image"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Remove image"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Remove image"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Remove image"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Remove image"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Remove image"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Remove image"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Remove image"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Remove image"
           }
         }
       }
@@ -12737,6 +13907,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Show networking QR"
+          }
+        }
+      }
+    },
+    "Show one logo or photo in your chosen corner. Images are saved on this iPhone.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Show one logo or photo in your chosen corner. Images are saved on this iPhone."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show one logo or photo in your chosen corner. Images are saved on this iPhone."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Show one logo or photo in your chosen corner. Images are saved on this iPhone."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Show one logo or photo in your chosen corner. Images are saved on this iPhone."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Show one logo or photo in your chosen corner. Images are saved on this iPhone."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Show one logo or photo in your chosen corner. Images are saved on this iPhone."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Show one logo or photo in your chosen corner. Images are saved on this iPhone."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Show one logo or photo in your chosen corner. Images are saved on this iPhone."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Show one logo or photo in your chosen corner. Images are saved on this iPhone."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Show one logo or photo in your chosen corner. Images are saved on this iPhone."
           }
         }
       }
@@ -15016,6 +16251,71 @@
         }
       }
     },
+    "This image could not be opened. Choose another image.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "This image could not be opened. Choose another image."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This image could not be opened. Choose another image."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "This image could not be opened. Choose another image."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "This image could not be opened. Choose another image."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "This image could not be opened. Choose another image."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "This image could not be opened. Choose another image."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "This image could not be opened. Choose another image."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "This image could not be opened. Choose another image."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "This image could not be opened. Choose another image."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "This image could not be opened. Choose another image."
+          }
+        }
+      }
+    },
     "This purchase could not be verified.": {
       "extractionState": "manual",
       "localizations": {
@@ -15467,6 +16767,136 @@
           "stringUnit": {
             "state": "new",
             "value": "Tone"
+          }
+        }
+      }
+    },
+    "Top left": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Top left"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Top left"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Top left"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Top left"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Top left"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Top left"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Top left"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Top left"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Top left"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Top left"
+          }
+        }
+      }
+    },
+    "Top right": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Top right"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Top right"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Top right"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Top right"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Top right"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Top right"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Top right"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Top right"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Top right"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Top right"
           }
         }
       }

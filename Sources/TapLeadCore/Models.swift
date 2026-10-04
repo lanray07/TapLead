@@ -112,3 +112,17 @@ public enum Validation {
         value.range(of: #"^[^\s@]+@[^\s@]+\.[^\s@]+$"#, options: .regularExpression) != nil
     }
 }
+
+public struct ConnectionCounts: Codable, Equatable, Sendable {
+    public var recent: Int
+    public var due: Int
+    public init(leads: [Lead], now: Date, calendar: Calendar = .current) {
+        let today = calendar.startOfDay(for: now)
+        let tomorrow = calendar.date(byAdding: .day, value: 1, to: today)!
+        let weekStart = calendar.date(byAdding: .day, value: -6, to: today)!
+        recent = leads.filter { $0.metAt >= weekStart && $0.metAt <= now }.count
+        due = leads.filter {
+            $0.status != .won && $0.status != .archived && ($0.followUp.map { $0 < tomorrow } ?? false)
+        }.count
+    }
+}

@@ -1,0 +1,20 @@
+name: Master prompt submission readiness
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - docs/MASTER_REQUIREMENTS.json
+      - scripts/check-release-readiness.py
+      - .github/workflows/release-readiness.yml
+permissions:
+  contents: read
+jobs:
+  acceptance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check all forty master requirements
+        run: python scripts/check-release-readiness.py

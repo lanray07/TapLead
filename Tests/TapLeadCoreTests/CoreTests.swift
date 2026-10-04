@@ -2,6 +2,23 @@ import XCTest
 @testable import TapLeadCore
 
 final class CoreTests: XCTestCase {
+    func testConnectionCountsUseCalendarDaysAndExcludeClosedFollowUps() {
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = TimeZone(identifier: "Europe/London")!
+        let now = ISO8601DateFormatter().date(from: "2026-10-24T22:00:00Z")!
+        let today = calendar.startOfDay(for: now)
+        let tomorrow = calendar.date(byAdding: .day, value: 1, to: today)!
+        var overdue = Lead(); overdue.metAt = now; overdue.followUp = today.addingTimeInterval(-60)
+        var tonight = Lead(); tonight.metAt = now; tonight.followUp = tomorrow.addingTimeInterval(-1)
+        var nextDay = Lead(); nextDay.metAt = now; nextDay.followUp = tomorrow
+        var won = overdue; won.status = .won
+        var archived = overdue; archived.status = .archived
+        var old = Lead(); old.metAt = calendar.date(byAdding: .day, value: -7, to: today)!
+        var future = Lead(); future.metAt = now.addingTimeInterval(60)
+        let counts = ConnectionCounts(leads: [overdue, tonight, nextDay, won, archived, old, future], now: now, calendar: calendar)
+        XCTAssertEqual(counts.recent, 5)
+        XCTAssertEqual(counts.due, 2)
+    }
     func testLegacyCardsDecodeWithoutImagePlacementFields() throws {
         var legacy = Card(); legacy.logoData = Data([1, 2, 3])
         let decoded = try JSONDecoder().decode(Card.self, from: JSONEncoder().encode(legacy))
