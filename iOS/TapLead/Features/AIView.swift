@@ -11,6 +11,7 @@ struct AIView:View {
     @State private var busy=false
     @State private var result:AIResult?
     @State private var draft=""
+    @State private var summary=""
     @State private var failure:String?
     @State private var generation:Task<Void,Never>?
     var body:some View {
@@ -31,12 +32,19 @@ struct AIView:View {
                 if let result {
                     Section("Facts from your notes") {ForEach(Array(result.facts.enumerated()),id:\.offset){_,fact in VStack(alignment:.leading,spacing:4){Text(verbatim:fact.field).font(.caption.bold());Text(verbatim:fact.value);Text(verbatim:fact.evidence).font(.caption).foregroundStyle(.secondary)}}}
                     Section("AI suggestions · review first") {ForEach(result.suggestions,id:\.self){Text(verbatim:$0)}}
+                    if result.draft == nil {
+                        Section("Review and edit summary") {
+                            TextEditor(text:$summary).frame(minHeight:160).accessibilityLabel("Smart Notes summary")
+                            Button("Save reviewed Smart Notes") {guard var updated=store.leads.first(where:{$0.id==lead.id}) else{return};updated.timeline.append(TimelineEntry(kind:"smart_notes",text:summary));store.saveLead(updated);dismiss()}.disabled(summary.isEmpty || summary.count>4000)
+                            if summary.count>4000 {Text("Shorten the summary to 4,000 characters before saving.").font(.caption)}
+                        }
+                    }
                     if result.draft != nil {Section("Review and edit your draft") {TextEditor(text:$draft).frame(minHeight:160);ShareLink(item:draft){Label("Share reviewed draft",systemImage:"square.and.arrow.up")};Button("Save draft to timeline"){guard var updated=store.leads.first(where:{$0.id==lead.id}) else{return};updated.timeline.append(TimelineEntry(kind:"follow_up_drafted",text:draft));store.saveLead(updated);dismiss()};Text("TapLead does not send messages. Choose a destination in the Share Sheet and confirm there.").font(.caption).foregroundStyle(.secondary)}}
                 }
             }.navigationTitle("A thoughtful next step").toolbar{ToolbarItem(placement:.cancellationAction){Button("Close"){dismiss()}}}
         }
         .onDisappear{generation?.cancel()}
-        .onChange(of:consent){_,enabled in if !enabled{generation?.cancel();result=nil;draft=""}}
+        .onChange(of:consent){_,enabled in if !enabled{generation?.cancel();result=nil;draft="";summary=""}}
     }
     var canGenerate:Bool{consent && !busy && LocalAIService.available && (store.pro || store.demo)}
     func start(_ kind:String){generation=Task{await generate(kind)}}
@@ -46,6 +54,7 @@ struct AIView:View {
         do {
             let response=try await LocalAIService.generate(kind:kind,notes:lead.notes.isEmpty ? lead.context:lead.notes,name:lead.name,tone:tone,channel:channel)
             guard consent,!Task.isCancelled else{return};result=response;draft=response.draft ?? ""
+            summary=String(localized:"Facts from your notes") + "\n" + response.facts.map{"\($0.field): \($0.value)"}.joined(separator:"\n") + "\n\n" + String(localized:"AI suggestions · review first") + "\n" + response.suggestions.joined(separator:"\n")
         } catch {guard !Task.isCancelled else{return};failure=error.localizedDescription}
     }
 }

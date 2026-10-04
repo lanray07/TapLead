@@ -103,6 +103,9 @@ public struct TimelineEntry: Codable, Identifiable, Equatable, Sendable {
     public var date = Date()
     public var kind: String
     public var text: String
+    public var displayName:String {
+        ["met":"Connection made","received":"Details received","voice":"Voice note added","status":"Status changed","follow_up_scheduled":"Follow-up scheduled","follow_up_completed":"Follow-up completed","follow_up_drafted":"Draft saved","smart_notes":"Smart Notes saved"][kind] ?? kind
+    }
     public init(kind: String, text: String, date: Date = Date()) { self.kind = kind; self.text = text; self.date = date }
 }
 public struct Lead: Codable, Identifiable, Equatable, Sendable {

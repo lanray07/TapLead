@@ -14106,6 +14106,71 @@
         }
       }
     },
+    "Review and edit summary": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Review and edit summary"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Review and edit summary"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Review and edit summary"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Review and edit summary"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Review and edit summary"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Review and edit summary"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Review and edit summary"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Review and edit summary"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Review and edit summary"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Review and edit summary"
+          }
+        }
+      }
+    },
     "Review and edit your draft": {
       "extractionState": "manual",
       "localizations": {
@@ -14817,6 +14882,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Save follow-up & reminder"
+          }
+        }
+      }
+    },
+    "Save reviewed Smart Notes": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Save reviewed Smart Notes"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save reviewed Smart Notes"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Save reviewed Smart Notes"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Save reviewed Smart Notes"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Save reviewed Smart Notes"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Save reviewed Smart Notes"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Save reviewed Smart Notes"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Save reviewed Smart Notes"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Save reviewed Smart Notes"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Save reviewed Smart Notes"
           }
         }
       }
@@ -16381,6 +16511,136 @@
         }
       }
     },
+    "Shorten the draft to 4,000 characters before saving to the timeline.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Shorten the draft to 4,000 characters before saving to the timeline."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shorten the draft to 4,000 characters before saving to the timeline."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Shorten the draft to 4,000 characters before saving to the timeline."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Shorten the draft to 4,000 characters before saving to the timeline."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Shorten the draft to 4,000 characters before saving to the timeline."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Shorten the draft to 4,000 characters before saving to the timeline."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Shorten the draft to 4,000 characters before saving to the timeline."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Shorten the draft to 4,000 characters before saving to the timeline."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Shorten the draft to 4,000 characters before saving to the timeline."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Shorten the draft to 4,000 characters before saving to the timeline."
+          }
+        }
+      }
+    },
+    "Shorten the summary to 4,000 characters before saving.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Shorten the summary to 4,000 characters before saving."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shorten the summary to 4,000 characters before saving."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Shorten the summary to 4,000 characters before saving."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Shorten the summary to 4,000 characters before saving."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Shorten the summary to 4,000 characters before saving."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Shorten the summary to 4,000 characters before saving."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Shorten the summary to 4,000 characters before saving."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Shorten the summary to 4,000 characters before saving."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Shorten the summary to 4,000 characters before saving."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Shorten the summary to 4,000 characters before saving."
+          }
+        }
+      }
+    },
     "Show QR": {
       "extractionState": "manual",
       "localizations": {
@@ -17287,6 +17547,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Smart Notes and AI drafts are included with TapLead Pro."
+          }
+        }
+      }
+    },
+    "Smart Notes summary": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Smart Notes summary"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Smart Notes summary"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Smart Notes summary"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Smart Notes summary"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Smart Notes summary"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Smart Notes summary"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Smart Notes summary"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Smart Notes summary"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Smart Notes summary"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Smart Notes summary"
           }
         }
       }

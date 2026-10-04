@@ -26,7 +26,6 @@ struct CardsView: View {
                     Divider()
                     Button {nfc=true} label:{Label("Set up NFC card",systemImage:"wave.3.right")}.frame(minHeight:44)
                     Text("QR codes and NFC tags open your published profile. Recipients don’t need the app. Cached QR codes work offline; opening the website needs internet.").font(.caption).foregroundStyle(.secondary)
-                    Label("Apple Wallet needs a signed pass service",systemImage:"wallet.pass").font(.caption).foregroundStyle(.secondary)
                     Text("Publishing includes your selected logo or photo. Choose None to publish without an image.").font(.caption).foregroundStyle(.secondary)
                 }
                 if store.demo || store.pro { Button("Add card persona"){var c=store.selectedCard ?? Card();c.id=UUID();c.published=false;c.persona="Conference";c.theme = .creator;store.saveCard(c);editing=CardSelection(card:c)} }

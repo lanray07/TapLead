@@ -55,7 +55,7 @@ enum LocalAIService {
             }
             let response=try await session.respond(to:"Draft a short \(tone) \(channel) follow-up using only this JSON data: \(prompt). Return the editable draft only. Do not claim anything has been sent or that a meeting is booked.")
             try Task.checkCancellation()
-            return AIResult(draft:String(response.content.prefix(6000)),facts:[],suggestions:[])
+            return AIResult(draft:String(response.content.prefix(4000)),facts:[],suggestions:[])
         }
         #endif
         throw ServiceError.message(String(localized:"On-device AI is unavailable."))
