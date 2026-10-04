@@ -34,7 +34,7 @@ Full [GitHub check run 37220371267](https://github.com/lanray07/TapLead/actions/
 
 ## Required configuration / acceptance still outstanding
 
-1. Sign in to the Supabase dashboard; set site URL to the GitHub site and allow the exact account redirect above. The connected MCP cannot edit Auth configuration, and the browser currently requires sign-in.
+1. **Completed 4 October 2026:** signed in to TapLead under `lanray07's Org`, saved site URL `https://lanray07.github.io/TapLead/` and the single exact redirect `https://lanray07.github.io/TapLead/account/`. The dashboard confirmed both saves. [Saved configuration proof](assets/auth-redirects.jpg). Email authentication and mandatory email confirmation are enabled; anonymous sign-ins and manual identity linking are disabled. Custom SMTP and the Apple provider are still disabled.
 2. Configure a production SMTP sender with email confirmation enabled. Supabase's default sender only delivers to organisation team addresses and is unsuitable for public signups. [Official SMTP instructions](https://supabase.com/docs/guides/auth/auth-smtp). Verify signup, confirmation, recovery and revocation end to end.
 3. Configure a separate Sign in with Apple credential for code exchange and grant revocation. Existing App Store Connect upload secrets are not this credential. Apple endpoints currently fail closed.
 4. Configure real App Store signature-chain/receipt/notification verification, renewal, refund and grace handling. Purchases are explicitly disabled and no production Pro entitlement has been inserted. Sandbox evidence must be isolated from Production entitlements.

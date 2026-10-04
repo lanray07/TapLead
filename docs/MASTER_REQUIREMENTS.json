@@ -19,7 +19,7 @@
       "section": 3,
       "title": "Onboarding, Apple/email/guest entry",
       "status": "partial",
-      "evidence": "Guest and native screens exist. Registration now handles verification-required responses; password recovery UI and account page are implemented. Production sender/redirect configuration and Apple authentication remain pending."
+      "evidence": "Guest and native screens exist. Registration handles verification-required responses; password recovery UI and account page are implemented. GitHub site and exact account redirect are saved in the live Supabase project; email confirmation is enabled. Production SMTP sender, end-to-end email acceptance and Apple authentication remain pending."
     },
     {
       "section": 4,
