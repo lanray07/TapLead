@@ -67,3 +67,28 @@ for resource in ['certificates','bundleIds','profiles']:
         reasons=[item.get('detail',item.get('title','Denied')) for item in details.get('errors',[])]
         print('Provisioning API access:',resource,'HTTP',error.code,'; '.join(reasons))
 print('Signed artifact export only; no App Store upload or submission.')
+def api_get(path):
+    request=urllib.request.Request('https://api.appstoreconnect.apple.com/v1/'+path,headers={'Authorization':'Bearer '+token})
+    with urllib.request.urlopen(request,timeout=30) as response:return json.load(response)
+from cryptography import x509
+from cryptography.x509.oid import NameOID
+for cert in api_get('certificates?limit=200')['data']:
+    content=cert['attributes'].get('certificateContent')
+    if content:
+        parsed=x509.load_der_x509_certificate(base64.b64decode(content))
+        units=parsed.subject.get_attributes_for_oid(NameOID.ORGANIZATIONAL_UNIT_NAME)
+        print('Certificate team matches configured team:',any(unit.value==env['APPLE_TEAM_ID'] for unit in units))
+for registered in api_get('bundleIds?limit=200')['data']:
+    if registered['attributes']['identifier'] in [bundle,bundle+'.widget']:
+        capabilities=api_get('bundleIds/'+registered['id']+'/bundleIdCapabilities?limit=200')['data']
+        print('Registered identifier:',registered['attributes']['identifier'],'capabilities:',','.join(item['attributes']['capabilityType'] for item in capabilities))
+for profile in api_get('profiles?limit=200')['data']:
+    import subprocess
+    profile_path=pathlib.Path(env['RUNNER_TEMP'])/'inspect.mobileprovision'
+    profile_path.write_bytes(base64.b64decode(profile['attributes']['profileContent']))
+    decoded=subprocess.run(['security','cms','-D','-i',str(profile_path)],capture_output=True,check=True).stdout
+    entitlements=plistlib.loads(decoded).get('Entitlements',{})
+    identifier=entitlements.get('application-identifier','')
+    if identifier.endswith('.'+bundle) or identifier.endswith('.'+bundle+'.widget'):
+        print('Existing profile:',profile['attributes']['name'],'type:',profile['attributes']['profileType'],'groups:',entitlements.get('com.apple.security.application-groups',[]))
+    profile_path.unlink()

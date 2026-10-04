@@ -8,7 +8,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   archive:
-    runs-on: macos-latest
+    runs-on: macos-15
     timeout-minutes: 35
     env:
       APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
@@ -21,6 +21,8 @@ jobs:
       TAPLEAD_TERMS_URL: ${{ vars.TAPLEAD_TERMS_URL }}
     steps:
       - uses: actions/checkout@v4
+      - name: Select stable Xcode 16.4
+        run: sudo xcode-select -s /Applications/Xcode_16.4.app/Contents/Developer
       - name: Install build dependencies
         run: |
           brew install xcodegen
