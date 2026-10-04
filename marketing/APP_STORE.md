@@ -38,7 +38,7 @@ The app can be explored without signing in. Choose the demo option during onboar
 
 ## Assets and subscriptions
 
-Three genuine simulator screenshot compositions uploaded in each iPhone size: 1242 × 2688 and 1320 × 2868. Order: card, connections, Today. See [asset manifest](ASSET_MANIFEST.md) for capture provenance and artwork prompts.
+Ten genuine simulator screenshot compositions uploaded in each iPhone size: 1242 × 2688 and 1320 × 2868. Order: card, connections, Today, Minimal, Creator, Bold, Dark, Elegant, Sales, Consultant. The seven new card-style samples use fictional profiles and original copy. See [sample gallery](PREMIUM_SAMPLES.md) and [asset manifest](ASSET_MANIFEST.md) for capture provenance and artwork prompts.
 
 TapLead Pro monthly and annual products share level 1 in group 22439298. Saved draft UK base prices: £4.99/month and £39.99/year with Apple regional equivalents, no introductory trial. Individual App Store purchase options; family sharing off. Availability: 175 current territories, future auto-add disabled. Genuine current-configuration Pro screenshot uploaded to each review draft, explicitly showing purchases unavailable.
 

@@ -2,6 +2,14 @@
 
 The screenshot layouts in `assets/01-card-*`, `02-connections-*` and `03-today-*` embed genuine pixels from the successful native simulator run [37195819458](https://github.com/lanray07/TapLead/actions/runs/37195819458). The SVG sources remain editable. PNG exports use 1242 × 2688 and 1320 × 2868 dimensions. Both sets have been uploaded to App Store Connect in card, connections, Today order.
 
+## Seven premium card samples
+
+Seven additional compositions fill each iPhone screenshot set to ten. Order: card, connections, Today, Minimal, Creator, Bold, Dark, Elegant, Sales, Consultant. The new assets use untouched simulator captures from `testPremiumCardSampleScreenshots`, which passed in [run 37203147150](https://github.com/lanray07/TapLead/actions/runs/37203147150). That run's separate search test failed to acquire keyboard focus; the premium capture test and app/widget compilation passed.
+
+Files `04-minimal-*` through `10-consultant-*` are exported in both 6.5-inch and 6.9-inch sizes by `scripts/premium-store-assets.cjs`. SVG sources embed the original native screen pixels; no interface is fabricated. Profile names, businesses and text are fictional samples, labelled as demo data in the native UI and as samples in the composition. No third-party artwork, photography or logos are used. The screenshot presets are restricted to debug builds and the anonymous demo.
+
+See [sample gallery](PREMIUM_SAMPLES.md).
+
 `04-insights-*` is an internal draft only and was not uploaded: the captured native screen correctly reports that the production insights service is unavailable. No invented activity or completed feature is shown.
 
 ## Subscription promotional images
