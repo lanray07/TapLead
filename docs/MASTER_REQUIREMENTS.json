@@ -43,7 +43,7 @@
       "section": 7,
       "title": "Dynamic QR and advanced sharing",
       "status": "partial",
-      "evidence": "Branded/photo/printable QR exports and persona selection are implemented. Both actual iOS exported images independently decoded the intended URL on Windows. GitHub Vision GPU execution failed in its VM; CPU-only native decoding is being checked in run 37215185529. Live hosting and second-phone/print acceptance remain."
+      "evidence": "Branded/photo/printable QR exports and persona selection are implemented. Both actual iOS exported images independently decoded the intended URL on Windows. Current Vision revision returned no results in the hosted VM with GPU or CPU processing. Simulator-only legacy Vision revision is being checked in run 37216204338; physical devices retain the default detector. Live hosting and second-phone/print acceptance remain."
     },
     {
       "section": 8,
