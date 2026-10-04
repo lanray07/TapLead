@@ -4,7 +4,7 @@ The screenshot layouts in `assets/01-card-*`, `02-connections-*` and `03-today-*
 
 ## Seven premium card samples
 
-Seven additional compositions fill each iPhone screenshot set to ten. Order: card, connections, Today, Minimal, Creator, Bold, Dark, Elegant, Sales, Consultant. The new assets use untouched simulator captures from `testPremiumCardSampleScreenshots`, which passed in [run 37203147150](https://github.com/lanray07/TapLead/actions/runs/37203147150). That run's separate search test failed to acquire keyboard focus; the premium capture test and app/widget compilation passed.
+Seven additional compositions fill each iPhone screenshot set to ten. Order: card, connections, Today, Minimal, Creator, Bold, Dark, Elegant, Sales, Consultant. The new assets use untouched simulator captures from `testPremiumCardSampleScreenshots`, which passed in [run 37203147150](https://github.com/lanray07/TapLead/actions/runs/37203147150). Full app/widget builds, seven shared Swift tests, twelve backend tests and all six simulator UI tests passed in [run 37204032293](https://github.com/lanray07/TapLead/actions/runs/37204032293).
 
 Files `04-minimal-*` through `10-consultant-*` are exported in both 6.5-inch and 6.9-inch sizes by `scripts/premium-store-assets.cjs`. SVG sources embed the original native screen pixels; no interface is fabricated. Profile names, businesses and text are fictional samples, labelled as demo data in the native UI and as samples in the composition. No third-party artwork, photography or logos are used. The screenshot presets are restricted to debug builds and the anonymous demo.
 

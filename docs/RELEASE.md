@@ -2,6 +2,8 @@
 
 ## Verified in GitHub Xcode
 
+[Run 37204032293](https://github.com/lanray07/TapLead/actions/runs/37204032293) passed app/widget compilation and all 25 tests: seven shared Swift, twelve backend and six native UI tests. Seven additional genuine card-style screenshot compositions were exported and uploaded, bringing both iPhone size sets to ten. The saved order was verified after reloading App Store Connect. See the [premium sample gallery](../marketing/PREMIUM_SAMPLES.md).
+
 [Run 37202219579](https://github.com/lanray07/TapLead/actions/runs/37202219579) passed app/widget compilation, seven shared Swift tests, twelve backend tests and five native UI tests. The card editor supports Photo, Logo or None, imports from Photos or Files, and all four corner positions. Native UI coverage verifies logo import, bottom-right placement, persistence after restart and removal; shared tests cover legacy card decoding and saved image preferences. [Native card capture](../marketing/assets/card-corner-logo-native.png) shows the imported logo. Images remain local to the iPhone; public media hosting is still unconfigured.
 
 [Run 37197524412](https://github.com/lanray07/TapLead/actions/runs/37197524412) also passed app/widget compilation, four simulator UI tests, five shared Swift tests and twelve backend tests. It includes an authentic Pro capture with purchases disabled pending configuration. Metadata, screenshots, subscription artwork/products/pricing, free download price and unpublished privacy drafts are prepared; see [saved store draft](../marketing/APP_STORE.md).
