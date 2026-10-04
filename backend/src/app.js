@@ -100,7 +100,7 @@ export function createApp(db,config={}) {
   app.put('/api/cards/:id',auth,(req,res)=>{
     const c=cardSchema.parse(req.body);if(c.id!==req.params.id)return res.status(400).json({error:'Card ID mismatch.'});
     const existing=db.prepare('SELECT owner FROM cards WHERE id=?').get(c.id);if(existing&&existing.owner!==req.owner)return res.status(404).json({error:'Card not found.'});
-    if(c.published&&!planFor(db,req.owner).pro && (c.customBackground || c.typography || c.primaryAction || c.primaryActionLabel))return res.status(403).json({error:'Advanced appearance requires a verified Pro subscription.'});
+    if(c.published&&!planFor(db,req.owner).pro && (c.customBackground || c.typography || c.primaryAction || c.primaryActionLabel || !['Minimal','Executive'].includes(c.theme)))return res.status(403).json({error:'Advanced appearance requires a verified Pro subscription.'});
     // Server-side free allowance. Pro expansion requires verified App Store transactions.
     if(!existing&&db.prepare('SELECT count(*) n FROM cards WHERE owner=?').get(req.owner).n>=planFor(db,req.owner).cardLimit)return res.status(403).json({error:'Your plan card limit has been reached.'});
     db.prepare('INSERT INTO cards VALUES(?,?,?) ON CONFLICT(id) DO UPDATE SET data=excluded.data').run(c.id,req.owner,JSON.stringify(c));res.json(c);
@@ -130,6 +130,7 @@ export function createApp(db,config={}) {
     res.status(201).type('html').send(messageHTML('You’re connected','Your details have been shared. The card owner can now follow up with you.'));
   });
   app.get('/api/analytics',auth,(req,res)=>{
+    if(!planFor(db,req.owner).pro)return res.status(403).json({error:'Activity insights require a verified Pro subscription.'});
     const days=Number(req.query.days||30);if(![7,30,90,0].includes(days))return res.status(400).json({error:'Unsupported date range.'});
     const rows=db.prepare('SELECT e.kind,e.source,e.created FROM events e JOIN cards c ON c.id=e.card_id WHERE c.owner=? AND e.created>=?').all(req.owner,days?now()-days*86400000:0);
     res.json({events:rows,notice:'Views are requests, not unique people. vCard downloads do not confirm a contact was saved. NFC source is link attribution only.'});
@@ -137,6 +138,7 @@ export function createApp(db,config={}) {
   app.post('/api/ai',auth,limiter(20,3600000),async(req,res)=>{
     const input=z.object({consent:z.literal(true),kind:z.enum(['smart_notes','follow_up']),notes:z.string().min(1).max(12000),name:textName(),tone:z.enum(['Friendly','Professional','Concise','Sales','Casual']),channel:z.enum(['Email','SMS','LinkedIn','WhatsApp'])}).parse(req.body);
     if(!config.aiURL||!config.aiToken)return res.status(503).json({error:'AI processing is not configured. Your notes have not been sent to an AI provider.'});
+    if(!planFor(db,req.owner).pro)return res.status(403).json({error:'AI processing requires a verified Pro subscription.'});
     const response=await fetch(config.aiURL,{method:'POST',headers:{'Content-Type':'application/json',Authorization:`Bearer ${config.aiToken}`},body:JSON.stringify({...input,instructions:'Use only supplied facts. Missing fields must be null. Suggestions must be labelled. Return a draft, never send a message.'}),signal:AbortSignal.timeout(30000)});
     if(!response.ok)throw new Error('AI gateway unavailable');
     const output=z.object({draft:z.string().max(12000).nullable(),facts:z.array(z.object({field:z.string().max(100),value:z.string().max(2000),evidence:z.string().min(1).max(2000)})).max(20),suggestions:z.array(z.string().max(2000)).max(10)}).parse(await response.json());

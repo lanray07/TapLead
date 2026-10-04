@@ -2211,6 +2211,71 @@
         }
       }
     },
+    "Advanced themes and card customisation": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Advanced themes and card customisation"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Advanced themes and card customisation"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Advanced themes and card customisation"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Advanced themes and card customisation"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Advanced themes and card customisation"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Advanced themes and card customisation"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Advanced themes and card customisation"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Advanced themes and card customisation"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Advanced themes and card customisation"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Advanced themes and card customisation"
+          }
+        }
+      }
+    },
     "All": {
       "extractionState": "manual",
       "localizations": {
@@ -3572,6 +3637,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Branded QR preview"
+          }
+        }
+      }
+    },
+    "Branded QR, photo and printable exports": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Branded QR, photo and printable exports"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Branded QR, photo and printable exports"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Branded QR, photo and printable exports"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Branded QR, photo and printable exports"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Branded QR, photo and printable exports"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Branded QR, photo and printable exports"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Branded QR, photo and printable exports"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Branded QR, photo and printable exports"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Branded QR, photo and printable exports"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Branded QR, photo and printable exports"
           }
         }
       }
@@ -10531,6 +10661,71 @@
         }
       }
     },
+    "Measured activity insights": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Measured activity insights"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Measured activity insights"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Measured activity insights"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Measured activity insights"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Measured activity insights"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Measured activity insights"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Measured activity insights"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Measured activity insights"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Measured activity insights"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Measured activity insights"
+          }
+        }
+      }
+    },
     "Measured profile requests by day": {
       "extractionState": "manual",
       "localizations": {
@@ -10982,6 +11177,71 @@
           "stringUnit": {
             "state": "new",
             "value": "More than one connection matches. Choose the right person and review the date. No action has been taken."
+          }
+        }
+      }
+    },
+    "Multiple card personas": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Multiple card personas"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Multiple card personas"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Multiple card personas"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Multiple card personas"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Multiple card personas"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Multiple card personas"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Multiple card personas"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Multiple card personas"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Multiple card personas"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Multiple card personas"
           }
         }
       }
@@ -12802,6 +13062,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Open my card"
+          }
+        }
+      }
+    },
+    "Optional on-device AI on eligible iOS 26 devices": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Optional on-device AI on eligible iOS 26 devices"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Optional on-device AI on eligible iOS 26 devices"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Optional on-device AI on eligible iOS 26 devices"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Optional on-device AI on eligible iOS 26 devices"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Optional on-device AI on eligible iOS 26 devices"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Optional on-device AI on eligible iOS 26 devices"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Optional on-device AI on eligible iOS 26 devices"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Optional on-device AI on eligible iOS 26 devices"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Optional on-device AI on eligible iOS 26 devices"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Optional on-device AI on eligible iOS 26 devices"
           }
         }
       }
@@ -21711,6 +22036,136 @@
         }
       }
     },
+    "Up to 10,000 synced leads": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Up to 10,000 synced leads"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Up to 10,000 synced leads"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Up to 10,000 synced leads"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Up to 10,000 synced leads"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Up to 10,000 synced leads"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Up to 10,000 synced leads"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Up to 10,000 synced leads"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Up to 10,000 synced leads"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Up to 10,000 synced leads"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Up to 10,000 synced leads"
+          }
+        }
+      }
+    },
+    "Up to 20 published cards": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Up to 20 published cards"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Up to 20 published cards"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Up to 20 published cards"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Up to 20 published cards"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Up to 20 published cards"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Up to 20 published cards"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Up to 20 published cards"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Up to 20 published cards"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Up to 20 published cards"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Up to 20 published cards"
+          }
+        }
+      }
+    },
     "Up to date": {
       "extractionState": "manual",
       "localizations": {
@@ -22487,6 +22942,136 @@
           "stringUnit": {
             "state": "new",
             "value": "Voice note added"
+          }
+        }
+      }
+    },
+    "Voice notes with reviewed transcription": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Voice notes with reviewed transcription"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voice notes with reviewed transcription"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Voice notes with reviewed transcription"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Voice notes with reviewed transcription"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Voice notes with reviewed transcription"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Voice notes with reviewed transcription"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Voice notes with reviewed transcription"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Voice notes with reviewed transcription"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Voice notes with reviewed transcription"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Voice notes with reviewed transcription"
+          }
+        }
+      }
+    },
+    "Voice recording is included with TapLead Pro. You can still write a note below.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Voice recording is included with TapLead Pro. You can still write a note below."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voice recording is included with TapLead Pro. You can still write a note below."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Voice recording is included with TapLead Pro. You can still write a note below."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Voice recording is included with TapLead Pro. You can still write a note below."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Voice recording is included with TapLead Pro. You can still write a note below."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Voice recording is included with TapLead Pro. You can still write a note below."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Voice recording is included with TapLead Pro. You can still write a note below."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Voice recording is included with TapLead Pro. You can still write a note below."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Voice recording is included with TapLead Pro. You can still write a note below."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Voice recording is included with TapLead Pro. You can still write a note below."
           }
         }
       }
