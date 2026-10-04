@@ -37,7 +37,7 @@
     {"section":32,"title":"Truthful human-centred marketing","status":"partial","evidence":"Original assets and labelled fictional samples; no third-party content. Broader real networking context and production-claim reconciliation remain."},
     {"section":33,"title":"Required screenshot story","status":"partial","evidence":"Ten screenshots per enabled iPhone size are uploaded. Current theme-heavy set does not cover the full QR/capture/voice/follow-up/analytics/persona story."},
     {"section":34,"title":"Authentic screenshot format and claims","status":"partial","evidence":"Genuine iPhone captures, correct dimensions and labelled demo data were verified; final production screenshots must reflect enabled working features."},
-    {"section":35,"title":"ASO keyword research","status":"partial","evidence":"Relevant candidate keywords exist; documented current competitor/search research is still required before final metadata."},
+    {"section":35,"title":"ASO keyword research","status":"verified","evidence":"marketing/ASO_RESEARCH.md records dated primary-source competitor/category research, search-intent mapping, accurate candidate terms and current Apple field limits. No unmeasured search-volume/ranking claims."},
     {"section":36,"title":"TapLead title","status":"verified","evidence":"Saved App Store title is TapLead."},
     {"section":37,"title":"Validated subtitle","status":"partial","evidence":"Business Cards & Connections is saved. Reconcile current limits, research and actual NFC availability before final choice; prompt subtitle is a candidate."},
     {"section":38,"title":"Truthful promotional text","status":"partial","evidence":"Conservative draft exists; reconcile final live voice/capture/follow-up capabilities before submission."},
