@@ -23,9 +23,13 @@ Rate limits are database-backed. Only hashed source-IP buckets are stored, and e
 
 ## Verification completed
 
+Full [GitHub check run 37220371267](https://github.com/lanray07/TapLead/actions/runs/37220371267) passed for source `ae2baa3`: app/widget compilation, 13 shared tests, 16 backend tests, five portable Edge image tests, QR/PDF validation and seven native UI tests. The unavailable-AI case was skipped when the runner reported an available model. Device AI evaluation remains required. [Pages deployment 37220371264](https://github.com/lanray07/TapLead/actions/runs/37220371264) also passed.
+
 - Live `/health`: HTTP 200; unsigned `/api/cards`: HTTP 401.
 - Live rollback SQL suite: owner isolation, one-card/50-lead free quotas, Pro appearance gate, consent, media ownership, expired sessions, private API privileges and account deletion cascades passed. Synthetic records were rolled back.
 - Deno type checking and five portable image tests passed, including EXIF orientation and malformed/animated file rejection.
+- Live HTTPS smoke checks passed for Free quotas, cross-owner denial, private field/CTA filtering, MIME spoofing rejection, actual portable image upload, public logo/vCard access, consented capture, owned inbox/export and paid-feature denial. Two disposable unverified identities were provisioned only for this transport test; this does not validate email or Apple authentication. Both were deleted through the normal API, after which their sessions and public profile returned unavailable.
+- The GitHub page was inspected in the browser. An explicit-consent fictional introduction was submitted and verified in the cloud inbox with `source=qr`. The uploaded corner logo rendered. The synthetic public profile and leads were removed with their owner after capture. Saved [profile proof](assets/cloud-profile.png) is browser evidence, not an App Store screenshot.
 - Security advisor reports seven informational `rls_enabled_no_policy` notices. This is intentional deny-by-default for server-only tables, reinforced by revoked client grants. See [the Supabase advisory](https://supabase.com/docs/guides/database/database-linter?lint=0008_rls_enabled_no_policy). No client-facing policy should be added merely to silence this notice.
 
 ## Required configuration / acceptance still outstanding

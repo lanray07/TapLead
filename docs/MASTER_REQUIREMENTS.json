@@ -13,19 +13,19 @@
       "section": 2,
       "title": "Complete connection-to-follow-up workflow",
       "status": "blocked",
-      "evidence": "Local baseline exists. Build 1012 has no production backend; end-to-end capture, sync and purchases cannot work."
+      "evidence": "Separate free London Supabase API and GitHub profiles are deployed; live HTTPS capture, inbox, image and export checks passed. Build 1012 still has no API URL. Production authentication, purchases and exact-build end-to-end acceptance remain."
     },
     {
       "section": 3,
       "title": "Onboarding, Apple/email/guest entry",
       "status": "partial",
-      "evidence": "Screens and guest mode exist; live Apple authentication, email verification and recovery need configuration and validation."
+      "evidence": "Guest and native screens exist. Registration now handles verification-required responses; password recovery UI and account page are implemented. Production sender/redirect configuration and Apple authentication remain pending."
     },
     {
       "section": 4,
       "title": "Card fields, social links and ordering",
       "status": "partial",
-      "evidence": "Fields/socials/order and single corner image controls exist. Publishing now sends only the selected image through validated, metadata-stripped owned storage. Live deployment and device publication tests remain."
+      "evidence": "Fields/socials/order and single-corner image controls exist. Live Edge upload rejects spoofed MIME, decodes bounded PNG/JPEG pixels, applies orientation, strips metadata, stores only selected imagery and renders the logo in the GitHub profile. Real-device publication acceptance remains."
     },
     {
       "section": 5,
@@ -43,7 +43,7 @@
       "section": 7,
       "title": "Dynamic QR and advanced sharing",
       "status": "partial",
-      "evidence": "Branded/photo/printable QR exports and persona selection are implemented. GitHub run 37216204338 passed exact URL decoding for both exports using simulator-only legacy Vision revision 1 and validated PDF pages. Both actual iOS export images also independently decoded on Windows. Physical devices retain the default detector. Live hosting and second-phone/print acceptance remain."
+      "evidence": "Branded/photo/PDF exports and persona sharing are implemented. Live GitHub profile hosting and stable query/source URLs now exist. Simulator Vision revision 1 passed branded/photo exact-URL decoding and PDF validation in run 37216204338; physical default-detector, second-phone and print acceptance remain."
     },
     {
       "section": 8,
@@ -61,13 +61,13 @@
       "section": 10,
       "title": "Recipient vCard without app",
       "status": "partial",
-      "evidence": "Public-field filtering, escaping and UTF-8 folding are tested; hosted recipient flow needs real deployment validation."
+      "evidence": "Live hosted vCard endpoint passed HTTP checks with public-field filtering and private-link exclusion; escaping and UTF-8 folding are tested. Safari/Android contact-import acceptance remains."
     },
     {
       "section": 11,
       "title": "Consented public lead capture",
       "status": "partial",
-      "evidence": "Preview capture persists explicit consent; deployed inbox delivery, abuse protection and privacy reconciliation remain."
+      "evidence": "Explicit consent was required in live API tests and an actual GitHub browser form submission reached the cloud inbox with source=qr. Database-backed rate limits and quotas are deployed. Production identity/provider privacy reconciliation and real-user end-to-end acceptance remain."
     },
     {
       "section": 12,
@@ -181,7 +181,7 @@
       "section": 30,
       "title": "Ten-language translation workflow",
       "status": "blocked",
-      "evidence": "String catalogs and approved-gateway draft/check tooling exist. Nine locales still contain unreviewed English fallbacks; human review and locale UI tests remain."
+      "evidence": "399 English source strings are extracted with nine English fallback catalogues marked unreviewed. API translation workflow exists; translation and human review/truncation checks remain."
     },
     {
       "section": 31,
