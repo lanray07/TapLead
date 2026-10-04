@@ -2,6 +2,8 @@
 
 The [40-section master acceptance audit](MASTER_AUDIT.md) is the submission gate. Its current result is blocked; build upload alone does not satisfy the master prompt.
 
+[Run 37206899047](https://github.com/lanray07/TapLead/actions/runs/37206899047) passed shared Swift tests (including the new calendar-day count test), backend checks and app/widget compilation for source commit `07e8a07`. Simulator UI tests were still pending when this audit was recorded. Large widgets now show aggregate connections from the last seven calendar days and follow-ups due today or overdue, with privacy-sensitive presentation and no lead identity shared. Device privacy and size acceptance remain open. Windows Swift testing encountered a local build-cache I/O error; Apple SDK compilation and the shared tests were verified in GitHub instead.
+
 ## Verified in GitHub Xcode
 
 [Run 37204032293](https://github.com/lanray07/TapLead/actions/runs/37204032293) passed app/widget compilation and all 25 tests: seven shared Swift, twelve backend and six native UI tests. Seven additional genuine card-style screenshot compositions were exported and uploaded, bringing both iPhone size sets to ten. The saved order was verified after reloading App Store Connect. See the [premium sample gallery](../marketing/PREMIUM_SAMPLES.md).
@@ -44,7 +46,7 @@ The NFC and speech implementations use documented Apple APIs with capability che
 | Personas/modes | Demo and verified-Pro persona creation/publication paths exist. Test cloud Pro limits and add explicit Sales/Recruiting/Event presets and company branding locks. |
 | Wallet | Build and deploy certificate-backed signing/update service, wire the client action, device test. No Wallet claim is published. |
 | AI | Configure approved provider gateway, publish processing terms, evaluate extraction/drafts and add quota/billing rules. |
-| Widgets/Spotlight | Large-widget aggregate recent-connection/due-follow-up counts are now implemented in source, with calendar-day boundary coverage. New Xcode compilation and widget privacy/size tests, plus Spotlight public-card index verification, remain. Build 1012 does not include this change. |
+| Widgets/Spotlight | Large-widget aggregate recent-connection/due-follow-up counts and calendar-day boundary coverage passed GitHub shared tests and Xcode compilation. Widget privacy/size tests and Spotlight public-card index verification remain. Build 1012 does not include this change. |
 | Advanced QR | Printable exports, QR-on-image compositions and configurable branded QR assets are incomplete. Native QR image/link sharing exists. |
 | Teams | Future organization/member/role architecture documented; no Teams admin/product implementation. |
 | Localisation | Human-reviewed translations, plural/interpolation extraction, translated public pages and locale/accessibility UI tests. |
