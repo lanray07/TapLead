@@ -13,7 +13,6 @@ jobs:
     env:
       APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
       APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
-      APP_STORE_CONNECT_API_PRIVATE_KEY: ${{ secrets.APP_STORE_CONNECT_API_PRIVATE_KEY }}
       APP_STORE_CONNECT_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
       TAPLEAD_APP_ID: ${{ vars.TAPLEAD_APP_ID }}
       TAPLEAD_APP_GROUP: ${{ vars.TAPLEAD_APP_GROUP }}
@@ -28,7 +27,10 @@ jobs:
           python3 -m venv "$RUNNER_TEMP/signing-python"
           "$RUNNER_TEMP/signing-python/bin/pip" install cryptography PyYAML
       - name: Configure existing Apple app and temporary signing credentials
-        run: "$RUNNER_TEMP/signing-python/bin/python" scripts/configure-signing.py
+        env:
+          APP_STORE_CONNECT_API_PRIVATE_KEY: ${{ secrets.APP_STORE_CONNECT_API_PRIVATE_KEY }}
+        run: |
+          "$RUNNER_TEMP/signing-python/bin/python" scripts/configure-signing.py
       - name: Generate Xcode project
         run: xcodegen generate
       - name: Archive with Apple automatic signing

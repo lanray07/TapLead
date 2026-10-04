@@ -15,7 +15,15 @@
 - StoreKit purchase/restore adapter with server JWS verification, account binding, signed renewal/revocation notifications and Free/Pro limits; signed Wallet-pass client architecture. Purchase UI is deliberately disabled pending release configuration/verification.
 - English string catalogue and nine additional locale review queues; extraction and optional approved-gateway draft workflow.
 
-**This is an implementation baseline, not a verified production release.** The iOS sources have been syntax checked on Windows; SwiftUI, entitlements, hardware and UI tests require Xcode on a Mac. See [release status](docs/RELEASE.md) for the exact remaining work. No App Store Connect record has been changed.
+**This is an implementation baseline, not a verified production release.** GitHub Actions provides the Mac/Xcode build and simulator-test environment. Physical NFC/speech testing and production-service configuration remain necessary. See [release status](docs/RELEASE.md) for the exact remaining work.
+
+## Xcode builds through GitHub
+
+The [TapLead repository](https://github.com/lanray07/TapLead) runs **TapLead checks** on pushes: backend tests/audit, shared Swift tests, native app/widget compilation, iPhone simulator UI tests and screenshot attachments. Logs and results are retained as `TapLead-Xcode-results` artifacts.
+
+**TapLead signed Xcode archive** is manually dispatched from GitHub Actions. It uses the existing `APPLE_TEAM_ID`, `APP_STORE_CONNECT_API_KEY_ID`, `APP_STORE_CONNECT_API_PRIVATE_KEY` and `APP_STORE_CONNECT_ISSUER_ID` repository secrets. It looks up the existing TapLead app in App Store Connect, applies the registered bundle identifier and calls Xcode automatic signing with the API key. It exports an archive/IPA artifact; it does not upload to TestFlight or submit to App Review.
+
+Optional repository variables: `TAPLEAD_APP_ID` if app lookup is ambiguous, `TAPLEAD_APP_GROUP` for an existing shared group, and HTTPS `TAPLEAD_API_URL`, `TAPLEAD_PRIVACY_URL`, `TAPLEAD_TERMS_URL` for release services. Apple's account role must permit automatic provisioning and signing; API-key presence alone does not guarantee those permissions. The private key is written only to runner temporary storage and removed after the job.
 
 ## Run the service on Windows
 
