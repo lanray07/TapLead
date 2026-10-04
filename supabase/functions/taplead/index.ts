@@ -4,6 +4,7 @@ import { Buffer } from 'node:buffer';
 import { cardSchema,leadSchema,captureSchema,publicCard,vcard,cardCSS } from './domain.js';
 import { normaliseImage } from './media.ts';
 import { appleAuth } from './apple.ts';
+import {verifyTransaction,verifyNotification} from './subscriptions.ts';
 
 const url=Deno.env.get('SUPABASE_URL')!;
 const service=Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
@@ -101,6 +102,18 @@ async function handle(req:Request):Promise<Response> {
       return json(await issue(owner));
     } finally {await auth.auth.signOut();}
   }
+  if(path==='/api/apple/notifications'&&method==='POST') {
+    await rate(req,'apple-notifications',120,60);
+    const {signedPayload}=z.object({signedPayload:z.string().min(1).max(60000)}).parse(await input(req));
+    let record;try{record=await verifyNotification(signedPayload);}catch{throw new HTTPError(400,'Invalid App Store notification.');}
+    if(record) {
+      const user=await db.auth.admin.getUserById(record.owner);
+      // Deleted accounts must not be recreated by delayed signed notifications.
+      if(user.error&&user.error.status!==404)throw new HTTPError(503,'Subscription account lookup is temporarily unavailable.');
+      if(user.data.user)check(await db.rpc('taplead_store_transaction',{p_data:record}));
+    }
+    return json({ok:true});
+  }
   const profile=path.match(/^\/p\/([^/]+)(?:\/(.*))?$/);
   if(profile) {
     const id=uuid.parse(profile[1]),tail=profile[2]||'',row=await live(id);
@@ -128,7 +141,11 @@ async function handle(req:Request):Promise<Response> {
   const {owner,digest}=await authenticate(req);
   if(method==='POST'&&path==='/api/auth/logout'){check(await db.from('taplead_sessions').delete().eq('hash',digest).eq('owner',owner));return new Response(null,{status:204,headers});}
   if(method==='GET'&&path==='/api/plan')return json(await plan(owner));
-  if(method==='POST'&&path==='/api/subscription')throw new HTTPError(503,'Purchases are not enabled until production receipt verification is configured.');
+  if(method==='POST'&&path==='/api/subscription') {
+    const {signedTransaction}=z.object({signedTransaction:z.string().min(1).max(30000)}).parse(await input(req));
+    let record;try{record=await verifyTransaction(signedTransaction,owner);}catch{throw new HTTPError(400,'This subscription could not be verified for your account.');}
+    check(await db.rpc('taplead_store_transaction',{p_data:record}));return json(await plan(owner));
+  }
   if(method==='GET'&&path==='/api/cards')return json(await cards(owner));
   if(method==='GET'&&path==='/api/leads')return json((await all('taplead_leads',owner)).map(row=>row.data));
   const record=path.match(/^\/api\/(cards|leads)\/([^/]+)(?:\/(image))?$/);

@@ -241,7 +241,7 @@
       "section": 40,
       "title": "Free/Pro tiers and future Teams architecture",
       "status": "partial",
-      "evidence": "Free/Pro limits, native NFC/voice/advanced export gates and server theme/analytics enforcement are implemented. StoreKit verification still needs real receipts, renewals/revocations and live paid-feature acceptance. Teams organization/role/branding architecture is documented; initial enterprise implementation is not required."
+      "evidence": "Free/Pro gates exist. Edge now verifies Apple JWS receipts/notifications with official roots, enforces owner/product binding, isolates Sandbox, prevents older receipt replay and handles verified signed grace. Ten Edge tests and live rollback SQL safeguards passed. Purchases remain disabled pending genuine purchase/restore/renewal/refund tests, notification configuration and reconciliation. Teams architecture is documented."
     }
   ],
   "scope_overrides": {
