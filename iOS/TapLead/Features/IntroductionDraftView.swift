@@ -26,8 +26,8 @@ struct IntroductionDraftView:View {
                     }.disabled(draft.trimmingCharacters(in:.whitespacesAndNewlines).isEmpty)
                 }
                 ShareLink(item:draft){Label("Share draft",systemImage:"square.and.arrow.up")}.disabled(draft.isEmpty)
-                Button("Save draft to timeline") {guard var copy=lead else{return};copy.timeline.append(TimelineEntry(kind:"follow_up_drafted",text:draft));store.saveLead(copy);dismiss()}.disabled(draft.isEmpty || draft.count>4000)
-                if draft.count>4000 {Text("Shorten the draft to 4,000 characters before saving to the timeline.").font(.caption)}
+                Button("Save draft to timeline") {guard var copy=lead else{return};copy.timeline.append(TimelineEntry(kind:"follow_up_drafted",text:draft));store.saveLead(copy);dismiss()}.disabled(draft.isEmpty || draft.utf16.count>4000)
+                if draft.utf16.count>4000 {Text("Shorten the draft to 4,000 characters before saving to the timeline.").font(.caption)}
                 if let failure {Text(verbatim:failure).foregroundStyle(.secondary)}
             }
         }.navigationTitle("Introduction draft").toolbar{ToolbarItem(placement:.cancellationAction){Button("Close"){dismiss()}}}.onAppear{

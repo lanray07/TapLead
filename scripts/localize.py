@@ -18,6 +18,7 @@ for file in (ROOT/'iOS').rglob('*.swift'):
         if '\\(' not in value:
             keys.add(value.replace('\\n','\n').replace('\\"','"'))
 keys.update(['New','Follow Up','Active','Won','Archived','Minimal','Executive','Creator','Bold','Dark','Elegant','Sales','Consultant','About','Contact','Links','email','phone','website','location','portfolio','booking','socials','met','received','voice','status','follow_up_scheduled','follow_up_completed','follow_up_drafted','Friendly','Professional','Concise','Casual','None','Photo','Logo','Top left','Top right','Bottom left','Bottom right','Choose photo','Photo added','Logo added','Loading image…'])
+keys.update(['Standard','Rounded','Serif','Monospaced','Networking','Recruiting','Event','Save contact','Website','Portfolio','Book a meeting','View CV','Connection made','Details received','Voice note added','Status changed','Follow-up scheduled','Follow-up completed','Draft saved','Smart Notes saved','Context','Interest','Next action','Follow-up date'])
 for key in keys:
     entry = catalog['strings'].setdefault(key, {'extractionState':'manual','localizations':{}})
     entry['localizations'].setdefault('en', {'stringUnit':{'state':'translated','value':key}})

@@ -3056,6 +3056,71 @@
         }
       }
     },
+    "Book a meeting": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Book a meeting"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Book a meeting"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Book a meeting"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Book a meeting"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Book a meeting"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Book a meeting"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Book a meeting"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Book a meeting"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Book a meeting"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Book a meeting"
+          }
+        }
+      }
+    },
     "Book follow-up": {
       "extractionState": "manual",
       "localizations": {
@@ -5006,6 +5071,71 @@
         }
       }
     },
+    "Connection made": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Connection made"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connection made"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Connection made"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Connection made"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Connection made"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Connection made"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Connection made"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Connection made"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Connection made"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Connection made"
+          }
+        }
+      }
+    },
     "Connection saved": {
       "extractionState": "manual",
       "localizations": {
@@ -5457,6 +5587,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Contact details"
+          }
+        }
+      }
+    },
+    "Context": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Context"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Context"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Context"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Context"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Context"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Context"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Context"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Context"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Context"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Context"
           }
         }
       }
@@ -6371,6 +6566,71 @@
         }
       }
     },
+    "Details received": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Details received"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Details received"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Details received"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Details received"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Details received"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Details received"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Details received"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Details received"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Details received"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Details received"
+          }
+        }
+      }
+    },
     "Done": {
       "extractionState": "manual",
       "localizations": {
@@ -6497,6 +6757,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Draft Follow-Up"
+          }
+        }
+      }
+    },
+    "Draft saved": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Draft saved"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Draft saved"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Draft saved"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Draft saved"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Draft saved"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Draft saved"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Draft saved"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Draft saved"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Draft saved"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Draft saved"
           }
         }
       }
@@ -6956,6 +7281,71 @@
         }
       }
     },
+    "Event": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Event"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Event"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Event"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Event"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Event"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Event"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Event"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Event"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Event"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Event"
+          }
+        }
+      }
+    },
     "Exchange Details": {
       "extractionState": "manual",
       "localizations": {
@@ -7411,6 +7801,71 @@
         }
       }
     },
+    "Follow-up completed": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Follow-up completed"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Follow-up completed"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Follow-up completed"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Follow-up completed"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Follow-up completed"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Follow-up completed"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Follow-up completed"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Follow-up completed"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Follow-up completed"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Follow-up completed"
+          }
+        }
+      }
+    },
     "Follow-up date": {
       "extractionState": "manual",
       "localizations": {
@@ -7602,6 +8057,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Follow-up saved. Notifications are unavailable; enable them in iPhone Settings."
+          }
+        }
+      }
+    },
+    "Follow-up scheduled": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Follow-up scheduled"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Follow-up scheduled"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Follow-up scheduled"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Follow-up scheduled"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Follow-up scheduled"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Follow-up scheduled"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Follow-up scheduled"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Follow-up scheduled"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Follow-up scheduled"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Follow-up scheduled"
           }
         }
       }
@@ -8577,6 +9097,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Insights aren’t available yet"
+          }
+        }
+      }
+    },
+    "Interest": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Interest"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Interest"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Interest"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Interest"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Interest"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Interest"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Interest"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Interest"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Interest"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Interest"
           }
         }
       }
@@ -10271,6 +10856,71 @@
         }
       }
     },
+    "Monospaced": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Monospaced"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Monospaced"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Monospaced"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Monospaced"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Monospaced"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Monospaced"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Monospaced"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Monospaced"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Monospaced"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Monospaced"
+          }
+        }
+      }
+    },
     "More than one connection matches. Choose the right person and review the date. No action has been taken.": {
       "extractionState": "manual",
       "localizations": {
@@ -10596,6 +11246,71 @@
         }
       }
     },
+    "Networking": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Networking"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Networking"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Networking"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Networking"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Networking"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Networking"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Networking"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Networking"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Networking"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Networking"
+          }
+        }
+      }
+    },
     "Networking mode": {
       "extractionState": "manual",
       "localizations": {
@@ -10917,6 +11632,71 @@
           "stringUnit": {
             "state": "new",
             "value": "New leads"
+          }
+        }
+      }
+    },
+    "Next action": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Next action"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Next action"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Next action"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Next action"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Next action"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Next action"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Next action"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Next action"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Next action"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Next action"
           }
         }
       }
@@ -12416,6 +13196,71 @@
         }
       }
     },
+    "Portfolio": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Portfolio"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Portfolio"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Portfolio"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Portfolio"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Portfolio"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Portfolio"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Portfolio"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Portfolio"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Portfolio"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Portfolio"
+          }
+        }
+      }
+    },
     "Preferred name": {
       "extractionState": "manual",
       "localizations": {
@@ -13716,6 +14561,71 @@
         }
       }
     },
+    "Recruiting": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Recruiting"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recruiting"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Recruiting"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Recruiting"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Recruiting"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Recruiting"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Recruiting"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Recruiting"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Recruiting"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Recruiting"
+          }
+        }
+      }
+    },
     "Relationship": {
       "extractionState": "manual",
       "localizations": {
@@ -14626,6 +15536,71 @@
         }
       }
     },
+    "Rounded": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Rounded"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rounded"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Rounded"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Rounded"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Rounded"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Rounded"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Rounded"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Rounded"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Rounded"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Rounded"
+          }
+        }
+      }
+    },
     "Sales": {
       "extractionState": "manual",
       "localizations": {
@@ -14752,6 +15727,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Save"
+          }
+        }
+      }
+    },
+    "Save contact": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Save contact"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save contact"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Save contact"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Save contact"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Save contact"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Save contact"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Save contact"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Save contact"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Save contact"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Save contact"
           }
         }
       }
@@ -15402,6 +16442,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Send introduction"
+          }
+        }
+      }
+    },
+    "Serif": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Serif"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Serif"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Serif"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Serif"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Serif"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Serif"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Serif"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Serif"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Serif"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Serif"
           }
         }
       }
@@ -17551,6 +18656,71 @@
         }
       }
     },
+    "Smart Notes saved": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Smart Notes saved"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Smart Notes saved"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Smart Notes saved"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Smart Notes saved"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Smart Notes saved"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Smart Notes saved"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Smart Notes saved"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Smart Notes saved"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Smart Notes saved"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Smart Notes saved"
+          }
+        }
+      }
+    },
     "Smart Notes summary": {
       "extractionState": "manual",
       "localizations": {
@@ -17746,6 +18916,71 @@
         }
       }
     },
+    "Standard": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Standard"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Standard"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Standard"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Standard"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Standard"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Standard"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Standard"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Standard"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Standard"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Standard"
+          }
+        }
+      }
+    },
     "Start on this iPhone. Publish when you’re ready.": {
       "extractionState": "manual",
       "localizations": {
@@ -17872,6 +19107,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Status"
+          }
+        }
+      }
+    },
+    "Status changed": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Status changed"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Status changed"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Status changed"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Status changed"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Status changed"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Status changed"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Status changed"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Status changed"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Status changed"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Status changed"
           }
         }
       }
@@ -20931,6 +22231,71 @@
         }
       }
     },
+    "View CV": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "View CV"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "View CV"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "View CV"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "View CV"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "View CV"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "View CV"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "View CV"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "View CV"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "View CV"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "View CV"
+          }
+        }
+      }
+    },
     "Voice assistant": {
       "extractionState": "manual",
       "localizations": {
@@ -21057,6 +22422,136 @@
           "stringUnit": {
             "state": "new",
             "value": "Voice note"
+          }
+        }
+      }
+    },
+    "Voice note added": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Voice note added"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voice note added"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Voice note added"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Voice note added"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Voice note added"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Voice note added"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Voice note added"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Voice note added"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Voice note added"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Voice note added"
+          }
+        }
+      }
+    },
+    "Website": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Website"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Website"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Website"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Website"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Website"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Website"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Website"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Website"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Website"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Website"
           }
         }
       }

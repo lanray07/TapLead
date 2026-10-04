@@ -30,16 +30,16 @@ struct AIView:View {
                 if busy {ProgressView("Preparing your draft…")}
                 if let failure {Section{Text(verbatim:failure).foregroundStyle(.secondary)}}
                 if let result {
-                    Section("Facts from your notes") {ForEach(Array(result.facts.enumerated()),id:\.offset){_,fact in VStack(alignment:.leading,spacing:4){Text(verbatim:fact.field).font(.caption.bold());Text(verbatim:fact.value);Text(verbatim:fact.evidence).font(.caption).foregroundStyle(.secondary)}}}
+                    Section("Facts from your notes") {ForEach(Array(result.facts.enumerated()),id:\.offset){_,fact in VStack(alignment:.leading,spacing:4){Text(LocalizedStringKey(fact.field)).font(.caption.bold());Text(verbatim:fact.value);Text(verbatim:fact.evidence).font(.caption).foregroundStyle(.secondary)}}}
                     Section("AI suggestions · review first") {ForEach(result.suggestions,id:\.self){Text(verbatim:$0)}}
                     if result.draft == nil {
                         Section("Review and edit summary") {
                             TextEditor(text:$summary).frame(minHeight:160).accessibilityLabel("Smart Notes summary")
-                            Button("Save reviewed Smart Notes") {guard var updated=store.leads.first(where:{$0.id==lead.id}) else{return};updated.timeline.append(TimelineEntry(kind:"smart_notes",text:summary));store.saveLead(updated);dismiss()}.disabled(summary.isEmpty || summary.count>4000)
-                            if summary.count>4000 {Text("Shorten the summary to 4,000 characters before saving.").font(.caption)}
+                            Button("Save reviewed Smart Notes") {guard var updated=store.leads.first(where:{$0.id==lead.id}) else{return};updated.timeline.append(TimelineEntry(kind:"smart_notes",text:summary));store.saveLead(updated);dismiss()}.disabled(summary.isEmpty || summary.utf16.count>4000)
+                            if summary.utf16.count>4000 {Text("Shorten the summary to 4,000 characters before saving.").font(.caption)}
                         }
                     }
-                    if result.draft != nil {Section("Review and edit your draft") {TextEditor(text:$draft).frame(minHeight:160);ShareLink(item:draft){Label("Share reviewed draft",systemImage:"square.and.arrow.up")};Button("Save draft to timeline"){guard var updated=store.leads.first(where:{$0.id==lead.id}) else{return};updated.timeline.append(TimelineEntry(kind:"follow_up_drafted",text:draft));store.saveLead(updated);dismiss()};Text("TapLead does not send messages. Choose a destination in the Share Sheet and confirm there.").font(.caption).foregroundStyle(.secondary)}}
+                    if result.draft != nil {Section("Review and edit your draft") {TextEditor(text:$draft).frame(minHeight:160);ShareLink(item:draft){Label("Share reviewed draft",systemImage:"square.and.arrow.up")};Button("Save draft to timeline"){guard var updated=store.leads.first(where:{$0.id==lead.id}) else{return};updated.timeline.append(TimelineEntry(kind:"follow_up_drafted",text:draft));store.saveLead(updated);dismiss()}.disabled(draft.utf16.count>4000 || draft.isEmpty);if draft.utf16.count>4000{Text("Shorten the draft to 4,000 characters before saving to the timeline.").font(.caption)};Text("TapLead does not send messages. Choose a destination in the Share Sheet and confirm there.").font(.caption).foregroundStyle(.secondary)}}
                 }
             }.navigationTitle("A thoughtful next step").toolbar{ToolbarItem(placement:.cancellationAction){Button("Close"){dismiss()}}}
         }
