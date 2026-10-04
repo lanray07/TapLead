@@ -56,4 +56,14 @@ options={'method':'app-store-connect','destination':'export','signingStyle':'aut
 with open(pathlib.Path(env['RUNNER_TEMP'])/'ExportOptions.plist','wb') as output:plistlib.dump(options,output)
 print('Configured existing App Store app:',app['attributes']['name'],'('+app['id']+')')
 print('Bundle identifier:',bundle)
+for resource in ['certificates','bundleIds','profiles']:
+    diagnostic=urllib.request.Request('https://api.appstoreconnect.apple.com/v1/'+resource+'?limit=1',headers={'Authorization':'Bearer '+token})
+    try:
+        with urllib.request.urlopen(diagnostic,timeout=30) as response:
+            json.load(response)
+        print('Provisioning API access:',resource,'available')
+    except urllib.error.HTTPError as error:
+        details=json.loads(error.read())
+        reasons=[item.get('detail',item.get('title','Denied')) for item in details.get('errors',[])]
+        print('Provisioning API access:',resource,'HTTP',error.code,'; '.join(reasons))
 print('Signed artifact export only; no App Store upload or submission.')
