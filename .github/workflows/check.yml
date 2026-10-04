@@ -1,5 +1,13 @@
 name: TapLead checks
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      native_only:
+        description: 'Run native unit tests only (full UI suite remains the default)'
+        type: boolean
+        default: false
 permissions:
   contents: read
 concurrency:
@@ -51,8 +59,12 @@ jobs:
       - name: Run native UI tests and capture demo states
         run: |
           set -o pipefail
+          TEST_SELECTION=()
+          if [ "${{ inputs.native_only }}" = "true" ]; then
+            TEST_SELECTION=(-only-testing:TapLeadNativeTests)
+          fi
           xcodebuild -project TapLead.xcodeproj -scheme TapLead \
-            -destination "platform=iOS Simulator,id=$SIMULATOR_ID" -derivedDataPath DerivedData \
+            "${TEST_SELECTION[@]}" -destination "platform=iOS Simulator,id=$SIMULATOR_ID" -derivedDataPath DerivedData \
             -parallel-testing-enabled NO -resultBundlePath artifacts/UI.xcresult CODE_SIGNING_ALLOWED=NO \
             test 2>&1 | tee artifacts/ui-tests.log
       - name: Export screenshot attachments

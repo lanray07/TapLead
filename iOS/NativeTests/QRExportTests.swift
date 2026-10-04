@@ -15,6 +15,11 @@ final class QRExportTests:XCTestCase {
             let image=try XCTUnwrap(QRExport.image(card:card,url:url,photo:background))
             let capture=XCTAttachment(image:image);capture.name=background == nil ? "Branded QR export":"Photo QR export";capture.lifetime = .keepAlways;add(capture)
             let request=VNDetectBarcodesRequest();request.symbologies=[.qr]
+            #if targetEnvironment(simulator)
+            // GitHub's virtual Mac cannot compile the Vision GPU network.
+            // Keep the decoding assertion; use the simulator's supported CPU path.
+            request.usesCPUOnly=true
+            #endif
             try VNImageRequestHandler(cgImage:try XCTUnwrap(image.cgImage),options:[:]).perform([request])
             XCTAssertEqual(request.results?.first?.payloadStringValue,url.absoluteString)
             let pdf=QRExport.pdf(image:image)
