@@ -30,6 +30,29 @@ import TapLeadCore
             catch {let backup=storage.deletingLastPathComponent().appendingPathComponent("taplead-recovery-\(UUID().uuidString).json");try? FileManager.default.copyItem(at:storage,to:backup); self.error = String(localized: "Your saved data could not be opened. It has been preserved for recovery.") }
         }
         if ProcessInfo.processInfo.arguments.contains("--demo") { startDemo() }
+        #if DEBUG
+        // Deterministic marketing captures use the same card renderer and remain demo-only.
+        let arguments=ProcessInfo.processInfo.arguments
+        if snapshot.demo,let index=arguments.firstIndex(of:"--sample-theme"),arguments.indices.contains(index+1),
+           let theme=CardTheme(rawValue:arguments[index+1]),var card=selectedCard {
+            let samples:[CardTheme:(String,String,String,String,String)] = [
+                .minimal:("Sam Taylor","Product designer","Northline Studio","Simple ideas. Thoughtful design.","Minimal"),
+                .creator:("Maya Patel","Illustrator & designer","Studio Maya","Colour outside the ordinary.","Creator"),
+                .bold:("Jordan Reed","Creative director","Form & Field","Ideas made to stand out.","Bold"),
+                .dark:("Casey Brooks","Software consultant","Bridge Works","Clear thinking. Better systems.","Dark"),
+                .elegant:("Avery Blake","Interior designer","Quiet Space","Considered spaces. Lasting impressions.","Elegant"),
+                .sales:("Morgan Ellis","Business development","Summit Partners","Great relationships start here.","Sales"),
+                .consultant:("Riley Park","Strategy consultant","Park Advisory","Your next chapter, with clarity.","Consultant")
+            ]
+            if let sample=samples[theme] {
+                card.name=sample.0;card.preferredName=sample.0.components(separatedBy:" ")[0]
+                card.title=sample.1;card.company=sample.2;card.headline=sample.3;card.persona=sample.4
+                card.theme=theme;card.imageKind = .none;card.accent="7861D9"
+                card.bio="Fictional sample profile for TapLead card style previews."
+                card.email="sample@example.com";saveCard(card)
+            }
+        }
+        #endif
     }
     func persist() {
         do { try JSONEncoder().encode(snapshot).write(to: storage, options: [.atomic, .completeFileProtectionUntilFirstUserAuthentication]); updateWidget();let signature=cards.filter(\.published).map{"\($0.id)|\($0.name)|\($0.title)|\($0.company)"}.joined(separator:"\n");if signature != indexedCardsSignature{indexedCardsSignature=signature;SpotlightService.update(cards)} }

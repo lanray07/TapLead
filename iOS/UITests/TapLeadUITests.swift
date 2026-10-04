@@ -1,5 +1,16 @@
 import XCTest
 final class TapLeadUITests:XCTestCase {
+    func testPremiumCardSampleScreenshots() {
+        for theme in ["Minimal","Creator","Bold","Dark","Elegant","Sales","Consultant"] {
+            let app=XCUIApplication()
+            app.launchArguments=["--demo","--sample-theme",theme];app.launch()
+            app.tabBars.buttons["My card"].tap()
+            XCTAssertTrue(app.staticTexts["Demo · sample connections"].waitForExistence(timeout:5))
+            let capture=XCTAttachment(screenshot:app.screenshot())
+            capture.name="TapLead-premium-\(theme.lowercased())";capture.lifetime = .keepAlways;add(capture)
+            app.terminate()
+        }
+    }
     func testCornerLogoImportPersistsAndCanBeRemoved() {
         let app=XCUIApplication();app.launchArguments=["--demo"];app.launch()
         app.tabBars.buttons["My card"].tap();app.buttons["Edit card"].tap()
