@@ -2,6 +2,15 @@ import XCTest
 @testable import TapLeadCore
 
 final class CoreTests: XCTestCase {
+    func testHostedProfileKeepsStableIdentityAndSource() {
+        let card=Card()
+        let pages=card.profileURL(base:URL(string:"https://lanray07.github.io/TapLead/card/")!,source:"nfc")
+        let parts=URLComponents(url:pages,resolvingAgainstBaseURL:false)!
+        XCTAssertEqual(parts.path,"/TapLead/card/")
+        XCTAssertEqual(parts.queryItems?.first(where:{$0.name=="id"})?.value,card.id.uuidString.lowercased())
+        XCTAssertEqual(parts.queryItems?.first(where:{$0.name=="source"})?.value,"nfc")
+        XCTAssertEqual(card.profileURL(base:URL(string:"https://cards.example.com")!).path,"/p/\(card.id.uuidString.lowercased())")
+    }
     func testFactsRejectInventedValuesAndEvidence() {
         let note="Met at the conference. Asked for the portfolio."
         XCTAssertTrue(Validation.groundedFact(value:"Asked for the portfolio",evidence:"Asked for the portfolio.",notes:note))

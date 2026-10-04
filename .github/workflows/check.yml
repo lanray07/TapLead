@@ -14,6 +14,22 @@ concurrency:
   group: checks-${{ github.ref }}
   cancel-in-progress: true
 jobs:
+  edge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: '2.9.6'
+      - name: Validate shared Edge schemas
+        run: |
+          python3 scripts/prepare-edge.py
+          git diff --exit-code -- supabase/functions/taplead/domain.js
+      - name: Check portable API and bounded image decoding
+        working-directory: supabase/functions/taplead
+        run: |
+          deno task check
+          deno task test
   backend:
     runs-on: ubuntu-latest
     defaults:

@@ -31,6 +31,11 @@ struct APIClient {
         guard let raw = Bundle.main.object(forInfoDictionaryKey: "TapLeadAPIURL") as? String else { return nil }
         return Validation.webURL(raw)
     }
+    var profileBase: URL? {
+        if let raw=Bundle.main.object(forInfoDictionaryKey:"TapLeadProfileURL") as? String,
+           let url=Validation.webURL(raw) {return url}
+        return base
+    }
     func request<T: Decodable>(_ path: String, method: String = "GET", body: Data? = nil, contentType:String="application/json") async throws -> T {
         guard let base else { throw ServiceError.message(String(localized: "Connect a secure TapLead service to use this feature.")) }
         let pathParts = path.split(separator:"?",maxSplits:1,omittingEmptySubsequences:false)
@@ -54,6 +59,8 @@ struct APIClient {
 }
 struct EmptyResponse: Decodable {}
 struct AuthResponse: Decodable { var token: String; var userID: String }
+struct RegistrationResponse:Decodable {var verificationRequired:Bool?;var message:String?;var token:String?;var userID:String?}
+struct AccountMessage:Decodable {var message:String}
 struct PlanResponse:Decodable {var pro:Bool;var cardLimit:Int;var leadLimit:Int;var purchasesEnabled:Bool?;var products:[String]?}
 struct AnalyticsResponse: Decodable {
     struct Event: Decodable, Identifiable {

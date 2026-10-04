@@ -172,7 +172,7 @@ import TapLeadCore
         // Deliberately share no lead names, notes, or contact details with the extension.
         defaults?.set(selectedCard?.name ?? "TapLead",forKey:"name")
         defaults?.set(selectedCard?.title ?? "",forKey:"title")
-        defaults?.set(selectedCard.flatMap { card in api.base.map { card.published ? card.profileURL(base:$0,source:"qr").absoluteString : "" } } ?? "",forKey:"url")
+        defaults?.set(selectedCard.flatMap { card in api.profileBase.map { card.published ? card.profileURL(base:$0,source:"qr").absoluteString : "" } } ?? "",forKey:"url")
         // Refresh counts across midnight without storing any individual lead metadata.
         let today = Calendar.current.startOfDay(for: Date())
         let counts = (0...7).map { offset -> WidgetCountSnapshot in

@@ -92,8 +92,9 @@ public struct Card: Codable, Identifiable, Equatable, Sendable {
     }
     public init() {}
     public func profileURL(base: URL, source: String = "direct") -> URL {
-        var parts = URLComponents(url: base.appendingPathComponent("p/\(id.uuidString.lowercased())"), resolvingAgainstBaseURL: false)!
-        parts.queryItems = [URLQueryItem(name: "source", value: source)]
+        let queryProfile=base.path.hasSuffix("/card/") || base.path.hasSuffix("/card")
+        var parts = URLComponents(url: queryProfile ? base : base.appendingPathComponent("p/\(id.uuidString.lowercased())"), resolvingAgainstBaseURL: false)!
+        parts.queryItems = (queryProfile ? [URLQueryItem(name:"id",value:id.uuidString.lowercased())] : []) + [URLQueryItem(name: "source", value: source)]
         return parts.url!
     }
     public func isPublic(_ key: String) -> Bool { publicFields.contains(key) }

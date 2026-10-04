@@ -21,7 +21,7 @@ struct CardsView: View {
                     CardPreview(card:card)
                     HStack { Label(card.published ? "Published" : "On this iPhone",systemImage:card.published ? "globe":"iphone").font(.caption).foregroundStyle(.secondary); Spacer(); Button("Edit card"){editing=CardSelection(card:card)} }
                     PrimaryButton(title:"Show networking QR",icon:"qrcode"){store.showEvent=true}
-                    if card.published,let base=store.api.base { ShareLink(item:card.profileURL(base:base)){Label("Share profile link",systemImage:"square.and.arrow.up")}.frame(minHeight:44) }
+                    if card.published,let base=store.api.profileBase { ShareLink(item:card.profileURL(base:base)){Label("Share profile link",systemImage:"square.and.arrow.up")}.frame(minHeight:44) }
                     Button {Task {busy=true;defer{busy=false};do{try await store.publish(card)}catch{store.error=error.localizedDescription}} } label:{ Label(card.published ? "Update published card":"Publish my card",systemImage:"globe") }.disabled(busy || card.name.trimmingCharacters(in:.whitespaces).isEmpty)
                     if card.published { Button("Make card private",role:.destructive){Task{do{try await store.unpublish(card)}catch{store.error=error.localizedDescription}}} }
                     Divider()

@@ -1171,6 +1171,71 @@
         }
       }
     },
+    "Account registration could not be completed.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Account registration could not be completed."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Account registration could not be completed."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Account registration could not be completed."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Account registration could not be completed."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Account registration could not be completed."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Account registration could not be completed."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Account registration could not be completed."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Account registration could not be completed."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Account registration could not be completed."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Account registration could not be completed."
+          }
+        }
+      }
+    },
     "Account services require a configured HTTPS backend. Demo mode works without an account.": {
       "extractionState": "manual",
       "localizations": {
@@ -4157,6 +4222,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Changes saved on this iPhone. Pull to retry sync."
+          }
+        }
+      }
+    },
+    "Check your email to verify your account, then sign in.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Check your email to verify your account, then sign in."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check your email to verify your account, then sign in."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Check your email to verify your account, then sign in."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Check your email to verify your account, then sign in."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Check your email to verify your account, then sign in."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Check your email to verify your account, then sign in."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Check your email to verify your account, then sign in."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Check your email to verify your account, then sign in."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Check your email to verify your account, then sign in."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Check your email to verify your account, then sign in."
           }
         }
       }
@@ -8386,6 +8516,71 @@
         }
       }
     },
+    "Forgot password?": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Forgot password?"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Forgot password?"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Forgot password?"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Forgot password?"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Forgot password?"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Forgot password?"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Forgot password?"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Forgot password?"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Forgot password?"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Forgot password?"
+          }
+        }
+      }
+    },
     "Free includes one digital card, QR sharing, public profile and up to 50 synced leads.": {
       "extractionState": "manual",
       "localizations": {
@@ -8902,6 +9097,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Identity"
+          }
+        }
+      }
+    },
+    "If this account exists, a recovery email will arrive shortly.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "If this account exists, a recovery email will arrive shortly."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "If this account exists, a recovery email will arrive shortly."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "If this account exists, a recovery email will arrive shortly."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "If this account exists, a recovery email will arrive shortly."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "If this account exists, a recovery email will arrive shortly."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "If this account exists, a recovery email will arrive shortly."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "If this account exists, a recovery email will arrive shortly."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "If this account exists, a recovery email will arrive shortly."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "If this account exists, a recovery email will arrive shortly."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "If this account exists, a recovery email will arrive shortly."
           }
         }
       }
@@ -23722,6 +23982,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Your account"
+          }
+        }
+      }
+    },
+    "Your account keeps published cards and connections in sync. Verify your email before signing in.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Your account keeps published cards and connections in sync. Verify your email before signing in."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your account keeps published cards and connections in sync. Verify your email before signing in."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Your account keeps published cards and connections in sync. Verify your email before signing in."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Your account keeps published cards and connections in sync. Verify your email before signing in."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Your account keeps published cards and connections in sync. Verify your email before signing in."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Your account keeps published cards and connections in sync. Verify your email before signing in."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Your account keeps published cards and connections in sync. Verify your email before signing in."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Your account keeps published cards and connections in sync. Verify your email before signing in."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Your account keeps published cards and connections in sync. Verify your email before signing in."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Your account keeps published cards and connections in sync. Verify your email before signing in."
           }
         }
       }

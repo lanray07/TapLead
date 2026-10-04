@@ -15,7 +15,7 @@ struct EventView: View {
                         Avatar(name:card.name,data:card.photoData,size:86)
                         Text(card.name.isEmpty ? String(localized:"Your TapLead") : card.name).font(.system(.largeTitle,design:.rounded,weight:.bold))
                         Text(verbatim:card.headline).font(.subheadline).foregroundStyle(.secondary).multilineTextAlignment(.center)
-                        if card.published,let base=store.api.base {
+                        if card.published,let base=store.api.profileBase {
                             let url=card.profileURL(base:base,source:"qr")
                             QRView(value:url.absoluteString).frame(maxWidth:300)
                             Text("Scan to connect").font(.title2.bold())
@@ -34,6 +34,6 @@ struct EventView: View {
                 }.padding(28)
             }.background(Palette.canvas).navigationTitle("Networking mode").navigationBarTitleDisplayMode(.inline).toolbar{ToolbarItem(placement:.cancellationAction){Button("Done"){dismiss()}}}.sheet(isPresented:$exchange){LeadEditor()}
         }
-        .sheet(isPresented:$exports){if let card=store.selectedCard,let base=store.api.base,card.published{QRExportView(card:card,url:card.profileURL(base:base,source:"qr"))}}
+        .sheet(isPresented:$exports){if let card=store.selectedCard,let base=store.api.profileBase,card.published{QRExportView(card:card,url:card.profileURL(base:base,source:"qr"))}}
     }
 }

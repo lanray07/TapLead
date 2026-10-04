@@ -1,0 +1,10 @@
+{
+  "imports": {
+    "@supabase/supabase-js": "npm:@supabase/supabase-js@2.117.2",
+    "zod": "npm:zod@4.6.5",
+    "pngjs": "npm:pngjs@7.0.0",
+    "jpeg-js": "npm:jpeg-js@0.4.4"
+  },
+  "compilerOptions": { "checkJs": false, "strict": true },
+  "tasks": { "test": "deno test --allow-read", "check": "deno check index.ts" }
+}

@@ -36,6 +36,7 @@ struct AuthView: View {
     @State private var register=false
     @State private var busy=false
     @State private var nonce=""
+    @State private var accountNotice=""
     var body: some View {
         NavigationStack {
             Form {
@@ -45,6 +46,8 @@ struct AuthView: View {
                     SecureField("Password (at least 12 characters)",text:$password).textContentType(register ? .newPassword : .password)
                     Toggle("Create a new account",isOn:$register)
                     Button(register ? String(localized:"Create account") : String(localized:"Sign in")) {Task {await emailSignIn()}}.disabled(busy || !Validation.email(email) || password.count<12)
+                    if !register {Button("Forgot password?"){Task{await recoverPassword()}}.disabled(busy || !Validation.email(email))}
+                    if !accountNotice.isEmpty {Text(verbatim:accountNotice).font(.subheadline).accessibilityAddTraits(.updatesFrequently)}
                 }
                 if store.api.base != nil {
                     Section {
@@ -60,13 +63,28 @@ struct AuthView: View {
                         }.frame(height:48).disabled(nonce.isEmpty || busy)
                     }
                 }
-                Section { Text("Account services require a configured HTTPS backend. Demo mode works without an account.").font(.caption).foregroundStyle(.secondary) }
+                Section { Text("Your account keeps published cards and connections in sync. Verify your email before signing in.").font(.caption).foregroundStyle(.secondary) }
             }.navigationTitle("Welcome to TapLead").toolbar {ToolbarItem(placement:.cancellationAction){Button("Close"){dismiss()}}}
             .task { do { struct Challenge:Decodable{var nonce:String};let challenge:Challenge=try await store.api.request("api/auth/apple/challenge",method:"POST");nonce=challenge.nonce } catch { /* Email remains available; no silent Apple fallback. */ } }
         }
     }
     func emailSignIn() async {
         busy=true;defer{busy=false}
-        do {let response:AuthResponse=try await store.api.send(register ? "api/auth/register":"api/auth/login",method:"POST",value:["email":email,"password":password]);try await store.signedIn(response);dismiss()} catch {store.error=error.localizedDescription}
+        do {
+            if register {
+                let result:RegistrationResponse=try await store.api.send("api/auth/register",method:"POST",value:["email":email,"password":password])
+                if result.verificationRequired==true {accountNotice=String(localized:"Check your email to verify your account, then sign in.");register=false;return}
+                guard let token=result.token,let userID=result.userID else {throw ServiceError.message(String(localized:"Account registration could not be completed."))}
+                try await store.signedIn(AuthResponse(token:token,userID:userID))
+            } else {
+                let response:AuthResponse=try await store.api.send("api/auth/login",method:"POST",value:["email":email,"password":password]);try await store.signedIn(response)
+            }
+            dismiss()
+        } catch {store.error=error.localizedDescription}
+    }
+    func recoverPassword() async {
+        busy=true;defer{busy=false}
+        do {let _:AccountMessage=try await store.api.send("api/auth/recover",method:"POST",value:["email":email]);accountNotice=String(localized:"If this account exists, a recovery email will arrive shortly.")}
+        catch{store.error=error.localizedDescription}
     }
 }

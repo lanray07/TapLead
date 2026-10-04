@@ -31,6 +31,7 @@ targets:
         CFBundleDisplayName: TapLead
         UILaunchScreen: {}
         TapLeadAPIURL: ''
+        TapLeadProfileURL: ''
         TapLeadPrivacyURL: 'https://github.com/lanray07/TapLead/blob/main/docs/PRIVACY.md'
         TapLeadTermsURL: 'https://github.com/lanray07/TapLead/blob/main/docs/TERMS.md'
         ITSAppUsesNonExemptEncryption: false

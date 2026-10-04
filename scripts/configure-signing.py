@@ -44,7 +44,7 @@ for target in ['TapLead','TapLeadWidget']:
     spec['targets'][target]['entitlements']['properties']['com.apple.security.application-groups']=[group]
     spec['targets'][target]['info']['properties']['CFBundleVersion']='$(CURRENT_PROJECT_VERSION)'
     spec['targets'][target]['info']['properties']['CFBundleShortVersionString']='$(MARKETING_VERSION)'
-for key,variable in [('TapLeadAPIURL','TAPLEAD_API_URL'),('TapLeadPrivacyURL','TAPLEAD_PRIVACY_URL'),('TapLeadTermsURL','TAPLEAD_TERMS_URL')]:
+for key,variable in [('TapLeadAPIURL','TAPLEAD_API_URL'),('TapLeadProfileURL','TAPLEAD_PROFILE_URL'),('TapLeadPrivacyURL','TAPLEAD_PRIVACY_URL'),('TapLeadTermsURL','TAPLEAD_TERMS_URL')]:
     value=env.get(variable,'').strip()
     if value and not value.startswith('https://'):raise SystemExit(variable+' must use HTTPS.')
     spec['targets']['TapLead']['info']['properties'][key]=value
