@@ -30,6 +30,9 @@ final class CoreTests: XCTestCase {
         XCTAssertEqual(card.actionURL(base:URL(string:"https://cards.example.com")!)?.absoluteString,card.booking)
         XCTAssertTrue(Validation.prefersDarkText(on:"FFFFFF"));XCTAssertFalse(Validation.prefersDarkText(on:"000000"))
         XCTAssertFalse(Validation.hexColour("red;display:none"))
+        card.primaryAction=nil;card.networkingMode = .sales;XCTAssertEqual(card.action,.booking)
+        card.networkingMode = .recruiting;XCTAssertEqual(card.action,.portfolio)
+        card.cv="https://example.com/cv";card.publicFields.append("cv");XCTAssertEqual(card.action,.cv)
     }
     func testConnectionCountsUseCalendarDaysAndExcludeClosedFollowUps() {
         var calendar = Calendar(identifier: .gregorian)

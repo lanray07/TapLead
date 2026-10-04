@@ -66,7 +66,15 @@ public struct Card: Codable, Identifiable, Equatable, Sendable {
     public var networkingMode: NetworkingMode?
     public var cv: String?
     public var mode: NetworkingMode { networkingMode ?? .networking }
-    public var action: CardAction { primaryAction ?? .saveContact }
+    public var action: CardAction {
+        if let primaryAction {return primaryAction}
+        switch mode {
+        case .networking:return .saveContact
+        case .sales:return .booking
+        case .recruiting:return isPublic("cv") && Validation.webURL(cv ?? "") != nil ? .cv : .portfolio
+        case .event:return .website
+        }
+    }
     public func actionURL(base: URL, source: String = "direct") -> URL? {
         let profile = profileURL(base: base, source: source)
         guard let field = action.field else { return profile }
