@@ -2,6 +2,8 @@
 
 ## Verified in GitHub Xcode
 
+[Run 37197524412](https://github.com/lanray07/TapLead/actions/runs/37197524412) also passed app/widget compilation, four simulator UI tests, five shared Swift tests and twelve backend tests. It includes an authentic Pro capture with purchases disabled pending configuration. Metadata, screenshots, subscription artwork/products/pricing, free download price and unpublished privacy drafts are prepared; see [saved store draft](../marketing/APP_STORE.md).
+
 [GitHub run 37195819458](https://github.com/lanray07/TapLead/actions/runs/37195819458) successfully compiled the iOS app and widget with Apple SDKs, passed all three native simulator UI tests, and exported four native screen captures plus the XCTest result bundle. Five shared Swift tests and twelve backend tests also passed. Signing and real-device behavior require separate validation.
 
 The Release device archive also compiles. Distribution export is currently blocked: [run 37196823899](https://github.com/lanray07/TapLead/actions/runs/37196823899) identifies authentication failure specifically at Apple's `xcbuild/v1/appGroups` endpoint. The same API key successfully reads app/certificate/identifier resources and can use cloud-managed distribution signing. Configure `group.com.TapLead.app.shared` for both `com.TapLead.app` and `com.TapLead.app.widget` in the Apple Developer portal, then retry the archive workflow. An earlier experimental export omitted capabilities; it is not a release deliverable. The workflow now preserves entitlements and verifies app/widget signatures, identifiers, build numbers, App Group, NFC and Apple sign-in before reporting success.
@@ -38,7 +40,7 @@ The NFC and speech implementations use documented Apple APIs with capability che
 | Advanced QR | Printable exports, QR-on-image compositions and configurable branded QR assets are incomplete. Native QR image/link sharing exists. |
 | Teams | Future organization/member/role architecture documented; no Teams admin/product implementation. |
 | Localisation | Human-reviewed translations, plural/interpolation extraction, translated public pages and locale/accessibility UI tests. |
-| App Store | Actual simulator screenshots and benefit-led compositions, final keyword research, accurate privacy labels, legal policy review, review notes and TestFlight testing. |
+| App Store | Screenshots and two Pro promotional images uploaded; metadata/pricing saved. Complete public privacy policy, content-rights declaration, production reconciliation of saved privacy drafts, enabled-paywall screenshots and TestFlight testing. |
 
 ## Minimum acceptance walkthrough
 

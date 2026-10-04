@@ -21,6 +21,9 @@ Original generated files remain in Codex generated-image storage; the project ex
 - Categories: Business / Productivity. Calculated age rating: 4+ with regional equivalents. User-generated content declared; no feed/chat, advertising, gambling or mature content.
 - Subscription group: TapLead Pro, 22439298, localized English (U.K.). Both products are level 1.
 - Monthly: `com.taplead.pro.monthly`, Apple ID 6818996322, one month, draft UK base price £4.99 with Apple regional equivalents.
-- Annual: `com.taplead.pro.yearly`, Apple ID 6818996808, one year upfront, intended draft UK base price £39.99 with Apple regional equivalents.
+- Annual: `com.taplead.pro.yearly`, Apple ID 6818996808, one year upfront, saved draft UK base price £39.99 with Apple regional equivalents.
 - Both descriptions: “Up to 20 cards and 10,000 synced leads.” No introductory trial. Review notes disclose the current purchase configuration blocker.
-- No final app or subscription review submission has been made. Public policy URLs, release-service configuration, signing repair, genuine enabled-paywall review screenshots and Apple Sandbox verification still require completion.
+- Both products have saved availability in 175 current territories, future territory auto-add disabled and individual App Store purchase options; multiseat and family sharing are off.
+- Free app pricing and availability in 175 territories are saved. The support URL points to the repository support guide. Ten privacy categories and purposes are saved as unpublished drafts.
+- `assets/pro-review-current-configuration.png` is the untouched native Pro screen from successful [run 37197524412](https://github.com/lanray07/TapLead/actions/runs/37197524412). It visibly shows purchases unavailable and is only a draft review asset; replace it after production configuration and Sandbox verification.
+- No final review submission has been made. Public policy URL, content-rights declaration, release-service configuration, signing repair, enabled-paywall review screenshots and Apple Sandbox verification still require completion.

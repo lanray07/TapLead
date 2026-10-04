@@ -1,53 +1,51 @@
-# App Store working copy
+# Saved App Store Connect draft
 
-This is draft copy. It must be reconciled with the shipped build and final keyword research before submission. Do not advertise gated/unverified features.
+TapLead (6818982306), iOS 1.0, English (U.K.). Prepared 4 October 2026. No review submission or release has been made.
 
-**Name:** TapLead  
-**Candidate subtitle:** Digital Business Card & NFC (27 characters)  
-**Primary category:** Business  
-**Secondary category:** Productivity
+Name: TapLead. Subtitle: Business Cards & Connections. Categories: Business / Productivity. Age rating: 4+ with regional equivalents. Free download. Support URL: https://github.com/lanray07/TapLead/blob/main/docs/SUPPORT.md
 
-Apple allows up to 30 characters for name/subtitle and 170 for promotional text. See [Creating Your Product Page](https://developer.apple.com/app-store/product-page/). Verify in App Store Connect at submission time. The name retains the brand without adding awkward search terms.
+## Promotional text
 
-## Promotional text — after NFC device verification
+Make every introduction count. Create a digital business card, organise your connections, save meeting notes and keep your next follow-up in view.
 
-Turn introductions into opportunities. Share your digital business card, capture connections, remember conversations and keep your next follow-up in view.
+## Description
 
-## Description — reconcile with verified release features
+TapLead helps you turn introductions into lasting professional connections.
 
-TapLead is the digital business card built for what happens after you meet someone.
+YOUR CARD, YOUR STYLE
+Create and edit a digital business card with the contact details you choose to share. Personalise your profile with professional card themes and keep your introduction ready for your next meeting.
 
-Create a professional profile, choose the details you want to share and connect through a QR code or link. Recipients can save your contact details without installing TapLead. With a compatible NFC tag and supported iPhone, you can also write your profile link to an NFC business card.
+REMEMBER THE CONVERSATION
+Keep your connections organised in a searchable inbox. Add tags, update a connection’s status and save notes with the context that matters.
 
-Keep the conversation going. Capture a new connection with their permission, add meeting context and organise your networking contacts in a simple lead inbox. Create follow-up dates so your next introduction has a next step.
+GIVE EVERY INTRODUCTION A NEXT STEP
+Set follow-up dates and review upcoming conversations from your Today screen. Keep meeting details and follow-up context together.
 
-Remember what matters. Add editable text notes or review an on-device voice transcription before saving. Use TapLead at conferences, client meetings, trade shows and everyday business introductions.
-
-Your details stay in your control. Select your public contact fields, keep private notes on your iPhone and choose whether your published profile records anonymous activity. Anonymous views never identify visitors.
+DESIGNED FOR YOUR IPHONE
+Explore the app with clearly labelled sample connections. Your private notes and local card edits stay under your control.
 
 Tap. Connect. Convert.
 
-Do not add AI, Apple Wallet, Teams, premium persona, contact-save analytics or unlimited-lead claims until those capabilities and entitlements are verified. Add accurate subscription prices, duration, auto-renewal explanation and policy links when purchases are enabled.
+## Keywords
 
-## Keywords: research candidates
+business card,networking,contacts,leads,follow up,notes,profile,CRM,connections,organise
 
-`business card,contact,sharing,networking,lead,capture,follow up,manager,QR,NFC,profile,CRM`
+Relevance-based selection; no keyword search-volume or ranking evidence is claimed.
 
-Validate keyword byte limits, duplicates with title/subtitle, relevance, localization and competitor search intent in final ASO work. No search-volume or ranking evidence has been established. This is a semantic candidate set, not a data-backed final selection. Promotional text does not improve search ranking according to Apple.
+## Review notes
 
-## Screenshot narrative
+The app can be explored without signing in. Choose the demo option during onboarding to view clearly labelled sample cards and connections. Demo content is not uploaded to an account. NFC and live profile publication require a configured service and supported device. Purchase actions remain disabled until the production subscription service is configured and verified.
 
-| Order | Headline | Genuine screen/state | Release condition |
-| --- | --- | --- | --- |
-| 1 | Digital Business Card That Works Harder | Profile + actual published QR | Verified published link |
-| 2 | Tap. Connect. Save Contact. | Recipient profile/contact download | Real device/browser flow |
-| 3 | Turn Introductions Into Leads | Lead form and native inbox | Consented capture and sync |
-| 4 | Remember Every Conversation | Reviewed voice transcription | Speech device test |
-| 5 | Follow Up Before They Forget You | Follow-up date and timeline | Notification tests |
-| 6 | Know What’s Working | Actual events in demo fixture | Explicit demo label, no invented live metrics |
-| 7 | One Identity. Different Situations. | Cloud Pro personas | Pro implementation/verification |
-| 8 | Your Card. Right in Apple Wallet. | Actual signed pass | Omit until fully verified |
+## Assets and subscriptions
 
-Keep headlines short, readable at thumbnail size and benefit-led. Use genuine simulator screenshots, clearly labelled demo data and believable professional environments for any later photography. No testimonials are invented. No completed App Store screenshots are included: Windows cannot capture the real iOS app.
+Three genuine simulator screenshot compositions uploaded in each iPhone size: 1242 × 2688 and 1320 × 2868. Order: card, connections, Today. See [asset manifest](ASSET_MANIFEST.md) for capture provenance and artwork prompts.
 
-Use `TapLeadUITests.testScreenshotStates` on a Mac to capture raw attachments. Build compositions from those pixels, never substitute a web mockup for an iOS screenshot. Current Apple specifications accept multiple display classes; consult [screenshot specifications](https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications) for the exact active requirements. This project is iPhone-only; do not upload stretched iPad screens.
+TapLead Pro monthly and annual products share level 1 in group 22439298. Saved draft UK base prices: £4.99/month and £39.99/year with Apple regional equivalents, no introductory trial. Individual App Store purchase options; family sharing off. Availability: 175 current territories, future auto-add disabled. Genuine current-configuration Pro screenshot uploaded to each review draft, explicitly showing purchases unavailable.
+
+## Privacy draft and outstanding forms
+
+Ten saved data types: name, email address, phone number, physical address, other contact information, contacts, other user content, user ID, purchase history, product interaction. Each declared for app functionality, linked to identity, not used for tracking. Reconcile with the deployed service and its processors before publication. Raw speech audio and selected photos remain on-device in the current implementation.
+
+Public privacy policy URL and operator content-rights declaration remain missing. Accessibility support claims await device validation. Server notification URLs await the deployed service. Optional routing, App Clip, iMessage, events and unsupported features are omitted.
+
+Distribution signing is blocked at Apple's App Group endpoint; no eligible build is attached. See [release status](../docs/RELEASE.md).
