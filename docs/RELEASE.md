@@ -40,7 +40,7 @@ The NFC and speech implementations use documented Apple APIs with capability che
 | Advanced QR | Printable exports, QR-on-image compositions and configurable branded QR assets are incomplete. Native QR image/link sharing exists. |
 | Teams | Future organization/member/role architecture documented; no Teams admin/product implementation. |
 | Localisation | Human-reviewed translations, plural/interpolation extraction, translated public pages and locale/accessibility UI tests. |
-| App Store | Screenshots and two Pro promotional images uploaded; metadata/pricing saved. Complete public privacy policy, content-rights declaration, production reconciliation of saved privacy drafts, enabled-paywall screenshots and TestFlight testing. |
+| App Store | Screenshots and two Pro promotional images uploaded; metadata/pricing saved. GitHub privacy/terms URLs configured. Complete content-rights declaration, production reconciliation of policies/privacy drafts, enabled-paywall screenshots and TestFlight testing. |
 
 ## Minimum acceptance walkthrough
 

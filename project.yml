@@ -31,8 +31,8 @@ targets:
         CFBundleDisplayName: TapLead
         UILaunchScreen: {}
         TapLeadAPIURL: ''
-        TapLeadPrivacyURL: ''
-        TapLeadTermsURL: ''
+        TapLeadPrivacyURL: 'https://github.com/lanray07/TapLead/blob/main/docs/PRIVACY.md'
+        TapLeadTermsURL: 'https://github.com/lanray07/TapLead/blob/main/docs/TERMS.md'
         NSSpeechRecognitionUsageDescription: Transcribe the voice notes you choose to record.
         NSMicrophoneUsageDescription: Record a voice note after a conversation.
         NFCReaderUsageDescription: Write your published TapLead link to an NFC card.
