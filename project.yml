@@ -70,10 +70,17 @@ targets:
     sources: [iOS/UITests]
     dependencies:
       - target: TapLead
+  TapLeadNativeTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [iOS/NativeTests]
+    dependencies:
+      - target: TapLead
+      - package: TapLeadCore
 schemes:
   TapLead:
     build:
       targets:
         TapLead: all
     test:
-      targets: [TapLeadUITests]
+      targets: [TapLeadNativeTests, TapLeadUITests]

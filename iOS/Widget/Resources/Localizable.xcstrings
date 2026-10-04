@@ -1366,6 +1366,71 @@
         }
       }
     },
+    "Add QR to a picture": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add QR to a picture"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add QR to a picture"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add QR to a picture"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add QR to a picture"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add QR to a picture"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add QR to a picture"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add QR to a picture"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add QR to a picture"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add QR to a picture"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add QR to a picture"
+          }
+        }
+      }
+    },
     "Add a booking link to your card to share it": {
       "extractionState": "manual",
       "localizations": {
@@ -3316,6 +3381,201 @@
         }
       }
     },
+    "Branded QR & printable exports": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Branded QR & printable exports"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Branded QR & printable exports"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Branded QR & printable exports"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Branded QR & printable exports"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Branded QR & printable exports"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Branded QR & printable exports"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Branded QR & printable exports"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Branded QR & printable exports"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Branded QR & printable exports"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Branded QR & printable exports"
+          }
+        }
+      }
+    },
+    "Branded QR preview": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Branded QR preview"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Branded QR preview"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Branded QR preview"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Branded QR preview"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Branded QR preview"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Branded QR preview"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Branded QR preview"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Branded QR preview"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Branded QR preview"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Branded QR preview"
+          }
+        }
+      }
+    },
+    "CTA clicks": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "CTA clicks"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "CTA clicks"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "CTA clicks"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "CTA clicks"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "CTA clicks"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "CTA clicks"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "CTA clicks"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "CTA clicks"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "CTA clicks"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "CTA clicks"
+          }
+        }
+      }
+    },
     "Cancel": {
       "extractionState": "manual",
       "localizations": {
@@ -3832,6 +4092,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Choose a future follow-up date."
+          }
+        }
+      }
+    },
+    "Choose a readable image smaller than 20 MB.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose a readable image smaller than 20 MB."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose a readable image smaller than 20 MB."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose a readable image smaller than 20 MB."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose a readable image smaller than 20 MB."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose a readable image smaller than 20 MB."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose a readable image smaller than 20 MB."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose a readable image smaller than 20 MB."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose a readable image smaller than 20 MB."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose a readable image smaller than 20 MB."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose a readable image smaller than 20 MB."
           }
         }
       }
@@ -8711,6 +9036,71 @@
         }
       }
     },
+    "Lead conversion": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Lead conversion"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lead conversion"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Lead conversion"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Lead conversion"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Lead conversion"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Lead conversion"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Lead conversion"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Lead conversion"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Lead conversion"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Lead conversion"
+          }
+        }
+      }
+    },
     "Lead submissions": {
       "extractionState": "manual",
       "localizations": {
@@ -8772,6 +9162,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Lead submissions"
+          }
+        }
+      }
+    },
+    "Lead submissions divided by measured profile requests. Requests are not unique people; repeated submissions can exceed 100%.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Lead submissions divided by measured profile requests. Requests are not unique people; repeated submissions can exceed 100%."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lead submissions divided by measured profile requests. Requests are not unique people; repeated submissions can exceed 100%."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Lead submissions divided by measured profile requests. Requests are not unique people; repeated submissions can exceed 100%."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Lead submissions divided by measured profile requests. Requests are not unique people; repeated submissions can exceed 100%."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Lead submissions divided by measured profile requests. Requests are not unique people; repeated submissions can exceed 100%."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Lead submissions divided by measured profile requests. Requests are not unique people; repeated submissions can exceed 100%."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Lead submissions divided by measured profile requests. Requests are not unique people; repeated submissions can exceed 100%."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Lead submissions divided by measured profile requests. Requests are not unique people; repeated submissions can exceed 100%."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Lead submissions divided by measured profile requests. Requests are not unique people; repeated submissions can exceed 100%."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Lead submissions divided by measured profile requests. Requests are not unique people; repeated submissions can exceed 100%."
           }
         }
       }
@@ -12676,6 +13131,136 @@
         }
       }
     },
+    "QR exports": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "QR exports"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "QR exports"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "QR exports"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "QR exports"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "QR exports"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "QR exports"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "QR exports"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "QR exports"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "QR exports"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "QR exports"
+          }
+        }
+      }
+    },
+    "QR requests": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "QR requests"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "QR requests"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "QR requests"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "QR requests"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "QR requests"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "QR requests"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "QR requests"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "QR requests"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "QR requests"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "QR requests"
+          }
+        }
+      }
+    },
     "REVIEW TRANSCRIPTION": {
       "extractionState": "manual",
       "localizations": {
@@ -14041,6 +14626,71 @@
         }
       }
     },
+    "Scan the exported QR on another phone before printing. The profile needs internet; your saved QR image can be shown offline.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Scan the exported QR on another phone before printing. The profile needs internet; your saved QR image can be shown offline."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scan the exported QR on another phone before printing. The profile needs internet; your saved QR image can be shown offline."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Scan the exported QR on another phone before printing. The profile needs internet; your saved QR image can be shown offline."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Scan the exported QR on another phone before printing. The profile needs internet; your saved QR image can be shown offline."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Scan the exported QR on another phone before printing. The profile needs internet; your saved QR image can be shown offline."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Scan the exported QR on another phone before printing. The profile needs internet; your saved QR image can be shown offline."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Scan the exported QR on another phone before printing. The profile needs internet; your saved QR image can be shown offline."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Scan the exported QR on another phone before printing. The profile needs internet; your saved QR image can be shown offline."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Scan the exported QR on another phone before printing. The profile needs internet; your saved QR image can be shown offline."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Scan the exported QR on another phone before printing. The profile needs internet; your saved QR image can be shown offline."
+          }
+        }
+      }
+    },
     "Scan this QR code to open the selected card": {
       "extractionState": "manual",
       "localizations": {
@@ -15016,6 +15666,71 @@
         }
       }
     },
+    "Share or save branded QR": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share or save branded QR"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Share or save branded QR"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share or save branded QR"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share or save branded QR"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share or save branded QR"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share or save branded QR"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share or save branded QR"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share or save branded QR"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share or save branded QR"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share or save branded QR"
+          }
+        }
+      }
+    },
     "Share portfolio": {
       "extractionState": "manual",
       "localizations": {
@@ -15077,6 +15792,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Share portfolio"
+          }
+        }
+      }
+    },
+    "Share printable PDF": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share printable PDF"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Share printable PDF"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share printable PDF"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share printable PDF"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share printable PDF"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share printable PDF"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share printable PDF"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share printable PDF"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share printable PDF"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share printable PDF"
           }
         }
       }
@@ -17356,6 +18136,71 @@
         }
       }
     },
+    "The QR could not be created. Please try again.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "The QR could not be created. Please try again."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The QR could not be created. Please try again."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "The QR could not be created. Please try again."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "The QR could not be created. Please try again."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "The QR could not be created. Please try again."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "The QR could not be created. Please try again."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "The QR could not be created. Please try again."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "The QR could not be created. Please try again."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "The QR could not be created. Please try again."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "The QR could not be created. Please try again."
+          }
+        }
+      }
+    },
     "The microphone is unavailable.": {
       "extractionState": "manual",
       "localizations": {
@@ -18977,6 +19822,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Use a booking or portfolio link for your next conversation."
+          }
+        }
+      }
+    },
+    "Use card colours": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use card colours"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Use card colours"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use card colours"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use card colours"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use card colours"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use card colours"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use card colours"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use card colours"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use card colours"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use card colours"
           }
         }
       }
