@@ -2,6 +2,26 @@ import XCTest
 @testable import TapLeadCore
 
 final class CoreTests: XCTestCase {
+    func testLegacyCardsDecodeWithoutImagePlacementFields() throws {
+        var legacy = Card(); legacy.logoData = Data([1, 2, 3])
+        let decoded = try JSONDecoder().decode(Card.self, from: JSONEncoder().encode(legacy))
+        XCTAssertEqual(decoded.imageKind, .logo)
+        XCTAssertEqual(decoded.imageCorner, .topRight)
+        legacy.photoData = Data([4, 5])
+        let withPhoto = try JSONDecoder().decode(Card.self, from: JSONEncoder().encode(legacy))
+        XCTAssertEqual(withPhoto.imageKind, .photo)
+    }
+    func testSingleImageChoiceAndCornerSurvivePersistence() throws {
+        var card = Card(); card.photoData = Data([1, 2]); card.logoData = Data([3, 4])
+        card.imageKind = .logo; card.imageCorner = .bottomRight
+        var snapshot = AppSnapshot(); snapshot.cards = [card]
+        let restored = try JSONDecoder().decode(AppSnapshot.self, from: JSONEncoder().encode(snapshot)).cards[0]
+        XCTAssertEqual(restored.imageKind, .logo)
+        XCTAssertEqual(restored.imageCorner, .bottomRight)
+        XCTAssertEqual(restored.logoData, card.logoData)
+        var hidden = restored; hidden.imageKind = .none
+        XCTAssertEqual(try JSONDecoder().decode(Card.self, from: JSONEncoder().encode(hidden)).imageKind, .none)
+    }
     func testVCardExcludesPrivateFieldsAndEscapesInjection() {
         var card = Card(); card.name = "Alex; Smith\r\nEMAIL:injected@example.com"; card.email = "private@example.com"; card.publicFields = []
         let result = VCard.generate(card)

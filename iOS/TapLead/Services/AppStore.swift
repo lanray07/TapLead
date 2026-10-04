@@ -75,7 +75,8 @@ import TapLeadCore
         guard authenticated, !demo else { throw ServiceError.message(String(localized: "Sign in to publish your card.")) }
         var live = card; live.published = true; live.photoData=nil; live.logoData=nil
         let response: Card = try await api.send("api/cards/\(card.id.uuidString.lowercased())", method:"PUT", value:live)
-        var merged=response; merged.photoData=card.photoData; merged.logoData=card.logoData; saveCard(merged)
+        var merged=response; merged.photoData=card.photoData; merged.logoData=card.logoData
+        merged.cornerImageKind=card.cornerImageKind; merged.cornerImagePosition=card.cornerImagePosition; saveCard(merged)
     }
     func unpublish(_ card: Card) async throws {
         var privateCard=card; privateCard.published=false; privateCard.photoData=nil;privateCard.logoData=nil

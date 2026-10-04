@@ -1,6 +1,7 @@
 import SwiftUI
 import UIKit
 import PhotosUI
+import UniformTypeIdentifiers
 import TapLeadCore
 
 struct CardSelection: Identifiable { var card: Card; var id: UUID {card.id} }
@@ -38,25 +39,110 @@ struct CardEditor: View {
     @Environment(AppStore.self) private var store
     @Environment(\.dismiss) private var dismiss
     @State var card: Card
-    @State private var photo: PhotosPickerItem?
-    @State private var logo: PhotosPickerItem?
+    @State private var imageLoading = false
     @State private var socialService="LinkedIn"
     @State private var socialURL=""
     var body: some View {
         NavigationStack {
             Form {
-                Section { CardPreview(card:card).listRowInsets(EdgeInsets()); PhotosPicker(selection:$photo,matching:.images){Label("Choose profile photo",systemImage:"person.crop.circle")}; PhotosPicker(selection:$logo,matching:.images){Label("Choose logo",systemImage:"building.2.crop.circle")} }
+                Section { CardPreview(card:card).listRowInsets(EdgeInsets()) }
+                CardImageEditor(card:$card,loading:$imageLoading)
                 Section("Identity") {TextField("Card persona",text:$card.persona);TextField("Full name",text:$card.name);TextField("Preferred name",text:$card.preferredName);TextField("Job title",text:$card.title);TextField("Company",text:$card.company);TextField("Professional headline",text:$card.headline);TextField("Short biography",text:$card.bio,axis:.vertical).lineLimit(3...6)}
                 Section("Contact details") {TextField("Email",text:$card.email).keyboardType(.emailAddress).textInputAutocapitalization(.never);TextField("Phone",text:$card.phone).keyboardType(.phonePad);TextField("Location",text:$card.location);urlField("Website",value:$card.website);urlField("Portfolio URL",value:$card.portfolio);urlField("Booking URL",value:$card.booking)}
                 Section("Social links") { ForEach(card.socials) {link in HStack{Text(verbatim:link.service);Spacer();Text(verbatim:link.url).lineLimit(1).foregroundStyle(.secondary)} }.onDelete{card.socials.remove(atOffsets:$0)}.onMove{card.socials.move(fromOffsets:$0,toOffset:$1)};Picker("Service",selection:$socialService){ForEach(["LinkedIn","Instagram","X","TikTok","YouTube","GitHub","Facebook","Threads"],id:\.self){Text(verbatim:$0)}};urlField("Social URL",value:$socialURL);Button("Add social link"){card.socials.append(SocialLink(service:socialService,url:socialURL));socialURL=""}.disabled(Validation.webURL(socialURL)==nil) }
                 Section("Appearance") { Picker("Theme",selection:$card.theme){ForEach(CardTheme.allCases,id:\.self){Text(LocalizedStringKey($0.rawValue)).tag($0)}};TextField("Accent colour (hex)",text:$card.accent).textInputAutocapitalization(.characters).autocorrectionDisabled() }
                 Section("Public details") { Text("Your name, company, headline and biography are public when published. Choose which contact details to include.").font(.caption);ForEach(["email","phone","website","location","portfolio","booking","socials"],id:\.self){key in Toggle(LocalizedStringKey(key),isOn:Binding(get:{card.publicFields.contains(key)},set:{enabled in if enabled {card.publicFields.append(key)}else{card.publicFields.removeAll{$0==key}}}))};Toggle("Measure anonymous profile activity",isOn:$card.analyticsEnabled) }
                 Section("Section order") {ForEach(card.sectionOrder,id:\.self){Text(LocalizedStringKey($0))}.onMove{card.sectionOrder.move(fromOffsets:$0,toOffset:$1)};Text("Use Edit to reorder sections and social links.").font(.caption).foregroundStyle(.secondary)}
-            }.navigationTitle("Edit card").toolbar {ToolbarItem(placement:.cancellationAction){Button("Cancel"){dismiss()}};ToolbarItem(placement:.primaryAction){Button("Save"){store.saveCard(card);dismiss()}.disabled(!valid)};ToolbarItem(placement:.bottomBar){EditButton()}}
-            .onChange(of:photo){_,item in Task{if let data=try? await item?.loadTransferable(type:Data.self),let image=UIImage(data:data){card.photoData=image.preparingThumbnail(of:CGSize(width:512,height:512))?.jpegData(compressionQuality:0.8)}}}
-            .onChange(of:logo){_,item in Task{if let data=try? await item?.loadTransferable(type:Data.self),let image=UIImage(data:data){card.logoData=image.preparingThumbnail(of:CGSize(width:256,height:256))?.pngData()}}}
+            }.navigationTitle("Edit card").toolbar {ToolbarItem(placement:.cancellationAction){Button("Cancel"){dismiss()}};ToolbarItem(placement:.primaryAction){Button("Save"){store.saveCard(card);dismiss()}.disabled(!valid || imageLoading)};ToolbarItem(placement:.bottomBar){EditButton()}}
         }
     }
     var valid: Bool { !card.name.trimmingCharacters(in:.whitespacesAndNewlines).isEmpty && (card.email.isEmpty || Validation.email(card.email)) && [card.website,card.portfolio,card.booking].allSatisfy{$0.isEmpty || Validation.webURL($0) != nil} && card.accent.range(of:"^[0-9A-Fa-f]{6}$",options:.regularExpression) != nil }
     func urlField(_ title: LocalizedStringKey,value:Binding<String>) -> some View { TextField(title,text:value).keyboardType(.URL).textInputAutocapitalization(.never).autocorrectionDisabled() }
+}
+
+struct CardImageEditor: View {
+    @Binding var card: Card
+    @State private var selection: PhotosPickerItem?
+    @State private var importingFile = false
+    @Binding var loading: Bool
+    @State private var error: String?
+    private var hasImage: Bool { card.imageKind == .logo ? card.logoData != nil : card.photoData != nil }
+
+    var body: some View {
+        Section("Card image") {
+            Picker("Image type",selection:$card.imageKind) {
+                ForEach(CardImageKind.allCases,id:\.self) { Text(LocalizedStringKey($0.rawValue)).tag($0) }
+            }.pickerStyle(.segmented)
+            if card.imageKind != .none {
+                PhotosPicker(selection:$selection,matching:.images) {
+                    Label(card.imageKind == .logo ? "Choose logo" : "Choose photo",systemImage:card.imageKind == .logo ? "building.2.crop.circle" : "photo")
+                }.disabled(loading)
+                Button { importingFile = true } label: { Label("Import image from Files",systemImage:"folder") }.disabled(loading)
+                Picker("Image corner",selection:$card.imageCorner) {
+                    ForEach(CardImageCorner.allCases,id:\.self) { Text(LocalizedStringKey($0.rawValue)).tag($0) }
+                }
+                if loading { ProgressView("Loading image…") }
+                if hasImage {
+                    Text(card.imageKind == .logo ? "Logo added" : "Photo added").font(.caption).foregroundStyle(.secondary)
+                    Button("Remove image",role:.destructive) {
+                        selection=nil
+                        if card.imageKind == .logo { card.logoData=nil } else { card.photoData=nil }
+                        error=nil
+                    }.disabled(loading)
+                }
+            }
+            if let error { Text(verbatim:error).font(.caption).foregroundStyle(.red) }
+            Text("Show one logo or photo in your chosen corner. Images are saved on this iPhone.").font(.caption).foregroundStyle(.secondary)
+        }
+        .onChange(of:card.imageKind) { _,_ in selection=nil;error=nil }
+        .task(id:selection) { await loadPhoto() }
+        .fileImporter(isPresented:$importingFile,allowedContentTypes:[.image]) { result in
+            do {
+                let url=try result.get()
+                let access=url.startAccessingSecurityScopedResource()
+                defer { if access { url.stopAccessingSecurityScopedResource() } }
+                let size=try url.resourceValues(forKeys:[.fileSizeKey]).fileSize ?? 0
+                guard size <= 20 * 1024 * 1024 else { throw ImageImportError.tooLarge }
+                try saveImage(Data(contentsOf:url,options:.mappedIfSafe),kind:card.imageKind)
+            } catch { self.error=error.localizedDescription }
+        }
+    }
+
+    @MainActor private func loadPhoto() async {
+        guard let item=selection else { loading=false;return }
+        let kind=card.imageKind
+        loading=true;error=nil
+        defer { if selection == item { loading=false } }
+        do {
+            guard let data=try await item.loadTransferable(type:Data.self) else { throw ImageImportError.invalid }
+            guard !Task.isCancelled,selection == item,card.imageKind == kind else { return }
+            try saveImage(data,kind:kind)
+        } catch {
+            guard !Task.isCancelled,selection == item else { return }
+            self.error=error.localizedDescription
+        }
+    }
+
+    private func saveImage(_ data:Data,kind:CardImageKind) throws {
+        guard data.count <= 20 * 1024 * 1024 else { throw ImageImportError.tooLarge }
+        guard let image=UIImage(data:data),let thumbnail=image.preparingThumbnail(of:CGSize(width:512,height:512)) else { throw ImageImportError.invalid }
+        if kind == .logo {
+            guard let encoded=thumbnail.pngData() else { throw ImageImportError.invalid }
+            card.logoData=encoded
+        } else if kind == .photo {
+            guard let encoded=thumbnail.jpegData(compressionQuality:0.85) else { throw ImageImportError.invalid }
+            card.photoData=encoded
+        }
+        error=nil
+    }
+}
+
+private enum ImageImportError: LocalizedError {
+    case invalid,tooLarge
+    var errorDescription:String? {
+        switch self {
+        case .invalid: String(localized:"This image could not be opened. Choose another image.")
+        case .tooLarge: String(localized:"Choose an image smaller than 20 MB.")
+        }
+    }
 }

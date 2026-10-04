@@ -6,6 +6,14 @@ public enum LeadStatus: String, Codable, CaseIterable, Sendable {
 public enum CardTheme: String, Codable, CaseIterable, Sendable {
     case minimal = "Minimal", executive = "Executive", creator = "Creator", bold = "Bold", dark = "Dark", elegant = "Elegant", sales = "Sales", consultant = "Consultant"
 }
+public enum CardImageKind: String, Codable, CaseIterable, Sendable {
+    case none = "None", photo = "Photo", logo = "Logo"
+}
+public enum CardImageCorner: String, Codable, CaseIterable, Sendable {
+    case topLeft = "Top left", topRight = "Top right", bottomLeft = "Bottom left", bottomRight = "Bottom right"
+    public var isTop: Bool { self == .topLeft || self == .topRight }
+    public var isLeading: Bool { self == .topLeft || self == .bottomLeft }
+}
 public struct SocialLink: Codable, Identifiable, Hashable, Sendable {
     public var id: UUID = UUID()
     public var service: String
@@ -36,6 +44,17 @@ public struct Card: Codable, Identifiable, Equatable, Sendable {
     public var analyticsEnabled = false
     public var photoData: Data?
     public var logoData: Data?
+    // Optional storage preserves decoding of cards created before image placement existed.
+    public var cornerImageKind: CardImageKind?
+    public var cornerImagePosition: CardImageCorner?
+    public var imageKind: CardImageKind {
+        get { cornerImageKind ?? (photoData == nil && logoData != nil ? .logo : .photo) }
+        set { cornerImageKind = newValue }
+    }
+    public var imageCorner: CardImageCorner {
+        get { cornerImagePosition ?? .topRight }
+        set { cornerImagePosition = newValue }
+    }
     public init() {}
     public func profileURL(base: URL, source: String = "direct") -> URL {
         var parts = URLComponents(url: base.appendingPathComponent("p/\(id.uuidString.lowercased())"), resolvingAgainstBaseURL: false)!

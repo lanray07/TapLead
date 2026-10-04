@@ -17,7 +17,7 @@ for file in (ROOT/'iOS').rglob('*.swift'):
     for value in re.findall(pattern, file.read_text(encoding='utf-8')):
         if '\\(' not in value:
             keys.add(value.replace('\\n','\n').replace('\\"','"'))
-keys.update(['New','Follow Up','Active','Won','Archived','Minimal','Executive','Creator','Bold','Dark','Elegant','Sales','Consultant','About','Contact','Links','email','phone','website','location','portfolio','booking','socials','met','received','voice','status','follow_up_scheduled','follow_up_completed','follow_up_drafted','Friendly','Professional','Concise','Casual'])
+keys.update(['New','Follow Up','Active','Won','Archived','Minimal','Executive','Creator','Bold','Dark','Elegant','Sales','Consultant','About','Contact','Links','email','phone','website','location','portfolio','booking','socials','met','received','voice','status','follow_up_scheduled','follow_up_completed','follow_up_drafted','Friendly','Professional','Concise','Casual','None','Photo','Logo','Top left','Top right','Bottom left','Bottom right','Choose photo','Photo added','Logo added','Loading image…'])
 for key in keys:
     entry = catalog['strings'].setdefault(key, {'extractionState':'manual','localizations':{}})
     entry['localizations'].setdefault('en', {'stringUnit':{'state':'translated','value':key}})

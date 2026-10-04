@@ -43,6 +43,11 @@ jobs:
             CODE_SIGNING_ALLOWED=NO ONLY_ACTIVE_ARCH=YES ARCHS="$(uname -m)" build 2>&1 | tee artifacts/build.log
       - name: Select available iPhone simulator
         run: python3 scripts/select-simulator.py >> "$GITHUB_ENV"
+      - name: Seed image picker test fixture
+        run: |
+          xcrun simctl boot "$SIMULATOR_ID" || true
+          xcrun simctl bootstatus "$SIMULATOR_ID" -b
+          xcrun simctl addmedia "$SIMULATOR_ID" iOS/UITests/Fixtures/corner-logo.png
       - name: Run native UI tests and capture demo states
         run: |
           set -o pipefail

@@ -51,18 +51,41 @@ struct CardPreview: View {
     var style:ThemeStyle{ThemeStyle.forCard(card)}
     var body: some View {
         VStack(alignment:.leading,spacing:24) {
-            HStack { Label("TapLead",systemImage:"square.on.square").font(.headline); Spacer(); Text(verbatim:card.persona).font(.caption).padding(.horizontal,12).padding(.vertical,7).background(.white.opacity(0.13),in:Capsule()) }
+            HStack(alignment:.top,spacing:16) {
+                if card.imageCorner.isTop && card.imageCorner.isLeading { cornerImage }
+                VStack(alignment:.leading,spacing:8) {
+                    Label("TapLead",systemImage:"square.on.square").font(.headline)
+                    Text(verbatim:card.persona).font(.caption).padding(.horizontal,12).padding(.vertical,7).background(style.foreground.opacity(0.13),in:Capsule())
+                }.frame(maxWidth:.infinity,alignment:.leading)
+                if card.imageCorner.isTop && !card.imageCorner.isLeading { cornerImage }
+            }
             Spacer(minLength:12)
-            Avatar(name:card.name,data:card.photoData,size:68)
             VStack(alignment:.leading,spacing:6) {
                 Text(card.name.isEmpty ? String(localized:"Your name") : card.name).font(.system(.title,design:style.design,weight:.bold))
                 Text(card.title.isEmpty ? String(localized:"Your next introduction starts here.") : card.title).font(.subheadline).opacity(0.8)
                 if !card.company.isEmpty { Text(verbatim:card.company).font(.caption).opacity(0.65) }
             }
             Divider().overlay(.white.opacity(0.15))
-            HStack { Text(card.headline.isEmpty ? String(localized:"Tap. Connect. Convert.") : card.headline).font(.caption); Spacer(); Image(systemName:"arrow.up.right").accessibilityHidden(true) }
+            HStack(alignment:.bottom,spacing:16) {
+                if !card.imageCorner.isTop && card.imageCorner.isLeading { cornerImage }
+                Text(card.headline.isEmpty ? String(localized:"Tap. Connect. Convert.") : card.headline).font(.caption).frame(maxWidth:.infinity,alignment:.leading)
+                if !card.imageCorner.isTop && !card.imageCorner.isLeading { cornerImage }
+                else { Image(systemName:"arrow.up.right").accessibilityHidden(true) }
+            }
         }.padding(26).foregroundStyle(style.foreground).background(style.background,in:RoundedRectangle(cornerRadius:28))
         .accessibilityElement(children:.combine)
+    }
+    @ViewBuilder private var cornerImage: some View {
+        switch card.imageKind {
+        case .none: EmptyView()
+        case .photo: Avatar(name:card.name,data:card.photoData,size:68)
+        case .logo:
+            if let data=card.logoData,let image=UIImage(data:data) {
+                Image(uiImage:image).resizable().scaledToFit().padding(6)
+                    .frame(width:68,height:68).background(.white,in:RoundedRectangle(cornerRadius:14))
+                    .accessibilityHidden(true)
+            }
+        }
     }
 }
 struct MetricTile: View {
