@@ -16,8 +16,11 @@ final class QRExportTests:XCTestCase {
             let capture=XCTAttachment(image:image);capture.name=background == nil ? "Branded QR export":"Photo QR export";capture.lifetime = .keepAlways;add(capture)
             let request=VNDetectBarcodesRequest();request.symbologies=[.qr]
             #if targetEnvironment(simulator)
-            // GitHub's virtual Mac cannot compile the Vision GPU network.
-            // Keep the decoding assertion; use the simulator's supported CPU path.
+            // The current detector's model pipeline cannot detect these valid
+            // exports inside the hosted VM, even after selecting CPU processing.
+            // Exercise Apple's legacy CPU detector on simulators; devices retain
+            // the default revision. Keep the exact URL assertion on both paths.
+            request.revision=VNDetectBarcodesRequestRevision1
             request.usesCPUOnly=true
             #endif
             try VNImageRequestHandler(cgImage:try XCTUnwrap(image.cgImage),options:[:]).perform([request])
