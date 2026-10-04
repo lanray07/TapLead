@@ -3,10 +3,12 @@ import { z } from 'zod';
 import { Buffer } from 'node:buffer';
 import { cardSchema,leadSchema,captureSchema,publicCard,vcard,cardCSS } from './domain.js';
 import { normaliseImage } from './media.ts';
+import { appleAuth } from './apple.ts';
 
 const url=Deno.env.get('SUPABASE_URL')!;
 const service=Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
 const db=createClient(url,service,{auth:{autoRefreshToken:false,persistSession:false}});
+const apple=appleAuth({team:Deno.env.get('TAPLEAD_APPLE_TEAM_ID')||'',keyID:Deno.env.get('TAPLEAD_APPLE_KEY_ID')||'',pem:Buffer.from(Deno.env.get('TAPLEAD_APPLE_PRIVATE_KEY_B64')||'','base64').toString('utf8'),encryptionKey:Deno.env.get('TAPLEAD_TOKEN_ENCRYPTION_KEY')||''});
 const products=['com.taplead.pro.monthly','com.taplead.pro.yearly'];
 const origin='https://lanray07.github.io';
 const uuid=z.uuid().transform(s=>s.toLowerCase());
@@ -74,7 +76,31 @@ async function handle(req:Request):Promise<Response> {
   await rate(req,'global',120,60);
   if(path==='/health'&&method==='GET')return json({ok:true,service:'TapLead',purchasesEnabled:false});
   if(['/api/auth/register','/api/auth/login','/api/auth/recover'].includes(path))throw new HTTPError(410,'Email accounts are no longer available. Continue with Apple or use guest mode on your iPhone.');
-  if(path==='/api/auth/apple/challenge'||path==='/api/auth/apple')throw new HTTPError(503,'Apple sign-in is awaiting its production credential configuration.');
+  if(path==='/api/auth/apple/challenge'&&method==='POST') {
+    if(!apple)throw new HTTPError(503,'Apple sign-in is awaiting its production credential configuration.');
+    await rate(req,'apple-challenge',10,900);
+    const nonce=Buffer.from(crypto.getRandomValues(new Uint8Array(32))).toString('hex');
+    check(await db.from('taplead_apple_challenges').delete().lt('expires',new Date().toISOString()));
+    check(await db.from('taplead_apple_challenges').insert({hash:await hash(nonce),expires:new Date(Date.now()+300000).toISOString()}));return json({nonce});
+  }
+  if(path==='/api/auth/apple'&&method==='POST') {
+    if(!apple)throw new HTTPError(503,'Apple sign-in is awaiting its production credential configuration.');
+    await rate(req,'apple-login',10,900);
+    const c=z.object({identityToken:z.string().min(1).max(10000),nonce:z.string().regex(/^[a-f0-9]{64}$/),authorizationCode:z.string().min(1).max(4000)}).parse(await input(req));
+    // Consume atomically before exchange: retries require a fresh challenge, preventing concurrent replay.
+    if(!check(await db.rpc('taplead_consume_apple_challenge',{p_hash:await hash(c.nonce)})))throw new HTTPError(401,'Apple sign-in challenge expired. Try again.');
+    let exchanged;try{exchanged=await apple.exchange(c.identityToken,c.nonce,c.authorizationCode);}catch{throw new HTTPError(401,'Apple sign-in could not be verified. Try again.');}
+    const auth=createClient(url,service,{auth:{autoRefreshToken:false,persistSession:false}});
+    const result=await auth.auth.signInWithIdToken({provider:'apple',token:c.identityToken,nonce:c.nonce});
+    if(result.error||!result.data.user)throw new HTTPError(503,'Apple account service is unavailable. Try again later.');
+    try {
+      const owner=result.data.user.id;
+      const existing=check(await db.from('taplead_apple_credentials').select('subject').eq('owner',owner).maybeSingle());
+      if(existing&&existing.subject!==exchanged.subject)throw new HTTPError(401,'Apple account mismatch.');
+      check(await db.from('taplead_apple_credentials').upsert({owner,subject:exchanged.subject,sealed_refresh:exchanged.sealed},{onConflict:'owner'}));
+      return json(await issue(owner));
+    } finally {await auth.auth.signOut();}
+  }
   const profile=path.match(/^\/p\/([^/]+)(?:\/(.*))?$/);
   if(profile) {
     const id=uuid.parse(profile[1]),tail=profile[2]||'',row=await live(id);
@@ -135,7 +161,11 @@ async function handle(req:Request):Promise<Response> {
   if(method==='DELETE'&&path==='/api/account') {
     const user=await db.auth.admin.getUserById(owner);
     if(user.error||!user.data.user)throw new HTTPError(401,'Sign in again to continue.');
-    if(user.data.user.identities?.some(identity=>identity.provider==='apple'))throw new HTTPError(503,'Apple grant revocation must complete before deleting this account.');
+    if(user.data.user.identities?.some(identity=>identity.provider==='apple')) {
+      const credential=check(await db.from('taplead_apple_credentials').select('subject,sealed_refresh').eq('owner',owner).maybeSingle());
+      if(!apple||!credential)throw new HTTPError(503,'Apple grant revocation must complete before deleting this account.');
+      try{await apple.revoke(credential.subject,credential.sealed_refresh);}catch{throw new HTTPError(503,'Apple access could not be revoked. Your account has not been deleted; please retry.');}
+    }
     const result=await db.auth.admin.deleteUser(owner);if(result.error)throw new HTTPError(503,'Account deletion is temporarily unavailable. Please retry.');
     return new Response(null,{status:204,headers});
   }
