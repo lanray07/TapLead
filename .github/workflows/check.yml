@@ -1,0 +1,65 @@
+name: TapLead checks
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+concurrency:
+  group: checks-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: backend/package-lock.json
+      - run: npm ci
+      - run: npm test
+      - run: npm audit --omit=dev
+  swift:
+    runs-on: macos-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Report Xcode version
+        run: xcodebuild -version
+      - name: Test shared Swift code
+        run: swift test
+      - name: Install XcodeGen
+        run: brew install xcodegen
+      - name: Generate Xcode project
+        run: xcodegen generate
+      - name: Build app and widget
+        run: |
+          mkdir -p artifacts
+          set -o pipefail
+          xcodebuild -project TapLead.xcodeproj -scheme TapLead -sdk iphonesimulator \
+            -destination 'generic/platform=iOS Simulator' -derivedDataPath DerivedData \
+            CODE_SIGNING_ALLOWED=NO build 2>&1 | tee artifacts/build.log
+      - name: Select available iPhone simulator
+        run: python3 scripts/select-simulator.py >> "$GITHUB_ENV"
+      - name: Run native UI tests and capture demo states
+        run: |
+          set -o pipefail
+          xcodebuild -project TapLead.xcodeproj -scheme TapLead \
+            -destination "platform=iOS Simulator,id=$SIMULATOR_ID" -derivedDataPath DerivedData \
+            -resultBundlePath artifacts/UI.xcresult CODE_SIGNING_ALLOWED=NO \
+            test 2>&1 | tee artifacts/ui-tests.log
+      - name: Export screenshot attachments
+        if: always()
+        run: |
+          if [ -d artifacts/UI.xcresult ]; then
+            xcrun xcresulttool export attachments --path artifacts/UI.xcresult --output-path artifacts/screenshots || true
+          fi
+      - name: Upload build logs and simulator results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: TapLead-Xcode-results
+          path: artifacts/
+          retention-days: 14

@@ -1,0 +1,78 @@
+name: TapLead
+options:
+  bundleIdPrefix: com.taplead
+  deploymentTarget:
+    iOS: '17.0'
+packages:
+  TapLeadCore:
+    path: .
+settings:
+  base:
+    SWIFT_VERSION: '5.0'
+    MARKETING_VERSION: '1.0.0'
+    CURRENT_PROJECT_VERSION: 1
+    DEVELOPMENT_TEAM: ''
+targets:
+  TapLead:
+    type: application
+    platform: iOS
+    sources: [iOS/TapLead, iOS/Shared]
+    dependencies:
+      - package: TapLeadCore
+      - target: TapLeadWidget
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.taplead.app
+        TARGETED_DEVICE_FAMILY: '1'
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    info:
+      path: iOS/Info.plist
+      properties:
+        CFBundleDisplayName: TapLead
+        UILaunchScreen: {}
+        TapLeadAPIURL: ''
+        TapLeadPrivacyURL: ''
+        TapLeadTermsURL: ''
+        NSSpeechRecognitionUsageDescription: Transcribe the voice notes you choose to record.
+        NSMicrophoneUsageDescription: Record a voice note after a conversation.
+        NFCReaderUsageDescription: Write your published TapLead link to an NFC card.
+        CFBundleURLTypes:
+          - CFBundleURLSchemes: [taplead]
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+    entitlements:
+      path: iOS/TapLead.entitlements
+      properties:
+        com.apple.developer.applesignin: [Default]
+        com.apple.developer.nfc.readersession.formats: [NDEF]
+        com.apple.security.application-groups: [group.com.taplead.shared]
+  TapLeadWidget:
+    type: app-extension
+    platform: iOS
+    sources: [iOS/Widget, iOS/Shared]
+    info:
+      path: iOS/WidgetInfo.plist
+      properties:
+        CFBundleDisplayName: TapLead
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+    entitlements:
+      path: iOS/Widget.entitlements
+      properties:
+        com.apple.security.application-groups: [group.com.taplead.shared]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.taplead.app.widget
+        APPLICATION_EXTENSION_API_ONLY: YES
+  TapLeadUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: [iOS/UITests]
+    dependencies:
+      - target: TapLead
+schemes:
+  TapLead:
+    build:
+      targets:
+        TapLead: all
+    test:
+      targets: [TapLeadUITests]

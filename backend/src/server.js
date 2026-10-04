@@ -1,0 +1,12 @@
+import {createApp} from './app.js';
+import {openStore} from './store.js';
+import {appleAuthFromEnv} from './apple-auth.js';
+import {subscriptionVerifierFromEnv} from './subscriptions.js';
+const publicURL=process.env.PUBLIC_URL||'http://localhost:8787';
+if(process.env.NODE_ENV==='production'&&!publicURL.startsWith('https://'))throw new Error('Production PUBLIC_URL must use HTTPS.');
+if(process.env.NODE_ENV==='production'&&(!process.env.PRIVACY_URL||!process.env.TERMS_URL))throw new Error('Set real privacy and terms URLs before production.');
+const db=openStore(process.env.DATABASE_PATH||'data/taplead.sqlite');
+const app=createApp(db,{appleClientID:process.env.APPLE_CLIENT_ID,appleAuth:appleAuthFromEnv(),subscriptionVerifier:subscriptionVerifierFromEnv(),subscriptionsEnabled:process.env.SUBSCRIPTIONS_ENABLED==='true',privacyURL:process.env.PRIVACY_URL,aiURL:process.env.AI_GATEWAY_URL,aiToken:process.env.AI_GATEWAY_TOKEN});
+const server=app.listen(Number(process.env.PORT||8787),process.env.HOST||'127.0.0.1',()=>console.log(`TapLead service listening on ${publicURL}`));
+server.requestTimeout=15000;server.headersTimeout=10000;
+process.on('SIGTERM',()=>server.close(()=>{db.close();process.exit(0);}));
