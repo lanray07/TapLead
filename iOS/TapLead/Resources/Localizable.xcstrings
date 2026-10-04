@@ -5916,6 +5916,71 @@
         }
       }
     },
+    "Continue on this iPhone": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Continue on this iPhone"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Continue on this iPhone"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Continue on this iPhone"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Continue on this iPhone"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Continue on this iPhone"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Continue on this iPhone"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Continue on this iPhone"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Continue on this iPhone"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Continue on this iPhone"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Continue on this iPhone"
+          }
+        }
+      }
+    },
     "Could not securely save your session.": {
       "extractionState": "manual",
       "localizations": {
@@ -7996,6 +8061,71 @@
         }
       }
     },
+    "Follow up while youâ€™re still remembered": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Follow up while youâ€™re still remembered"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Follow up while youâ€™re still remembered"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Follow up while youâ€™re still remembered"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Follow up while youâ€™re still remembered"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Follow up while youâ€™re still remembered"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Follow up while youâ€™re still remembered"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Follow up while youâ€™re still remembered"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Follow up while youâ€™re still remembered"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Follow up while youâ€™re still remembered"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Follow up while youâ€™re still remembered"
+          }
+        }
+      }
+    },
     "Follow up while you’re still remembered": {
       "extractionState": "manual",
       "localizations": {
@@ -8902,6 +9032,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Good to connect"
+          }
+        }
+      }
+    },
+    "Guest cards and notes stay on this iPhone. Sign in with Apple when you’re ready to publish and sync.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Guest cards and notes stay on this iPhone. Sign in with Apple when you’re ready to publish and sync."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guest cards and notes stay on this iPhone. Sign in with Apple when you’re ready to publish and sync."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Guest cards and notes stay on this iPhone. Sign in with Apple when you’re ready to publish and sync."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Guest cards and notes stay on this iPhone. Sign in with Apple when you’re ready to publish and sync."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Guest cards and notes stay on this iPhone. Sign in with Apple when you’re ready to publish and sync."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Guest cards and notes stay on this iPhone. Sign in with Apple when you’re ready to publish and sync."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Guest cards and notes stay on this iPhone. Sign in with Apple when you’re ready to publish and sync."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Guest cards and notes stay on this iPhone. Sign in with Apple when you’re ready to publish and sync."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Guest cards and notes stay on this iPhone. Sign in with Apple when you’re ready to publish and sync."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Guest cards and notes stay on this iPhone. Sign in with Apple when you’re ready to publish and sync."
           }
         }
       }
@@ -19046,6 +19241,71 @@
         }
       }
     },
+    "Sign in with Apple to publish your card and sync your connections.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Sign in with Apple to publish your card and sync your connections."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sign in with Apple to publish your card and sync your connections."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Sign in with Apple to publish your card and sync your connections."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Sign in with Apple to publish your card and sync your connections."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Sign in with Apple to publish your card and sync your connections."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Sign in with Apple to publish your card and sync your connections."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Sign in with Apple to publish your card and sync your connections."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Sign in with Apple to publish your card and sync your connections."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Sign in with Apple to publish your card and sync your connections."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Sign in with Apple to publish your card and sync your connections."
+          }
+        }
+      }
+    },
     "Sign out": {
       "extractionState": "manual",
       "localizations": {
@@ -19562,6 +19822,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Standard"
+          }
+        }
+      }
+    },
+    "Start on this iPhone. Publish when youâ€™re ready.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Start on this iPhone. Publish when youâ€™re ready."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start on this iPhone. Publish when youâ€™re ready."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Start on this iPhone. Publish when youâ€™re ready."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Start on this iPhone. Publish when youâ€™re ready."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Start on this iPhone. Publish when youâ€™re ready."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Start on this iPhone. Publish when youâ€™re ready."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Start on this iPhone. Publish when youâ€™re ready."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Start on this iPhone. Publish when youâ€™re ready."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Start on this iPhone. Publish when youâ€™re ready."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Start on this iPhone. Publish when youâ€™re ready."
           }
         }
       }
@@ -22097,6 +22422,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Top right"
+          }
+        }
+      }
+    },
+    "Try again": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Try again"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Try again"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Try again"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Try again"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Try again"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Try again"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Try again"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Try again"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Try again"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Try again"
           }
         }
       }

@@ -17,9 +17,9 @@
     },
     {
       "section": 3,
-      "title": "Onboarding, Apple/email/guest entry",
+      "title": "Onboarding, Apple and guest entry (user-approved scope)",
       "status": "partial",
-      "evidence": "Guest and native screens exist. Registration handles verification-required responses; password recovery UI and account page are implemented. GitHub site and exact account redirect are saved in the live Supabase project; email confirmation is enabled. Production SMTP sender, end-to-end email acceptance and Apple authentication remain pending."
+      "evidence": "Email login removed by explicit user choice. Guest entry remains; native Apple-only account screen has errors/loading/retry. Live email routes return 410 and email provider is disabled. Apple credential, production sign-in and grant-revocation acceptance remain pending."
     },
     {
       "section": 4,
@@ -243,5 +243,8 @@
       "status": "partial",
       "evidence": "Free/Pro limits, native NFC/voice/advanced export gates and server theme/analytics enforcement are implemented. StoreKit verification still needs real receipts, renewals/revocations and live paid-feature acceptance. Teams organization/role/branding architecture is documented; initial enterprise implementation is not required."
     }
-  ]
+  ],
+  "scope_overrides": {
+    "authentication": "User explicitly chose native Apple sign-in plus guest mode on 4 October 2026; email login/SMTP removed from acceptance scope."
+  }
 }

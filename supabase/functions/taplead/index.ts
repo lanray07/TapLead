@@ -9,7 +9,6 @@ const service=Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
 const db=createClient(url,service,{auth:{autoRefreshToken:false,persistSession:false}});
 const products=['com.taplead.pro.monthly','com.taplead.pro.yearly'];
 const origin='https://lanray07.github.io';
-const credentials=z.object({email:z.email().max(254).transform(s=>s.toLowerCase()),password:z.string().min(12).max(256)});
 const uuid=z.uuid().transform(s=>s.toLowerCase());
 const sources=['qr','nfc','email','website','event','social','direct'];
 const headers={'Access-Control-Allow-Origin':origin,'Access-Control-Allow-Methods':'GET,POST,PUT,DELETE,OPTIONS','Access-Control-Allow-Headers':'Content-Type,Authorization','Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer'};
@@ -74,29 +73,7 @@ async function handle(req:Request):Promise<Response> {
   const method=req.method,source=sources.includes(requestURL.searchParams.get('source')||'')?requestURL.searchParams.get('source')!:'direct';
   await rate(req,'global',120,60);
   if(path==='/health'&&method==='GET')return json({ok:true,service:'TapLead',purchasesEnabled:false});
-  if(path==='/api/auth/register'&&method==='POST') {
-    await rate(req,'register',5,3600);const c=credentials.parse(await input(req));
-    const auth=createClient(url,service,{auth:{autoRefreshToken:false,persistSession:false}});
-    const result=await auth.auth.signUp({...c,options:{emailRedirectTo:origin+'/TapLead/account/'}});
-    if(result.error)throw new HTTPError(400,'Account registration could not be completed. Check your email or try again later.');
-    // Never issue an app session to an unverified email account.
-    return json({verificationRequired:true,message:'Check your email to verify your account, then sign in.'},202);
-  }
-  if(path==='/api/auth/login'&&method==='POST') {
-    await rate(req,'login',10,900);const c=credentials.parse(await input(req));
-    // A separate Auth client prevents a signed-in user changing the service client's role.
-    const auth=createClient(url,service,{auth:{autoRefreshToken:false,persistSession:false}});
-    const result=await auth.auth.signInWithPassword(c);
-    if(result.error||!result.data.user?.email_confirmed_at)throw new HTTPError(401,'Check your email verification and sign-in details.');
-    const response=await issue(result.data.user.id);
-    await auth.auth.signOut();return json(response);
-  }
-  if(path==='/api/auth/recover'&&method==='POST') {
-    await rate(req,'recover',3,3600);const c=z.object({email:z.email().max(254)}).parse(await input(req));
-    const result=await db.auth.resetPasswordForEmail(c.email,{redirectTo:origin+'/TapLead/account/'});
-    if(result.error)throw new HTTPError(503,'Password recovery is temporarily unavailable. Please try again later.');
-    return json({message:'If this account exists, a recovery email will arrive shortly.'});
-  }
+  if(['/api/auth/register','/api/auth/login','/api/auth/recover'].includes(path))throw new HTTPError(410,'Email accounts are no longer available. Continue with Apple or use guest mode on your iPhone.');
   if(path==='/api/auth/apple/challenge'||path==='/api/auth/apple')throw new HTTPError(503,'Apple sign-in is awaiting its production credential configuration.');
   const profile=path.match(/^\/p\/([^/]+)(?:\/(.*))?$/);
   if(profile) {

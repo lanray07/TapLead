@@ -6,7 +6,7 @@ import TapLeadCore
 struct OnboardingView: View {
     @Environment(AppStore.self) private var store
     @State private var page=0
-    @State private var emailAuth=false
+    @State private var accountAuth=false
     var body: some View {
         VStack(spacing:24) {
             HStack { Label("TapLead",systemImage:"square.on.square").font(.title3.bold()); Spacer(); Button("Explore demo") {store.startDemo()}.font(.subheadline) }.padding(.horizontal,24)
@@ -14,14 +14,14 @@ struct OnboardingView: View {
                 OnboardingPage(icon:"person.crop.rectangle",title:"Never lose a connection again",copy:"Create and share your professional identity instantly.").tag(0)
                 OnboardingPage(icon:"qrcode",title:"Tap or scan to connect",copy:"Share using QR, NFC or a simple link.").tag(1)
                 OnboardingPage(icon:"waveform",title:"Remember every conversation",copy:"Capture notes using text or your voice.").tag(2)
-                OnboardingPage(icon:"arrow.up.forward.circle",title:"Follow up while you’re still remembered",copy:"Turn new contacts into actionable opportunities.").tag(3)
+                OnboardingPage(icon:"arrow.up.forward.circle",title:"Follow up while youâ€™re still remembered",copy:"Turn new contacts into actionable opportunities.").tag(3)
             }.tabViewStyle(.page(indexDisplayMode:.always))
             VStack(spacing:14) {
                 PrimaryButton(title:"Create My TapLead") {store.beginLocal()}
-                Button("Sign in or create an account") {emailAuth=true}
-                Text("Start on this iPhone. Publish when you’re ready.").font(.caption).foregroundStyle(.secondary)
+                Button("Sign in or create an account") {accountAuth=true}
+                Text("Start on this iPhone. Publish when youâ€™re ready.").font(.caption).foregroundStyle(.secondary)
             }.padding(24)
-        }.padding(.top,16).background(Palette.canvas).sheet(isPresented:$emailAuth) {AuthView()}
+        }.padding(.top,16).background(Palette.canvas).sheet(isPresented:$accountAuth) {AuthView()}
     }
 }
 struct OnboardingPage: View {
@@ -31,60 +31,51 @@ struct OnboardingPage: View {
 struct AuthView: View {
     @Environment(AppStore.self) private var store
     @Environment(\.dismiss) private var dismiss
-    @State private var email=""
-    @State private var password=""
-    @State private var register=false
+    @Environment(\.colorScheme) private var colorScheme
     @State private var busy=false
     @State private var nonce=""
     @State private var accountNotice=""
     var body: some View {
         NavigationStack {
             Form {
-                Section { Text("Your connections, wherever you go.").font(.title2.bold()); Text("Sign in to publish your card and sync your connections.").foregroundStyle(.secondary) }
+                Section { Text("Your connections, wherever you go.").font(.title2.bold()); Text("Sign in with Apple to publish your card and sync your connections.").foregroundStyle(.secondary) }
                 Section {
-                    TextField("Email",text:$email).keyboardType(.emailAddress).textContentType(.emailAddress).textInputAutocapitalization(.never).autocorrectionDisabled()
-                    SecureField("Password (at least 12 characters)",text:$password).textContentType(register ? .newPassword : .password)
-                    Toggle("Create a new account",isOn:$register)
-                    Button(register ? String(localized:"Create account") : String(localized:"Sign in")) {Task {await emailSignIn()}}.disabled(busy || !Validation.email(email) || password.count<12)
-                    if !register {Button("Forgot password?"){Task{await recoverPassword()}}.disabled(busy || !Validation.email(email))}
-                    if !accountNotice.isEmpty {Text(verbatim:accountNotice).font(.subheadline).accessibilityAddTraits(.updatesFrequently)}
-                }
-                if store.api.base != nil {
-                    Section {
-                        SignInWithAppleButton(.signIn) { request in request.requestedScopes=[]; request.nonce=SHA256.hash(data:Data(nonce.utf8)).map {String(format:"%02x",$0)}.joined() } onCompletion: { result in
-                            Task {
-                                do {
-                                    let authorization=try result.get()
-                                    guard let credential=authorization.credential as? ASAuthorizationAppleIDCredential,let data=credential.identityToken,let token=String(data:data,encoding:.utf8),let codeData=credential.authorizationCode,let code=String(data:codeData,encoding:.utf8) else {throw ServiceError.message(String(localized:"Apple sign-in did not return a token."))}
-                                    let response: AuthResponse=try await store.api.send("api/auth/apple",method:"POST",value:["identityToken":token,"nonce":nonce,"authorizationCode":code])
-                                    try await store.signedIn(response);dismiss()
-                                } catch {store.error=error.localizedDescription}
+                    SignInWithAppleButton(.continue) { request in
+                        request.requestedScopes=[]
+                        request.nonce=SHA256.hash(data:Data(nonce.utf8)).map {String(format:"%02x",$0)}.joined()
+                        busy=true
+                    } onCompletion: { result in
+                        Task {
+                            defer {busy=false}
+                            do {
+                                let authorization=try result.get()
+                                guard let credential=authorization.credential as? ASAuthorizationAppleIDCredential,let data=credential.identityToken,let token=String(data:data,encoding:.utf8),let codeData=credential.authorizationCode,let code=String(data:codeData,encoding:.utf8) else {throw ServiceError.message(String(localized:"Apple sign-in did not return a token."))}
+                                let response: AuthResponse=try await store.api.send("api/auth/apple",method:"POST",value:["identityToken":token,"nonce":nonce,"authorizationCode":code])
+                                try await store.signedIn(response);dismiss()
+                            } catch {
+                                accountNotice=error.localizedDescription
+                                nonce=""
                             }
-                        }.frame(height:48).disabled(nonce.isEmpty || busy)
-                    }
+                        }
+                    }.signInWithAppleButtonStyle(colorScheme == .dark ? .white : .black).frame(height:48).disabled(nonce.isEmpty || busy)
+                    if busy {ProgressView()}
+                    if !accountNotice.isEmpty {Text(verbatim:accountNotice).font(.subheadline).accessibilityAddTraits(.updatesFrequently)}
+                    if nonce.isEmpty {Button("Try again"){Task{await loadChallenge()}}.disabled(busy)}
                 }
-                Section { Text("Your account keeps published cards and connections in sync. Verify your email before signing in.").font(.caption).foregroundStyle(.secondary) }
+                Section {
+                    Button("Continue on this iPhone") {store.beginLocal();dismiss()}
+                    Text("Guest cards and notes stay on this iPhone. Sign in with Apple when you’re ready to publish and sync.").font(.caption).foregroundStyle(.secondary)
+                }
             }.navigationTitle("Welcome to TapLead").toolbar {ToolbarItem(placement:.cancellationAction){Button("Close"){dismiss()}}}
-            .task { do { struct Challenge:Decodable{var nonce:String};let challenge:Challenge=try await store.api.request("api/auth/apple/challenge",method:"POST");nonce=challenge.nonce } catch { /* Email remains available; no silent Apple fallback. */ } }
+            .task {await loadChallenge()}
         }
     }
-    func emailSignIn() async {
+    func loadChallenge() async {
         busy=true;defer{busy=false}
         do {
-            if register {
-                let result:RegistrationResponse=try await store.api.send("api/auth/register",method:"POST",value:["email":email,"password":password])
-                if result.verificationRequired==true {accountNotice=String(localized:"Check your email to verify your account, then sign in.");register=false;return}
-                guard let token=result.token,let userID=result.userID else {throw ServiceError.message(String(localized:"Account registration could not be completed."))}
-                try await store.signedIn(AuthResponse(token:token,userID:userID))
-            } else {
-                let response:AuthResponse=try await store.api.send("api/auth/login",method:"POST",value:["email":email,"password":password]);try await store.signedIn(response)
-            }
-            dismiss()
-        } catch {store.error=error.localizedDescription}
-    }
-    func recoverPassword() async {
-        busy=true;defer{busy=false}
-        do {let _:AccountMessage=try await store.api.send("api/auth/recover",method:"POST",value:["email":email]);accountNotice=String(localized:"If this account exists, a recovery email will arrive shortly.")}
-        catch{store.error=error.localizedDescription}
+            struct Challenge:Decodable {var nonce:String}
+            let challenge:Challenge=try await store.api.request("api/auth/apple/challenge",method:"POST")
+            nonce=challenge.nonce;accountNotice=""
+        } catch {nonce="";accountNotice=error.localizedDescription}
     }
 }

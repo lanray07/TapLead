@@ -7,7 +7,7 @@ The user approved creating TapLead in **lanray07's Org** on the **£0/month** pl
 - Account email redirects: `https://lanray07.github.io/TapLead/account/`
 - Dashboard: `https://supabase.com/dashboard/project/qyflrgvolsiljpsghqku`
 
-The existing Node/SQLite server remains a local/reference implementation. The production API uses Supabase Edge, Postgres and managed email authentication. `scripts/prepare-edge.py` copies the canonical Zod validation, visibility filtering, CSS and vCard logic into its independently deployable bundle. CI rejects a stale copy. Deno/package versions and the dependency lockfile are committed.
+The existing Node/SQLite server remains a local/reference implementation. The production API uses Supabase Edge, Postgres and managed account storage. `scripts/prepare-edge.py` copies the canonical Zod validation, visibility filtering, CSS and vCard logic into its independently deployable bundle. CI rejects a stale copy. Deno/package versions and the dependency lockfile are committed.
 
 ## Security and data
 
@@ -34,8 +34,8 @@ Full [GitHub check run 37220371267](https://github.com/lanray07/TapLead/actions/
 
 ## Required configuration / acceptance still outstanding
 
-1. **Completed 4 October 2026:** signed in to TapLead under `lanray07's Org`, saved site URL `https://lanray07.github.io/TapLead/` and the single exact redirect `https://lanray07.github.io/TapLead/account/`. The dashboard confirmed both saves. [Saved configuration proof](assets/auth-redirects.jpg). Email authentication and mandatory email confirmation are enabled; anonymous sign-ins and manual identity linking are disabled. Custom SMTP and the Apple provider are still disabled.
-2. Configure a production SMTP sender with email confirmation enabled. Supabase's default sender only delivers to organisation team addresses and is unsuitable for public signups. [Official SMTP instructions](https://supabase.com/docs/guides/auth/auth-smtp). Verify signup, confirmation, recovery and revocation end to end.
+1. **User scope change, 4 October 2026:** use native Apple sign-in and local guest mode; email login is no longer a release requirement. Email UI/DTOs and public recovery form are removed; live Edge email endpoints return HTTP 410 and the dashboard email provider is disabled. The unsaved Gmail SMTP draft was cancelled. No SMTP sender or Gmail app password is needed. Guest mode remains local and does not create an anonymous Supabase account.
+2. Native Apple UI now shows loading, explicit challenge errors and retry instead of silently failing. The Apple provider and live Apple endpoints remain disabled until sign-in, encrypted refresh credentials and grant revocation are configured and verified. [Dashboard proof](assets/apple-only-auth.jpg).
 3. Configure a separate Sign in with Apple credential for code exchange and grant revocation. Existing App Store Connect upload secrets are not this credential. Apple endpoints currently fail closed.
 4. Configure real App Store signature-chain/receipt/notification verification, renewal, refund and grace handling. Purchases are explicitly disabled and no production Pro entitlement has been inserted. Sandbox evidence must be isolated from Production entitlements.
 5. Complete the master prompt's device, locale, privacy, screenshot and subscription acceptance checks, then build a new signed candidate. Build 1012 predates this deployment and still has no API URL.

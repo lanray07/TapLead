@@ -59,8 +59,6 @@ struct APIClient {
 }
 struct EmptyResponse: Decodable {}
 struct AuthResponse: Decodable { var token: String; var userID: String }
-struct RegistrationResponse:Decodable {var verificationRequired:Bool?;var message:String?;var token:String?;var userID:String?}
-struct AccountMessage:Decodable {var message:String}
 struct PlanResponse:Decodable {var pro:Bool;var cardLimit:Int;var leadLimit:Int;var purchasesEnabled:Bool?;var products:[String]?}
 struct AnalyticsResponse: Decodable {
     struct Event: Decodable, Identifiable {

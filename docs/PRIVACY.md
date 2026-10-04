@@ -8,7 +8,7 @@ TapLead helps you create a digital business card, organise professional connecti
 
 - **Local cards and connections:** The app stores the profile details, connection details, tags, notes, statuses and follow-up dates you enter on your iPhone. Demo connections are labelled sample data and are not uploaded to an account.
 
-- **Account and synchronisation, when configured:** Signing in uses your email and account identifier, or the identifier supplied by Sign in with Apple. The account service stores password hashes rather than plaintext passwords, sessions, your card details and synced connections/notes. This data provides authentication, publication, synchronisation and account management.
+- **Account and synchronisation, when configured:** Account entry uses Sign in with Apple or local guest mode. Email/password login is disabled. When Apple sign-in is configured, the account service stores the Apple account identifier, protected revocation credentials, sessions, your card details and synced connections/notes. This data provides authentication, publication, synchronisation and account management.
 
 - **Contact details:** Cards and connections can contain names, email addresses, phone numbers, addresses, company/role information, websites and social links. Only the card fields you select for publication are included in public profiles and contact downloads. Published information can be accessed and copied by recipients of your link.
 
