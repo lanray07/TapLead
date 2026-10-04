@@ -1,15 +1,19 @@
 import StoreKit
 import Observation
 
+private final class TransactionObserver {
+    var task:Task<Void,Never>?
+    deinit{task?.cancel()}
+}
+
 @MainActor @Observable final class PurchaseService {
     var products:[Product]=[]
     var pro=false
     var purchasesEnabled=false
     var error:String?
-    private var observer:Task<Void,Never>?
+    @ObservationIgnored private let observer=TransactionObserver()
     private let ids=["com.taplead.pro.monthly","com.taplead.pro.yearly"]
-    init(){observer=Task{[weak self] in for await update in Transaction.updates{guard let self else{return};if case .verified(let transaction)=update{do{let _:PlanResponse=try await APIClient().send("api/subscription",method:"POST",value:["signedTransaction":update.jwsRepresentation]);await self.refresh();await transaction.finish()}catch{self.error=error.localizedDescription}}}}}
-    deinit{observer?.cancel()}
+    init(){observer.task=Task{[weak self] in for await update in Transaction.updates{guard let self else{return};if case .verified(let transaction)=update{do{let _:PlanResponse=try await APIClient().send("api/subscription",method:"POST",value:["signedTransaction":update.jwsRepresentation]);await self.refresh();await transaction.finish()}catch{self.error=error.localizedDescription}}}}}
     func load() async {do{let plan:PlanResponse=try await APIClient().request("api/plan");purchasesEnabled=plan.purchasesEnabled ?? false;pro=plan.pro;products=try await Product.products(for:ids)}catch{self.error=error.localizedDescription}}
     func refresh() async {do{let plan:PlanResponse=try await APIClient().request("api/plan");pro=plan.pro;purchasesEnabled=plan.purchasesEnabled ?? false}catch{self.error=error.localizedDescription}}
     func buy(_ product:Product) async {
