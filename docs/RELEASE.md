@@ -4,6 +4,8 @@
 
 [GitHub run 37195819458](https://github.com/lanray07/TapLead/actions/runs/37195819458) successfully compiled the iOS app and widget with Apple SDKs, passed all three native simulator UI tests, and exported four native screen captures plus the XCTest result bundle. Five shared Swift tests and twelve backend tests also passed. Signing and real-device behavior require separate validation.
 
+The Release device archive also compiles. Distribution export is currently blocked: [run 37196823899](https://github.com/lanray07/TapLead/actions/runs/37196823899) identifies authentication failure specifically at Apple's `xcbuild/v1/appGroups` endpoint. The same API key successfully reads app/certificate/identifier resources and can use cloud-managed distribution signing. Configure `group.com.TapLead.app.shared` for both `com.TapLead.app` and `com.TapLead.app.widget` in the Apple Developer portal, then retry the archive workflow. An earlier experimental export omitted capabilities; it is not a release deliverable. The workflow now preserves entitlements and verifies app/widget signatures, identifiers, build numbers, App Group, NFC and Apple sign-in before reporting success.
+
 ## Verified on this Windows machine
 
 - Shared Swift domain module compiles; five XCTest cases pass.
