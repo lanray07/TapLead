@@ -19,7 +19,7 @@
       "section": 3,
       "title": "Onboarding, Apple and guest entry (user-approved scope)",
       "status": "partial",
-      "evidence": "Email login removed by explicit user choice. Guest entry remains; native Apple-only account screen has errors/loading/retry. Live email routes return 410 and email provider is disabled. Apple credential, production sign-in and grant-revocation acceptance remain pending."
+      "evidence": "Email login removed by explicit user choice. Apple-only native account entry and local guest mode are implemented. Apple provider and four Edge secrets are configured. Live challenge generation passes; invalid identity and challenge replay return 401. Genuine Apple login, account deletion/revocation and exact-build acceptance remain pending."
     },
     {
       "section": 4,
