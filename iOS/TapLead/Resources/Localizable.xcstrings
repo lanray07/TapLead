@@ -1236,6 +1236,71 @@
         }
       }
     },
+    "Action label (optional)": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Action label (optional)"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Action label (optional)"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Action label (optional)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Action label (optional)"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Action label (optional)"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Action label (optional)"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Action label (optional)"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Action label (optional)"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Action label (optional)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Action label (optional)"
+          }
+        }
+      }
+    },
     "Active": {
       "extractionState": "manual",
       "localizations": {
@@ -1297,6 +1362,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Active"
+          }
+        }
+      }
+    },
+    "Add a booking link to your card to share it": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add a booking link to your card to share it"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add a booking link to your card to share it"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add a booking link to your card to share it"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add a booking link to your card to share it"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add a booking link to your card to share it"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add a booking link to your card to share it"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add a booking link to your card to share it"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add a booking link to your card to share it"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add a booking link to your card to share it"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add a booking link to your card to share it"
           }
         }
       }
@@ -1427,6 +1557,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Add a follow-up to keep a good conversation going."
+          }
+        }
+      }
+    },
+    "Add a portfolio link to your card to share it": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add a portfolio link to your card to share it"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add a portfolio link to your card to share it"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add a portfolio link to your card to share it"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add a portfolio link to your card to share it"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add a portfolio link to your card to share it"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add a portfolio link to your card to share it"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add a portfolio link to your card to share it"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add a portfolio link to your card to share it"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add a portfolio link to your card to share it"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add a portfolio link to your card to share it"
           }
         }
       }
@@ -1626,6 +1821,71 @@
         }
       }
     },
+    "Add reminder": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add reminder"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add reminder"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add reminder"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add reminder"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add reminder"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add reminder"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add reminder"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add reminder"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add reminder"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Add reminder"
+          }
+        }
+      }
+    },
     "Add social link": {
       "extractionState": "manual",
       "localizations": {
@@ -1817,6 +2077,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Add voice note"
+          }
+        }
+      }
+    },
+    "Advanced appearance · Pro": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Advanced appearance · Pro"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Advanced appearance · Pro"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Advanced appearance · Pro"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Advanced appearance · Pro"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Advanced appearance · Pro"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Advanced appearance · Pro"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Advanced appearance · Pro"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Advanced appearance · Pro"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Advanced appearance · Pro"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Advanced appearance · Pro"
           }
         }
       }
@@ -2536,6 +2861,71 @@
         }
       }
     },
+    "Background colour (hex, optional)": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Background colour (hex, optional)"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Background colour (hex, optional)"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Background colour (hex, optional)"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Background colour (hex, optional)"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Background colour (hex, optional)"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Background colour (hex, optional)"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Background colour (hex, optional)"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Background colour (hex, optional)"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Background colour (hex, optional)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Background colour (hex, optional)"
+          }
+        }
+      }
+    },
     "Bold": {
       "extractionState": "manual",
       "localizations": {
@@ -2597,6 +2987,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Bold"
+          }
+        }
+      }
+    },
+    "Book follow-up": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Book follow-up"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Book follow-up"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Book follow-up"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Book follow-up"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Book follow-up"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Book follow-up"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Book follow-up"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Book follow-up"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Book follow-up"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Book follow-up"
           }
         }
       }
@@ -3702,6 +4157,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Choose profile photo"
+          }
+        }
+      }
+    },
+    "Choose the context yourself. Your mode never changes from inferred personal information.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose the context yourself. Your mode never changes from inferred personal information."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose the context yourself. Your mode never changes from inferred personal information."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose the context yourself. Your mode never changes from inferred personal information."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose the context yourself. Your mode never changes from inferred personal information."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose the context yourself. Your mode never changes from inferred personal information."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose the context yourself. Your mode never changes from inferred personal information."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose the context yourself. Your mode never changes from inferred personal information."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose the context yourself. Your mode never changes from inferred personal information."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose the context yourself. Your mode never changes from inferred personal information."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Choose the context yourself. Your mode never changes from inferred personal information."
           }
         }
       }
@@ -5071,6 +5591,71 @@
         }
       }
     },
+    "Custom backgrounds, typography and primary actions are included with TapLead Pro.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Custom backgrounds, typography and primary actions are included with TapLead Pro."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Custom backgrounds, typography and primary actions are included with TapLead Pro."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Custom backgrounds, typography and primary actions are included with TapLead Pro."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Custom backgrounds, typography and primary actions are included with TapLead Pro."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Custom backgrounds, typography and primary actions are included with TapLead Pro."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Custom backgrounds, typography and primary actions are included with TapLead Pro."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Custom backgrounds, typography and primary actions are included with TapLead Pro."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Custom backgrounds, typography and primary actions are included with TapLead Pro."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Custom backgrounds, typography and primary actions are included with TapLead Pro."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Custom backgrounds, typography and primary actions are included with TapLead Pro."
+          }
+        }
+      }
+    },
     "Dark": {
       "extractionState": "manual",
       "localizations": {
@@ -5717,6 +6302,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Edit card"
+          }
+        }
+      }
+    },
+    "Edit this starter in your own words. TapLead does not send messages or assume the connection has been contacted.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Edit this starter in your own words. TapLead does not send messages or assume the connection has been contacted."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Edit this starter in your own words. TapLead does not send messages or assume the connection has been contacted."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Edit this starter in your own words. TapLead does not send messages or assume the connection has been contacted."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Edit this starter in your own words. TapLead does not send messages or assume the connection has been contacted."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Edit this starter in your own words. TapLead does not send messages or assume the connection has been contacted."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Edit this starter in your own words. TapLead does not send messages or assume the connection has been contacted."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Edit this starter in your own words. TapLead does not send messages or assume the connection has been contacted."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Edit this starter in your own words. TapLead does not send messages or assume the connection has been contacted."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Edit this starter in your own words. TapLead does not send messages or assume the connection has been contacted."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Edit this starter in your own words. TapLead does not send messages or assume the connection has been contacted."
           }
         }
       }
@@ -7021,6 +7671,136 @@
         }
       }
     },
+    "Good to connect": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Good to connect"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Good to connect"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Good to connect"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Good to connect"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Good to connect"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Good to connect"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Good to connect"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Good to connect"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Good to connect"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Good to connect"
+          }
+        }
+      }
+    },
+    "Hi": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Hi"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hi"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Hi"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Hi"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Hi"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Hi"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Hi"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Hi"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Hi"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Hi"
+          }
+        }
+      }
+    },
     "Hold the top of your iPhone near your writable NFC card.": {
       "extractionState": "manual",
       "localizations": {
@@ -7537,6 +8317,136 @@
           "stringUnit": {
             "state": "new",
             "value": "Interested in"
+          }
+        }
+      }
+    },
+    "Introduction draft": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Introduction draft"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Introduction draft"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Introduction draft"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Introduction draft"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Introduction draft"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Introduction draft"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Introduction draft"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Introduction draft"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Introduction draft"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Introduction draft"
+          }
+        }
+      }
+    },
+    "It was good to meet you. I’d be glad to continue our conversation.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "It was good to meet you. I’d be glad to continue our conversation."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "It was good to meet you. I’d be glad to continue our conversation."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "It was good to meet you. I’d be glad to continue our conversation."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "It was good to meet you. I’d be glad to continue our conversation."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "It was good to meet you. I’d be glad to continue our conversation."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "It was good to meet you. I’d be glad to continue our conversation."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "It was good to meet you. I’d be glad to continue our conversation."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "It was good to meet you. I’d be glad to continue our conversation."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "It was good to meet you. I’d be glad to continue our conversation."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "It was good to meet you. I’d be glad to continue our conversation."
           }
         }
       }
@@ -8841,6 +9751,136 @@
         }
       }
     },
+    "Mode": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Mode"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mode"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Mode"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Mode"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Mode"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Mode"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Mode"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Mode"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Mode"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Mode"
+          }
+        }
+      }
+    },
+    "More than one connection matches. Choose the right person and review the date. No action has been taken.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "More than one connection matches. Choose the right person and review the date. No action has been taken."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "More than one connection matches. Choose the right person and review the date. No action has been taken."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "More than one connection matches. Choose the right person and review the date. No action has been taken."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "More than one connection matches. Choose the right person and review the date. No action has been taken."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "More than one connection matches. Choose the right person and review the date. No action has been taken."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "More than one connection matches. Choose the right person and review the date. No action has been taken."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "More than one connection matches. Choose the right person and review the date. No action has been taken."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "More than one connection matches. Choose the right person and review the date. No action has been taken."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "More than one connection matches. Choose the right person and review the date. No action has been taken."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "More than one connection matches. Choose the right person and review the date. No action has been taken."
+          }
+        }
+      }
+    },
     "My card": {
       "extractionState": "manual",
       "localizations": {
@@ -9361,6 +10401,71 @@
         }
       }
     },
+    "New leads": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "New leads"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New leads"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "New leads"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "New leads"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "New leads"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "New leads"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "New leads"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "New leads"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "New leads"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "New leads"
+          }
+        }
+      }
+    },
     "Next week": {
       "extractionState": "manual",
       "localizations": {
@@ -9487,6 +10592,71 @@
           "stringUnit": {
             "state": "new",
             "value": "No app needed. Just a good introduction."
+          }
+        }
+      }
+    },
+    "No email app is available. Share or copy the draft instead.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "No email app is available. Share or copy the draft instead."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No email app is available. Share or copy the draft instead."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "No email app is available. Share or copy the draft instead."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "No email app is available. Share or copy the draft instead."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "No email app is available. Share or copy the draft instead."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "No email app is available. Share or copy the draft instead."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "No email app is available. Share or copy the draft instead."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "No email app is available. Share or copy the draft instead."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "No email app is available. Share or copy the draft instead."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "No email app is available. Share or copy the draft instead."
           }
         }
       }
@@ -10076,6 +11246,71 @@
         }
       }
     },
+    "Open email draft": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Open email draft"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open email draft"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Open email draft"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Open email draft"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Open email draft"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Open email draft"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Open email draft"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Open email draft"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Open email draft"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Open email draft"
+          }
+        }
+      }
+    },
     "Open my card": {
       "extractionState": "manual",
       "localizations": {
@@ -10657,6 +11892,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Present one NFC tag at a time."
+          }
+        }
+      }
+    },
+    "Primary action": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Primary action"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Primary action"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Primary action"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Primary action"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Primary action"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Primary action"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Primary action"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Primary action"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Primary action"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Primary action"
           }
         }
       }
@@ -12221,6 +13521,71 @@
         }
       }
     },
+    "Review your introduction": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Review your introduction"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Review your introduction"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Review your introduction"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Review your introduction"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Review your introduction"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Review your introduction"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Review your introduction"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Review your introduction"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Review your introduction"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Review your introduction"
+          }
+        }
+      }
+    },
     "Role": {
       "extractionState": "manual",
       "localizations": {
@@ -12936,6 +14301,71 @@
         }
       }
     },
+    "Send introduction": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Send introduction"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Send introduction"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Send introduction"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Send introduction"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Send introduction"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Send introduction"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Send introduction"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Send introduction"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Send introduction"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Send introduction"
+          }
+        }
+      }
+    },
     "Service": {
       "extractionState": "manual",
       "localizations": {
@@ -13131,6 +14561,71 @@
         }
       }
     },
+    "Share CV publicly": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share CV publicly"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Share CV publicly"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share CV publicly"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share CV publicly"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share CV publicly"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share CV publicly"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share CV publicly"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share CV publicly"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share CV publicly"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share CV publicly"
+          }
+        }
+      }
+    },
     "Share booking link": {
       "extractionState": "manual",
       "localizations": {
@@ -13257,6 +14752,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Share data export"
+          }
+        }
+      }
+    },
+    "Share draft": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share draft"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Share draft"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share draft"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share draft"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share draft"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share draft"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share draft"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share draft"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share draft"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Share draft"
           }
         }
       }
@@ -14821,6 +16381,71 @@
         }
       }
     },
+    "Subject": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Subject"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Subject"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Subject"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Subject"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Subject"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Subject"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Subject"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Subject"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Subject"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Subject"
+          }
+        }
+      }
+    },
     "Summarise or draft with AI": {
       "extractionState": "manual",
       "localizations": {
@@ -15857,6 +17482,71 @@
           "stringUnit": {
             "state": "new",
             "value": "The profile link is invalid."
+          }
+        }
+      }
+    },
+    "The public action appears only when its link is valid and shared publicly. Text contrast adjusts to your background.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "The public action appears only when its link is valid and shared publicly. Text contrast adjusts to your background."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The public action appears only when its link is valid and shared publicly. Text contrast adjusts to your background."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "The public action appears only when its link is valid and shared publicly. Text contrast adjusts to your background."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "The public action appears only when its link is valid and shared publicly. Text contrast adjusts to your background."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "The public action appears only when its link is valid and shared publicly. Text contrast adjusts to your background."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "The public action appears only when its link is valid and shared publicly. Text contrast adjusts to your background."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "The public action appears only when its link is valid and shared publicly. Text contrast adjusts to your background."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "The public action appears only when its link is valid and shared publicly. Text contrast adjusts to your background."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "The public action appears only when its link is valid and shared publicly. Text contrast adjusts to your background."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "The public action appears only when its link is valid and shared publicly. Text contrast adjusts to your background."
           }
         }
       }
@@ -17031,6 +18721,71 @@
         }
       }
     },
+    "Typography": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Typography"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Typography"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Typography"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Typography"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Typography"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Typography"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Typography"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Typography"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Typography"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Typography"
+          }
+        }
+      }
+    },
     "Up to date": {
       "extractionState": "manual",
       "localizations": {
@@ -17161,6 +18916,71 @@
         }
       }
     },
+    "Use a booking or portfolio link for your next conversation.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use a booking or portfolio link for your next conversation."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Use a booking or portfolio link for your next conversation."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use a booking or portfolio link for your next conversation."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use a booking or portfolio link for your next conversation."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use a booking or portfolio link for your next conversation."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use a booking or portfolio link for your next conversation."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use a booking or portfolio link for your next conversation."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use a booking or portfolio link for your next conversation."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use a booking or portfolio link for your next conversation."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use a booking or portfolio link for your next conversation."
+          }
+        }
+      }
+    },
     "Use the context you already have": {
       "extractionState": "manual",
       "localizations": {
@@ -17222,6 +19042,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Use the context you already have"
+          }
+        }
+      }
+    },
+    "Use theme defaults": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use theme defaults"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Use theme defaults"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use theme defaults"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use theme defaults"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use theme defaults"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use theme defaults"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use theme defaults"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use theme defaults"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use theme defaults"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use theme defaults"
           }
         }
       }
@@ -18262,6 +20147,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Your data, your choice"
+          }
+        }
+      }
+    },
+    "Your event card opens in the large QR view for quick introductions.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Your event card opens in the large QR view for quick introductions."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your event card opens in the large QR view for quick introductions."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Your event card opens in the large QR view for quick introductions."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Your event card opens in the large QR view for quick introductions."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Your event card opens in the large QR view for quick introductions."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Your event card opens in the large QR view for quick introductions."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Your event card opens in the large QR view for quick introductions."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Your event card opens in the large QR view for quick introductions."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Your event card opens in the large QR view for quick introductions."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Your event card opens in the large QR view for quick introductions."
           }
         }
       }

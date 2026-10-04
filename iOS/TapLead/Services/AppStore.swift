@@ -22,7 +22,7 @@ import TapLeadCore
     var leads: [Lead] { snapshot.leads }
     var demo: Bool { snapshot.demo }
     var selectedCard: Card? { snapshot.cards.first { $0.id == snapshot.selectedCardID } ?? snapshot.cards.first }
-    var dueLeads: [Lead] { leads.filter { $0.status != .won && $0.status != .archived && ($0.followUp.map { $0 <= Date().addingTimeInterval(86400) } ?? false) }.sorted { ($0.followUp ?? .distantFuture) < ($1.followUp ?? .distantFuture) } }
+    var dueLeads: [Lead] { leads.filter { $0.status != .won && $0.status != .archived && ($0.followUp.map { $0 < Calendar.current.date(byAdding:.day,value:1,to:Calendar.current.startOfDay(for:Date()))! } ?? false) }.sorted { ($0.followUp ?? .distantFuture) < ($1.followUp ?? .distantFuture) } }
     init() {
         storage = URL.documentsDirectory.appendingPathComponent("taplead-state.json")
         if FileManager.default.fileExists(atPath: storage.path) {
@@ -59,8 +59,11 @@ import TapLeadCore
         catch { self.error = String(localized: "Your changes could not be saved. Please try again.") }
     }
     func select(_ card: Card) { snapshot.selectedCardID = card.id; persist() }
-    func saveCard(_ card: Card) {
+    func saveCard(_ card: Card, acknowledged:Bool=false) {
         if let i = snapshot.cards.firstIndex(where: { $0.id == card.id }) { snapshot.cards[i] = card } else { snapshot.cards.append(card) }
+        var edits=snapshot.unpublishedCardEdits ?? []
+        edits.removeAll{$0==card.id};if !acknowledged{edits.append(card.id)}
+        snapshot.unpublishedCardEdits=edits
         snapshot.selectedCardID = card.id; persist()
     }
     func saveLead(_ lead: Lead) {
@@ -99,12 +102,15 @@ import TapLeadCore
         var live = card; live.published = true; live.photoData=nil; live.logoData=nil
         let response: Card = try await api.send("api/cards/\(card.id.uuidString.lowercased())", method:"PUT", value:live)
         var merged=response; merged.photoData=card.photoData; merged.logoData=card.logoData
-        merged.cornerImageKind=card.cornerImageKind; merged.cornerImagePosition=card.cornerImagePosition; saveCard(merged)
+        merged.cornerImageKind=card.cornerImageKind; merged.cornerImagePosition=card.cornerImagePosition
+        if let current=cards.first(where:{$0.id==card.id}),current != card {
+            var edited=current;edited.published=true;saveCard(edited)
+        } else {saveCard(merged,acknowledged:true)}
     }
     func unpublish(_ card: Card) async throws {
         var privateCard=card; privateCard.published=false; privateCard.photoData=nil;privateCard.logoData=nil
         let _: Card = try await api.send("api/cards/\(card.id.uuidString.lowercased())",method:"PUT",value:privateCard)
-        var local=card;local.published=false;saveCard(local)
+        var local=cards.first(where:{$0.id==card.id}) ?? card;let changed=local != card;local.published=false;saveCard(local,acknowledged:!changed)
     }
     func synchronize() async {
         guard authenticated, !demo, !syncing else { return }; syncing = true; defer { syncing = false }
@@ -132,7 +138,7 @@ import TapLeadCore
             snapshot.leads = remote.filter { !snapshot.pendingLeadIDs.contains($0.id) && !snapshot.deletedLeadIDs.contains($0.id) } + snapshot.leads.filter { snapshot.pendingLeadIDs.contains($0.id) }
             let remoteCards: [Card] = try await api.request("api/cards")
             guard epoch==sessionEpoch else{return}
-            for remote in remoteCards where !snapshot.cards.contains(where:{$0.id==remote.id}) { snapshot.cards.append(remote) }
+            snapshot.cards=CardSync.merge(remote:remoteCards,local:snapshot.cards,editedIDs:snapshot.unpublishedCardEdits ?? [])
             syncMessage = String(localized: "Up to date"); persist()
         } catch {guard epoch==sessionEpoch else{return}; syncMessage = String(localized: "Changes saved on this iPhone. Pull to retry sync."); self.error = error.localizedDescription; persist() }
     }

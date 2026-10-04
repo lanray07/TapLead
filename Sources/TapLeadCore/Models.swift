@@ -6,6 +6,18 @@ public enum LeadStatus: String, Codable, CaseIterable, Sendable {
 public enum CardTheme: String, Codable, CaseIterable, Sendable {
     case minimal = "Minimal", executive = "Executive", creator = "Creator", bold = "Bold", dark = "Dark", elegant = "Elegant", sales = "Sales", consultant = "Consultant"
 }
+public enum NetworkingMode: String, Codable, CaseIterable, Sendable {
+    case networking = "Networking", sales = "Sales", recruiting = "Recruiting", event = "Event"
+}
+public enum CardTypography: String, Codable, CaseIterable, Sendable {
+    case standard = "Standard", rounded = "Rounded", serif = "Serif", monospaced = "Monospaced"
+}
+public enum CardAction: String, Codable, CaseIterable, Sendable {
+    case saveContact = "Save contact", website = "Website", portfolio = "Portfolio", booking = "Book a meeting", cv = "View CV"
+    public var field: String? {
+        switch self { case .saveContact: nil; case .website: "website"; case .portfolio: "portfolio"; case .booking: "booking"; case .cv: "cv" }
+    }
+}
 public enum CardImageKind: String, Codable, CaseIterable, Sendable {
     case none = "None", photo = "Photo", logo = "Logo"
 }
@@ -47,6 +59,21 @@ public struct Card: Codable, Identifiable, Equatable, Sendable {
     // Optional storage preserves decoding of cards created before image placement existed.
     public var cornerImageKind: CardImageKind?
     public var cornerImagePosition: CardImageCorner?
+    public var customBackground: String?
+    public var typography: CardTypography?
+    public var primaryAction: CardAction?
+    public var primaryActionLabel: String?
+    public var networkingMode: NetworkingMode?
+    public var cv: String?
+    public var mode: NetworkingMode { networkingMode ?? .networking }
+    public var action: CardAction { primaryAction ?? .saveContact }
+    public func actionURL(base: URL, source: String = "direct") -> URL? {
+        let profile = profileURL(base: base, source: source)
+        guard let field = action.field else { return profile }
+        let value = field == "cv" ? (cv ?? "") : field == "booking" ? booking : field == "portfolio" ? portfolio : website
+        guard isPublic(field), Validation.webURL(value) != nil else { return nil }
+        return URL(string: value)
+    }
     public var imageKind: CardImageKind {
         get { cornerImageKind ?? (photoData == nil && logoData != nil ? .logo : .photo) }
         set { cornerImageKind = newValue }
@@ -99,11 +126,38 @@ public struct AppSnapshot: Codable, Sendable {
     public var leads: [Lead] = []
     public var pendingLeadIDs: [UUID] = []
     public var deletedLeadIDs: [UUID] = []
+    public var unpublishedCardEdits: [UUID]?
     public var selectedCardID: UUID?
     public var demo = false
     public init() {}
 }
+public enum CardSync {
+    public static func merge(remote: [Card], local: [Card], editedIDs: [UUID]) -> [Card] {
+        var result=local
+        for card in remote {
+            if let index=result.firstIndex(where:{$0.id==card.id}) {
+                guard !editedIDs.contains(card.id) else {continue}
+                var merged=card
+                merged.photoData=result[index].photoData;merged.logoData=result[index].logoData
+                merged.cornerImageKind=result[index].cornerImageKind;merged.cornerImagePosition=result[index].cornerImagePosition
+                result[index]=merged
+            } else {result.append(card)}
+        }
+        let remoteIDs=Set(remote.map(\.id))
+        for index in result.indices where result[index].published && !remoteIDs.contains(result[index].id) && !editedIDs.contains(result[index].id) {
+            result[index].published=false
+        }
+        return result
+    }
+}
 public enum Validation {
+    public static func hexColour(_ value: String) -> Bool { value.range(of: "^[0-9A-Fa-f]{6}$", options: .regularExpression) != nil }
+    public static func prefersDarkText(on hex: String) -> Bool {
+        guard let value = UInt32(hex, radix: 16) else { return false }
+        func linear(_ byte: UInt32) -> Double { let c = Double(byte) / 255; return c <= 0.04045 ? c / 12.92 : pow((c + 0.055) / 1.055, 2.4) }
+        let luminance = 0.2126 * linear((value >> 16) & 255) + 0.7152 * linear((value >> 8) & 255) + 0.0722 * linear(value & 255)
+        return (luminance + 0.05) / 0.05 >= 1.05 / (luminance + 0.05)
+    }
     public static func webURL(_ value: String) -> URL? {
         guard let url = URL(string: value), url.scheme == "https", url.host != nil, url.user == nil, url.password == nil else { return nil }
         return url

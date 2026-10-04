@@ -15,10 +15,21 @@ struct ThemeStyle {
     let foreground:Color
     let design:Font.Design
     static func forCard(_ card:Card)->ThemeStyle{
+        var style = base(card)
+        if let background = card.customBackground, Validation.hexColour(background) {
+            style = .init(background:Color(hex:background),foreground:Validation.prefersDarkText(on:background) ? .black : .white,design:style.design)
+        }
+        if let font = card.typography {
+            let design:Font.Design = switch font { case .standard: .default; case .rounded: .rounded; case .serif: .serif; case .monospaced: .monospaced }
+            style = .init(background:style.background,foreground:style.foreground,design:design)
+        }
+        return style
+    }
+    private static func base(_ card:Card)->ThemeStyle{
         switch card.theme {
         case .minimal:return .init(background:Color(uiColor:.secondarySystemGroupedBackground),foreground:.primary,design:.default)
         case .executive:return .init(background:Color(hex:"292436"),foreground:.white,design:.default)
-        case .creator:return .init(background:Color(hex:card.accent),foreground:.white,design:.rounded)
+        case .creator:return .init(background:Color(hex:card.accent),foreground:Validation.prefersDarkText(on:card.accent) ? .black : .white,design:.rounded)
         case .bold:return .init(background:Color(hex:"EAD99A"),foreground:Color(hex:"282517"),design:.rounded)
         case .dark:return .init(background:Color(hex:"17191D"),foreground:.white,design:.monospaced)
         case .elegant:return .init(background:Color(hex:"EDE5DA"),foreground:Color(hex:"3A302A"),design:.serif)

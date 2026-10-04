@@ -24,9 +24,26 @@ struct LeadEditor: View {
     @State var lead=Lead()
     @State private var saved=false
     @State private var voice=false
+    @State private var introduction=false
+    var usedCard:Card? { store.cards.first{$0.id == lead.cardID} ?? store.selectedCard }
     var body: some View {
         NavigationStack {
-            if saved { VStack(alignment:.leading,spacing:24){Image(systemName:"checkmark.circle.fill").font(.system(size:48)).foregroundStyle(Palette.accent);Text("A good start. What next?").font(.largeTitle.bold());Text(verbatim:lead.name).font(.title3).foregroundStyle(.secondary);NavigationLink{LeadDetailView(leadID:lead.id)}label:{Label("Book follow-up or draft an introduction",systemImage:"arrow.up.forward.circle")};Button("Add voice note"){voice=true};PrimaryButton(title:"Done",icon:"checkmark"){dismiss()};Spacer()}.padding(28).navigationTitle("Connection saved") }
+            if saved {
+                ScrollView {VStack(alignment:.leading,spacing:20) {
+                    Image(systemName:"checkmark.circle.fill").font(.system(size:48)).foregroundStyle(Palette.accent)
+                    Text("A good start. What next?").font(.largeTitle.bold())
+                    Text(verbatim:lead.name).font(.title3).foregroundStyle(.secondary)
+                    Button{introduction=true}label:{Label("Send introduction",systemImage:"envelope")}.frame(minHeight:44)
+                    NavigationLink{LeadDetailView(leadID:lead.id)}label:{Label("Book follow-up",systemImage:"calendar")}.frame(minHeight:44)
+                    NavigationLink{LeadDetailView(leadID:lead.id)}label:{Label("Add reminder",systemImage:"bell")}.frame(minHeight:44)
+                    Button{voice=true}label:{Label("Add voice note",systemImage:"mic")}.frame(minHeight:44)
+                    if let url=usedCard.flatMap({Validation.webURL($0.portfolio)}) {ShareLink(item:url){Label("Share portfolio",systemImage:"square.and.arrow.up")}.frame(minHeight:44)}
+                    else {Label("Add a portfolio link to your card to share it",systemImage:"link").font(.caption).foregroundStyle(.secondary)}
+                    if let url=usedCard.flatMap({Validation.webURL($0.booking)}) {ShareLink(item:url){Label("Share booking link",systemImage:"calendar.badge.plus")}.frame(minHeight:44)}
+                    else {Label("Add a booking link to your card to share it",systemImage:"calendar").font(.caption).foregroundStyle(.secondary)}
+                    PrimaryButton(title:"Done",icon:"checkmark"){dismiss()}
+                }.padding(28)}.navigationTitle("Connection saved")
+            }
             else {
                 Form {
                     Section("Their details") {TextField("Name",text:$lead.name);TextField("Email",text:$lead.email).keyboardType(.emailAddress).textInputAutocapitalization(.never);TextField("Phone",text:$lead.phone).keyboardType(.phonePad);TextField("Company",text:$lead.company);TextField("Role",text:$lead.role);TextField("Interested in",text:$lead.interest)}
@@ -35,6 +52,7 @@ struct LeadEditor: View {
                 }.navigationTitle("New connection").toolbar{ToolbarItem(placement:.cancellationAction){Button("Cancel"){dismiss()}};ToolbarItem(placement:.confirmationAction){Button("Save"){lead.cardID=store.selectedCard?.id;lead.timeline.append(TimelineEntry(kind:"met",text:lead.context));store.saveLead(lead);saved=true}.disabled(lead.name.trimmingCharacters(in:.whitespaces).isEmpty || (!lead.email.isEmpty && !Validation.email(lead.email)) || !lead.consent)}}
             }
         }.sheet(isPresented:$voice){VoiceNoteView {text in lead.notes += (lead.notes.isEmpty ? "":"\n")+text;if saved{lead.timeline.append(TimelineEntry(kind:"voice",text:text));store.saveLead(lead)}}}
+        .sheet(isPresented:$introduction){IntroductionDraftView(leadID:lead.id)}
     }
 }
 struct LeadDetailView: View {
@@ -46,6 +64,7 @@ struct LeadDetailView: View {
     @State private var reminderDate=Date().addingTimeInterval(86400)
     @Environment(\.dismiss) private var dismiss
     var lead:Lead?{store.leads.first{$0.id==leadID}}
+    var usedCard:Card?{store.cards.first{$0.id==lead?.cardID} ?? store.selectedCard}
     var body: some View {
         Group {
             if let lead {
@@ -53,7 +72,7 @@ struct LeadDetailView: View {
                     Section {HStack(spacing:16){Avatar(name:lead.name,size:64);VStack(alignment:.leading){Text(verbatim:lead.name).font(.title2.bold());Text(verbatim:lead.company).foregroundStyle(.secondary)}};if !lead.email.isEmpty{Text(verbatim:lead.email)};if !lead.phone.isEmpty{Text(verbatim:lead.phone)}}
                     Section("Relationship") {Picker("Status",selection:Binding(get:{self.lead?.status ?? .new},set:{value in mutate{l in l.status=value;l.timeline.append(TimelineEntry(kind:"status",text:value.rawValue))}})){ForEach(LeadStatus.allCases,id:\.self){Text(LocalizedStringKey($0.rawValue)).tag($0)}};Text(verbatim:lead.context);if !lead.interest.isEmpty{Text(verbatim:lead.interest)}}
                     Section("Meeting memory") {TextField("Notes",text:Binding(get:{self.lead?.notes ?? ""},set:{text in mutate{$0.notes=text}}),axis:.vertical).lineLimit(4...10);Button{voice=true}label:{Label("Add voice note",systemImage:"mic.fill")};Button{ai=true}label:{Label("Smart Notes & Draft Follow-Up",systemImage:"sparkles")}}
-                    Section("Your next move") {DatePicker("Follow-up date",selection:$reminderDate,in:Date()...,displayedComponents:[.date,.hourAndMinute]);HStack{Button("Tomorrow"){reminderDate=Calendar.current.date(byAdding:.day,value:1,to:Date())!};Spacer();Button("3 days"){reminderDate=Calendar.current.date(byAdding:.day,value:3,to:Date())!};Spacer();Button("Next week"){reminderDate=Calendar.current.date(byAdding:.day,value:7,to:Date())!}};Button("Save follow-up & reminder"){Task{await schedule()}};if let date=lead.followUp{Text(date,format:.dateTime.day().month().hour().minute());Button("Mark follow-up complete"){mutate{$0.followUp=nil;$0.status = .active;$0.timeline.append(TimelineEntry(kind:"follow_up_completed",text:""))};NotificationService.cancel(leadID)}};if let card=store.selectedCard{if let url=Validation.webURL(card.portfolio){ShareLink(item:url){Label("Share portfolio",systemImage:"square.and.arrow.up")}};if let url=Validation.webURL(card.booking){ShareLink(item:url){Label("Share booking link",systemImage:"calendar")}}}}
+                    Section("Your next move") {DatePicker("Follow-up date",selection:$reminderDate,in:Date()...,displayedComponents:[.date,.hourAndMinute]);Button("Today"){reminderDate=Date().addingTimeInterval(60)}.disabled(!Calendar.current.isDateInToday(Date().addingTimeInterval(60)));HStack{Button("Tomorrow"){reminderDate=Calendar.current.date(byAdding:.day,value:1,to:Date())!};Spacer();Button("3 days"){reminderDate=Calendar.current.date(byAdding:.day,value:3,to:Date())!};Spacer();Button("Next week"){reminderDate=Calendar.current.date(byAdding:.day,value:7,to:Date())!}};Button("Save follow-up & reminder"){Task{await schedule()}};if let date=lead.followUp{Text(date,format:.dateTime.day().month().hour().minute());Button("Mark follow-up complete"){mutate{$0.followUp=nil;$0.status = .active;$0.timeline.append(TimelineEntry(kind:"follow_up_completed",text:""))};NotificationService.cancel(leadID)}};if let card=usedCard{if let url=Validation.webURL(card.portfolio){ShareLink(item:url){Label("Share portfolio",systemImage:"square.and.arrow.up")}};if let url=Validation.webURL(card.booking){ShareLink(item:url){Label("Share booking link",systemImage:"calendar")}}}}
                     Section("Timeline") {ForEach(lead.timeline.sorted{$0.date>$1.date}){event in VStack(alignment:.leading,spacing:6){Text(event.date,format:.dateTime.day().month().hour().minute()).font(.caption).foregroundStyle(.secondary);Text(LocalizedStringKey(event.kind)).font(.subheadline.bold());if !event.text.isEmpty{Text(verbatim:event.text).font(.subheadline)}}}}
                     Section{Button("Delete connection",role:.destructive){deleting=true}}
                 }.navigationTitle(lead.name).navigationBarTitleDisplayMode(.inline)

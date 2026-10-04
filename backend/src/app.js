@@ -4,7 +4,7 @@ import { randomUUID, randomBytes, createHash, scryptSync, timingSafeEqual } from
 import { fileURLToPath } from 'node:url';
 import { createRemoteJWKSet, jwtVerify } from 'jose';
 import { z } from 'zod';
-import { cardSchema, leadSchema, captureSchema, vcard } from './domain.js';
+import { cardSchema, leadSchema, captureSchema, vcard, cardCSS } from './domain.js';
 import { profileHTML, messageHTML } from './public.js';
 import {planFor,storeTransaction,proProducts} from './subscriptions.js';
 
@@ -86,6 +86,7 @@ export function createApp(db,config={}) {
   app.put('/api/cards/:id',auth,(req,res)=>{
     const c=cardSchema.parse(req.body);if(c.id!==req.params.id)return res.status(400).json({error:'Card ID mismatch.'});
     const existing=db.prepare('SELECT owner FROM cards WHERE id=?').get(c.id);if(existing&&existing.owner!==req.owner)return res.status(404).json({error:'Card not found.'});
+    if(!planFor(db,req.owner).pro && (c.customBackground || c.typography || c.primaryAction || c.primaryActionLabel))return res.status(403).json({error:'Advanced appearance requires a verified Pro subscription.'});
     // Server-side free allowance. Pro expansion requires verified App Store transactions.
     if(!existing&&db.prepare('SELECT count(*) n FROM cards WHERE owner=?').get(req.owner).n>=planFor(db,req.owner).cardLimit)return res.status(403).json({error:'Your plan card limit has been reached.'});
     db.prepare('INSERT INTO cards VALUES(?,?,?) ON CONFLICT(id) DO UPDATE SET data=excluded.data').run(c.id,req.owner,JSON.stringify(c));res.json(c);
@@ -101,8 +102,9 @@ export function createApp(db,config={}) {
   });
   app.delete('/api/leads/:id',auth,(req,res)=>{db.prepare('DELETE FROM leads WHERE id=? AND owner=?').run(req.params.id,req.owner);res.status(204).end();});
   app.get('/p/:id',(req,res)=>{const r=liveCard(req.params.id);if(!r)return res.status(404).type('html').send(messageHTML('Card unavailable','This profile is private or no longer available.'));event(r,'profile_view',sourceOf(req));res.set('Cache-Control','no-store').type('html').send(profileHTML(r.card,sourceOf(req),config.privacyURL));});
+  app.get('/p/:id/theme.css',(req,res)=>{const r=liveCard(req.params.id);if(!r)return res.sendStatus(404);res.set('Cache-Control','no-store').type('css').send(cardCSS(r.card));});
   app.get('/p/:id/contact.vcf',(req,res)=>{const r=liveCard(req.params.id);if(!r)return res.sendStatus(404);event(r,'vcard_download',sourceOf(req));res.set({'Content-Type':'text/vcard; charset=utf-8','Content-Disposition':'attachment; filename="contact.vcf"','Cache-Control':'no-store'}).send(vcard(r.card));});
-  app.get('/p/:id/go/:kind',(req,res)=>{const r=liveCard(req.params.id);if(!r)return res.sendStatus(404);const k=req.params.kind;if(!['website','portfolio','booking'].includes(k)||!r.card.publicFields.includes(k)||!r.card[k])return res.sendStatus(404);event(r,k==='booking'?'booking_click':'cta_click',sourceOf(req));res.redirect(303,r.card[k]);});
+  app.get('/p/:id/go/:kind',(req,res)=>{const r=liveCard(req.params.id);if(!r)return res.sendStatus(404);const k=req.params.kind;if(!['website','portfolio','booking','cv'].includes(k)||!r.card.publicFields.includes(k)||!r.card[k])return res.sendStatus(404);event(r,k==='booking'?'booking_click':'cta_click',sourceOf(req));res.redirect(303,r.card[k]);});
   app.post('/p/:id/leads',limiter(5,3600000),(req,res)=>{
     const r=liveCard(req.params.id);if(!r)return res.sendStatus(404);
     const parsed=captureSchema.safeParse({...req.body,consent:req.body.consent===true||req.body.consent==='true'});

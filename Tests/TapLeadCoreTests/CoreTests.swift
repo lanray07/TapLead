@@ -2,6 +2,28 @@ import XCTest
 @testable import TapLeadCore
 
 final class CoreTests: XCTestCase {
+    func testLegacyCardAndSnapshotKeepNewSettingsOptional() throws {
+        let card=try JSONDecoder().decode(Card.self,from:JSONEncoder().encode(Card()))
+        XCTAssertEqual(card.mode,.networking);XCTAssertEqual(card.action,.saveContact);XCTAssertNil(card.customBackground)
+        XCTAssertNil(try JSONDecoder().decode(AppSnapshot.self,from:JSONEncoder().encode(AppSnapshot())).unpublishedCardEdits)
+    }
+    func testRemoteCardRefreshPreservesUnpublishedEditsAndLocalMedia() {
+        var local=Card();local.name="Local draft";local.photoData=Data([1]);local.imageCorner = .bottomRight;local.published=true
+        var remote=local;remote.name="Updated on second device";remote.photoData=nil
+        XCTAssertEqual(CardSync.merge(remote:[remote],local:[local],editedIDs:[local.id])[0].name,"Local draft")
+        let merged=CardSync.merge(remote:[remote],local:[local],editedIDs:[])[0]
+        XCTAssertEqual(merged.name,remote.name);XCTAssertEqual(merged.photoData,local.photoData);XCTAssertEqual(merged.imageCorner,.bottomRight)
+        XCTAssertFalse(CardSync.merge(remote:[],local:[local],editedIDs:[])[0].published)
+        XCTAssertTrue(CardSync.merge(remote:[],local:[local],editedIDs:[local.id])[0].published)
+    }
+    func testCustomActionRespectsPublicVisibilityAndColourContrast() {
+        var card=Card();card.primaryAction = .booking;card.booking="https://example.com/book";card.publicFields=[]
+        XCTAssertNil(card.actionURL(base:URL(string:"https://cards.example.com")!))
+        card.publicFields=["booking"]
+        XCTAssertEqual(card.actionURL(base:URL(string:"https://cards.example.com")!)?.absoluteString,card.booking)
+        XCTAssertTrue(Validation.prefersDarkText(on:"FFFFFF"));XCTAssertFalse(Validation.prefersDarkText(on:"000000"))
+        XCTAssertFalse(Validation.hexColour("red;display:none"))
+    }
     func testConnectionCountsUseCalendarDaysAndExcludeClosedFollowUps() {
         var calendar = Calendar(identifier: .gregorian)
         calendar.timeZone = TimeZone(identifier: "Europe/London")!

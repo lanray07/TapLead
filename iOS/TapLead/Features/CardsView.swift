@@ -51,12 +51,29 @@ struct CardEditor: View {
                 Section("Contact details") {TextField("Email",text:$card.email).keyboardType(.emailAddress).textInputAutocapitalization(.never);TextField("Phone",text:$card.phone).keyboardType(.phonePad);TextField("Location",text:$card.location);urlField("Website",value:$card.website);urlField("Portfolio URL",value:$card.portfolio);urlField("Booking URL",value:$card.booking)}
                 Section("Social links") { ForEach(card.socials) {link in HStack{Text(verbatim:link.service);Spacer();Text(verbatim:link.url).lineLimit(1).foregroundStyle(.secondary)} }.onDelete{card.socials.remove(atOffsets:$0)}.onMove{card.socials.move(fromOffsets:$0,toOffset:$1)};Picker("Service",selection:$socialService){ForEach(["LinkedIn","Instagram","X","TikTok","YouTube","GitHub","Facebook","Threads"],id:\.self){Text(verbatim:$0)}};urlField("Social URL",value:$socialURL);Button("Add social link"){card.socials.append(SocialLink(service:socialService,url:socialURL));socialURL=""}.disabled(Validation.webURL(socialURL)==nil) }
                 Section("Appearance") { Picker("Theme",selection:$card.theme){ForEach(CardTheme.allCases,id:\.self){Text(LocalizedStringKey($0.rawValue)).tag($0)}};TextField("Accent colour (hex)",text:$card.accent).textInputAutocapitalization(.characters).autocorrectionDisabled() }
+                Section("Networking mode") {
+                    Picker("Mode",selection:Binding(get:{card.mode},set:{card.networkingMode=$0})) { ForEach(NetworkingMode.allCases,id:\.self){Text(LocalizedStringKey($0.rawValue)).tag($0)} }
+                    Text("Choose the context yourself. Your mode never changes from inferred personal information.").font(.caption).foregroundStyle(.secondary)
+                    if card.mode == .recruiting { urlField("CV URL",value:Binding(get:{card.cv ?? ""},set:{card.cv=$0}));Toggle("Share CV publicly",isOn:Binding(get:{card.isPublic("cv")},set:{enabled in card.publicFields.removeAll{$0=="cv"};if enabled{card.publicFields.append("cv")}})) }
+                    if card.mode == .sales { Text("Use a booking or portfolio link for your next conversation.").font(.caption) }
+                    if card.mode == .event { Text("Your event card opens in the large QR view for quick introductions.").font(.caption) }
+                }
+                Section("Advanced appearance · Pro") {
+                    if store.pro || store.demo {
+                        TextField("Background colour (hex, optional)",text:Binding(get:{card.customBackground ?? ""},set:{card.customBackground=$0.isEmpty ? nil : $0})).textInputAutocapitalization(.characters).autocorrectionDisabled()
+                        Picker("Typography",selection:Binding(get:{card.typography ?? .standard},set:{card.typography=$0})) {ForEach(CardTypography.allCases,id:\.self){Text(LocalizedStringKey($0.rawValue)).tag($0)}}
+                        Picker("Primary action",selection:Binding(get:{card.action},set:{card.primaryAction=$0})) {ForEach(CardAction.allCases,id:\.self){Text(LocalizedStringKey($0.rawValue)).tag($0)}}
+                        TextField("Action label (optional)",text:Binding(get:{card.primaryActionLabel ?? ""},set:{card.primaryActionLabel=$0.isEmpty ? nil : $0})).onChange(of:card.primaryActionLabel){_,value in card.primaryActionLabel=value.map{String($0.prefix(60))}}
+                        Text("The public action appears only when its link is valid and shared publicly. Text contrast adjusts to your background.").font(.caption).foregroundStyle(.secondary)
+                    } else {Text("Custom backgrounds, typography and primary actions are included with TapLead Pro.").foregroundStyle(.secondary)}
+                    Button("Use theme defaults"){card.customBackground=nil;card.typography=nil;card.primaryAction=nil;card.primaryActionLabel=nil}
+                }
                 Section("Public details") { Text("Your name, company, headline and biography are public when published. Choose which contact details to include.").font(.caption);ForEach(["email","phone","website","location","portfolio","booking","socials"],id:\.self){key in Toggle(LocalizedStringKey(key),isOn:Binding(get:{card.publicFields.contains(key)},set:{enabled in if enabled {card.publicFields.append(key)}else{card.publicFields.removeAll{$0==key}}}))};Toggle("Measure anonymous profile activity",isOn:$card.analyticsEnabled) }
                 Section("Section order") {ForEach(card.sectionOrder,id:\.self){Text(LocalizedStringKey($0))}.onMove{card.sectionOrder.move(fromOffsets:$0,toOffset:$1)};Text("Use Edit to reorder sections and social links.").font(.caption).foregroundStyle(.secondary)}
             }.navigationTitle("Edit card").toolbar {ToolbarItem(placement:.cancellationAction){Button("Cancel"){dismiss()}};ToolbarItem(placement:.primaryAction){Button("Save"){store.saveCard(card);dismiss()}.disabled(!valid || imageLoading)};ToolbarItem(placement:.bottomBar){EditButton()}}
         }
     }
-    var valid: Bool { !card.name.trimmingCharacters(in:.whitespacesAndNewlines).isEmpty && (card.email.isEmpty || Validation.email(card.email)) && [card.website,card.portfolio,card.booking].allSatisfy{$0.isEmpty || Validation.webURL($0) != nil} && card.accent.range(of:"^[0-9A-Fa-f]{6}$",options:.regularExpression) != nil }
+    var valid: Bool { !card.name.trimmingCharacters(in:.whitespacesAndNewlines).isEmpty && (card.email.isEmpty || Validation.email(card.email)) && [card.website,card.portfolio,card.booking,card.cv ?? ""].allSatisfy{$0.isEmpty || Validation.webURL($0) != nil} && Validation.hexColour(card.accent) && (card.customBackground.map{Validation.hexColour($0)} ?? true) }
     func urlField(_ title: LocalizedStringKey,value:Binding<String>) -> some View { TextField(title,text:value).keyboardType(.URL).textInputAutocapitalization(.never).autocorrectionDisabled() }
 }
 
