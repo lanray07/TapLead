@@ -81,6 +81,6 @@ else:
         exported=json.loads(expect(200,request('api/export',token=a),'owned export'))
         assert len(exported['cards'])==1 and exported['cards'][0]['logoData']
         expect(403,request('api/analytics',token=a),'Free analytics gate')
-        expect(503,request('api/subscription','POST',{'signedTransaction':'not-a-receipt'},a),'purchases fail closed')
+        expect(400,request('api/subscription','POST',{'signedTransaction':'not-a-receipt'},a),'invalid signed receipt rejected')
         print('HTTPS ownership, quotas, privacy, portable image upload, vCard, consented capture, inbox/export and paid gates passed.')
         print('Browser proof URL: https://lanray07.github.io/TapLead/card/?id='+cid+'&source=qr')
