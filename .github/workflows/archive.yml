@@ -46,6 +46,11 @@ jobs:
             -authenticationKeyIssuerID "$APP_STORE_CONNECT_ISSUER_ID" \
             DEVELOPMENT_TEAM="$APPLE_TEAM_ID" CODE_SIGN_STYLE=Automatic CODE_SIGNING_ALLOWED=NO \
             archive 2>&1 | tee artifacts/archive.log
+      - name: Preserve application capabilities for distribution export
+        run: |
+          APP=artifacts/TapLead.xcarchive/Products/Applications/TapLead.app
+          codesign --force --sign - --generate-entitlement-der --entitlements iOS/Widget.entitlements "$APP/PlugIns/TapLeadWidget.appex"
+          codesign --force --sign - --generate-entitlement-der --entitlements iOS/TapLead.entitlements "$APP"
       - name: Export signed IPA for App Store distribution
         run: |
           set -o pipefail
@@ -55,6 +60,15 @@ jobs:
             -authenticationKeyID "$APP_STORE_CONNECT_API_KEY_ID" \
             -authenticationKeyIssuerID "$APP_STORE_CONNECT_ISSUER_ID" \
             2>&1 | tee artifacts/export.log
+      - name: Verify exported app and widget signatures and capabilities
+        run: |
+          mkdir -p "$RUNNER_TEMP/verify-ipa"
+          unzip -q artifacts/export/TapLead.ipa -d "$RUNNER_TEMP/verify-ipa"
+          APP="$RUNNER_TEMP/verify-ipa/Payload/TapLead.app"
+          codesign --verify --deep --strict "$APP"
+          codesign -d --entitlements :- "$APP" > "$RUNNER_TEMP/app-entitlements.plist"
+          codesign -d --entitlements :- "$APP/PlugIns/TapLeadWidget.appex" > "$RUNNER_TEMP/widget-entitlements.plist"
+          "$RUNNER_TEMP/signing-python/bin/python" scripts/verify-export.py
       - name: Preserve archive and build diagnostics
         if: always()
         uses: actions/upload-artifact@v4

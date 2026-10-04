@@ -42,6 +42,8 @@ spec['targets']['TapLead']['settings']['base']['PRODUCT_BUNDLE_IDENTIFIER']=bund
 spec['targets']['TapLeadWidget']['settings']['base']['PRODUCT_BUNDLE_IDENTIFIER']=bundle+'.widget'
 for target in ['TapLead','TapLeadWidget']:
     spec['targets'][target]['entitlements']['properties']['com.apple.security.application-groups']=[group]
+    spec['targets'][target]['info']['properties']['CFBundleVersion']='$(CURRENT_PROJECT_VERSION)'
+    spec['targets'][target]['info']['properties']['CFBundleShortVersionString']='$(MARKETING_VERSION)'
 for key,variable in [('TapLeadAPIURL','TAPLEAD_API_URL'),('TapLeadPrivacyURL','TAPLEAD_PRIVACY_URL'),('TapLeadTermsURL','TAPLEAD_TERMS_URL')]:
     value=env.get(variable,'').strip()
     if value and not value.startswith('https://'):raise SystemExit(variable+' must use HTTPS.')
@@ -52,6 +54,8 @@ for file in [pathlib.Path('iOS/TapLead/Services/AppStore.swift'),pathlib.Path('i
 key_path=pathlib.Path(env['RUNNER_TEMP'])/('AuthKey_'+env['APP_STORE_CONNECT_API_KEY_ID']+'.p8')
 key_path.write_text(pem+'\n');key_path.chmod(0o600)
 with open(env['GITHUB_ENV'],'a') as output:output.write('ASC_KEY_PATH='+str(key_path)+'\n')
+with open(env['GITHUB_ENV'],'a') as output:
+    output.write('TAPLEAD_RESOLVED_BUNDLE='+bundle+'\nTAPLEAD_RESOLVED_GROUP='+group+'\n')
 options={'method':'app-store-connect','destination':'export','signingStyle':'automatic','teamID':env['APPLE_TEAM_ID'],'manageAppVersionAndBuildNumber':False,'stripSwiftSymbols':True,'uploadSymbols':True}
 with open(pathlib.Path(env['RUNNER_TEMP'])/'ExportOptions.plist','wb') as output:plistlib.dump(options,output)
 print('Configured existing App Store app:',app['attributes']['name'],'('+app['id']+')')
