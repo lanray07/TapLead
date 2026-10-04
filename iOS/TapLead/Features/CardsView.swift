@@ -112,7 +112,7 @@ struct CardImageEditor: View {
         guard let item=selection else { loading=false;return }
         let kind=card.imageKind
         loading=true;error=nil
-        defer { if selection == item { loading=false } }
+        defer { if selection == item { loading=false;selection=nil } }
         do {
             guard let data=try await item.loadTransferable(type:Data.self) else { throw ImageImportError.invalid }
             guard !Task.isCancelled,selection == item,card.imageKind == kind else { return }
