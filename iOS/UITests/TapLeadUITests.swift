@@ -5,7 +5,7 @@ final class TapLeadUITests:XCTestCase {
         app.tabBars.buttons["My card"].tap();app.buttons["Edit card"].tap()
         app.segmentedControls.buttons["Logo"].tap()
         app.buttons["Choose logo"].tap()
-        let photo=app.cells.firstMatch
+        let photo=app.scrollViews["photosView_content_scroll_view"].images["PXGGridLayout-Info"].firstMatch
         XCTAssertTrue(photo.waitForExistence(timeout:20),app.debugDescription)
         photo.tap()
         XCTAssertTrue(app.staticTexts["Logo added"].waitForExistence(timeout:20),app.debugDescription)
