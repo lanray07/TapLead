@@ -7,6 +7,7 @@ import { z } from 'zod';
 import { cardSchema, leadSchema, captureSchema, vcard, cardCSS } from './domain.js';
 import { profileHTML, messageHTML } from './public.js';
 import {planFor,storeTransaction,proProducts} from './subscriptions.js';
+import {normaliseCardImage} from './media.js';
 
 const appleKeys=createRemoteJWKSet(new URL('https://appleid.apple.com/auth/keys'));
 const hash=v=>createHash('sha256').update(v).digest('hex');
@@ -38,7 +39,9 @@ export function createApp(db,config={}) {
     db.prepare('INSERT INTO sessions VALUES(?,?,?)').run(hash(token),owner,now()+30*86400000);return {token,userID:owner};
   };
   const ownedCard=(id,owner)=>db.prepare('SELECT * FROM cards WHERE id=? AND owner=?').get(id,owner);
-  const liveCard=id=>{const row=db.prepare('SELECT * FROM cards WHERE id=?').get(id);if(!row)return null;const card=JSON.parse(row.data);return card.published?{...row,card}:null;};
+  const cardWithMedia=card=>{const media=mediaFor(card);if(media)card[media.kind==='Logo'?'logoData':'photoData']=Buffer.from(media.pixels).toString('base64');return card;};
+  const mediaFor=card=>card.cornerImageKind==='None'?null:db.prepare('SELECT kind,pixels FROM card_media WHERE card_id=? AND kind=?').get(card.id,card.cornerImageKind||'Photo');
+  const liveCard=id=>{const row=db.prepare('SELECT * FROM cards WHERE id=?').get(id);if(!row)return null;const card=JSON.parse(row.data);card.publicImageAvailable=Boolean(mediaFor(card));return card.published?{...row,card}:null;};
   const event=(row,kind,source)=>{if(row.card.analyticsEnabled) db.prepare('INSERT INTO events(card_id,kind,source,created) VALUES(?,?,?,?)').run(row.id,kind,source,now());};
   app.get('/health',(_req,res)=>res.json({ok:true}));
   app.get('/',(_req,res)=>res.type('html').send(messageHTML('TapLead','Tap. Connect. Convert. Open a shared TapLead link to connect.')));
@@ -82,11 +85,22 @@ export function createApp(db,config={}) {
     try {const notification=await config.subscriptionVerifier.verifyAndDecodeNotification(signedPayload);const signed=notification.data?.signedTransactionInfo;if(signed){const transaction=await config.subscriptionVerifier.verifyAndDecodeTransaction(signed);const owner=transaction.appAccountToken?.toLowerCase();if(owner&&db.prepare('SELECT id FROM users WHERE id=?').get(owner))storeTransaction(db,transaction,owner);}res.status(200).json({ok:true});}
     catch{return res.status(400).json({error:'Invalid Apple notification.'});}
   });
-  app.get('/api/cards',auth,(req,res)=>res.json(db.prepare('SELECT data FROM cards WHERE owner=?').all(req.owner).map(r=>JSON.parse(r.data))));
+  app.get('/api/cards',auth,(req,res)=>res.json(db.prepare('SELECT data FROM cards WHERE owner=?').all(req.owner).map(r=>cardWithMedia(JSON.parse(r.data)))));
+  app.put('/api/cards/:id/image',auth,limiter(20,3600000),express.raw({type:['image/png','image/jpeg'],limit:'2mb'}),async(req,res)=>{
+    const row=ownedCard(req.params.id,req.owner);if(!row)return res.sendStatus(404);
+    const kind=z.enum(['Photo','Logo']).parse(req.query.kind);
+    if(JSON.parse(row.data).cornerImageKind!==kind)return res.status(409).json({error:'Update the card image choice before uploading.'});
+    try {
+      const pixels=await normaliseCardImage(req.body,req.headers['content-type']?.split(';')[0]);
+      db.prepare('INSERT INTO card_media VALUES(?,?,?) ON CONFLICT(card_id) DO UPDATE SET kind=excluded.kind,pixels=excluded.pixels').run(req.params.id,kind,pixels);
+      res.status(204).end();
+    } catch {res.status(400).json({error:'Choose a valid PNG or JPEG image smaller than 2 MB.'});}
+  });
+  app.delete('/api/cards/:id/image',auth,(req,res)=>{if(!ownedCard(req.params.id,req.owner))return res.sendStatus(404);db.prepare('DELETE FROM card_media WHERE card_id=?').run(req.params.id);res.status(204).end();});
   app.put('/api/cards/:id',auth,(req,res)=>{
     const c=cardSchema.parse(req.body);if(c.id!==req.params.id)return res.status(400).json({error:'Card ID mismatch.'});
     const existing=db.prepare('SELECT owner FROM cards WHERE id=?').get(c.id);if(existing&&existing.owner!==req.owner)return res.status(404).json({error:'Card not found.'});
-    if(!planFor(db,req.owner).pro && (c.customBackground || c.typography || c.primaryAction || c.primaryActionLabel))return res.status(403).json({error:'Advanced appearance requires a verified Pro subscription.'});
+    if(c.published&&!planFor(db,req.owner).pro && (c.customBackground || c.typography || c.primaryAction || c.primaryActionLabel))return res.status(403).json({error:'Advanced appearance requires a verified Pro subscription.'});
     // Server-side free allowance. Pro expansion requires verified App Store transactions.
     if(!existing&&db.prepare('SELECT count(*) n FROM cards WHERE owner=?').get(req.owner).n>=planFor(db,req.owner).cardLimit)return res.status(403).json({error:'Your plan card limit has been reached.'});
     db.prepare('INSERT INTO cards VALUES(?,?,?) ON CONFLICT(id) DO UPDATE SET data=excluded.data').run(c.id,req.owner,JSON.stringify(c));res.json(c);
@@ -103,6 +117,7 @@ export function createApp(db,config={}) {
   app.delete('/api/leads/:id',auth,(req,res)=>{db.prepare('DELETE FROM leads WHERE id=? AND owner=?').run(req.params.id,req.owner);res.status(204).end();});
   app.get('/p/:id',(req,res)=>{const r=liveCard(req.params.id);if(!r)return res.status(404).type('html').send(messageHTML('Card unavailable','This profile is private or no longer available.'));event(r,'profile_view',sourceOf(req));res.set('Cache-Control','no-store').type('html').send(profileHTML(r.card,sourceOf(req),config.privacyURL));});
   app.get('/p/:id/theme.css',(req,res)=>{const r=liveCard(req.params.id);if(!r)return res.sendStatus(404);res.set('Cache-Control','no-store').type('css').send(cardCSS(r.card));});
+  app.get('/p/:id/image',(req,res)=>{const r=liveCard(req.params.id),media=r&&mediaFor(r.card);if(!media)return res.sendStatus(404);res.set({'Content-Type':'image/png','Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Content-Disposition':'inline; filename="card-image.png"'}).send(Buffer.from(media.pixels));});
   app.get('/p/:id/contact.vcf',(req,res)=>{const r=liveCard(req.params.id);if(!r)return res.sendStatus(404);event(r,'vcard_download',sourceOf(req));res.set({'Content-Type':'text/vcard; charset=utf-8','Content-Disposition':'attachment; filename="contact.vcf"','Cache-Control':'no-store'}).send(vcard(r.card));});
   app.get('/p/:id/go/:kind',(req,res)=>{const r=liveCard(req.params.id);if(!r)return res.sendStatus(404);const k=req.params.kind;if(!['website','portfolio','booking','cv'].includes(k)||!r.card.publicFields.includes(k)||!r.card[k])return res.sendStatus(404);event(r,k==='booking'?'booking_click':'cta_click',sourceOf(req));res.redirect(303,r.card[k]);});
   app.post('/p/:id/leads',limiter(5,3600000),(req,res)=>{
@@ -127,9 +142,9 @@ export function createApp(db,config={}) {
     const output=z.object({draft:z.string().max(12000).nullable(),facts:z.array(z.object({field:z.string().max(100),value:z.string().max(2000),evidence:z.string().min(1).max(2000)})).max(20),suggestions:z.array(z.string().max(2000)).max(10)}).parse(await response.json());
     if(output.facts.some(f=>!input.notes.includes(f.evidence)||!f.evidence.includes(f.value)||!f.value.trim()))throw new Error('AI evidence validation failed');res.json(output);
   });
-  app.get('/api/export',auth,(req,res)=>res.json({cards:db.prepare('SELECT data FROM cards WHERE owner=?').all(req.owner).map(r=>JSON.parse(r.data)),leads:db.prepare('SELECT data FROM leads WHERE owner=?').all(req.owner).map(r=>JSON.parse(r.data))}));
+  app.get('/api/export',auth,(req,res)=>res.json({cards:db.prepare('SELECT data FROM cards WHERE owner=?').all(req.owner).map(r=>cardWithMedia(JSON.parse(r.data))),leads:db.prepare('SELECT data FROM leads WHERE owner=?').all(req.owner).map(r=>JSON.parse(r.data))}));
   app.delete('/api/account',auth,async(req,res)=>{const u=db.prepare('SELECT apple_sub FROM users WHERE id=?').get(req.owner);if(u.apple_sub){const credentials=db.prepare('SELECT sealed_refresh FROM apple_credentials WHERE user_id=?').get(req.owner);if(!config.appleAuth||!credentials)return res.status(503).json({error:'Apple revocation is temporarily unavailable. Your data is preserved; please retry.'});await config.appleAuth.revoke(credentials.sealed_refresh);}db.prepare('DELETE FROM users WHERE id=?').run(req.owner);res.status(204).end();});
-  app.use((err,req,res,_next)=>{if(err instanceof z.ZodError)return res.status(400).json({error:'Invalid input. Check the fields and try again.'});if(err?.code?.startsWith('ERR_J'))return res.status(401).json({error:'Apple sign-in could not be verified.'});console.error('Request failed:',err.name);res.status(500).json({error:'Unable to complete this request. Please try again.'});});
+  app.use((err,req,res,_next)=>{if(err?.type==='entity.too.large')return res.status(413).json({error:'The upload is too large.'});if(err instanceof z.ZodError)return res.status(400).json({error:'Invalid input. Check the fields and try again.'});if(err?.code?.startsWith('ERR_J'))return res.status(401).json({error:'Apple sign-in could not be verified.'});console.error('Request failed:',err.name);res.status(500).json({error:'Unable to complete this request. Please try again.'});});
   return app;
 }
 function textName(){return z.string().max(120);}

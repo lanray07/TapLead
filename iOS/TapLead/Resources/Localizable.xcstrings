@@ -13261,6 +13261,71 @@
         }
       }
     },
+    "Publishing includes your selected logo or photo. Choose None to publish without an image.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Publishing includes your selected logo or photo. Choose None to publish without an image."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Publishing includes your selected logo or photo. Choose None to publish without an image."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Publishing includes your selected logo or photo. Choose None to publish without an image."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Publishing includes your selected logo or photo. Choose None to publish without an image."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Publishing includes your selected logo or photo. Choose None to publish without an image."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Publishing includes your selected logo or photo. Choose None to publish without an image."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Publishing includes your selected logo or photo. Choose None to publish without an image."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Publishing includes your selected logo or photo. Choose None to publish without an image."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Publishing includes your selected logo or photo. Choose None to publish without an image."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Publishing includes your selected logo or photo. Choose None to publish without an image."
+          }
+        }
+      }
+    },
     "QR codes and NFC tags open your published profile. Recipients don’t need the app. Cached QR codes work offline; opening the website needs internet.": {
       "extractionState": "manual",
       "localizations": {
@@ -16507,6 +16572,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Show one logo or photo in your chosen corner. Images are saved on this iPhone."
+          }
+        }
+      }
+    },
+    "Show one logo or photo in your chosen corner. The selected image is uploaded when you publish; other images remain on this iPhone.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Show one logo or photo in your chosen corner. The selected image is uploaded when you publish; other images remain on this iPhone."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show one logo or photo in your chosen corner. The selected image is uploaded when you publish; other images remain on this iPhone."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Show one logo or photo in your chosen corner. The selected image is uploaded when you publish; other images remain on this iPhone."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Show one logo or photo in your chosen corner. The selected image is uploaded when you publish; other images remain on this iPhone."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Show one logo or photo in your chosen corner. The selected image is uploaded when you publish; other images remain on this iPhone."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Show one logo or photo in your chosen corner. The selected image is uploaded when you publish; other images remain on this iPhone."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Show one logo or photo in your chosen corner. The selected image is uploaded when you publish; other images remain on this iPhone."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Show one logo or photo in your chosen corner. The selected image is uploaded when you publish; other images remain on this iPhone."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Show one logo or photo in your chosen corner. The selected image is uploaded when you publish; other images remain on this iPhone."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Show one logo or photo in your chosen corner. The selected image is uploaded when you publish; other images remain on this iPhone."
           }
         }
       }

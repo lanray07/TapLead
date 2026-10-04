@@ -14,5 +14,6 @@ export function openStore(path) {
     CREATE TABLE IF NOT EXISTS challenges(nonce TEXT PRIMARY KEY,expires INTEGER NOT NULL);`);
   db.exec('CREATE TABLE IF NOT EXISTS apple_credentials(user_id TEXT PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE,sealed_refresh TEXT NOT NULL);');
   db.exec('CREATE TABLE IF NOT EXISTS entitlements(original_id TEXT PRIMARY KEY,owner TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,product TEXT NOT NULL,expires INTEGER NOT NULL,revoked INTEGER NOT NULL,signed_date INTEGER NOT NULL);');
+  db.exec('CREATE TABLE IF NOT EXISTS card_media(card_id TEXT PRIMARY KEY REFERENCES cards(id) ON DELETE CASCADE,kind TEXT NOT NULL CHECK(kind IN (\'Photo\',\'Logo\')),pixels BLOB NOT NULL);');
   return db;
 }

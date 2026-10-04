@@ -30,13 +30,13 @@ struct APIClient {
         guard let raw = Bundle.main.object(forInfoDictionaryKey: "TapLeadAPIURL") as? String else { return nil }
         return Validation.webURL(raw)
     }
-    func request<T: Decodable>(_ path: String, method: String = "GET", body: Data? = nil) async throws -> T {
+    func request<T: Decodable>(_ path: String, method: String = "GET", body: Data? = nil, contentType:String="application/json") async throws -> T {
         guard let base else { throw ServiceError.message(String(localized: "Connect a secure TapLead service to use this feature.")) }
         let pathParts = path.split(separator:"?",maxSplits:1,omittingEmptySubsequences:false)
         var components = URLComponents(url:base.appendingPathComponent(String(pathParts[0])),resolvingAgainstBaseURL:false)!
         if pathParts.count>1 { components.percentEncodedQuery=String(pathParts[1]) }
         var request = URLRequest(url:components.url!); request.httpMethod = method; request.httpBody = body
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue(contentType, forHTTPHeaderField: "Content-Type")
         if let token = Keychain.token() { request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization") }
         request.timeoutInterval = 35
         let (data,response) = try await URLSession.shared.data(for: request)

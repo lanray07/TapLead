@@ -16,7 +16,7 @@ TapLead's current implementation has no advertising SDK or third-party advertisi
 
 ## Photos, microphone, speech and NFC
 
-Selected profile photos and logos remain local in the current app; a production media-upload service is not enabled. Microphone and speech permissions are requested for notes you choose to record. Recognition requires supported on-device speech processing; raw audio is not retained or uploaded by TapLead. You can review and edit the resulting text before saving; saved text notes can be synchronised with an account service when configured. NFC reads/writes are used for the public profile link, after you choose the action.
+Photos/logos are stored locally while you edit. When you publish through a configured account service, TapLead uploads only the selected photo or logo; unselected images remain on the iPhone. The service validates and re-encodes PNG/JPEG images, strips embedded metadata and stores the result with your card. The selected image is public while the card is published. Choosing None or making the card private stops public image delivery; account/card deletion removes the associated stored image. Production deployment and backup retention remain pending for the next release. Microphone and speech permissions are requested for notes you choose to record. Recognition requires supported on-device speech processing; raw audio is not retained or uploaded by TapLead. You can review and edit the resulting text before saving; saved text notes can be synchronised with an account service when configured. NFC reads/writes are used for the public profile link, after you choose the action.
 
 ## Optional AI
 

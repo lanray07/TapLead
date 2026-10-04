@@ -146,8 +146,8 @@ public enum CardSync {
             if let index=result.firstIndex(where:{$0.id==card.id}) {
                 guard !editedIDs.contains(card.id) else {continue}
                 var merged=card
-                merged.photoData=result[index].photoData;merged.logoData=result[index].logoData
-                merged.cornerImageKind=result[index].cornerImageKind;merged.cornerImagePosition=result[index].cornerImagePosition
+                merged.photoData=card.photoData ?? result[index].photoData;merged.logoData=card.logoData ?? result[index].logoData
+                merged.cornerImageKind=card.cornerImageKind ?? result[index].cornerImageKind;merged.cornerImagePosition=card.cornerImagePosition ?? result[index].cornerImagePosition
                 result[index]=merged
             } else {result.append(card)}
         }

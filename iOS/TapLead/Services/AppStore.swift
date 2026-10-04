@@ -99,8 +99,18 @@ import TapLeadCore
     }
     func publish(_ card: Card) async throws {
         guard authenticated, !demo else { throw ServiceError.message(String(localized: "Sign in to publish your card.")) }
-        var live = card; live.published = true; live.photoData=nil; live.logoData=nil
+        let epoch=sessionEpoch
+        var live = card; live.published = true; live.photoData=nil; live.logoData=nil;live.imageKind=card.imageKind
         let response: Card = try await api.send("api/cards/\(card.id.uuidString.lowercased())", method:"PUT", value:live)
+        guard epoch==sessionEpoch else{return}
+        let image=card.imageKind == .logo ? card.logoData : card.imageKind == .photo ? card.photoData : nil
+        if let image {
+            let mime=image.starts(with:[137,80,78,71,13,10,26,10]) ? "image/png" : "image/jpeg"
+            let _:EmptyResponse=try await api.request("api/cards/\(card.id.uuidString.lowercased())/image?kind=\(card.imageKind.rawValue)",method:"PUT",body:image,contentType:mime)
+        } else {
+            let _:EmptyResponse=try await api.request("api/cards/\(card.id.uuidString.lowercased())/image",method:"DELETE")
+        }
+        guard epoch==sessionEpoch else{return}
         var merged=response; merged.photoData=card.photoData; merged.logoData=card.logoData
         merged.cornerImageKind=card.cornerImageKind; merged.cornerImagePosition=card.cornerImagePosition
         if let current=cards.first(where:{$0.id==card.id}),current != card {
@@ -108,8 +118,10 @@ import TapLeadCore
         } else {saveCard(merged,acknowledged:true)}
     }
     func unpublish(_ card: Card) async throws {
+        let epoch=sessionEpoch
         var privateCard=card; privateCard.published=false; privateCard.photoData=nil;privateCard.logoData=nil
         let _: Card = try await api.send("api/cards/\(card.id.uuidString.lowercased())",method:"PUT",value:privateCard)
+        guard epoch==sessionEpoch else{return}
         var local=cards.first(where:{$0.id==card.id}) ?? card;let changed=local != card;local.published=false;saveCard(local,acknowledged:!changed)
     }
     func synchronize() async {

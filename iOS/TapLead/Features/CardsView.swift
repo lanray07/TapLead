@@ -27,7 +27,7 @@ struct CardsView: View {
                     Button {nfc=true} label:{Label("Set up NFC card",systemImage:"wave.3.right")}.frame(minHeight:44)
                     Text("QR codes and NFC tags open your published profile. Recipients don’t need the app. Cached QR codes work offline; opening the website needs internet.").font(.caption).foregroundStyle(.secondary)
                     Label("Apple Wallet needs a signed pass service",systemImage:"wallet.pass").font(.caption).foregroundStyle(.secondary)
-                    Text("Photos and logos currently stay on this iPhone. Public image uploads require the configured storage service.").font(.caption).foregroundStyle(.secondary)
+                    Text("Publishing includes your selected logo or photo. Choose None to publish without an image.").font(.caption).foregroundStyle(.secondary)
                 }
                 if store.demo || store.pro { Button("Add card persona"){var c=store.selectedCard ?? Card();c.id=UUID();c.published=false;c.persona="Conference";c.theme = .creator;store.saveCard(c);editing=CardSelection(card:c)} }
             }.padding(22)
@@ -109,7 +109,7 @@ struct CardImageEditor: View {
                 }
             }
             if let error { Text(verbatim:error).font(.caption).foregroundStyle(.red) }
-            Text("Show one logo or photo in your chosen corner. Images are saved on this iPhone.").font(.caption).foregroundStyle(.secondary)
+            Text("Show one logo or photo in your chosen corner. The selected image is uploaded when you publish; other images remain on this iPhone.").font(.caption).foregroundStyle(.secondary)
         }
         .onChange(of:card.imageKind) { _,_ in selection=nil;error=nil }
         .task(id:selection) { await loadPhoto() }

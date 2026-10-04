@@ -16,6 +16,8 @@ export const cardSchema = z.object({
   primaryAction: z.enum(['Save contact','Website','Portfolio','Book a meeting','View CV']).optional(),
   primaryActionLabel: z.string().trim().max(60).optional(),
   networkingMode: z.enum(['Networking','Sales','Recruiting','Event']).optional(),
+  cornerImageKind: z.enum(['None','Photo','Logo']).optional(),
+  cornerImagePosition: z.enum(['Top left','Top right','Bottom left','Bottom right']).optional(),
   sectionOrder: z.array(z.enum(['About','Contact','Links'])).length(3).refine(v => new Set(v).size === 3).default(['About','Contact','Links']),
   published: z.boolean().default(false), analyticsEnabled: z.boolean().default(false)
 });
@@ -32,8 +34,8 @@ export const captureSchema = z.object({
 }).refine(v => v.email || v.phone, 'Provide an email address or phone number.');
 export function publicCard(card) {
   const visible = new Set(card.publicFields);
-  const {id, persona, name, preferredName, title, company, headline, bio, theme, accent, sectionOrder, customBackground, typography, primaryAction, primaryActionLabel, networkingMode} = card;
-  return {id, persona, name, preferredName, title, company, headline, bio, theme, accent, sectionOrder, customBackground, typography, primaryAction, primaryActionLabel, networkingMode,
+  const {id, persona, name, preferredName, title, company, headline, bio, theme, accent, sectionOrder, customBackground, typography, primaryAction, primaryActionLabel, networkingMode, cornerImageKind, cornerImagePosition, publicImageAvailable} = card;
+  return {id, persona, name, preferredName, title, company, headline, bio, theme, accent, sectionOrder, customBackground, typography, primaryAction, primaryActionLabel, networkingMode, cornerImageKind, cornerImagePosition, publicImageAvailable,
     ...Object.fromEntries(['email','phone','website','location','portfolio','booking','socials','cv'].filter(k => visible.has(k)).map(k => [k, card[k]]))};
 }
 export function cardCSS(card) {
@@ -42,7 +44,7 @@ export function cardCSS(card) {
   const contrast=hex=>{const rgb=[0,2,4].map(i=>parseInt(hex.slice(i,i+2),16)/255).map(c=>c<=.04045?c/12.92:((c+.055)/1.055)**2.4);const l=rgb[0]*.2126+rgb[1]*.7152+rgb[2]*.0722;return (l+.05)/.05>=1.05/(l+.05)?'#000':'#fff';};
   const fonts={Standard:'system-ui,sans-serif',Rounded:'ui-rounded,system-ui,sans-serif',Serif:'ui-serif,Georgia,serif',Monospaced:'ui-monospace,monospace'};
   // Only schema-validated hex colours and allowlisted font stacks enter CSS.
-  return `.cover{background:#${background};color:${contrast(background)}}article{font-family:${fonts[card.typography]||fonts.Standard}}.primary{background:#${card.accent};color:${contrast(card.accent)}}`;
+  return `.cover{background:#${background};color:${contrast(background)}}.cover span{color:inherit;opacity:.8}article{font-family:${fonts[card.typography]||fonts.Standard}}.primary{background:#${card.accent};color:${contrast(card.accent)}}`;
 }
 export function escapeHTML(value = '') { return String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 export function vcard(card) {
