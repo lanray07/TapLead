@@ -13,6 +13,7 @@ final class QRExportTests:XCTestCase {
         }
         for background in [nil,Optional(photo)] {
             let image=try XCTUnwrap(QRExport.image(card:card,url:url,photo:background))
+            let capture=XCTAttachment(image:image);capture.name=background == nil ? "Branded QR export":"Photo QR export";capture.lifetime = .keepAlways;add(capture)
             let request=VNDetectBarcodesRequest();request.symbologies=[.qr]
             try VNImageRequestHandler(cgImage:try XCTUnwrap(image.cgImage),options:[:]).perform([request])
             XCTAssertEqual(request.results?.first?.payloadStringValue,url.absoluteString)

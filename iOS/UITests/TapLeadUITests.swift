@@ -6,8 +6,8 @@ final class TapLeadUITests:XCTestCase {
         let name=app.textFields["Name"];XCTAssertTrue(name.waitForExistence(timeout:5));name.tap();name.typeText("Nova Test")
         let consent=app.switches["They agreed to share these details"]
         for _ in 0..<5 {if consent.isHittable{break};app.swipeUp()}
-        XCTAssertTrue(consent.isHittable,app.debugDescription);consent.tap();app.buttons["Save"].tap()
-        XCTAssertTrue(app.staticTexts["A good start. What next?"].waitForExistence(timeout:5))
+        XCTAssertTrue(consent.isHittable,app.debugDescription);consent.switches.firstMatch.tap();XCTAssertEqual(consent.value as? String,"1");XCTAssertTrue(app.buttons["Save"].isEnabled);app.buttons["Save"].tap()
+        XCTAssertTrue(app.staticTexts["A good start. What next?"].waitForExistence(timeout:5),app.debugDescription)
         XCTAssertTrue(app.buttons["Send introduction"].exists)
         XCTAssertTrue(app.buttons["Book follow-up"].exists)
         XCTAssertTrue(app.buttons["Add reminder"].exists)

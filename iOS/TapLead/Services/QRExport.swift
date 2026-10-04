@@ -3,7 +3,7 @@ import TapLeadCore
 
 enum QRExport {
     @MainActor static func image(card:Card,url:URL,photo:UIImage? = nil)->UIImage? {
-        guard let qr=QRCode.image(url.absoluteString) else{return nil}
+        guard let symbol=QRCode.image(url.absoluteString,scale:1)?.cgImage else{return nil}
         let size=CGSize(width:1024,height:1280)
         let format=UIGraphicsImageRendererFormat();format.scale=1;format.opaque=true
         return UIGraphicsImageRenderer(size:size,format:format).image { context in
@@ -22,7 +22,13 @@ enum QRExport {
             // Keep the symbol and its quiet zone untouched; branding sits outside it.
             let panel=CGRect(x:254,y:470,width:516,height:516)
             UIColor.white.setFill();cg.fill(panel)
-            qr.draw(in:panel.insetBy(dx:64,dy:64))
+            let available=panel.insetBy(dx:64,dy:64)
+            let moduleScale=floor(available.width/CGFloat(symbol.width))
+            let edge=CGFloat(symbol.width)*moduleScale
+            let rect=CGRect(x:floor(panel.midX-edge/2),y:floor(panel.midY-edge/2),width:edge,height:edge)
+            cg.saveGState();cg.interpolationQuality = .none;cg.setShouldAntialias(false)
+            cg.translateBy(x:rect.minX,y:rect.maxY);cg.scaleBy(x:1,y:-1)
+            cg.draw(symbol,in:CGRect(x:0,y:0,width:edge,height:edge));cg.restoreGState()
             draw(card.name,rect:CGRect(x:64,y:1020,width:896,height:90),size:44,colour:.black)
             draw(String(localized:"Scan to connect"),rect:CGRect(x:64,y:1130,width:896,height:70),size:32,colour:.darkGray)
         }

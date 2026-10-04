@@ -3,9 +3,9 @@ import UIKit
 import CoreImage.CIFilterBuiltins
 
 enum QRCode {
-    static func image(_ value: String) -> UIImage? {
+    static func image(_ value: String, scale: Int = 12) -> UIImage? {
         let filter=CIFilter.qrCodeGenerator();filter.message=Data(value.utf8);filter.correctionLevel="M"
-        guard let output=filter.outputImage,let cg=CIContext().createCGImage(output.transformed(by:CGAffineTransform(scaleX:12,y:12)),from:output.extent.applying(CGAffineTransform(scaleX:12,y:12))) else{return nil}
+        guard let output=filter.outputImage,let cg=CIContext().createCGImage(output.transformed(by:CGAffineTransform(scaleX:CGFloat(scale),y:CGFloat(scale))),from:output.extent.applying(CGAffineTransform(scaleX:CGFloat(scale),y:CGFloat(scale)))) else{return nil}
         return UIImage(cgImage:cg)
     }
 }
