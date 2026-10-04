@@ -43,7 +43,7 @@
       "section": 7,
       "title": "Dynamic QR and advanced sharing",
       "status": "partial",
-      "evidence": "Fullscreen QR, persona selection, branded image, QR-on-photo and printable PDF exports are implemented. Native decoding/PDF tests are in GitHub. Live hosting and second-phone/print acceptance remain."
+      "evidence": "Branded/photo/printable QR exports and persona selection are implemented. Both actual iOS exported images independently decoded the intended URL on Windows. GitHub Vision GPU execution failed in its VM; CPU-only native decoding is being checked in run 37215185529. Live hosting and second-phone/print acceptance remain."
     },
     {
       "section": 8,
@@ -97,7 +97,7 @@
       "section": 16,
       "title": "Six immediate follow-up actions",
       "status": "partial",
-      "evidence": "After-save actions now include introduction drafting, follow-up, reminder, voice note and configured portfolio/booking sharing. Shares use the connection card. New native UI walkthrough test is in GitHub; full acceptance remains."
+      "evidence": "All six immediate actions appear after a consented connection save; missing portfolio/booking links show disabled actions with guidance. Native UI run 37213899002 passed saving and opening the editable introduction draft. Live sync/recipient acceptance remains."
     },
     {
       "section": 17,

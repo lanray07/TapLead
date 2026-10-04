@@ -15,3 +15,7 @@ Seven original card-style samples are appended to the existing three App Store s
 | 10 | Consultant | [PNG](assets/10-consultant-6.5.png) | [PNG](assets/10-consultant-6.9.png) |
 
 The PNGs are opaque at 1242 × 2688 or 1320 × 2868 pixels. Corresponding editable SVG sources sit beside each PNG. Captured by the passing native premium sample test in [GitHub run 37203147150](https://github.com/lanray07/TapLead/actions/runs/37203147150); generated with [premium-store-assets.cjs](../scripts/premium-store-assets.cjs).
+
+## New workflow capture for the final story
+
+[Saved connection and six next actions](assets/next-actions-native.png) is a genuine 1320 × 2868 native capture from the passing workflow test in [run 37213899002](https://github.com/lanray07/TapLead/actions/runs/37213899002). It uses explicitly labelled fictional demo data. Portfolio and booking actions explain why they are disabled when the card has no link. This source capture is saved for the final screenshot story; it has not replaced the current App Store draft.
