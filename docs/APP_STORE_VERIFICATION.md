@@ -6,7 +6,7 @@ Private receipt submission additionally binds the signed `appAccountToken` to th
 
 Database writes serialize per original transaction/environment, reject ownership reassignment and ignore older/equal signed updates. Public notifications require a verified signed notification and an independently verified nested transaction. Verified billing grace can extend expiry only when the signed renewal matches the transaction and environment. Later expiry/refund/revocation updates supersede older receipts. Deleted accounts are not recreated by notifications.
 
-Notification endpoint: `https://qyflrgvolsiljpsghqku.supabase.co/functions/v1/taplead/api/apple/notifications`. App Store Connect configuration is still outstanding. Purchases remain disabled while acceptance is incomplete.
+Notification endpoint: `https://qyflrgvolsiljpsghqku.supabase.co/functions/v1/taplead/api/apple/notifications`. This URL is saved for both Production and Sandbox in App Store Connect as of 4 October 2026. Actual signed notification delivery remains unverified. Purchases remain disabled while acceptance is incomplete.
 
 ## Evidence and remaining acceptance
 
