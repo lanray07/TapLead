@@ -7,7 +7,8 @@ final class TapLeadUITests:XCTestCase {
         app.buttons["Choose logo"].tap()
         let photo=app.scrollViews["photosView_content_scroll_view"].images.matching(identifier:"PXGGridLayout-Info").firstMatch
         XCTAssertTrue(photo.waitForExistence(timeout:20),app.debugDescription)
-        photo.tap()
+        // PhotosUI exposes the remote thumbnail but reports no accessibility hit point.
+        photo.coordinate(withNormalizedOffset:CGVector(dx:0.5,dy:0.5)).tap()
         XCTAssertTrue(app.staticTexts["Logo added"].waitForExistence(timeout:20),app.debugDescription)
         app.buttons.matching(NSPredicate(format:"label BEGINSWITH %@","Image corner")).firstMatch.tap()
         app.buttons["Bottom right"].tap()
