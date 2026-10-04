@@ -4,7 +4,8 @@ import TapLeadCore
 
 enum ServiceError: LocalizedError {
     case message(String)
-    var errorDescription: String? { if case .message(let text) = self { return text }; return nil }
+    case response(status:Int,message:String)
+    var errorDescription:String?{switch self{case .message(let text):text;case .response(_,let message):message}}
 }
 enum Keychain {
     private static let service = "com.taplead.session"
@@ -42,7 +43,7 @@ struct APIClient {
         let (data,response) = try await URLSession.shared.data(for: request)
         guard let response = response as? HTTPURLResponse else { throw URLError(.badServerResponse) }
         guard (200..<300).contains(response.statusCode) else {
-            throw ServiceError.message((try? JSONDecoder().decode(Failure.self, from: data).error) ?? String(localized: "The request could not be completed."))
+            throw ServiceError.response(status:response.statusCode,message:(try? JSONDecoder().decode(Failure.self, from: data).error) ?? String(localized: "The request could not be completed."))
         }
         if data.isEmpty, let empty = EmptyResponse() as? T { return empty }
         return try JSONDecoder().decode(T.self, from: data)

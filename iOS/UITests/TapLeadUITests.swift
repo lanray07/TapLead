@@ -12,6 +12,8 @@ final class TapLeadUITests:XCTestCase {
         XCTAssertTrue(app.buttons["Book follow-up"].exists)
         XCTAssertTrue(app.buttons["Add reminder"].exists)
         XCTAssertTrue(app.buttons["Add voice note"].exists)
+        XCTAssertTrue(app.buttons["Share portfolio"].exists)
+        XCTAssertTrue(app.buttons["Share booking link"].exists)
         let capture=XCTAttachment(screenshot:app.screenshot());capture.name="TapLead-next-actions";capture.lifetime = .keepAlways;add(capture)
         app.buttons["Send introduction"].tap()
         XCTAssertTrue(app.textViews["Introduction draft"].waitForExistence(timeout:5))

@@ -155,7 +155,11 @@ import TapLeadCore
         } catch {guard epoch==sessionEpoch else{return}; syncMessage = String(localized: "Changes saved on this iPhone. Pull to retry sync."); self.error = error.localizedDescription; persist() }
     }
     func signOut() async {
-        do { let _: EmptyResponse = try await api.request("api/auth/logout",method:"POST");sessionEpoch += 1;for lead in leads{NotificationService.cancel(lead.id)}; try Keychain.set(nil); authenticated=false;pro=false;UserDefaults.standard.removeObject(forKey:"TapLeadUserID"); snapshot=AppSnapshot(); persist() }
+        do {
+            do {let _:EmptyResponse=try await api.request("api/auth/logout",method:"POST")}
+            catch ServiceError.response(let status,_) where status == 401 { /* Session already expired or revoked. */ }
+            sessionEpoch += 1;for lead in leads{NotificationService.cancel(lead.id)};try Keychain.set(nil);authenticated=false;pro=false;UserDefaults.standard.removeObject(forKey:"TapLeadUserID");snapshot=AppSnapshot();persist()
+        }
         catch { self.error=error.localizedDescription }
     }
     func deleteAccount() async throws {

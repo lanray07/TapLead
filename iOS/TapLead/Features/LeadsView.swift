@@ -39,9 +39,9 @@ struct LeadEditor: View {
                     NavigationLink{LeadDetailView(leadID:lead.id)}label:{Label("Add reminder",systemImage:"bell")}.frame(minHeight:44)
                     Button{voice=true}label:{Label("Add voice note",systemImage:"mic")}.frame(minHeight:44)
                     if let url=usedCard.flatMap({Validation.webURL($0.portfolio)}) {ShareLink(item:url){Label("Share portfolio",systemImage:"square.and.arrow.up")}.frame(minHeight:44)}
-                    else {Label("Add a portfolio link to your card to share it",systemImage:"link").font(.caption).foregroundStyle(.secondary)}
+                    else {Button{}label:{Label("Share portfolio",systemImage:"square.and.arrow.up")}.disabled(true).frame(minHeight:44);Text("Add a portfolio link to your card to share it").font(.caption).foregroundStyle(.secondary)}
                     if let url=usedCard.flatMap({Validation.webURL($0.booking)}) {ShareLink(item:url){Label("Share booking link",systemImage:"calendar.badge.plus")}.frame(minHeight:44)}
-                    else {Label("Add a booking link to your card to share it",systemImage:"calendar").font(.caption).foregroundStyle(.secondary)}
+                    else {Button{}label:{Label("Share booking link",systemImage:"calendar.badge.plus")}.disabled(true).frame(minHeight:44);Text("Add a booking link to your card to share it").font(.caption).foregroundStyle(.secondary)}
                     PrimaryButton(title:"Done",icon:"checkmark"){dismiss()}
                 }.padding(28)}.navigationTitle("Connection saved")
             }
