@@ -25,6 +25,7 @@ enum Keychain {
     }
 }
 struct APIClient {
+    private struct Failure:Decodable {var error:String}
     var base: URL? {
         guard let raw = Bundle.main.object(forInfoDictionaryKey: "TapLeadAPIURL") as? String else { return nil }
         return Validation.webURL(raw)
@@ -41,7 +42,6 @@ struct APIClient {
         let (data,response) = try await URLSession.shared.data(for: request)
         guard let response = response as? HTTPURLResponse else { throw URLError(.badServerResponse) }
         guard (200..<300).contains(response.statusCode) else {
-            struct Failure: Decodable { var error: String }
             throw ServiceError.message((try? JSONDecoder().decode(Failure.self, from: data).error) ?? String(localized: "The request could not be completed."))
         }
         if data.isEmpty, let empty = EmptyResponse() as? T { return empty }

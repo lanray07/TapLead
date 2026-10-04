@@ -8,3 +8,5 @@ node_modules/
 backend/data/
 artifacts/
 .DS_Store
+__pycache__/
+*.pyc

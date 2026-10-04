@@ -40,7 +40,7 @@ jobs:
           set -o pipefail
           xcodebuild -project TapLead.xcodeproj -scheme TapLead -sdk iphonesimulator \
             -destination 'generic/platform=iOS Simulator' -derivedDataPath DerivedData \
-            CODE_SIGNING_ALLOWED=NO build 2>&1 | tee artifacts/build.log
+            CODE_SIGNING_ALLOWED=NO ONLY_ACTIVE_ARCH=YES ARCHS="$(uname -m)" build 2>&1 | tee artifacts/build.log
       - name: Select available iPhone simulator
         run: python3 scripts/select-simulator.py >> "$GITHUB_ENV"
       - name: Run native UI tests and capture demo states
