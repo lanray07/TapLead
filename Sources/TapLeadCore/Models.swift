@@ -151,6 +151,9 @@ public enum CardSync {
     }
 }
 public enum Validation {
+    public static func groundedFact(value:String,evidence:String,notes:String)->Bool {
+        !value.trimmingCharacters(in:.whitespacesAndNewlines).isEmpty && !evidence.isEmpty && evidence.count <= 2000 && value.count <= 2000 && notes.contains(evidence) && evidence.contains(value)
+    }
     public static func hexColour(_ value: String) -> Bool { value.range(of: "^[0-9A-Fa-f]{6}$", options: .regularExpression) != nil }
     public static func prefersDarkText(on hex: String) -> Bool {
         guard let value = UInt32(hex, radix: 16) else { return false }

@@ -12,11 +12,20 @@ struct AIView:View {
     @State private var result:AIResult?
     @State private var draft=""
     @State private var failure:String?
+    @State private var generation:Task<Void,Never>?
     var body:some View {
         NavigationStack {
             Form {
-                Section("Use the context you already have") {Text(verbatim:lead.notes.isEmpty ? lead.context:lead.notes);Toggle("Allow AI processing of these notes",isOn:$consent);Text("The selected notes and contact name are sent to your configured AI service only when you choose an action. Check its privacy terms first.").font(.caption).foregroundStyle(.secondary)}
-                Section {Picker("Tone",selection:$tone){ForEach(["Friendly","Professional","Concise","Sales","Casual"],id:\.self){Text(LocalizedStringKey($0))}};Picker("Message format",selection:$channel){ForEach(["Email","SMS","LinkedIn","WhatsApp"],id:\.self){Text(verbatim:$0)}};Button("Create Smart Notes"){Task{await generate("smart_notes")}}.disabled(!consent || busy);Button("Draft Follow-Up"){Task{await generate("follow_up")}}.disabled(!consent || busy)}
+                Section("Use the context you already have") {Text(verbatim:lead.notes.isEmpty ? lead.context:lead.notes);Toggle("Allow AI processing of these notes",isOn:$consent);Text("These notes and the contact name are processed on this iPhone using Apple’s on-device model only when you choose an action. TapLead does not send them to an external AI service.").font(.caption).foregroundStyle(.secondary)}
+                Section {
+                    Picker("Tone",selection:$tone){ForEach(["Friendly","Professional","Concise","Sales","Casual"],id:\.self){Text(LocalizedStringKey($0))}}
+                    Picker("Message format",selection:$channel){ForEach(["Email","SMS","LinkedIn","WhatsApp"],id:\.self){Text(verbatim:$0)}}
+                    Button("Create Smart Notes"){start("smart_notes")}.disabled(!canGenerate)
+                    Button("Draft Follow-Up"){start("follow_up")}.disabled(!canGenerate)
+                    if !store.pro && !store.demo {Text("Smart Notes and AI drafts are included with TapLead Pro.").font(.caption)}
+                    if !LocalAIService.available {Text("On-device AI needs iOS 26, Apple Intelligence enabled, and a supported device and language. Your notes and manual introduction drafts remain available.").font(.caption).foregroundStyle(.secondary)}
+                    NavigationLink("Write an introduction yourself"){IntroductionDraftView(leadID:lead.id)}
+                }
                 if busy {ProgressView("Preparing your draft…")}
                 if let failure {Section{Text(verbatim:failure).foregroundStyle(.secondary)}}
                 if let result {
@@ -26,9 +35,17 @@ struct AIView:View {
                 }
             }.navigationTitle("A thoughtful next step").toolbar{ToolbarItem(placement:.cancellationAction){Button("Close"){dismiss()}}}
         }
+        .onDisappear{generation?.cancel()}
+        .onChange(of:consent){_,enabled in if !enabled{generation?.cancel();result=nil;draft=""}}
     }
+    var canGenerate:Bool{consent && !busy && LocalAIService.available && (store.pro || store.demo)}
+    func start(_ kind:String){generation=Task{await generate(kind)}}
     func generate(_ kind:String) async {
         busy=true;failure=nil;defer{busy=false}
-        do{struct Input:Encodable{var consent:Bool;var kind:String;var notes:String;var name:String;var tone:String;var channel:String};let response:AIResult=try await store.api.send("api/ai",method:"POST",value:Input(consent:consent,kind:kind,notes:lead.notes.isEmpty ? lead.context:lead.notes,name:lead.name,tone:tone,channel:channel));result=response;draft=response.draft ?? ""}catch{failure=error.localizedDescription}
+        guard consent,store.pro || store.demo else{return}
+        do {
+            let response=try await LocalAIService.generate(kind:kind,notes:lead.notes.isEmpty ? lead.context:lead.notes,name:lead.name,tone:tone,channel:channel)
+            guard consent,!Task.isCancelled else{return};result=response;draft=response.draft ?? ""
+        } catch {guard !Task.isCancelled else{return};failure=error.localizedDescription}
     }
 }

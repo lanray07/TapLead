@@ -2,6 +2,13 @@ import XCTest
 @testable import TapLeadCore
 
 final class CoreTests: XCTestCase {
+    func testFactsRejectInventedValuesAndEvidence() {
+        let note="Met at the conference. Asked for the portfolio."
+        XCTAssertTrue(Validation.groundedFact(value:"Asked for the portfolio",evidence:"Asked for the portfolio.",notes:note))
+        XCTAssertFalse(Validation.groundedFact(value:"Booked a meeting",evidence:"Asked for the portfolio.",notes:note))
+        XCTAssertFalse(Validation.groundedFact(value:"Tomorrow",evidence:"Tomorrow",notes:note))
+        XCTAssertFalse(Validation.groundedFact(value:"",evidence:"Asked for the portfolio.",notes:note))
+    }
     func testLegacyCardAndSnapshotKeepNewSettingsOptional() throws {
         let card=try JSONDecoder().decode(Card.self,from:JSONEncoder().encode(Card()))
         XCTAssertEqual(card.mode,.networking);XCTAssertEqual(card.action,.saveContact);XCTAssertNil(card.customBackground)

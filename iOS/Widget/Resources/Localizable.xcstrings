@@ -11376,6 +11376,201 @@
         }
       }
     },
+    "On-device AI is unavailable.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "On-device AI is unavailable."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "On-device AI is unavailable."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "On-device AI is unavailable."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "On-device AI is unavailable."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "On-device AI is unavailable."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "On-device AI is unavailable."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "On-device AI is unavailable."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "On-device AI is unavailable."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "On-device AI is unavailable."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "On-device AI is unavailable."
+          }
+        }
+      }
+    },
+    "On-device AI needs iOS 26 and an available Apple Intelligence model for your language. You can still write notes and introductions yourself.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "On-device AI needs iOS 26 and an available Apple Intelligence model for your language. You can still write notes and introductions yourself."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "On-device AI needs iOS 26 and an available Apple Intelligence model for your language. You can still write notes and introductions yourself."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "On-device AI needs iOS 26 and an available Apple Intelligence model for your language. You can still write notes and introductions yourself."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "On-device AI needs iOS 26 and an available Apple Intelligence model for your language. You can still write notes and introductions yourself."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "On-device AI needs iOS 26 and an available Apple Intelligence model for your language. You can still write notes and introductions yourself."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "On-device AI needs iOS 26 and an available Apple Intelligence model for your language. You can still write notes and introductions yourself."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "On-device AI needs iOS 26 and an available Apple Intelligence model for your language. You can still write notes and introductions yourself."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "On-device AI needs iOS 26 and an available Apple Intelligence model for your language. You can still write notes and introductions yourself."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "On-device AI needs iOS 26 and an available Apple Intelligence model for your language. You can still write notes and introductions yourself."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "On-device AI needs iOS 26 and an available Apple Intelligence model for your language. You can still write notes and introductions yourself."
+          }
+        }
+      }
+    },
+    "On-device AI needs iOS 26, Apple Intelligence enabled, and a supported device and language. Your notes and manual introduction drafts remain available.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "On-device AI needs iOS 26, Apple Intelligence enabled, and a supported device and language. Your notes and manual introduction drafts remain available."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "On-device AI needs iOS 26, Apple Intelligence enabled, and a supported device and language. Your notes and manual introduction drafts remain available."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "On-device AI needs iOS 26, Apple Intelligence enabled, and a supported device and language. Your notes and manual introduction drafts remain available."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "On-device AI needs iOS 26, Apple Intelligence enabled, and a supported device and language. Your notes and manual introduction drafts remain available."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "On-device AI needs iOS 26, Apple Intelligence enabled, and a supported device and language. Your notes and manual introduction drafts remain available."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "On-device AI needs iOS 26, Apple Intelligence enabled, and a supported device and language. Your notes and manual introduction drafts remain available."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "On-device AI needs iOS 26, Apple Intelligence enabled, and a supported device and language. Your notes and manual introduction drafts remain available."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "On-device AI needs iOS 26, Apple Intelligence enabled, and a supported device and language. Your notes and manual introduction drafts remain available."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "On-device AI needs iOS 26, Apple Intelligence enabled, and a supported device and language. Your notes and manual introduction drafts remain available."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "On-device AI needs iOS 26, Apple Intelligence enabled, and a supported device and language. Your notes and manual introduction drafts remain available."
+          }
+        }
+      }
+    },
     "On-device speech recognition is unavailable for this language or device. You can type your note instead.": {
       "extractionState": "manual",
       "localizations": {
@@ -16901,6 +17096,71 @@
         }
       }
     },
+    "Smart Notes and AI drafts are included with TapLead Pro.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Smart Notes and AI drafts are included with TapLead Pro."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Smart Notes and AI drafts are included with TapLead Pro."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Smart Notes and AI drafts are included with TapLead Pro."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Smart Notes and AI drafts are included with TapLead Pro."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Smart Notes and AI drafts are included with TapLead Pro."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Smart Notes and AI drafts are included with TapLead Pro."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Smart Notes and AI drafts are included with TapLead Pro."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Smart Notes and AI drafts are included with TapLead Pro."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Smart Notes and AI drafts are included with TapLead Pro."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Smart Notes and AI drafts are included with TapLead Pro."
+          }
+        }
+      }
+    },
     "Social links": {
       "extractionState": "manual",
       "localizations": {
@@ -18656,6 +18916,71 @@
         }
       }
     },
+    "These notes and the contact name are processed on this iPhone using Apple’s on-device model only when you choose an action. TapLead does not send them to an external AI service.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "These notes and the contact name are processed on this iPhone using Apple’s on-device model only when you choose an action. TapLead does not send them to an external AI service."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "These notes and the contact name are processed on this iPhone using Apple’s on-device model only when you choose an action. TapLead does not send them to an external AI service."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "These notes and the contact name are processed on this iPhone using Apple’s on-device model only when you choose an action. TapLead does not send them to an external AI service."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "These notes and the contact name are processed on this iPhone using Apple’s on-device model only when you choose an action. TapLead does not send them to an external AI service."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "These notes and the contact name are processed on this iPhone using Apple’s on-device model only when you choose an action. TapLead does not send them to an external AI service."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "These notes and the contact name are processed on this iPhone using Apple’s on-device model only when you choose an action. TapLead does not send them to an external AI service."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "These notes and the contact name are processed on this iPhone using Apple’s on-device model only when you choose an action. TapLead does not send them to an external AI service."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "These notes and the contact name are processed on this iPhone using Apple’s on-device model only when you choose an action. TapLead does not send them to an external AI service."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "These notes and the contact name are processed on this iPhone using Apple’s on-device model only when you choose an action. TapLead does not send them to an external AI service."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "These notes and the contact name are processed on this iPhone using Apple’s on-device model only when you choose an action. TapLead does not send them to an external AI service."
+          }
+        }
+      }
+    },
     "They agreed to share these details": {
       "extractionState": "manual",
       "localizations": {
@@ -19822,6 +20147,71 @@
           "stringUnit": {
             "state": "new",
             "value": "Use a booking or portfolio link for your next conversation."
+          }
+        }
+      }
+    },
+    "Use a non-empty note of up to 3,000 characters for this on-device action.": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use a non-empty note of up to 3,000 characters for this on-device action."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Use a non-empty note of up to 3,000 characters for this on-device action."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use a non-empty note of up to 3,000 characters for this on-device action."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use a non-empty note of up to 3,000 characters for this on-device action."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use a non-empty note of up to 3,000 characters for this on-device action."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use a non-empty note of up to 3,000 characters for this on-device action."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use a non-empty note of up to 3,000 characters for this on-device action."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use a non-empty note of up to 3,000 characters for this on-device action."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use a non-empty note of up to 3,000 characters for this on-device action."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Use a non-empty note of up to 3,000 characters for this on-device action."
           }
         }
       }

@@ -1,5 +1,22 @@
 import XCTest
 final class TapLeadUITests:XCTestCase {
+    func testSavedConnectionOffersImmediateActions() {
+        let app=XCUIApplication();app.launchArguments=["--demo"];app.launch()
+        app.tabBars.buttons["Connections"].tap();app.buttons["Add connection"].tap()
+        let name=app.textFields["Name"];XCTAssertTrue(name.waitForExistence(timeout:5));name.tap();name.typeText("Nova Test")
+        let consent=app.switches["They agreed to share these details"]
+        for _ in 0..<5 {if consent.isHittable{break};app.swipeUp()}
+        XCTAssertTrue(consent.isHittable,app.debugDescription);consent.tap();app.buttons["Save"].tap()
+        XCTAssertTrue(app.staticTexts["A good start. What next?"].waitForExistence(timeout:5))
+        XCTAssertTrue(app.buttons["Send introduction"].exists)
+        XCTAssertTrue(app.buttons["Book follow-up"].exists)
+        XCTAssertTrue(app.buttons["Add reminder"].exists)
+        XCTAssertTrue(app.buttons["Add voice note"].exists)
+        let capture=XCTAttachment(screenshot:app.screenshot());capture.name="TapLead-next-actions";capture.lifetime = .keepAlways;add(capture)
+        app.buttons["Send introduction"].tap()
+        XCTAssertTrue(app.textViews["Introduction draft"].waitForExistence(timeout:5))
+        XCTAssertTrue(app.buttons["Share draft"].exists)
+    }
     func testPremiumCardSampleScreenshots() {
         for theme in ["Minimal","Creator","Bold","Dark","Elegant","Sales","Consultant"] {
             let app=XCUIApplication()

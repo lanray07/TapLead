@@ -30,6 +30,7 @@ struct LeadEditor: View {
         NavigationStack {
             if saved {
                 ScrollView {VStack(alignment:.leading,spacing:20) {
+                    if store.demo {DemoBanner()}
                     Image(systemName:"checkmark.circle.fill").font(.system(size:48)).foregroundStyle(Palette.accent)
                     Text("A good start. What next?").font(.largeTitle.bold())
                     Text(verbatim:lead.name).font(.title3).foregroundStyle(.secondary)
@@ -46,6 +47,7 @@ struct LeadEditor: View {
             }
             else {
                 Form {
+                    if store.demo {Section{DemoBanner()}}
                     Section("Their details") {TextField("Name",text:$lead.name);TextField("Email",text:$lead.email).keyboardType(.emailAddress).textInputAutocapitalization(.never);TextField("Phone",text:$lead.phone).keyboardType(.phonePad);TextField("Company",text:$lead.company);TextField("Role",text:$lead.role);TextField("Interested in",text:$lead.interest)}
                     Section("Remember the conversation") {TextField("Where or how did you meet?",text:$lead.context,axis:.vertical);TextField("Notes",text:$lead.notes,axis:.vertical).lineLimit(3...8);Button{voice=true}label:{Label("Add voice note",systemImage:"mic.fill")};TextField("Tags, separated by commas",text:Binding(get:{lead.tags.joined(separator:", ")},set:{lead.tags=$0.split(separator:",").map{$0.trimmingCharacters(in:.whitespaces)}}))}
                     Section {Toggle("They agreed to share these details",isOn:$lead.consent);Text("Record contact details only with permission. Location and context are entered by you; TapLead does not track your location.").font(.caption).foregroundStyle(.secondary)}

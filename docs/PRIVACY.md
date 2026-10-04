@@ -2,7 +2,7 @@
 
 Last updated: 4 October 2026.
 
-TapLead helps you create a digital business card, organise professional connections and keep meeting notes. This policy describes the current implementation maintained in the [TapLead repository](https://github.com/lanray07/TapLead). Live account services, purchases and AI processing remain unavailable until their production configuration and verification are complete.
+TapLead helps you create a digital business card, organise professional connections and keep meeting notes. This policy describes the current implementation maintained in the [TapLead repository](https://github.com/lanray07/TapLead). Live account services and purchases remain unavailable until their production configuration and verification are complete. Optional on-device AI requires iOS 26, an available Apple Intelligence model, Pro access and your explicit action consent; physical-device evaluation remains pending for release.
 
 ## Information and its use
 
@@ -20,7 +20,7 @@ Selected profile photos and logos remain local in the current app; a production 
 
 ## Optional AI
 
-AI processing is currently unconfigured. No notes are automatically sent to an AI provider. The implementation requires a separate, explicit action and consent. The actual provider, processing location, retention and sharing terms must be disclosed here before production AI is enabled.
+Optional Smart Notes and follow-up drafts use Apple’s Foundation Models on the iPhone when its model is available for the device and language. TapLead does not send the chosen notes or contact name to an external AI processor in this path. You must opt in and choose an action; results are reviewed before saving or sharing. An optional external gateway remains disabled and is not called by the native AI screen. Any future external processor requires an updated consent flow and policy before activation.
 
 ## Sharing and external services
 
