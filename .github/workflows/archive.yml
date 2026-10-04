@@ -1,0 +1,64 @@
+name: TapLead signed Xcode archive
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: taplead-signed-archive
+  cancel-in-progress: false
+jobs:
+  archive:
+    runs-on: macos-latest
+    timeout-minutes: 35
+    env:
+      APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+      APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
+      APP_STORE_CONNECT_API_PRIVATE_KEY: ${{ secrets.APP_STORE_CONNECT_API_PRIVATE_KEY }}
+      APP_STORE_CONNECT_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+      TAPLEAD_APP_ID: ${{ vars.TAPLEAD_APP_ID }}
+      TAPLEAD_APP_GROUP: ${{ vars.TAPLEAD_APP_GROUP }}
+      TAPLEAD_API_URL: ${{ vars.TAPLEAD_API_URL }}
+      TAPLEAD_PRIVACY_URL: ${{ vars.TAPLEAD_PRIVACY_URL }}
+      TAPLEAD_TERMS_URL: ${{ vars.TAPLEAD_TERMS_URL }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install build dependencies
+        run: |
+          brew install xcodegen
+          python3 -m venv "$RUNNER_TEMP/signing-python"
+          "$RUNNER_TEMP/signing-python/bin/pip" install cryptography PyYAML
+      - name: Configure existing Apple app and temporary signing credentials
+        run: "$RUNNER_TEMP/signing-python/bin/python" scripts/configure-signing.py
+      - name: Generate Xcode project
+        run: xcodegen generate
+      - name: Archive with Apple automatic signing
+        run: |
+          mkdir -p artifacts
+          set -o pipefail
+          xcodebuild -project TapLead.xcodeproj -scheme TapLead -configuration Release \
+            -destination 'generic/platform=iOS' -archivePath artifacts/TapLead.xcarchive \
+            -allowProvisioningUpdates -authenticationKeyPath "$ASC_KEY_PATH" \
+            -authenticationKeyID "$APP_STORE_CONNECT_API_KEY_ID" \
+            -authenticationKeyIssuerID "$APP_STORE_CONNECT_ISSUER_ID" \
+            DEVELOPMENT_TEAM="$APPLE_TEAM_ID" CODE_SIGN_STYLE=Automatic \
+            archive 2>&1 | tee artifacts/archive.log
+      - name: Export signed IPA for App Store distribution
+        run: |
+          set -o pipefail
+          xcodebuild -exportArchive -archivePath artifacts/TapLead.xcarchive \
+            -exportPath artifacts/export -exportOptionsPlist "$RUNNER_TEMP/ExportOptions.plist" \
+            -allowProvisioningUpdates -authenticationKeyPath "$ASC_KEY_PATH" \
+            -authenticationKeyID "$APP_STORE_CONNECT_API_KEY_ID" \
+            -authenticationKeyIssuerID "$APP_STORE_CONNECT_ISSUER_ID" \
+            2>&1 | tee artifacts/export.log
+      - name: Preserve archive and build diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: TapLead-signed-archive
+          path: artifacts/
+          retention-days: 14
+      - name: Remove temporary signing key
+        if: always()
+        run: |
+          if [ -n "$ASC_KEY_PATH" ]; then rm -f "$ASC_KEY_PATH"; fi
