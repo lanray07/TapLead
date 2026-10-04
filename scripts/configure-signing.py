@@ -69,7 +69,12 @@ for resource in ['certificates','bundleIds','profiles']:
 print('Signed artifact export only; no App Store upload or submission.')
 def api_get(path):
     request=urllib.request.Request('https://api.appstoreconnect.apple.com/v1/'+path,headers={'Authorization':'Bearer '+token})
-    with urllib.request.urlopen(request,timeout=30) as response:return json.load(response)
+    try:
+        with urllib.request.urlopen(request,timeout=30) as response:return json.load(response)
+    except urllib.error.HTTPError as error:
+        details=json.loads(error.read())
+        print('Provisioning inspection:',error.code,'; '.join(item.get('detail',item.get('title','Denied')) for item in details.get('errors',[])))
+        return {'data':[]}
 from cryptography import x509
 from cryptography.x509.oid import NameOID
 for cert in api_get('certificates?limit=200')['data']:
@@ -80,7 +85,7 @@ for cert in api_get('certificates?limit=200')['data']:
         print('Certificate team matches configured team:',any(unit.value==env['APPLE_TEAM_ID'] for unit in units))
 for registered in api_get('bundleIds?limit=200')['data']:
     if registered['attributes']['identifier'] in [bundle,bundle+'.widget']:
-        capabilities=api_get('bundleIds/'+registered['id']+'/bundleIdCapabilities?limit=200')['data']
+        capabilities=api_get('bundleIds/'+registered['id']+'/bundleIdCapabilities')['data']
         print('Registered identifier:',registered['attributes']['identifier'],'capabilities:',','.join(item['attributes']['capabilityType'] for item in capabilities))
 for profile in api_get('profiles?limit=200')['data']:
     import subprocess

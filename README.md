@@ -68,7 +68,7 @@ Choose a simulator that actually exists in `xcrun simctl list devices available`
 
 ## Checks performed here
 
-Five Swift domain tests pass, including UTF-8 vCard folding, privacy and persistence. Twelve backend tests pass, including consent, owner isolation, idempotent writes, request limiting, measured events, cascading account deletion and subscription expiry/account/replay logic. `npm audit --omit=dev` reports zero known dependency vulnerabilities at build time. All native Swift files pass parser checks; this does **not** establish iOS compilation or UI correctness.
+Five Swift domain tests pass, including UTF-8 vCard folding, privacy and persistence. Twelve backend tests pass, including consent, owner isolation, idempotent writes, request limiting, measured events, cascading account deletion and subscription expiry/account/replay logic. `npm audit --omit=dev` reports zero known dependency vulnerabilities at build time. [GitHub Xcode run 37195819458](https://github.com/lanray07/TapLead/actions/runs/37195819458) compiled the native app and widget and passed all three simulator UI tests. Its artifacts include four native screenshots and the XCTest result bundle. NFC, speech and distribution signing require separate validation.
 
 ```powershell
 swift test --scratch-path C:\Users\User\.codex\taplead-build

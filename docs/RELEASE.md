@@ -1,5 +1,9 @@
 # Release status
 
+## Verified in GitHub Xcode
+
+[GitHub run 37195819458](https://github.com/lanray07/TapLead/actions/runs/37195819458) successfully compiled the iOS app and widget with Apple SDKs, passed all three native simulator UI tests, and exported four native screen captures plus the XCTest result bundle. Five shared Swift tests and twelve backend tests also passed. Signing and real-device behavior require separate validation.
+
 ## Verified on this Windows machine
 
 - Shared Swift domain module compiles; five XCTest cases pass.
@@ -18,7 +22,7 @@ The NFC and speech implementations use documented Apple APIs with capability che
 
 | Area | Required work |
 | --- | --- |
-| iOS build | Generate Xcode project, fix any Apple SDK type-check errors, build app and widget, run UI tests, test real devices. |
+| iOS build | App/widget compilation and three simulator UI tests passed in GitHub. Complete distribution signing and real-device tests. |
 | Apple credentials | Register identifiers, App Group/NFC/sign-in entitlements; configure Apple code exchange and token revocation; verify credential-revocation handling. |
 | Hosting | Deploy HTTPS service, set real profile domain/policy URLs, configure persistence, backups, migrations, monitoring and distributed abuse protection. |
 | Authentication | Email ownership verification, password recovery, session management and account-linking UX. Apple sign-in configuration is required before enabling it. |
