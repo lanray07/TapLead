@@ -74,7 +74,7 @@ struct CardPreview: View {
             VStack(alignment:.leading,spacing:6) {
                 Text(card.name.isEmpty ? String(localized:"Your name") : card.name).font(.system(.title,design:style.design,weight:.bold))
                 Text(card.title.isEmpty ? String(localized:"Your next introduction starts here.") : card.title).font(.subheadline).opacity(0.8)
-                if !card.company.isEmpty { Text(verbatim:card.company).font(.caption).opacity(0.65) }
+                if !card.company.isEmpty { Text(verbatim:card.company).font(.caption).opacity(0.85) }
             }
             Divider().overlay(.white.opacity(0.15))
             HStack(alignment:.bottom,spacing:16) {

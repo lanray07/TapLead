@@ -22,7 +22,7 @@ enum QRExport {
             // Keep the symbol and its quiet zone untouched; branding sits outside it.
             let panel=CGRect(x:254,y:470,width:516,height:516)
             UIColor.white.setFill();cg.fill(panel)
-            qr.draw(in:panel.insetBy(dx:42,dy:42))
+            qr.draw(in:panel.insetBy(dx:64,dy:64))
             draw(card.name,rect:CGRect(x:64,y:1020,width:896,height:90),size:44,colour:.black)
             draw(String(localized:"Scan to connect"),rect:CGRect(x:64,y:1130,width:896,height:70),size:32,colour:.darkGray)
         }
