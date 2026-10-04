@@ -18,7 +18,10 @@ final class TapLeadUITests:XCTestCase {
         app.tabBars.buttons["My card"].tap();app.buttons["Edit card"].tap()
         XCTAssertTrue(app.staticTexts["Logo added"].exists)
         XCTAssertTrue(app.buttons.matching(NSPredicate(format:"label CONTAINS %@","Bottom right")).firstMatch.exists)
-        app.buttons["Remove image"].tap();XCTAssertFalse(app.staticTexts["Logo added"].exists)
+        // Bring the row above the floating bottom toolbar before tapping it.
+        app.swipeUp()
+        app.buttons["Remove image"].tap()
+        XCTAssertTrue(app.staticTexts["Logo added"].waitForNonExistence(timeout:5),app.debugDescription)
         app.buttons["Save"].tap();app.buttons["Edit card"].tap()
         XCTAssertFalse(app.staticTexts["Logo added"].exists)
         app.segmentedControls.buttons["None"].tap()
