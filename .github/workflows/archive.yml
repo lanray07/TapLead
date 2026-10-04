@@ -76,6 +76,10 @@ jobs:
           name: TapLead-signed-archive
           path: artifacts/
           retention-days: 14
+      - name: Summarize Apple distribution errors
+        if: failure()
+        run: |
+          "$RUNNER_TEMP/signing-python/bin/python" scripts/distribution-errors.py
       - name: Remove temporary signing key
         if: always()
         run: |
