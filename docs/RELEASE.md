@@ -10,7 +10,9 @@
 
 [GitHub run 37195819458](https://github.com/lanray07/TapLead/actions/runs/37195819458) successfully compiled the iOS app and widget with Apple SDKs, passed all three native simulator UI tests, and exported four native screen captures plus the XCTest result bundle. Five shared Swift tests and twelve backend tests also passed. Signing and real-device behavior require separate validation.
 
-The distribution signing gap is resolved. `group.com.TapLead.app.shared` was registered and assigned to both `com.TapLead.app` and `com.TapLead.app.widget` in the Apple Developer portal. [Run 37205638304](https://github.com/lanray07/TapLead/actions/runs/37205638304) successfully exported the signed IPA and verified app/widget signatures, identifiers, matching build numbers, App Group, NFC and Apple sign-in. The workflow uses the current macOS runner and checks for an iOS SDK version of at least 26. Upload follows successful verification; Apple processing and build selection are separate steps. An earlier experimental export omitted capabilities and is not a release deliverable.
+The distribution signing gap is resolved. `group.com.TapLead.app.shared` was registered and assigned to both `com.TapLead.app` and `com.TapLead.app.widget` in the Apple Developer portal. [Run 37205854958](https://github.com/lanray07/TapLead/actions/runs/37205854958) successfully exported, verified and uploaded build 1012 (version 1.0.0) to App Store Connect. Apple processed it and the build was selected and saved on version 1.0.0. Verification covers app/widget signatures, identifiers, matching build numbers, App Group, current NFC `TAG` entitlement and Apple sign-in. The workflow uses Xcode 26.6 and checks for an iOS SDK version of at least 26. The previous upload attempt identified the obsolete NFC `NDEF` entitlement, which was corrected. An earlier experimental export omitted capabilities and is not a release deliverable.
+
+Submission remains incomplete. The selected build has no production API URL and purchases are disabled. Free Supabase hosting was requested; the connected organisation's new-project price was confirmed as zero per month. Organisation selection is pending before creating a separate TapLead project; the existing project contains another application's data. Privacy publication must reflect the deployed service and its actual processors/retention. Apple free/paid agreements, banking, tax forms and listed compliance statuses are active.
 
 ## Verified on this Windows machine
 
@@ -30,7 +32,7 @@ The NFC and speech implementations use documented Apple APIs with capability che
 
 | Area | Required work |
 | --- | --- |
-| iOS build | App/widget compilation, 25 automated tests and distribution signature/capability verification passed in GitHub. Complete Apple upload processing, build selection and real-device tests. |
+| iOS build | App/widget compilation, 25 automated tests and distribution signature/capability verification passed in GitHub. Build 1012 is processed and attached to 1.0.0. Add the production service configuration and complete real-device tests. |
 | Apple credentials | Distribution app/widget identifiers and App Group/NFC/sign-in entitlements are configured. Configure backend Apple code exchange and token revocation; verify credential-revocation handling. |
 | Hosting | Deploy HTTPS service, set real profile domain/policy URLs, configure persistence, backups, migrations, monitoring and distributed abuse protection. |
 | Authentication | Email ownership verification, password recovery, session management and account-linking UX. Apple sign-in configuration is required before enabling it. |

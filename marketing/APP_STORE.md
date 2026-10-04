@@ -1,8 +1,8 @@
 # Saved App Store Connect draft
 
-TapLead (6818982306), iOS 1.0, English (U.K.). Prepared 4 October 2026. No review submission or release has been made.
+TapLead (6818982306), iOS 1.0.0, English (U.K.). Prepared 4 October 2026. No review submission or release has been made.
 
-Name: TapLead. Subtitle: Business Cards & Connections. Categories: Business / Productivity. Age rating: 4+ with regional equivalents. Free download. Support URL: https://github.com/lanray07/TapLead/blob/main/docs/SUPPORT.md
+Name: TapLead. Subtitle: Business Cards & Connections. Categories: Business / Productivity. Age rating: 4+ with regional equivalents. Free download. Support URL: https://github.com/lanray07/TapLead/blob/main/docs/SUPPORT.md. Marketing URL: https://github.com/lanray07/TapLead.
 
 ## Promotional text
 
@@ -48,4 +48,4 @@ Ten saved data types: name, email address, phone number, physical address, other
 
 Privacy and terms pages are hosted in this repository at `docs/PRIVACY.md` and `docs/TERMS.md`. The app configuration and GitHub archive variables use their public GitHub URLs. The privacy notice explicitly describes the current service configuration limits; reconcile production providers and retention before launching live accounts. The operator confirmed no third-party content; that content-rights declaration is saved in App Store Connect. Accessibility support claims await device validation. Server notification URLs await the deployed service. Optional routing, App Clip, iMessage, events and unsupported features are omitted.
 
-Distribution signing is blocked at Apple's App Group endpoint; no eligible build is attached. See [release status](../docs/RELEASE.md).
+Build 1012 (1.0.0) was uploaded, processed and saved on the app version. Distribution signing is resolved after registering and assigning the shared App Group to both targets. The corrected workflow uses the current NFC `TAG` entitlement. Privacy information remains unpublished pending production reconciliation. Production hosting and enabled subscription verification remain outstanding; no review submission has been made. Free/paid agreements, banking, tax forms and listed compliance statuses are active. See [release status](../docs/RELEASE.md).
