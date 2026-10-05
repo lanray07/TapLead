@@ -83,3 +83,11 @@ The user authorized submission if building was complete after being informed of 
 Submission ID: 79de4d3b-d644-435a-b9d6-a8b899083961. Apple displayed submission time: Oct 5, 2026 at 9:49 AM. The submitted item is the app version; Pro purchases remain disabled and no subscription product was added to this submission. Existing language/device/authentication/purchase requirement statuses remain open, rather than being marked passed by the act of submission. Automatic release after approval remains selected.
 
 Proof: [Waiting for Review](assets/build-1014-waiting-for-review.jpg), [Apple submission confirmation](assets/build-1014-submitted-confirmation.jpg).
+
+## App and Pro submitted together — 5 October 2026
+
+The user explicitly requested Pro be submitted too. Following Apple's first-subscription submission requirement, the app-only submission above was cancelled recoverably and replaced by a combined submission containing version 1.0.0 (1014), the TapLead Pro subscription group, TapLead Pro Monthly (com.taplead.pro.monthly) and TapLead Pro Annual (com.taplead.pro.yearly). Apple confirmed 4 Items Submitted. Each of the four items shows Waiting for Review in submission 220fdb82-3e1b-40f0-9cf3-ae29b2e38c75, displayed as Oct 5, 2026 at 9:57 AM.
+
+Both product review notes disclose their actual same-service-level monthly/annual configuration, disabled purchase actions in build 1014, and outstanding genuine purchase, restore, renewal and refund acceptance. The existing review screenshots reflect the disabled-purchase screen. No purchase feature flag was enabled and no incomplete acceptance requirement was marked verified. Existing product prices, availability and automatic app release settings were retained. This combined submission supersedes the app-only submission recorded above.
+
+Proof: [Combined Waiting for Review](assets/pro-combined-waiting-for-review.jpg), [4 Items Submitted confirmation](assets/pro-combined-submitted-confirmation.jpg). Apple's requirement: [Submit an in-app purchase](https://developer.apple.com/help/app-store-connect/manage-submissions-to-app-review/submit-an-in-app-purchase).

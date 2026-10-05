@@ -252,12 +252,17 @@
     "version": "1.0.0",
     "build": "1014",
     "status": "Waiting for Review",
-    "id": "79de4d3b-d644-435a-b9d6-a8b899083961",
-    "date_displayed_by_apple": "Oct 5, 2026 at 9:49 AM",
+    "id": "220fdb82-3e1b-40f0-9cf3-ae29b2e38c75",
+    "date_displayed_by_apple": "Oct 5, 2026 at 9:57 AM",
     "items": [
-      "App Version"
+      "App Version 1.0.0 (1014)",
+      "TapLead Pro Subscription Group",
+      "TapLead Pro Monthly (com.taplead.pro.monthly)",
+      "TapLead Pro Annual (com.taplead.pro.yearly)"
     ],
     "pro_purchases_enabled": false,
-    "evidence": "assets/build-1014-waiting-for-review.jpg"
+    "superseded_app_only_submission": "79de4d3b-d644-435a-b9d6-a8b899083961",
+    "pro_submission_authorization": "The user explicitly requested Pro be submitted too. The app-only submission was cancelled recoverably and the app version, subscription group and both products were submitted together. All four items show Waiting for Review; product review notes disclose disabled purchasing and outstanding purchase lifecycle acceptance.",
+    "evidence": "assets/pro-combined-waiting-for-review.jpg"
   }
 }
