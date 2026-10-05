@@ -45,6 +45,8 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm audit --omit=dev
+      - name: Check all app widget and permission translations
+        run: python3 ../scripts/localize.py --check
   swift:
     runs-on: macos-latest
     timeout-minutes: 30

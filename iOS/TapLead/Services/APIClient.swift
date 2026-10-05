@@ -5,7 +5,22 @@ import TapLeadCore
 enum ServiceError: LocalizedError {
     case message(String)
     case response(status:Int,message:String)
-    var errorDescription:String?{switch self{case .message(let text):text;case .response(_,let message):message}}
+    var errorDescription:String? {
+        switch self {
+        case .message(let text): return text
+        case .response(let status,let message):
+            // Keep server diagnostics for the source language; other locales use actionable local copy.
+            if Bundle.main.preferredLocalizations.first?.hasPrefix("en") == true { return message }
+            switch status {
+            case 401: return String(localized:"Sign in with Apple again to continue.")
+            case 403: return String(localized:"This action is unavailable for your account or plan.")
+            case 409: return String(localized:"This item changed. Sync and try again.")
+            case 429: return String(localized:"Too many requests. Wait a moment and try again.")
+            case 500...599: return String(localized:"The service is temporarily unavailable. Try again shortly.")
+            default: return String(localized:"Check the details and try again.")
+            }
+        }
+    }
 }
 enum Keychain {
     private static let service = "com.taplead.session"

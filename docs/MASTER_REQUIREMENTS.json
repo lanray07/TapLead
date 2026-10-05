@@ -181,7 +181,7 @@
       "section": 30,
       "title": "Ten-language translation workflow",
       "status": "blocked",
-      "evidence": "399 English source strings are extracted with nine English fallback catalogues marked unreviewed. API translation workflow exists; translation and human review/truncation checks remain."
+      "evidence": "424 native strings have actual translations in Spanish, French, German, Italian, Portuguese, Dutch, Japanese, Korean and Simplified Chinese, plus English. App/widget and three permission prompts are synchronized; completeness/format checks pass locally. Agent terminology and key consent/deletion/payment copy review completed. Ten-locale simulator UI checks are added and awaiting execution/visual inspection. Independent language review, accessibility/smaller-screen checks and translated public pages remain. See LOCALISATION.md."
     },
     {
       "section": 31,

@@ -1,19 +1,13 @@
-# Localisation
+# TapLead app localization
 
-`Localizable.xcstrings` contains English source strings and explicit review queues for Spanish, French, German, Italian, Portuguese, Dutch, Japanese, Korean and Simplified Chinese. Non-English values currently fall back to English and are marked `new`; they are **not** finished translations. Do not declare these languages as fully supported in the App Store until reviewed.
+Updated 5 October 2026. English plus Spanish, French, German, Italian, Portuguese, Dutch, Japanese, Korean and Simplified Chinese are bundled in both the app and widget.
 
-Run `python scripts/localize.py` after UI changes. The extractor gathers common SwiftUI literals plus domain enums; Xcode string extraction is the authoritative final check, especially for interpolated/plural strings and labels in custom components. Domain/user content uses verbatim text. Locale-aware native formatters display dates and counts. System navigation and leading/trailing alignments support future RTL work.
+There are 424 catalog entries per language. The nine added languages have actual translations rather than English fallback copies. The three microphone, speech and NFC permission messages are also generated as localized InfoPlist.strings resources. Dates and numbers use Apple's locale-aware formatters; user-entered names, notes, URLs and prices supplied by StoreKit remain untouched.
 
-To request machine drafts through an approved developer translation gateway:
+Drafts were produced through the Google Translate website from public interface copy only, in indexed batches. Missing and duplicated row identifiers were detected and recovered individually before import. No customer data, secrets, runtime notes or recordings were submitted. There is no translation service or dependency in the shipped app. Task intermediates remain in the ignored artifacts/localization directory.
 
-```powershell
-$env:TRANSLATION_GATEWAY_URL = 'https://your-approved-service/translate'
-# Load TRANSLATION_GATEWAY_TOKEN from a secret manager.
-python scripts/localize.py --draft es
-```
+The agent reviewed navigation, card controls, statuses, tones, guest authentication, AI/privacy consent and subscription/deletion wording. Context corrections in scripts/localization-overrides.json fix technical-connection translations, a mistaken Professional/Pro interpretation, card-persona wording, guest-mode meaning and other terms. Sentence spacing and corrupt source apostrophes were corrected. This is not an independent native-speaker review of every sentence.
 
-The gateway receives `{source, target, strings}` and returns `{translations: {sourceString: translatedString}}`. Only source UI text is submitted. Drafts are stored as `needs_review`; a native-speaking reviewer marks approved entries `translated` in Xcode. No user card, lead or note content is translated. Run `python scripts/localize.py --check` in release CI; it fails while review queues remain.
+Validation: python scripts/localize.py --check rejects missing resources, missing translations, corrupted text and incompatible format placeholders, and verifies matching app/widget catalogs and all ten permission resources. GitHub checks run this gate. LocalizationUITests launches each language/region and checks actual translated navigation, editing, connections and paywall controls, with five screenshot attachments per locale. Simulator execution and visual inspection are recorded below when complete; the test's existence alone does not mean it passed.
 
-The widget needs its own resource membership because it is a separate bundle. `scripts/prepare-assets.py` copies the catalogue into the widget resource folder; rerun it after extraction. Before release, improve this to a build resource-generation phase to avoid stale copies.
-
-Test every advertised locale with accessibility text sizes, long names, multiline biographies, 320–440 point widths, VoiceOver and reduced motion. Capture actual simulator screenshots and inspect truncation. Public web pages currently use English; add a validated language negotiation/catalogue layer before advertising full international web support.
+Remaining release acceptance includes screenshot inspection, smaller-screen/Dynamic Type/VoiceOver checks and independent language review. Public website and App Store marketing translations are separate from this native interface work and are not represented as translated here. Build 1013 predates these translations; a new signed build must be uploaded after checks pass.

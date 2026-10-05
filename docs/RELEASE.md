@@ -55,7 +55,7 @@ The NFC and speech implementations use documented Apple APIs with capability che
 | Widgets/Spotlight | Large-widget aggregate recent-connection/due-follow-up counts and calendar-day boundary coverage passed GitHub shared tests and Xcode compilation. Widget privacy/size tests and Spotlight public-card index verification remain. Build 1012 does not include this change. |
 | Advanced QR | Branded images, QR-on-photo and printable PDF export are implemented; native Vision decode/PDF tests are in GitHub. Second-phone/printed scan and long-name/visual/device validation remain. |
 | Teams | Future organization/member/role architecture documented; no Teams admin/product implementation. |
-| Localisation | Human-reviewed translations, plural/interpolation extraction, translated public pages and locale/accessibility UI tests. |
+| Localisation | 424 native strings now translated in all ten languages, with localized permission prompts, widget resources and agent terminology review. Completeness/format checks pass locally. Ten-locale simulator execution/visual inspection, independent native-language review, public pages and broader accessibility checks remain; see LOCALISATION.md. |
 | App Store | Screenshots and two Pro promotional images uploaded; metadata/pricing saved. GitHub privacy/terms URLs configured. Complete production reconciliation of policies/privacy drafts, enabled-paywall screenshots and TestFlight testing. |
 
 ## Minimum acceptance walkthrough

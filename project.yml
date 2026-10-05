@@ -1,6 +1,7 @@
 name: TapLead
 options:
   bundleIdPrefix: com.taplead
+  developmentLanguage: en
   deploymentTarget:
     iOS: '17.0'
 packages:
@@ -29,6 +30,7 @@ targets:
       path: iOS/Info.plist
       properties:
         CFBundleDisplayName: TapLead
+        CFBundleLocalizations: [en, es, fr, de, it, pt, nl, ja, ko, zh-Hans]
         UILaunchScreen: {}
         TapLeadAPIURL: ''
         TapLeadProfileURL: ''
@@ -55,6 +57,7 @@ targets:
       path: iOS/WidgetInfo.plist
       properties:
         CFBundleDisplayName: TapLead
+        CFBundleLocalizations: [en, es, fr, de, it, pt, nl, ja, ko, zh-Hans]
         NSExtension:
           NSExtensionPointIdentifier: com.apple.widgetkit-extension
     entitlements:

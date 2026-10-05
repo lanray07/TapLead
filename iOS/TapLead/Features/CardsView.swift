@@ -19,10 +19,10 @@ struct CardsView: View {
                 if store.cards.count>1 { Picker("Card persona",selection:Binding(get:{store.selectedCard?.id ?? UUID()},set:{id in if let c=store.cards.first(where:{$0.id==id}){store.select(c)}})) {ForEach(store.cards){c in Text(verbatim:c.persona).tag(c.id)}}.pickerStyle(.menu) }
                 if let card=store.selectedCard {
                     CardPreview(card:card)
-                    HStack { Label(card.published ? "Published" : "On this iPhone",systemImage:card.published ? "globe":"iphone").font(.caption).foregroundStyle(.secondary); Spacer(); Button("Edit card"){editing=CardSelection(card:card)} }
+                    HStack { Label(LocalizedStringKey(card.published ? "Published" : "On this iPhone"),systemImage:card.published ? "globe":"iphone").font(.caption).foregroundStyle(.secondary); Spacer(); Button("Edit card"){editing=CardSelection(card:card)} }
                     PrimaryButton(title:"Show networking QR",icon:"qrcode"){store.showEvent=true}
                     if card.published,let base=store.api.profileBase { ShareLink(item:card.profileURL(base:base)){Label("Share profile link",systemImage:"square.and.arrow.up")}.frame(minHeight:44) }
-                    Button {Task {busy=true;defer{busy=false};do{try await store.publish(card)}catch{store.error=error.localizedDescription}} } label:{ Label(card.published ? "Update published card":"Publish my card",systemImage:"globe") }.disabled(busy || card.name.trimmingCharacters(in:.whitespaces).isEmpty)
+                    Button {Task {busy=true;defer{busy=false};do{try await store.publish(card)}catch{store.error=error.localizedDescription}} } label:{ Label(LocalizedStringKey(card.published ? "Update published card":"Publish my card"),systemImage:"globe") }.disabled(busy || card.name.trimmingCharacters(in:.whitespaces).isEmpty)
                     if card.published { Button("Make card private",role:.destructive){Task{do{try await store.unpublish(card)}catch{store.error=error.localizedDescription}}} }
                     Divider()
                     Button {if store.pro || store.demo {nfc=true} else {paywall=true}} label:{Label("Set up NFC card",systemImage:"wave.3.right")}.frame(minHeight:44)
@@ -92,7 +92,7 @@ struct CardImageEditor: View {
             }.pickerStyle(.segmented)
             if card.imageKind != .none {
                 PhotosPicker(selection:$selection,matching:.images) {
-                    Label(card.imageKind == .logo ? "Choose logo" : "Choose photo",systemImage:card.imageKind == .logo ? "building.2.crop.circle" : "photo")
+                    Label(LocalizedStringKey(card.imageKind == .logo ? "Choose logo" : "Choose photo"),systemImage:card.imageKind == .logo ? "building.2.crop.circle" : "photo")
                 }.disabled(loading)
                 Button { importingFile = true } label: { Label("Import image from Files",systemImage:"folder") }.disabled(loading)
                 Picker("Image corner",selection:$card.imageCorner) {
@@ -100,7 +100,7 @@ struct CardImageEditor: View {
                 }
                 if loading { ProgressView("Loading image…") }
                 if hasImage {
-                    Text(card.imageKind == .logo ? "Logo added" : "Photo added").font(.caption).foregroundStyle(.secondary)
+                    Text(LocalizedStringKey(card.imageKind == .logo ? "Logo added" : "Photo added")).font(.caption).foregroundStyle(.secondary)
                     Button("Remove image",role:.destructive) {
                         selection=nil
                         if card.imageKind == .logo { card.logoData=nil } else { card.photoData=nil }

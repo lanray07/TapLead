@@ -26,7 +26,7 @@ struct AnalyticsView:View {
                     if viewCount>0 {VStack(alignment:.leading,spacing:8){Text("Lead conversion").font(.headline);Text(Double(leadCount)/Double(viewCount),format:.percent.precision(.fractionLength(1))).font(.title2.bold());Text("Lead submissions divided by measured profile requests. Requests are not unique people; repeated submissions can exceed 100%.").font(.caption).foregroundStyle(.secondary)}}
                     if events.isEmpty{ContentUnavailableView("Your story starts here",systemImage:"chart.bar",description:Text("Enable anonymous activity measurement on your published card. Events will appear as people interact."))}
                     else {Text("Profile activity").font(.title2.bold());Chart{ForEach(dailyCounts,id:\.date){point in BarMark(x:.value("Date",point.date,unit:.day),y:.value("Requests",point.count)).foregroundStyle(Palette.accent)}}.frame(height:180).accessibilityLabel("Measured profile requests by day");Text("Where connections begin").font(.title2.bold());ForEach(sourceCounts,id:\.source){point in HStack{Text(verbatim:point.source);Spacer();Text(point.count,format:.number)}}}
-                    Text(response?.notice ?? "").font(.caption).foregroundStyle(.secondary)
+                    Text("Counts represent measured requests, not unique people.").font(.caption).foregroundStyle(.secondary)
                 }
             }.padding(22)
         }.background(Palette.canvas).navigationTitle("Insights").navigationBarTitleDisplayMode(.inline).task(id:days){await load()}.refreshable{await load()}

@@ -14,12 +14,12 @@ struct OnboardingView: View {
                 OnboardingPage(icon:"person.crop.rectangle",title:"Never lose a connection again",copy:"Create and share your professional identity instantly.").tag(0)
                 OnboardingPage(icon:"qrcode",title:"Tap or scan to connect",copy:"Share using QR, NFC or a simple link.").tag(1)
                 OnboardingPage(icon:"waveform",title:"Remember every conversation",copy:"Capture notes using text or your voice.").tag(2)
-                OnboardingPage(icon:"arrow.up.forward.circle",title:"Follow up while youâ€™re still remembered",copy:"Turn new contacts into actionable opportunities.").tag(3)
+                OnboardingPage(icon:"arrow.up.forward.circle",title:"Follow up while you’re still remembered",copy:"Turn new contacts into actionable opportunities.").tag(3)
             }.tabViewStyle(.page(indexDisplayMode:.always))
             VStack(spacing:14) {
                 PrimaryButton(title:"Create My TapLead") {store.beginLocal()}
                 Button("Sign in or create an account") {accountAuth=true}
-                Text("Start on this iPhone. Publish when youâ€™re ready.").font(.caption).foregroundStyle(.secondary)
+                Text("Start on this iPhone. Publish when you’re ready.").font(.caption).foregroundStyle(.secondary)
             }.padding(24)
         }.padding(.top,16).background(Palette.canvas).sheet(isPresented:$accountAuth) {AuthView()}
     }

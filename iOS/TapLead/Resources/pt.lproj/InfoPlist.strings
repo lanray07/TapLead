@@ -1,0 +1,3 @@
+"NSSpeechRecognitionUsageDescription" = "Transcreva as notas de voz que você decidir gravar.";
+"NSMicrophoneUsageDescription" = "Grave uma nota de voz após uma conversa.";
+"NFCReaderUsageDescription" = "Gravar seu link publicado do TapLead em um cartão NFC.";

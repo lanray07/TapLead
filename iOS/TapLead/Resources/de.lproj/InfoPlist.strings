@@ -1,0 +1,3 @@
+"NSSpeechRecognitionUsageDescription" = "Transkribieren Sie die Sprachnotizen, die Sie aufnehmen.";
+"NSMicrophoneUsageDescription" = "Sprachnotiz nach einem Gespräch aufnehmen.";
+"NFCReaderUsageDescription" = "Schreiben Sie Ihren veröffentlichten TapLead-Link auf eine NFC-Karte.";

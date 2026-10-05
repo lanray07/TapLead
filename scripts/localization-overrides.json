@@ -1,0 +1,33 @@
+{
+  "Sign in with Apple again to continue.": {"es":"Inicia sesión de nuevo con Apple para continuar.","fr":"Reconnectez-vous avec Apple pour continuer.","de":"Melde dich erneut mit Apple an, um fortzufahren.","it":"Accedi di nuovo con Apple per continuare.","pt":"Inicie sessão novamente com a Apple para continuar.","nl":"Log opnieuw in met Apple om door te gaan.","ja":"続行するには、Appleで再度サインインしてください。","ko":"계속하려면 Apple로 다시 로그인하세요.","zh-Hans":"请重新使用 Apple 账号登录以继续。"},
+  "This action is unavailable for your account or plan.": {"es":"Esta acción no está disponible para tu cuenta o plan.","fr":"Cette action n’est pas disponible pour votre compte ou votre formule.","de":"Diese Aktion ist für dein Konto oder deinen Tarif nicht verfügbar.","it":"Questa azione non è disponibile per il tuo account o piano.","pt":"Esta ação não está disponível para sua conta ou plano.","nl":"Deze actie is niet beschikbaar voor je account of abonnement.","ja":"この操作は、ご利用のアカウントまたはプランでは利用できません。","ko":"현재 계정 또는 요금제에서는 이 작업을 사용할 수 없습니다.","zh-Hans":"您的账户或方案不支持此操作。"},
+  "This item changed. Sync and try again.": {"es":"Este elemento ha cambiado. Sincroniza e inténtalo de nuevo.","fr":"Cet élément a changé. Synchronisez et réessayez.","de":"Dieser Eintrag wurde geändert. Synchronisiere und versuche es erneut.","it":"Questo elemento è cambiato. Sincronizza e riprova.","pt":"Este item mudou. Sincronize e tente novamente.","nl":"Dit item is gewijzigd. Synchroniseer en probeer het opnieuw.","ja":"この項目は変更されました。同期してから、もう一度お試しください。","ko":"항목이 변경되었습니다. 동기화한 후 다시 시도하세요.","zh-Hans":"此项目已更改。请同步后重试。"},
+  "Too many requests. Wait a moment and try again.": {"es":"Demasiadas solicitudes. Espera un momento e inténtalo de nuevo.","fr":"Trop de demandes. Patientez un instant et réessayez.","de":"Zu viele Anfragen. Warte einen Moment und versuche es erneut.","it":"Troppe richieste. Attendi un momento e riprova.","pt":"Muitas solicitações. Aguarde um momento e tente novamente.","nl":"Te veel verzoeken. Wacht even en probeer het opnieuw.","ja":"リクエストが多すぎます。少し待ってから、もう一度お試しください。","ko":"요청이 너무 많습니다. 잠시 기다린 후 다시 시도하세요.","zh-Hans":"请求过多。请稍候再试。"},
+  "The service is temporarily unavailable. Try again shortly.": {"es":"El servicio no está disponible temporalmente. Inténtalo de nuevo en unos momentos.","fr":"Le service est temporairement indisponible. Réessayez dans un instant.","de":"Der Dienst ist vorübergehend nicht verfügbar. Versuche es in Kürze erneut.","it":"Il servizio è temporaneamente non disponibile. Riprova tra poco.","pt":"O serviço está temporariamente indisponível. Tente novamente em breve.","nl":"De service is tijdelijk niet beschikbaar. Probeer het straks opnieuw.","ja":"サービスを一時的に利用できません。しばらくしてから、もう一度お試しください。","ko":"서비스를 일시적으로 사용할 수 없습니다. 잠시 후 다시 시도하세요.","zh-Hans":"服务暂时不可用。请稍后重试。"},
+  "Check the details and try again.": {"es":"Revisa los datos e inténtalo de nuevo.","fr":"Vérifiez les informations et réessayez.","de":"Prüfe die Angaben und versuche es erneut.","it":"Controlla i dettagli e riprova.","pt":"Confira os dados e tente novamente.","nl":"Controleer de gegevens en probeer het opnieuw.","ja":"入力内容を確認して、もう一度お試しください。","ko":"입력 내용을 확인한 후 다시 시도하세요.","zh-Hans":"请检查详细信息后重试。"},
+  "Counts represent measured requests, not unique people.": {"es":"Los recuentos representan solicitudes medidas, no personas únicas.","fr":"Les chiffres représentent les requêtes mesurées, et non des personnes uniques.","de":"Die Zahlen stehen für gemessene Anfragen, nicht für einzelne Personen.","it":"I conteggi rappresentano le richieste misurate, non le singole persone.","pt":"As contagens representam solicitações medidas, não pessoas únicas.","nl":"De aantallen geven gemeten verzoeken weer, geen unieke personen.","ja":"件数は測定されたリクエスト数であり、個別の人数ではありません。","ko":"횟수는 측정된 요청 수이며, 고유한 사람 수가 아닙니다.","zh-Hans":"统计数字表示测量到的请求次数，而非独立访客人数。"},
+  "Connections": {"es":"Contactos","fr":"Contacts","de":"Kontakte","it":"Contatti","pt":"Contatos","nl":"Contacten","ja":"人脈","ko":"인맥","zh-Hans":"联系人"},
+  "Connection": {"es":"Contacto","fr":"Contact","de":"Kontakt","it":"Contatto","pt":"Contato","nl":"Contact","ja":"連絡先","ko":"연락처","zh-Hans":"联系人"},
+  "Professional": {"es":"Profesional","fr":"Professionnel","de":"Professionell","it":"Professionale","pt":"Profissional","nl":"Professioneel","ja":"ビジネス向け","ko":"격식 있는","zh-Hans":"专业"},
+  "Friendly": {"ja":"親しみやすい"},
+  "Casual": {"pt":"Informal","zh-Hans":"随和"},
+  "Concise": {"ko":"간결한","zh-Hans":"简洁"},
+  "Active": {"ja":"進行中","zh-Hans":"活跃"},
+  "New": {"ko":"신규","zh-Hans":"新联系人"},
+  "Won": {"es":"Conseguido","ko":"성사됨"},
+  "My card": {"it":"Il mio biglietto"},
+  "Card persona": {"de":"Kartenprofil","it":"Profilo del biglietto","ja":"カードのプロフィール","ko":"명함 프로필","zh-Hans":"名片身份"},
+  "Networking": {"es":"Red de contactos","de":"Netzwerken","it":"Rete di contatti","pt":"Rede de contatos"},
+  "Serif": {"es":"Con remates","fr":"Avec empattements","it":"Con grazie","nl":"Met schreef"},
+  "Guest cards and notes stay on this iPhone. Sign in with Apple when you’re ready to publish and sync.": {
+    "es":"En modo invitado, tus tarjetas y notas se guardan en este iPhone. Inicia sesión con Apple cuando quieras publicar y sincronizar.",
+    "fr":"En mode invité, vos cartes et notes restent sur cet iPhone. Connectez-vous avec Apple quand vous souhaitez les publier et les synchroniser.",
+    "de":"Im Gastmodus bleiben deine Karten und Notizen auf diesem iPhone. Melde dich mit Apple an, wenn du sie veröffentlichen und synchronisieren möchtest.",
+    "it":"In modalità ospite, i tuoi biglietti e le tue note restano su questo iPhone. Accedi con Apple quando vuoi pubblicarli e sincronizzarli.",
+    "pt":"No modo visitante, seus cartões e notas ficam neste iPhone. Inicie sessão com a Apple quando quiser publicar e sincronizar.",
+    "nl":"In de gastmodus blijven je kaarten en notities op deze iPhone. Log in met Apple wanneer je wilt publiceren en synchroniseren.",
+    "ja":"ゲストモードのカードとメモは、このiPhoneに保存されます。公開や同期を行う際は、Appleでサインインしてください。",
+    "ko":"게스트 모드의 명함과 메모는 이 iPhone에 저장됩니다. 게시하거나 동기화하려면 Apple로 로그인하세요.",
+    "zh-Hans":"访客模式下，您的名片和备注保存在此 iPhone 上。需要发布和同步时，请使用 Apple 账号登录。"
+  }
+}
