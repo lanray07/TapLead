@@ -37,6 +37,7 @@ for key in keys:
     for language in LANGUAGES[1:]:
         entry['localizations'].setdefault(language, {'stringUnit':{'state':'new','value':key}})
 for key,entry in catalog['strings'].items():
+    entry['comment']='Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.'
     entry['localizations']['en']={'stringUnit':{'state':'translated','value':key}}
 if args.prepare:
     directory=ROOT/'artifacts/localization'

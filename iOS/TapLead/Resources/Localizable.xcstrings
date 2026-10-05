@@ -2,6 +2,7 @@
   "sourceLanguage": "en",
   "strings": {
     "1. Select the card you want to share.\n2. Prepare a compatible writable NDEF tag.\n3. Hold the top of your iPhone near the tag.\n4. Keep it in place while TapLead writes and verifies the link.\n5. Test your card with another phone.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -67,6 +68,7 @@
       }
     },
     "3 days": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -132,6 +134,7 @@
       }
     },
     "30 days": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -197,6 +200,7 @@
       }
     },
     "7 days": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -262,6 +266,7 @@
       }
     },
     "90 days": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -327,6 +332,7 @@
       }
     },
     "A clearer picture of your introductions.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -392,6 +398,7 @@
       }
     },
     "A connection is waiting": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -457,6 +464,7 @@
       }
     },
     "A good start. What next?": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -522,6 +530,7 @@
       }
     },
     "A little follow-up goes a long way.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -587,6 +596,7 @@
       }
     },
     "A signed Wallet pass could not be downloaded.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -652,6 +662,7 @@
       }
     },
     "A small tap.\nA lasting connection.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -717,6 +728,7 @@
       }
     },
     "A thoughtful next step": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -782,6 +794,7 @@
       }
     },
     "A verified Pro entitlement is active.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -847,6 +860,7 @@
       }
     },
     "AI suggestions · review first": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -912,6 +926,7 @@
       }
     },
     "About": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -977,6 +992,7 @@
       }
     },
     "About TapLead": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -1042,6 +1058,7 @@
       }
     },
     "Accent colour (hex)": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -1107,6 +1124,7 @@
       }
     },
     "Account services require a configured HTTPS backend. Demo mode works without an account.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -1172,6 +1190,7 @@
       }
     },
     "Action label (optional)": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -1237,6 +1256,7 @@
       }
     },
     "Active": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -1302,6 +1322,7 @@
       }
     },
     "Add QR to a picture": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -1367,6 +1388,7 @@
       }
     },
     "Add a TapLead note": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -1432,6 +1454,7 @@
       }
     },
     "Add a booking link to your card to share it": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -1497,6 +1520,7 @@
       }
     },
     "Add a demo persona": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -1562,6 +1586,7 @@
       }
     },
     "Add a follow-up to keep a good conversation going.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -1627,6 +1652,7 @@
       }
     },
     "Add a portfolio link to your card to share it": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -1692,6 +1718,7 @@
       }
     },
     "Add card persona": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -1757,6 +1784,7 @@
       }
     },
     "Add connection": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -1822,6 +1850,7 @@
       }
     },
     "Add note": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -1887,6 +1916,7 @@
       }
     },
     "Add reminder": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -1952,6 +1982,7 @@
       }
     },
     "Add social link": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -2017,6 +2048,7 @@
       }
     },
     "Add someone you’ve met, then choose your next move.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -2082,6 +2114,7 @@
       }
     },
     "Add voice note": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -2147,6 +2180,7 @@
       }
     },
     "Advanced appearance · Pro": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -2212,6 +2246,7 @@
       }
     },
     "Advanced themes and card customisation": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -2277,6 +2312,7 @@
       }
     },
     "All": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -2342,6 +2378,7 @@
       }
     },
     "All caught up": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -2407,6 +2444,7 @@
       }
     },
     "All time": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -2472,6 +2510,7 @@
       }
     },
     "Allow AI processing of these notes": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -2537,6 +2576,7 @@
       }
     },
     "Allow microphone and speech access in iPhone Settings to record a voice note.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -2602,6 +2642,7 @@
       }
     },
     "Appearance": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -2667,6 +2708,7 @@
       }
     },
     "Apple Wallet is unavailable.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -2732,6 +2774,7 @@
       }
     },
     "Apple Wallet needs a signed pass service": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -2797,6 +2840,7 @@
       }
     },
     "Apple sign-in did not return a token.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -2862,6 +2906,7 @@
       }
     },
     "Archive": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -2927,6 +2972,7 @@
       }
     },
     "Archived": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -2992,6 +3038,7 @@
       }
     },
     "Background colour (hex, optional)": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -3057,6 +3104,7 @@
       }
     },
     "Bold": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -3122,6 +3170,7 @@
       }
     },
     "Book a meeting": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -3187,6 +3236,7 @@
       }
     },
     "Book follow-up": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -3252,6 +3302,7 @@
       }
     },
     "Book follow-up or draft an introduction": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -3317,6 +3368,7 @@
       }
     },
     "Booking URL": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -3382,6 +3434,7 @@
       }
     },
     "Booking clicks": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -3447,6 +3500,7 @@
       }
     },
     "Bottom left": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -3512,6 +3566,7 @@
       }
     },
     "Bottom right": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -3577,6 +3632,7 @@
       }
     },
     "Branded QR & printable exports": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -3642,6 +3698,7 @@
       }
     },
     "Branded QR preview": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -3707,6 +3764,7 @@
       }
     },
     "Branded QR, photo and printable exports": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -3772,6 +3830,7 @@
       }
     },
     "CTA clicks": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -3837,6 +3896,7 @@
       }
     },
     "CV URL": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -3902,6 +3962,7 @@
       }
     },
     "Cancel": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -3967,6 +4028,7 @@
       }
     },
     "Capture notes using text or your voice.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -4032,6 +4094,7 @@
       }
     },
     "Card image": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -4097,6 +4160,7 @@
       }
     },
     "Card persona": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -4162,6 +4226,7 @@
       }
     },
     "Casual": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -4227,6 +4292,7 @@
       }
     },
     "Changes saved on this iPhone. Pull to retry sync.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -4292,6 +4358,7 @@
       }
     },
     "Check the details and try again.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -4357,6 +4424,7 @@
       }
     },
     "Choose a connection": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -4422,6 +4490,7 @@
       }
     },
     "Choose a future follow-up date.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -4487,6 +4556,7 @@
       }
     },
     "Choose a readable image smaller than 20 MB.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -4552,6 +4622,7 @@
       }
     },
     "Choose an image smaller than 20 MB.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -4617,6 +4688,7 @@
       }
     },
     "Choose logo": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -4682,6 +4754,7 @@
       }
     },
     "Choose more room for your next connection.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -4747,6 +4820,7 @@
       }
     },
     "Choose photo": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -4812,6 +4886,7 @@
       }
     },
     "Choose profile photo": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -4877,6 +4952,7 @@
       }
     },
     "Choose the context yourself. Your mode never changes from inferred personal information.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -4942,6 +5018,7 @@
       }
     },
     "Close": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -5007,6 +5084,7 @@
       }
     },
     "Company": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -5072,6 +5150,7 @@
       }
     },
     "Concise": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -5137,6 +5216,7 @@
       }
     },
     "Confirm follow-up": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -5202,6 +5282,7 @@
       }
     },
     "Confirm the connection and action": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -5267,6 +5348,7 @@
       }
     },
     "Connect a secure TapLead service to use this feature.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -5332,6 +5414,7 @@
       }
     },
     "Connection": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -5397,6 +5480,7 @@
       }
     },
     "Connection made": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -5462,6 +5546,7 @@
       }
     },
     "Connection saved": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -5527,6 +5612,7 @@
       }
     },
     "Connection unavailable": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -5592,6 +5678,7 @@
       }
     },
     "Connections": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -5657,6 +5744,7 @@
       }
     },
     "Connections in 7 days": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -5722,6 +5810,7 @@
       }
     },
     "Consultant": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -5787,6 +5876,7 @@
       }
     },
     "Contact": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -5852,6 +5942,7 @@
       }
     },
     "Contact details": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -5917,6 +6008,7 @@
       }
     },
     "Context": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -5982,6 +6074,7 @@
       }
     },
     "Continue on this iPhone": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -6047,6 +6140,7 @@
       }
     },
     "Could not securely save your session.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -6112,6 +6206,7 @@
       }
     },
     "Counts represent measured requests, not unique people.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -6177,6 +6272,7 @@
       }
     },
     "Create My TapLead": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -6242,6 +6338,7 @@
       }
     },
     "Create Smart Notes": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -6307,6 +6404,7 @@
       }
     },
     "Create and share your professional identity instantly.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -6372,6 +6470,7 @@
       }
     },
     "Create this follow-up?": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -6437,6 +6536,7 @@
       }
     },
     "Creator": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -6502,6 +6602,7 @@
       }
     },
     "Custom backgrounds, typography and primary actions are included with TapLead Pro.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -6567,6 +6668,7 @@
       }
     },
     "Dark": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -6632,6 +6734,7 @@
       }
     },
     "Date": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -6697,6 +6800,7 @@
       }
     },
     "Date range": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -6762,6 +6866,7 @@
       }
     },
     "Delete account": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -6827,6 +6932,7 @@
       }
     },
     "Delete connection": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -6892,6 +6998,7 @@
       }
     },
     "Delete this connection and its notes?": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -6957,6 +7064,7 @@
       }
     },
     "Deleting your account does not cancel your App Store subscription. Manage subscriptions in your Apple account.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -7022,6 +7130,7 @@
       }
     },
     "Demo · sample connections": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -7087,6 +7196,7 @@
       }
     },
     "Details received": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -7152,6 +7262,7 @@
       }
     },
     "Done": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -7217,6 +7328,7 @@
       }
     },
     "Draft Follow-Up": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -7282,6 +7394,7 @@
       }
     },
     "Draft saved": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -7347,6 +7460,7 @@
       }
     },
     "Due today or overdue": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -7412,6 +7526,7 @@
       }
     },
     "Edit card": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -7477,6 +7592,7 @@
       }
     },
     "Edit this starter in your own words. TapLead does not send messages or assume the connection has been contacted.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -7542,6 +7658,7 @@
       }
     },
     "Editable voice transcription": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -7607,6 +7724,7 @@
       }
     },
     "Elegant": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -7672,6 +7790,7 @@
       }
     },
     "Email": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -7737,6 +7856,7 @@
       }
     },
     "Enable anonymous activity measurement on your published card. Events will appear as people interact.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -7802,6 +7922,7 @@
       }
     },
     "Event": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -7867,6 +7988,7 @@
       }
     },
     "Exchange Details": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -7932,6 +8054,7 @@
       }
     },
     "Executive": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -7997,6 +8120,7 @@
       }
     },
     "Explore demo": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -8062,6 +8186,7 @@
       }
     },
     "Export my data": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -8127,6 +8252,7 @@
       }
     },
     "Facts from your notes": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -8192,6 +8318,7 @@
       }
     },
     "Follow Up": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -8257,6 +8384,7 @@
       }
     },
     "Follow up while you’re still remembered": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -8322,6 +8450,7 @@
       }
     },
     "Follow-up completed": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -8387,6 +8516,7 @@
       }
     },
     "Follow-up date": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -8452,6 +8582,7 @@
       }
     },
     "Follow-up saved.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -8517,6 +8648,7 @@
       }
     },
     "Follow-up saved. Notifications are unavailable; enable them in iPhone Settings.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -8582,6 +8714,7 @@
       }
     },
     "Follow-up scheduled": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -8647,6 +8780,7 @@
       }
     },
     "Follow-ups": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -8712,6 +8846,7 @@
       }
     },
     "Follow-ups due": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -8777,6 +8912,7 @@
       }
     },
     "Free includes one digital card, QR sharing, public profile and up to 50 synced leads.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -8842,6 +8978,7 @@
       }
     },
     "Friendly": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -8907,6 +9044,7 @@
       }
     },
     "Full name": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -8972,6 +9110,7 @@
       }
     },
     "Good connections.\nBetter possibilities.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -9037,6 +9176,7 @@
       }
     },
     "Good to connect": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -9102,6 +9242,7 @@
       }
     },
     "Guest cards and notes stay on this iPhone. Sign in with Apple when you’re ready to publish and sync.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -9167,6 +9308,7 @@
       }
     },
     "Hi": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -9232,6 +9374,7 @@
       }
     },
     "Hold the top of your iPhone near your writable NFC card.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -9297,6 +9440,7 @@
       }
     },
     "Identity": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -9362,6 +9506,7 @@
       }
     },
     "Image corner": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -9427,6 +9572,7 @@
       }
     },
     "Image type": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -9492,6 +9638,7 @@
       }
     },
     "Import image from Files": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -9557,6 +9704,7 @@
       }
     },
     "Insights": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -9622,6 +9770,7 @@
       }
     },
     "Insights aren’t available yet": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -9687,6 +9836,7 @@
       }
     },
     "Interest": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -9752,6 +9902,7 @@
       }
     },
     "Interested in": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -9817,6 +9968,7 @@
       }
     },
     "Introduction draft": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -9882,6 +10034,7 @@
       }
     },
     "It was good to meet you. I’d be glad to continue our conversation.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -9947,6 +10100,7 @@
       }
     },
     "Job title": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -10012,6 +10166,7 @@
       }
     },
     "Keep the conversation.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -10077,6 +10232,7 @@
       }
     },
     "Keep your networking QR close at hand.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -10142,6 +10298,7 @@
       }
     },
     "Know what\nopens doors.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -10207,6 +10364,7 @@
       }
     },
     "Lead conversion": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -10272,6 +10430,7 @@
       }
     },
     "Lead submissions": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -10337,6 +10496,7 @@
       }
     },
     "Lead submissions divided by measured profile requests. Requests are not unique people; repeated submissions can exceed 100%.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -10402,6 +10562,7 @@
       }
     },
     "Links": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -10467,6 +10628,7 @@
       }
     },
     "Loading image…": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -10532,6 +10694,7 @@
       }
     },
     "Location": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -10597,6 +10760,7 @@
       }
     },
     "Logo": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -10662,6 +10826,7 @@
       }
     },
     "Logo added": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -10727,6 +10892,7 @@
       }
     },
     "MAKE IT COUNT": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -10792,6 +10958,7 @@
       }
     },
     "Make card private": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -10857,6 +11024,7 @@
       }
     },
     "Make more of\nevery introduction.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -10922,6 +11090,7 @@
       }
     },
     "Manage Apple subscriptions": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -10987,6 +11156,7 @@
       }
     },
     "Mark follow-up complete": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -11052,6 +11222,7 @@
       }
     },
     "Measure anonymous profile activity": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -11117,6 +11288,7 @@
       }
     },
     "Measured activity insights": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -11182,6 +11354,7 @@
       }
     },
     "Measured profile requests by day": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -11247,6 +11420,7 @@
       }
     },
     "Meeting memory": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -11312,6 +11486,7 @@
       }
     },
     "Message format": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -11377,6 +11552,7 @@
       }
     },
     "Minimal": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -11442,6 +11618,7 @@
       }
     },
     "Mode": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -11507,6 +11684,7 @@
       }
     },
     "Monospaced": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -11572,6 +11750,7 @@
       }
     },
     "More than one connection matches. Choose the right person and review the date. No action has been taken.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -11637,6 +11816,7 @@
       }
     },
     "Multiple card personas": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -11702,6 +11882,7 @@
       }
     },
     "My card": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -11767,6 +11948,7 @@
       }
     },
     "NFC writing is unavailable on this device. Use your QR code instead.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -11832,6 +12014,7 @@
       }
     },
     "Name": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -11897,6 +12080,7 @@
       }
     },
     "Native notes can be captured offline. Public profiles, publication, AI and cloud sync require internet.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -11962,6 +12146,7 @@
       }
     },
     "Networking": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -12027,6 +12212,7 @@
       }
     },
     "Networking mode": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -12092,6 +12278,7 @@
       }
     },
     "Never lose a connection again": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -12157,6 +12344,7 @@
       }
     },
     "New": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -12222,6 +12410,7 @@
       }
     },
     "New connection": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -12287,6 +12476,7 @@
       }
     },
     "New leads": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -12352,6 +12542,7 @@
       }
     },
     "Next action": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -12417,6 +12608,7 @@
       }
     },
     "Next week": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -12482,6 +12674,7 @@
       }
     },
     "No app needed. Just a good introduction.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -12547,6 +12740,7 @@
       }
     },
     "No email app is available. Share or copy the draft instead.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -12612,6 +12806,7 @@
       }
     },
     "None": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -12677,6 +12872,7 @@
       }
     },
     "Notes": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -12742,6 +12938,7 @@
       }
     },
     "Notifications are disabled.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -12807,6 +13004,7 @@
       }
     },
     "OK": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -12872,6 +13070,7 @@
       }
     },
     "On this iPhone": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -12937,6 +13136,7 @@
       }
     },
     "On-device AI is unavailable.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -13002,6 +13202,7 @@
       }
     },
     "On-device AI needs iOS 26 and an available Apple Intelligence model for your language. You can still write notes and introductions yourself.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -13067,6 +13268,7 @@
       }
     },
     "On-device AI needs iOS 26, Apple Intelligence enabled, and a supported device and language. Your notes and manual introduction drafts remain available.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -13132,6 +13334,7 @@
       }
     },
     "On-device speech recognition is unavailable for this language or device. You can type your note instead.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -13197,6 +13400,7 @@
       }
     },
     "One introduction.\nMake it yours.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -13262,6 +13466,7 @@
       }
     },
     "Open TapLead to refresh counts": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -13327,6 +13532,7 @@
       }
     },
     "Open TapLead to see your follow-up.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -13392,6 +13598,7 @@
       }
     },
     "Open card": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -13457,6 +13664,7 @@
       }
     },
     "Open email draft": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -13522,6 +13730,7 @@
       }
     },
     "Open my TapLead card": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -13587,6 +13796,7 @@
       }
     },
     "Open my card": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -13652,6 +13862,7 @@
       }
     },
     "Optional on-device AI on eligible iOS 26 devices": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -13717,6 +13928,7 @@
       }
     },
     "Payment is charged to your Apple account. Subscriptions renew automatically unless cancelled at least 24 hours before the current period ends. Manage or cancel in your Apple account.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -13782,6 +13994,7 @@
       }
     },
     "Permanently delete your account, cards and leads?": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -13847,6 +14060,7 @@
       }
     },
     "Phone": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -13912,6 +14126,7 @@
       }
     },
     "Photo": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -13977,6 +14192,7 @@
       }
     },
     "Photo added": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -14042,6 +14258,7 @@
       }
     },
     "Portfolio": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -14107,6 +14324,7 @@
       }
     },
     "Portfolio URL": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -14172,6 +14390,7 @@
       }
     },
     "Preferred name": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -14237,6 +14456,7 @@
       }
     },
     "Present one NFC tag at a time.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -14302,6 +14522,7 @@
       }
     },
     "Primary action": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -14367,6 +14588,7 @@
       }
     },
     "Privacy policy": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -14432,6 +14654,7 @@
       }
     },
     "Private contact fields stay out of public profiles and vCards. Anonymous views never identify visitors. Voice recognition runs on device; raw recordings are not retained.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -14497,6 +14720,7 @@
       }
     },
     "Pro is being prepared for release. Purchases stay disabled until server entitlement verification and the advertised features are verified.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -14562,6 +14786,7 @@
       }
     },
     "Pro purchases are not yet available. Release configuration and sandbox verification are required.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -14627,6 +14852,7 @@
       }
     },
     "Professional": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -14692,6 +14918,7 @@
       }
     },
     "Professional headline": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -14757,6 +14984,7 @@
       }
     },
     "Profile activity": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -14822,6 +15050,7 @@
       }
     },
     "Profile requests": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -14887,6 +15116,7 @@
       }
     },
     "Public details": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -14952,6 +15182,7 @@
       }
     },
     "Publish a card before setting up NFC.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -15017,6 +15248,7 @@
       }
     },
     "Publish my card": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -15082,6 +15314,7 @@
       }
     },
     "Publish your card to share a live QR": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -15147,6 +15380,7 @@
       }
     },
     "Published": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -15212,6 +15446,7 @@
       }
     },
     "Publishing includes your selected logo or photo. Choose None to publish without an image.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -15277,6 +15512,7 @@
       }
     },
     "QR codes and NFC tags open your published profile. Recipients don’t need the app. Cached QR codes work offline; opening the website needs internet.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -15342,6 +15578,7 @@
       }
     },
     "QR exports": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -15407,6 +15644,7 @@
       }
     },
     "QR requests": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -15472,6 +15710,7 @@
       }
     },
     "REVIEW TRANSCRIPTION": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -15537,6 +15776,7 @@
       }
     },
     "Record a voice note after a conversation.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -15602,6 +15842,7 @@
       }
     },
     "Record contact details only with permission. Location and context are entered by you; TapLead does not track your location.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -15667,6 +15908,7 @@
       }
     },
     "Record what matters, then review and edit before saving. Audio stays on your device and is not retained.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -15702,13 +15944,13 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "重要な内容を記録し、保存前に確認・編集します。音声データはデバイス内にのみ保持され、サーバー等には保存されません。"
+            "value": "重要な内容を録音し、文字起こしを確認・編集してから保存してください。音声はデバイス上で処理され、保存されません。"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "중요한 내용을 기록한 다음, 저장하기 전에 검토하고 수정하세요. 오디오는 기기에만 저장되며 별도로 보관되지 않습니다."
+            "value": "중요한 내용을 녹음한 후, 변환된 텍스트를 검토하고 수정한 다음 저장하세요. 음성 데이터는 기기에서만 처리되며 보관되지 않습니다."
           }
         },
         "nl": {
@@ -15732,6 +15974,7 @@
       }
     },
     "Recruiting": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -15797,6 +16040,7 @@
       }
     },
     "Relationship": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -15862,6 +16106,7 @@
       }
     },
     "Remember every conversation": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -15927,6 +16172,7 @@
       }
     },
     "Remember the conversation": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -15992,6 +16238,7 @@
       }
     },
     "Remove image": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -16057,6 +16304,7 @@
       }
     },
     "Requests": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -16122,6 +16370,7 @@
       }
     },
     "Restore purchases": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -16187,6 +16436,7 @@
       }
     },
     "Retry": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -16252,6 +16502,7 @@
       }
     },
     "Review and edit summary": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -16317,6 +16568,7 @@
       }
     },
     "Review and edit your draft": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -16382,6 +16634,7 @@
       }
     },
     "Review follow-up": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -16447,6 +16700,7 @@
       }
     },
     "Review the connection and date before confirming. No action has been taken.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -16512,6 +16766,7 @@
       }
     },
     "Review your command": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -16577,6 +16832,7 @@
       }
     },
     "Review your introduction": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -16642,6 +16898,7 @@
       }
     },
     "Role": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -16707,6 +16964,7 @@
       }
     },
     "Room for a new connection": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -16772,6 +17030,7 @@
       }
     },
     "Rounded": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -16837,6 +17096,7 @@
       }
     },
     "Sales": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -16902,6 +17162,7 @@
       }
     },
     "Save": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -16967,6 +17228,7 @@
       }
     },
     "Save contact": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -17032,6 +17294,7 @@
       }
     },
     "Save draft to timeline": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -17097,6 +17360,7 @@
       }
     },
     "Save follow-up & reminder": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -17162,6 +17426,7 @@
       }
     },
     "Save reviewed Smart Notes": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -17227,6 +17492,7 @@
       }
     },
     "Save reviewed note": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -17292,6 +17558,7 @@
       }
     },
     "Scan the exported QR on another phone before printing. The profile needs internet; your saved QR image can be shown offline.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -17357,6 +17624,7 @@
       }
     },
     "Scan this QR code to open the selected card": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -17422,6 +17690,7 @@
       }
     },
     "Scan to connect": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -17487,6 +17756,7 @@
       }
     },
     "Search names, notes or tags": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -17552,6 +17822,7 @@
       }
     },
     "Section order": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -17617,6 +17888,7 @@
       }
     },
     "See all": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -17682,6 +17954,7 @@
       }
     },
     "Send introduction": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -17747,6 +18020,7 @@
       }
     },
     "Serif": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -17812,6 +18086,7 @@
       }
     },
     "Service": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -17877,6 +18152,7 @@
       }
     },
     "Set up NFC card": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -17942,6 +18218,7 @@
       }
     },
     "Settings": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -18007,6 +18284,7 @@
       }
     },
     "Share CV publicly": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -18072,6 +18350,7 @@
       }
     },
     "Share booking link": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -18137,6 +18416,7 @@
       }
     },
     "Share data export": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -18202,6 +18482,7 @@
       }
     },
     "Share draft": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -18267,6 +18548,7 @@
       }
     },
     "Share link": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -18332,6 +18614,7 @@
       }
     },
     "Share my card": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -18397,6 +18680,7 @@
       }
     },
     "Share or save QR image": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -18462,6 +18746,7 @@
       }
     },
     "Share or save branded QR": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -18527,6 +18812,7 @@
       }
     },
     "Share portfolio": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -18592,6 +18878,7 @@
       }
     },
     "Share printable PDF": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -18657,6 +18944,7 @@
       }
     },
     "Share profile link": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -18722,6 +19010,7 @@
       }
     },
     "Share reviewed draft": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -18787,6 +19076,7 @@
       }
     },
     "Share using QR, NFC or a simple link.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -18852,6 +19142,7 @@
       }
     },
     "Short biography": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -18917,6 +19208,7 @@
       }
     },
     "Shorten the draft to 4,000 characters before saving to the timeline.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -18982,6 +19274,7 @@
       }
     },
     "Shorten the summary to 4,000 characters before saving.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -19047,6 +19340,7 @@
       }
     },
     "Show QR": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -19112,6 +19406,7 @@
       }
     },
     "Show my networking QR": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -19177,6 +19472,7 @@
       }
     },
     "Show networking QR": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -19242,6 +19538,7 @@
       }
     },
     "Show one logo or photo in your chosen corner. The selected image is uploaded when you publish; other images remain on this iPhone.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -19307,6 +19604,7 @@
       }
     },
     "Show today’s follow-ups": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -19372,6 +19670,7 @@
       }
     },
     "Show uncontacted leads": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -19437,6 +19736,7 @@
       }
     },
     "Sign in": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -19502,6 +19802,7 @@
       }
     },
     "Sign in and publish a card to measure real profile activity.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -19567,6 +19868,7 @@
       }
     },
     "Sign in before purchasing TapLead Pro.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -19632,6 +19934,7 @@
       }
     },
     "Sign in or create an account": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -19697,6 +20000,7 @@
       }
     },
     "Sign in to publish your card and sync your connections.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -19762,6 +20066,7 @@
       }
     },
     "Sign in to publish your card.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -19827,6 +20132,7 @@
       }
     },
     "Sign in with Apple again to continue.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -19892,6 +20198,7 @@
       }
     },
     "Sign in with Apple to publish your card and sync your connections.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -19957,6 +20264,7 @@
       }
     },
     "Sign out": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -20022,6 +20330,7 @@
       }
     },
     "Smart Notes & Draft Follow-Up": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -20087,6 +20396,7 @@
       }
     },
     "Smart Notes and AI drafts are included with TapLead Pro.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -20152,6 +20462,7 @@
       }
     },
     "Smart Notes saved": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -20217,6 +20528,7 @@
       }
     },
     "Smart Notes summary": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -20282,6 +20594,7 @@
       }
     },
     "Social URL": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -20347,6 +20660,7 @@
       }
     },
     "Social links": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -20412,6 +20726,7 @@
       }
     },
     "Something needs attention": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -20477,6 +20792,7 @@
       }
     },
     "Speak a command": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -20542,6 +20858,7 @@
       }
     },
     "Standard": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -20607,6 +20924,7 @@
       }
     },
     "Start on this iPhone. Publish when you’re ready.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -20672,6 +20990,7 @@
       }
     },
     "Start voice note": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -20737,6 +21056,7 @@
       }
     },
     "Status": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -20802,6 +21122,7 @@
       }
     },
     "Status changed": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -20867,6 +21188,7 @@
       }
     },
     "Stop recording": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -20932,6 +21254,7 @@
       }
     },
     "Subject": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -20997,6 +21320,7 @@
       }
     },
     "Summarise or draft with AI": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -21062,6 +21386,7 @@
       }
     },
     "Sync": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -21127,6 +21452,7 @@
       }
     },
     "Sync now": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -21192,6 +21518,7 @@
       }
     },
     "Tags, separated by commas": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -21257,6 +21584,7 @@
       }
     },
     "Tap or scan to connect": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -21322,6 +21650,7 @@
       }
     },
     "Tap to connect": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -21387,6 +21716,7 @@
       }
     },
     "Tap. Connect. Convert.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -21452,6 +21782,7 @@
       }
     },
     "TapLead": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -21517,6 +21848,7 @@
       }
     },
     "TapLead Pro": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -21582,6 +21914,7 @@
       }
     },
     "TapLead does not send messages. Choose a destination in the Share Sheet and confirm there.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -21647,6 +21980,7 @@
       }
     },
     "Teams architecture is planned for shared branding, roles and company templates.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -21712,6 +22046,7 @@
       }
     },
     "Tell TapLead your next move": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -21777,6 +22112,7 @@
       }
     },
     "Tell TapLead your next move.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -21842,6 +22178,7 @@
       }
     },
     "Terms of use": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -21907,6 +22244,7 @@
       }
     },
     "The NFC write could not be verified.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -21972,6 +22310,7 @@
       }
     },
     "The QR could not be created. Please try again.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -22037,6 +22376,7 @@
       }
     },
     "The microphone is unavailable.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -22102,6 +22442,7 @@
       }
     },
     "The profile link is invalid.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -22167,6 +22508,7 @@
       }
     },
     "The public action appears only when its link is valid and shared publicly. Text contrast adjusts to your background.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -22232,6 +22574,7 @@
       }
     },
     "The request could not be completed.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -22297,6 +22640,7 @@
       }
     },
     "The service is temporarily unavailable. Try again shortly.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -22362,6 +22706,7 @@
       }
     },
     "Their details": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -22427,6 +22772,7 @@
       }
     },
     "Theme": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -22492,6 +22838,7 @@
       }
     },
     "These notes and the contact name are processed on this iPhone using Apple’s on-device model only when you choose an action. TapLead does not send them to an external AI service.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -22557,6 +22904,7 @@
       }
     },
     "They agreed to share these details": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -22622,6 +22970,7 @@
       }
     },
     "This NFC tag is locked, unsupported or too small.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -22687,6 +23036,7 @@
       }
     },
     "This action is unavailable for your account or plan.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -22752,6 +23102,7 @@
       }
     },
     "This image could not be opened. Choose another image.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -22817,6 +23168,7 @@
       }
     },
     "This item changed. Sync and try again.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -22882,6 +23234,7 @@
       }
     },
     "This purchase could not be verified.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -22947,6 +23300,7 @@
       }
     },
     "This writes a URL to a physical tag. Your QR code remains available on every supported iPhone.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -23012,6 +23366,7 @@
       }
     },
     "Timeline": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -23077,6 +23432,7 @@
       }
     },
     "Tip: raise your screen brightness for easier scanning.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -23142,6 +23498,7 @@
       }
     },
     "Today": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -23207,6 +23564,7 @@
       }
     },
     "Tomorrow": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -23272,6 +23630,7 @@
       }
     },
     "Tone": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -23337,6 +23696,7 @@
       }
     },
     "Too many requests. Wait a moment and try again.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -23402,6 +23762,7 @@
       }
     },
     "Top left": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -23467,6 +23828,7 @@
       }
     },
     "Top right": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -23532,6 +23894,7 @@
       }
     },
     "Transcribe the voice notes you choose to record.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -23597,6 +23960,7 @@
       }
     },
     "Try again": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -23662,6 +24026,7 @@
       }
     },
     "Try ‘Create a follow-up for Sarah next Tuesday’, ‘Summarise my notes about James’, ‘Draft an introduction email’, or ‘Show leads I haven’t contacted’.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -23727,6 +24092,7 @@
       }
     },
     "Turn new contacts into actionable opportunities.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -23792,6 +24158,7 @@
       }
     },
     "Typography": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -23857,6 +24224,7 @@
       }
     },
     "Up to 10,000 synced leads": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -23922,6 +24290,7 @@
       }
     },
     "Up to 20 published cards": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -23987,6 +24356,7 @@
       }
     },
     "Up to date": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -24052,6 +24422,7 @@
       }
     },
     "Update published card": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -24117,6 +24488,7 @@
       }
     },
     "Use Edit to reorder sections and social links.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -24182,6 +24554,7 @@
       }
     },
     "Use a booking or portfolio link for your next conversation.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -24247,6 +24620,7 @@
       }
     },
     "Use a non-empty note of up to 3,000 characters for this on-device action.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -24312,6 +24686,7 @@
       }
     },
     "Use card colours": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -24377,6 +24752,7 @@
       }
     },
     "Use the context you already have": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -24442,6 +24818,7 @@
       }
     },
     "Use theme defaults": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -24507,6 +24884,7 @@
       }
     },
     "Version 1.0 · Business / Productivity": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -24572,6 +24950,7 @@
       }
     },
     "View CV": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -24637,6 +25016,7 @@
       }
     },
     "Voice assistant": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -24702,6 +25082,7 @@
       }
     },
     "Voice note": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -24767,6 +25148,7 @@
       }
     },
     "Voice note added": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -24832,6 +25214,7 @@
       }
     },
     "Voice notes with reviewed transcription": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -24897,6 +25280,7 @@
       }
     },
     "Voice recording is included with TapLead Pro. You can still write a note below.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -24962,6 +25346,7 @@
       }
     },
     "Website": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -25027,6 +25412,7 @@
       }
     },
     "Welcome to TapLead": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -25092,6 +25478,7 @@
       }
     },
     "Where connections begin": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -25157,6 +25544,7 @@
       }
     },
     "Where or how did you meet?": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -25222,6 +25610,7 @@
       }
     },
     "Won": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -25287,6 +25676,7 @@
       }
     },
     "Write my profile link": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -25352,6 +25742,7 @@
       }
     },
     "Write your published TapLead link to an NFC card.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -25417,6 +25808,7 @@
       }
     },
     "Your NFC card is ready. Test it with another compatible phone.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -25482,6 +25874,7 @@
       }
     },
     "Your TapLead": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -25547,6 +25940,7 @@
       }
     },
     "Your TapLead card": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -25612,6 +26006,7 @@
       }
     },
     "Your account": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -25677,6 +26072,7 @@
       }
     },
     "Your cards and notes are saved on this iPhone.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -25742,6 +26138,7 @@
       }
     },
     "Your changes could not be saved. Please try again.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -25807,6 +26204,7 @@
       }
     },
     "Your connections, wherever you go.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -25872,6 +26270,7 @@
       }
     },
     "Your data, your choice": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -25937,6 +26336,7 @@
       }
     },
     "Your event card opens in the large QR view for quick introductions.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -26002,6 +26402,7 @@
       }
     },
     "Your name": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -26067,6 +26468,7 @@
       }
     },
     "Your name, company, headline and biography are public when published. Choose which contact details to include.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -26132,6 +26534,7 @@
       }
     },
     "Your next chapter": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -26197,6 +26600,7 @@
       }
     },
     "Your next introduction starts here.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -26262,6 +26666,7 @@
       }
     },
     "Your next move": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -26327,6 +26732,7 @@
       }
     },
     "Your profile is still private. You can capture a connection on this iPhone below.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -26392,6 +26798,7 @@
       }
     },
     "Your purchase is awaiting approval.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -26457,6 +26864,7 @@
       }
     },
     "Your saved data could not be opened. It has been preserved for recovery.": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -26522,6 +26930,7 @@
       }
     },
     "Your story starts here": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -26587,6 +26996,7 @@
       }
     },
     "booking": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -26652,6 +27062,7 @@
       }
     },
     "email": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -26717,6 +27128,7 @@
       }
     },
     "follow_up_completed": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -26782,6 +27194,7 @@
       }
     },
     "follow_up_drafted": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -26847,6 +27260,7 @@
       }
     },
     "follow_up_scheduled": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -26912,6 +27326,7 @@
       }
     },
     "location": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -26977,6 +27392,7 @@
       }
     },
     "met": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -27042,6 +27458,7 @@
       }
     },
     "phone": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -27107,6 +27524,7 @@
       }
     },
     "portfolio": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -27172,6 +27590,7 @@
       }
     },
     "received": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -27237,6 +27656,7 @@
       }
     },
     "socials": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -27302,6 +27722,7 @@
       }
     },
     "status": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -27367,6 +27788,7 @@
       }
     },
     "vCard downloads": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -27432,6 +27854,7 @@
       }
     },
     "voice": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
@@ -27497,6 +27920,7 @@
       }
     },
     "website": {
+      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
