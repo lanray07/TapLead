@@ -1,6 +1,6 @@
 {
-  "audited_on": "2026-10-04",
-  "selected_build": "1012",
+  "audited_on": "2026-10-05",
+  "selected_build": "1013",
   "submission_authorized_only_after_gate_passes": true,
   "requirements": [
     {
@@ -13,7 +13,7 @@
       "section": 2,
       "title": "Complete connection-to-follow-up workflow",
       "status": "blocked",
-      "evidence": "Separate free London Supabase API and GitHub profiles are deployed; live HTTPS capture, inbox, image and export checks passed. Build 1012 still has no API URL. Production authentication, purchases and exact-build end-to-end acceptance remain."
+      "evidence": "Separate free London Supabase API and GitHub profiles are deployed; live HTTPS capture, inbox, image and export checks passed. Selected build 1013 includes the deployed API configuration and Apple-only account entry. Genuine Apple authentication, purchase lifecycle and exact-build end-to-end acceptance remain."
     },
     {
       "section": 3,
@@ -151,7 +151,7 @@
       "section": 25,
       "title": "Small/medium/large private widgets",
       "status": "partial",
-      "evidence": "All three families exist. Private aggregate counts, calendar-day shared tests and app/widget Xcode compilation passed run 37206899047 for source 07e8a07. Device privacy/size checks remain; build 1012 predates the count change."
+      "evidence": "All three families exist. Private aggregate counts, calendar-day shared tests and app/widget Xcode compilation passed run 37206899047 for source 07e8a07. Device privacy/size checks remain; selected build 1013 includes the count change."
     },
     {
       "section": 26,
@@ -181,7 +181,7 @@
       "section": 30,
       "title": "Ten-language translation workflow",
       "status": "blocked",
-      "evidence": "424 native strings have actual translations in Spanish, French, German, Italian, Portuguese, Dutch, Japanese, Korean and Simplified Chinese, plus English. App/widget and three permission prompts are synchronized; completeness/format checks pass locally. Agent terminology and key consent/deletion/payment copy review completed. Ten-locale simulator UI checks are added and awaiting execution/visual inspection. Independent language review, accessibility/smaller-screen checks and translated public pages remain. See LOCALISATION.md."
+      "evidence": "424 native strings have actual translations in Spanish, French, German, Italian, Portuguese, Dutch, Japanese, Korean and Simplified Chinese, plus English. App/widget and three permission prompts are synchronized; completeness/format checks pass locally. Agent terminology and key consent/deletion/payment copy review completed. Ten-locale UI assertions and the full native UI suite passed GitHub run 37268836423 for source 2946c67. All 50 locale screenshots were visually inspected on iPhone 17 Pro Max; no clipped navigation or main controls were found. Four Siri invocation phrases per language preserve the applicationName parameter. Independent language review, accessibility/smaller-screen checks and translated public pages remain. See LOCALISATION.md."
     },
     {
       "section": 31,
