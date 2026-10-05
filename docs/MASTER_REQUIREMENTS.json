@@ -1,7 +1,7 @@
 {
   "audited_on": "2026-10-05",
   "selected_build": "1014",
-  "submission_authorized_only_after_gate_passes": true,
+  "submission_authorized_only_after_gate_passes": false,
   "requirements": [
     {
       "section": 1,
@@ -181,7 +181,7 @@
       "section": 30,
       "title": "Ten-language translation workflow",
       "status": "blocked",
-      "evidence": "424 native strings have actual translations in Spanish, French, German, Italian, Portuguese, Dutch, Japanese, Korean and Simplified Chinese, plus English. App/widget and three permission prompts are synchronized; completeness/format checks pass locally. Agent terminology and key consent/deletion/payment copy review completed. Ten-locale UI assertions and the full native UI suite passed GitHub run 37268836423 for source 2946c67. All 50 locale screenshots were visually inspected on iPhone 17 Pro Max; no clipped navigation or main controls were found. Four Siri invocation phrases per language preserve the applicationName parameter. Independent language review, accessibility/smaller-screen checks and translated public pages remain. See LOCALISATION.md. Signed build 1014 passed IPA resource inspection, was processed by Apple and selected/saved on version 1.0.0. No App Review submission occurred."
+      "evidence": "424 native strings have actual translations in Spanish, French, German, Italian, Portuguese, Dutch, Japanese, Korean and Simplified Chinese, plus English. App/widget and three permission prompts are synchronized; completeness/format checks pass locally. Agent terminology and key consent/deletion/payment copy review completed. Ten-locale UI assertions and the full native UI suite passed GitHub run 37268836423 for source 2946c67. All 50 locale screenshots were visually inspected on iPhone 17 Pro Max; no clipped navigation or main controls were found. Four Siri invocation phrases per language preserve the applicationName parameter. Independent language review, accessibility/smaller-screen checks and translated public pages remain. See LOCALISATION.md. Signed build 1014 passed IPA resource inspection, was processed by Apple and selected/saved on version 1.0.0. App version 1.0.0 / build 1014 was subsequently submitted by latest user authorization; Apple shows Waiting for Review. Quality acceptance remains outstanding."
     },
     {
       "section": 31,
@@ -245,6 +245,19 @@
     }
   ],
   "scope_overrides": {
-    "authentication": "User explicitly chose native Apple sign-in plus guest mode on 4 October 2026; email login/SMTP removed from acceptance scope."
+    "authentication": "User explicitly chose native Apple sign-in plus guest mode on 4 October 2026; email login/SMTP removed from acceptance scope.",
+    "submission": "On 5 October, after disclosure that language review and genuine Apple/device/subscription acceptance remained outstanding, the user authorized submitting if building was complete. Build 1014 compilation, checks, signing, upload, Apple processing and selection were complete. The current app version was submitted with review notes explicitly disclosing disabled Pro purchases and remaining acceptance testing. Existing requirement statuses were not promoted to verified."
+  },
+  "submission": {
+    "version": "1.0.0",
+    "build": "1014",
+    "status": "Waiting for Review",
+    "id": "79de4d3b-d644-435a-b9d6-a8b899083961",
+    "date_displayed_by_apple": "Oct 5, 2026 at 9:49 AM",
+    "items": [
+      "App Version"
+    ],
+    "pro_purchases_enabled": false,
+    "evidence": "assets/build-1014-waiting-for-review.jpg"
   }
 }
