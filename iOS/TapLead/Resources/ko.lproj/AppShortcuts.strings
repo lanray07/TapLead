@@ -1,0 +1,5 @@
+/* Agent-authored phrases; human language and Siri device review pending. */
+"Open my card in ${applicationName}" = "${applicationName}에서 내 명함 열어 줘";
+"Show my QR in ${applicationName}" = "${applicationName}에서 QR 코드 보여 줘";
+"Show follow-ups in ${applicationName}" = "${applicationName}에서 후속 연락 보여 줘";
+"Add a note in ${applicationName}" = "${applicationName}에서 메모 추가해 줘";

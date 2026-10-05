@@ -90,6 +90,11 @@ for key,entry in catalog['strings'].items():
 CATALOG.parent.mkdir(parents=True,exist_ok=True)
 permissions={'NSSpeechRecognitionUsageDescription':'Transcribe the voice notes you choose to record.','NSMicrophoneUsageDescription':'Record a voice note after a conversation.','NFCReaderUsageDescription':'Write your published TapLead link to an NFC card.'}
 permission_files={ROOT/f'iOS/TapLead/Resources/{language}.lproj/InfoPlist.strings':''.join(f'{json.dumps(name)} = {json.dumps(catalog["strings"][key]["localizations"][language]["stringUnit"]["value"],ensure_ascii=False)};\n' for name,key in permissions.items()) for language in LANGUAGES}
+shortcuts=json.loads((ROOT/'scripts/shortcut-translations.json').read_text(encoding='utf-8'))
+for language in LANGUAGES:
+    if len(shortcuts[language])!=4 or any(value.count('${applicationName}')!=1 for value in shortcuts[language]):raise SystemExit(f'Invalid shortcut placeholders: {language}')
+shortcut_files={ROOT/f'iOS/TapLead/Resources/{language}.lproj/AppShortcuts.strings':'/* Agent-authored phrases; human language and Siri device review pending. */\n'+''.join(f'{json.dumps(key)} = {json.dumps(value,ensure_ascii=False)};\n' for key,value in zip(shortcuts['en'],shortcuts[language])) for language in LANGUAGES}
+permission_files.update(shortcut_files)
 if not args.check:
     for target in [CATALOG,ROOT/'iOS/Widget/Resources/Localizable.xcstrings']:
         target.write_text(json.dumps(catalog,ensure_ascii=False,indent=2,sort_keys=True)+'\n',encoding='utf-8')

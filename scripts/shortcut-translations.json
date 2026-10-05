@@ -1,0 +1,12 @@
+{
+  "en": ["Open my card in ${applicationName}", "Show my QR in ${applicationName}", "Show follow-ups in ${applicationName}", "Add a note in ${applicationName}"],
+  "es": ["Abre mi tarjeta en ${applicationName}", "Muestra mi QR en ${applicationName}", "Muestra mis seguimientos en ${applicationName}", "Añade una nota en ${applicationName}"],
+  "fr": ["Ouvre ma carte dans ${applicationName}", "Affiche mon QR dans ${applicationName}", "Affiche mes suivis dans ${applicationName}", "Ajoute une note dans ${applicationName}"],
+  "de": ["Öffne meine Karte in ${applicationName}", "Zeige meinen QR-Code in ${applicationName}", "Zeige meine Nachbereitungen in ${applicationName}", "Füge eine Notiz in ${applicationName} hinzu"],
+  "it": ["Apri il mio biglietto in ${applicationName}", "Mostra il mio QR in ${applicationName}", "Mostra i follow-up in ${applicationName}", "Aggiungi una nota in ${applicationName}"],
+  "pt": ["Abra meu cartão no ${applicationName}", "Mostre meu QR no ${applicationName}", "Mostre meus acompanhamentos no ${applicationName}", "Adicione uma nota no ${applicationName}"],
+  "nl": ["Open mijn kaart in ${applicationName}", "Toon mijn QR-code in ${applicationName}", "Toon mijn opvolgingen in ${applicationName}", "Voeg een notitie toe in ${applicationName}"],
+  "ja": ["${applicationName}で自分のカードを開いて", "${applicationName}でQRコードを表示して", "${applicationName}でフォローアップを表示して", "${applicationName}でメモを追加して"],
+  "ko": ["${applicationName}에서 내 명함 열어 줘", "${applicationName}에서 QR 코드 보여 줘", "${applicationName}에서 후속 연락 보여 줘", "${applicationName}에서 메모 추가해 줘"],
+  "zh-Hans": ["在${applicationName}中打开我的名片", "在${applicationName}中显示我的二维码", "在${applicationName}中显示跟进事项", "在${applicationName}中添加备注"]
+}

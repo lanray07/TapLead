@@ -1,0 +1,5 @@
+/* Agent-authored phrases; human language and Siri device review pending. */
+"Open my card in ${applicationName}" = "${applicationName}で自分のカードを開いて";
+"Show my QR in ${applicationName}" = "${applicationName}でQRコードを表示して";
+"Show follow-ups in ${applicationName}" = "${applicationName}でフォローアップを表示して";
+"Add a note in ${applicationName}" = "${applicationName}でメモを追加して";

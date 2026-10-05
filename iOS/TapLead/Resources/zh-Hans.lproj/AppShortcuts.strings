@@ -1,0 +1,5 @@
+/* Agent-authored phrases; human language and Siri device review pending. */
+"Open my card in ${applicationName}" = "在${applicationName}中打开我的名片";
+"Show my QR in ${applicationName}" = "在${applicationName}中显示我的二维码";
+"Show follow-ups in ${applicationName}" = "在${applicationName}中显示跟进事项";
+"Add a note in ${applicationName}" = "在${applicationName}中添加备注";

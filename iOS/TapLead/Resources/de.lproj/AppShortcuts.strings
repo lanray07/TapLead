@@ -1,0 +1,5 @@
+/* Agent-authored phrases; human language and Siri device review pending. */
+"Open my card in ${applicationName}" = "Öffne meine Karte in ${applicationName}";
+"Show my QR in ${applicationName}" = "Zeige meinen QR-Code in ${applicationName}";
+"Show follow-ups in ${applicationName}" = "Zeige meine Nachbereitungen in ${applicationName}";
+"Add a note in ${applicationName}" = "Füge eine Notiz in ${applicationName} hinzu";
