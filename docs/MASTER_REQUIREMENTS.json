@@ -263,6 +263,8 @@
     "pro_purchases_enabled": false,
     "superseded_app_only_submission": "79de4d3b-d644-435a-b9d6-a8b899083961",
     "pro_submission_authorization": "The user explicitly requested Pro be submitted too. The app-only submission was cancelled recoverably and the app version, subscription group and both products were submitted together. All four items show Waiting for Review; product review notes disclose disabled purchasing and outstanding purchase lifecycle acceptance.",
-    "evidence": "assets/pro-combined-waiting-for-review.jpg"
+    "resubmitted_on": "2026-10-07",
+    "metadata_correction": "Apple's automated guideline 3.1.2 rejection identified a missing functional EULA link in the App Store description. Added the direct standard Apple EULA URL and GitHub privacy URL to the saved English (U.K.) description, updated review and resubmitted the same build and all four items. All show Waiting for Review. No custom license or purchase enablement change was made.",
+    "evidence": "assets/eula-corrected-resubmitted.jpg"
   }
 }

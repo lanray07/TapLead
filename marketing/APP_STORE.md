@@ -1,6 +1,6 @@
-# Saved App Store Connect draft
+# Saved App Store Connect metadata
 
-TapLead (6818982306), iOS 1.0.0, English (U.K.). Prepared 4 October 2026. No review submission or release has been made.
+TapLead (6818982306), iOS 1.0.0, English (U.K.). Updated 7 October 2026. Build 1014, the Pro subscription group and both Pro plans were resubmitted after correcting the missing EULA link; all four items show Waiting for Review. No release is claimed.
 
 Name: TapLead. Subtitle: Business Cards & Connections. Categories: Business / Productivity. Age rating: 4+ with regional equivalents. Free download. Support URL: https://github.com/lanray07/TapLead/blob/main/docs/SUPPORT.md. Marketing URL: https://github.com/lanray07/TapLead.
 
@@ -26,6 +26,9 @@ Explore the app with clearly labelled sample connections. Your private notes and
 
 Tap. Connect. Convert.
 
+Terms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacy Policy: https://github.com/lanray07/TapLead/blob/main/docs/PRIVACY.md
+
 ## Keywords
 
 business card,networking,contacts,leads,follow up,notes,profile,CRM,connections,organise
@@ -48,4 +51,4 @@ Eleven published data types: name, email address, phone number, physical address
 
 Privacy and terms pages are hosted in this repository at `docs/PRIVACY.md` and `docs/TERMS.md`. The app configuration and GitHub archive variables use their public GitHub URLs. The privacy notice describes Supabase hosting in London, GitHub Pages, native Apple authentication, selected image publication, protected revocation credentials and provider retention limits. Email login and SMTP are removed at the operator's request. The operator confirmed no third-party content; that content-rights declaration is saved in App Store Connect. Accessibility support claims await device validation. Production and Sandbox server notification URLs are saved; real delivery testing remains. Optional routing, App Clip, iMessage, events and unsupported features are omitted.
 
-Build 1013 (1.0.0), source `f86382c1551d524ea8e1cbf4b89f569a01f3906d`, was uploaded, processed to Ready to Submit and saved on the app version, replacing 1012. Its App Store build ID is `4e067c2f-69fb-49d9-bb62-009a89ef2650`. Distribution signing, shared App Group and NFC `TAG` entitlement are configured. Hosting and receipt verification are deployed. Purchases remain disabled until genuine Apple purchase/lifecycle checks and reconciliation are complete; native Apple authentication and physical-device acceptance also remain unverified. No review submission has been made. Free/paid agreements, banking, tax forms and listed compliance statuses are active. See [release status](../docs/RELEASE.md).
+Build 1014 (1.0.0) replaced 1013 and was submitted with the Pro group and monthly/annual products on 5 October. Following Apple's automated guideline 3.1.2 rejection for a missing metadata EULA link, the description above was saved and all four items resubmitted on 7 October. The existing standard Apple EULA applies; no custom license was introduced. Distribution signing, shared App Group and NFC `TAG` entitlement are configured. Hosting and receipt verification are deployed. Purchases remain disabled until genuine Apple purchase/lifecycle checks and reconciliation are complete; native Apple authentication and physical-device acceptance also remain unverified. Free/paid agreements, banking, tax forms and listed compliance statuses were active at the previous check. See [release status](../docs/RELEASE.md).
