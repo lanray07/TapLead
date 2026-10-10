@@ -3,7 +3,7 @@ Duo's display type was read from this app's saved Apple API collections.
 Only allowlisted empty reservations from this uploader may be recreated.
 No delivered asset deletion, binary upload, subscription change or submission.
 """
-import hashlib,json,urllib.request,urllib.parse,urllib.error,importlib.util,os
+import hashlib,json,urllib.request,urllib.parse,urllib.error,importlib.util,os,time
 from concurrent.futures import ThreadPoolExecutor,as_completed
 from pathlib import Path
 helper_spec=importlib.util.spec_from_file_location('store_metadata',Path(__file__).with_name('store-metadata.py'))
@@ -16,12 +16,23 @@ localizations=json.loads(Path('marketing/store-metadata-verification.json').read
 placements={'APP_IPHONE_DUO':('duo-inner','duo-outer'),'APP_IPHONE_61':('iphone-medium',)}
 failed_reservations={x['id']:x for x in json.loads(Path('marketing/pending-upload-reservations.json').read_text())}
 
+def verified_picture(picture_id,asset):
+    for attempt in range(30):
+        picture=api('/v1/appScreenshots/'+picture_id+'?fields[appScreenshots]=fileName,sourceFileChecksum,assetDeliveryState')['data']
+        a=picture['attributes'];state=(a.get('assetDeliveryState') or {}).get('state')
+        if a.get('sourceFileChecksum')==asset['md5'] and state=='COMPLETE':return picture
+        if state=='FAILED':raise RuntimeError('Apple screenshot processing failed: '+asset['file'])
+        if state=='COMPLETE':raise RuntimeError('Completed screenshot checksum differs: '+asset['file']+' expected '+asset['md5']+' received '+str(a.get('sourceFileChecksum')))
+        time.sleep(2)
+    raise RuntimeError('Apple is still processing '+asset['file'])
+
 def finish_picture(record,asset):
     data=(ROOT/asset['file']).read_bytes()
     assert hashlib.sha256(data).hexdigest()==asset['sha256'], 'Export integrity mismatch: '+asset['file']
     fresh=api('/v1/appScreenshots/'+record['id']+'?fields[appScreenshots]=fileName,fileSize,sourceFileChecksum,uploadOperations,assetDeliveryState')['data']
     attrs=fresh['attributes']
     if attrs.get('sourceFileChecksum')==asset['md5'] and attrs.get('assetDeliveryState',{}).get('state')=='COMPLETE':return fresh
+    if (attrs.get('assetDeliveryState') or {}).get('state') in {'UPLOAD_COMPLETE','COMPLETE'}:return verified_picture(record['id'],asset)
     operations=record['attributes'].get('uploadOperations') or attrs.get('uploadOperations') or []
     assert operations, 'Apple returned no resumable upload operations for '+asset['file']
     for operation in operations:
@@ -38,7 +49,7 @@ def finish_picture(record,asset):
         except urllib.error.HTTPError as error:
             raise RuntimeError('Apple file upload HTTP '+str(error.code)+' at '+host) from None
     api('/v1/appScreenshots/'+record['id'],'PATCH',{'data':{'type':'appScreenshots','id':record['id'],'attributes':{'sourceFileChecksum':asset['md5'],'uploaded':True}}})
-    return api('/v1/appScreenshots/'+record['id'])['data']
+    return verified_picture(record['id'],asset)
 
 def locale_upload(localization):
     locale=localization['copy_locale'];result={'locale':localization['locale'],'copy_locale':locale,'sets':[]}
