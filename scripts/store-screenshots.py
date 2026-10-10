@@ -1,8 +1,9 @@
 """Upload the exact exported screenshots to Apple; retain correct existing assets.
 Duo's display type was read from this app's saved Apple API collections.
-No screenshot deletion, binary upload, subscription change or review submission.
+Only allowlisted empty reservations from this uploader may be recreated.
+No delivered asset deletion, binary upload, subscription change or submission.
 """
-import hashlib,json,urllib.request,urllib.parse,urllib.error,importlib.util
+import hashlib,json,urllib.request,urllib.parse,urllib.error,importlib.util,os
 from concurrent.futures import ThreadPoolExecutor,as_completed
 from pathlib import Path
 helper_spec=importlib.util.spec_from_file_location('store_metadata',Path(__file__).with_name('store-metadata.py'))
@@ -13,6 +14,7 @@ ROOT=Path('artifacts/storefront-export')
 manifest=json.loads(Path('marketing/localized-assets/manifest.json').read_text(encoding='utf-8'))['assets']
 localizations=json.loads(Path('marketing/store-metadata-verification.json').read_text())['verified_localizations']
 placements={'APP_IPHONE_DUO':('duo-inner','duo-outer'),'APP_IPHONE_61':('iphone-medium',)}
+failed_reservations={x['id']:x for x in json.loads(Path('marketing/pending-upload-reservations.json').read_text())}
 
 def finish_picture(record,asset):
     data=(ROOT/asset['file']).read_bytes()
@@ -61,10 +63,22 @@ def locale_upload(localization):
             else:
                 pending=[p for p in pictures if p['attributes'].get('fileName')==name and not p['attributes'].get('sourceFileChecksum')]
                 assert len(pending)<=1,'Duplicate pending upload: '+locale
-                if pending:picture=pending[0]
-                else:
+                if pending:
+                    picture=pending[0];reservation=failed_reservations.get(picture['id'])
+                    if not picture['attributes'].get('uploadOperations') and reservation:
+                        assert reservation['locale']==locale and reservation['file_name']==name
+                        assert not picture['attributes'].get('sourceFileChecksum')
+                        assert picture['attributes'].get('fileSize')==(ROOT/asset['file']).stat().st_size
+                        assert (picture['attributes'].get('assetDeliveryState') or {}).get('state')!='COMPLETE'
+                        # Remove only this task's known empty failed reservation;
+                        # the original art and all delivered screenshots remain.
+                        api('/v1/appScreenshots/'+picture['id'],'DELETE')
+                        picture=None
+                else:picture=None
+                if picture is None:
                     size=(ROOT/asset['file']).stat().st_size
                     picture=api('/v1/appScreenshots','POST',{'data':{'type':'appScreenshots','attributes':{'fileName':name,'fileSize':size},'relationships':{'appScreenshotSet':{'data':{'type':'appScreenshotSets','id':collection['id']}}}}})['data']
+                    print('Reserved screenshot operation count:',locale,len(picture['attributes'].get('uploadOperations') or []),flush=True)
             finished=finish_picture(picture,asset)
             assert finished['attributes'].get('sourceFileChecksum')==asset['md5'],'Checksum read-back mismatch'
             saved.append({'id':finished['id'],'file':asset['file'],'checksum':asset['md5'],'delivery':finished['attributes'].get('assetDeliveryState')})
@@ -75,8 +89,10 @@ def locale_upload(localization):
 if __name__=='__main__':
     assert api('/v1/apps/'+APP)['data']['attributes']['bundleId']=='com.TapLead.app'
     report={'app_id':APP,'locales':[],'errors':[]}
+    selected=os.environ.get('TAPLEAD_ASSET_LOCALE','all')
+    assert selected=='all' or any(x['copy_locale']==selected for x in localizations),'Unknown locale selection'
     with ThreadPoolExecutor(max_workers=4) as pool:
-        futures={pool.submit(locale_upload,item):item for item in localizations}
+        futures={pool.submit(locale_upload,item):item for item in localizations if selected=='all' or item['copy_locale']==selected}
         for future in as_completed(futures):
             locale=futures[future]['copy_locale']
             try:report['locales'].append(future.result())
