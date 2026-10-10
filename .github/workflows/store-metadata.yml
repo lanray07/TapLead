@@ -4,7 +4,7 @@ on:
     inputs:
       mode:
         type: choice
-        options: [inspect, apply, inspect-assets, inspect-subscriptions]
+        options: [inspect, apply, inspect-assets, inspect-subscriptions, update-pro-review]
         default: inspect
         required: true
 permissions:
@@ -27,7 +27,12 @@ jobs:
           APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
           APP_STORE_CONNECT_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
           APP_STORE_CONNECT_API_PRIVATE_KEY: ${{ secrets.APP_STORE_CONNECT_API_PRIVATE_KEY }}
-        run: python scripts/store-metadata.py '${{ inputs.mode }}'
+        run: |
+          if [ '${{ inputs.mode }}' = 'update-pro-review' ]; then
+            python scripts/update-pro-review.py
+          else
+            python scripts/store-metadata.py '${{ inputs.mode }}'
+          fi
       - uses: actions/upload-artifact@v4
         if: always()
         with:
