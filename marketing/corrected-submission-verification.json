@@ -1,0 +1,31 @@
+{
+  "app_id": "6818982306",
+  "version_id": "19190b9a-9bcb-4393-8d33-2406f00f56da",
+  "build": "1015",
+  "items": [
+    {
+      "id": "NGVmYjliYzktOTYwNS00ZjBjLTk0MDItNTg4NWRmNDJjMTEwfDZ8ODkyNDk4Mjg4",
+      "relation": "appStoreVersion",
+      "resource_id": "19190b9a-9bcb-4393-8d33-2406f00f56da"
+    },
+    {
+      "id": "NGVmYjliYzktOTYwNS00ZjBjLTk0MDItNTg4NWRmNDJjMTEwfDE4fDM5MTQ0Mzk2LTNkYTEtNDc5NS1iNTZmLTFiMmQ3NmUyYzU5MA",
+      "relation": "subscriptionVersion",
+      "resource_id": "39144396-3da1-4795-b56f-1b2d76e2c590"
+    },
+    {
+      "id": "NGVmYjliYzktOTYwNS00ZjBjLTk0MDItNTg4NWRmNDJjMTEwfDE4fGU0NDU1Yjc1LWM2ZTEtNGEzMi1hM2I1LTJmMThkZDJjZjhlMQ",
+      "relation": "subscriptionVersion",
+      "resource_id": "e4455b75-c6e1-4a32-a3b5-2f18dd2cf8e1"
+    },
+    {
+      "id": "NGVmYjliYzktOTYwNS00ZjBjLTk0MDItNTg4NWRmNDJjMTEwfDE5fGFhM2U3OTY0LWQ3NGQtNGVhNC04ZTZjLThjMjc1YmEwMTE1ZQ",
+      "relation": "subscriptionGroupVersion",
+      "resource_id": "aa3e7964-d74d-4ea4-8e6c-8c275ba0115e"
+    }
+  ],
+  "release_type": "MANUAL",
+  "submission_id": "4efb9bc9-9605-4f0c-9402-5885df42c110",
+  "state": "WAITING_FOR_REVIEW",
+  "submitted_date": "2026-10-10T10:08:18.787Z"
+}

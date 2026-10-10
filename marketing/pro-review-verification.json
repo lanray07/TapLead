@@ -1,0 +1,29 @@
+{
+  "app_id": "6818982306",
+  "subscriptions": [
+    {
+      "id": "6818996808",
+      "product_id": "com.taplead.pro.yearly",
+      "review_note": "Annual access paid upfront for one year; auto-renewable. Product ID: com.taplead.pro.yearly. Pro is enabled in build 1015. Open Settings, complete native Sign in with Apple, then open TapLead Pro. Select the monthly or annual StoreKit product and complete the Apple purchase sheet. Restore purchases is on the same sheet. Close and reopen the Pro sheet if it was opened before sign-in. Active verified access displays A verified Pro entitlement is active. Both plans provide the same Pro tier: up to 20 published cards and 10,000 synced leads, advanced card themes, voice notes, branded QR exports and activity insights. No storefront-specific purchase restriction is applied. The Paid Apps Agreement is active. Signed transactions and V2 server notifications are configured for Production and Sandbox. On 10 October 2026 the developer reported successful TestFlight purchase, Pro unlock and restore on a physical iPhone. Renewal/expiration/refund notification acceptance was not separately confirmed. The review screenshot is an unmodified native build-1015 simulator capture of the Creator card theme in labelled demo mode, illustrating an advanced appearance included in Pro. It is not a purchase receipt or a screenshot of the physical-device test.",
+      "screenshot_id": "234ce97d-2bde-44c5-8ce8-8b9e8f432c75",
+      "checksum": "21be462396a01fab75ecc1e893fd5aea",
+      "delivery": {
+        "errors": null,
+        "warnings": null,
+        "state": "COMPLETE"
+      }
+    },
+    {
+      "id": "6818996322",
+      "product_id": "com.taplead.pro.monthly",
+      "review_note": "Monthly access; auto-renewable. Product ID: com.taplead.pro.monthly. Pro is enabled in build 1015. Open Settings, complete native Sign in with Apple, then open TapLead Pro. Select the monthly or annual StoreKit product and complete the Apple purchase sheet. Restore purchases is on the same sheet. Close and reopen the Pro sheet if it was opened before sign-in. Active verified access displays A verified Pro entitlement is active. Both plans provide the same Pro tier: up to 20 published cards and 10,000 synced leads, advanced card themes, voice notes, branded QR exports and activity insights. No storefront-specific purchase restriction is applied. The Paid Apps Agreement is active. Signed transactions and V2 server notifications are configured for Production and Sandbox. On 10 October 2026 the developer reported successful TestFlight purchase, Pro unlock and restore on a physical iPhone. Renewal/expiration/refund notification acceptance was not separately confirmed. The review screenshot is an unmodified native build-1015 simulator capture of the Creator card theme in labelled demo mode, illustrating an advanced appearance included in Pro. It is not a purchase receipt or a screenshot of the physical-device test.",
+      "screenshot_id": "81c0d62b-9485-454e-b483-dd72c428adf3",
+      "checksum": "21be462396a01fab75ecc1e893fd5aea",
+      "delivery": {
+        "errors": null,
+        "warnings": null,
+        "state": "COMPLETE"
+      }
+    }
+  ]
+}

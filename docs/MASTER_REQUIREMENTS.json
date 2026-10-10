@@ -252,11 +252,11 @@
   "submission": {
     "version": "1.0.0",
     "build": "1015",
-    "status": "Unresolved Issues",
-    "id": "220fdb82-3e1b-40f0-9cf3-ae29b2e38c75",
-    "date_displayed_by_apple": "Oct 5, 2026 at 9:57 AM",
+    "status": "Waiting for Review",
+    "id": "4efb9bc9-9605-4f0c-9402-5885df42c110",
+    "date_displayed_by_apple": "Oct 10, 2026 at 11:08 AM BST",
     "items": [
-      "App Version 1.0.0 (1015 replacement selected; not resubmitted)",
+      "App Version 1.0.0 (1015)",
       "TapLead Pro Subscription Group",
       "TapLead Pro Monthly (com.taplead.pro.monthly)",
       "TapLead Pro Annual (com.taplead.pro.yearly)"
@@ -266,12 +266,15 @@
     "pro_device_acceptance": "User-reported physical-iPhone TestFlight purchase, Pro unlock and Restore purchases passed on 10 October 2026. Codex did not independently observe these tests. Renewal, expiration and refund notification acceptance remain unconfirmed.",
     "superseded_app_only_submission": "79de4d3b-d644-435a-b9d6-a8b899083961",
     "pro_submission_authorization": "The user explicitly requested Pro be submitted too. The app-only submission was cancelled recoverably and the app version, subscription group and both products were submitted together. All four items show Waiting for Review; product review notes disclose disabled purchasing and outstanding purchase lifecycle acceptance.",
-    "resubmitted_on": "2026-10-07",
+    "resubmitted_on": "2026-10-10",
     "metadata_correction": "Apple's automated guideline 3.1.2 rejection identified a missing functional EULA link in the App Store description. Added the direct standard Apple EULA URL and GitHub privacy URL to the saved English (U.K.) description, updated review and resubmitted the same build and all four items. All show Waiting for Review. No custom license or purchase enablement change was made.",
-    "evidence": "assets/eula-corrected-resubmitted.jpg",
-    "review_issues": "Apple reviewed build 1014 on 9 October: physical NFC demo (2.1), User-Generated Content age-rating selection (2.3.6), and locating functional purchases (2.1b). On 10 October the saved UGC selection was verified Yes. Build 1015 removes NFC, passed signed export verification, uploaded and processed as Ready to Submit, and replaced 1014 on version 1.0.0 with saved NFC-free review notes. Pro purchasing and verified Sandbox access were enabled on the backend for TestFlight testing at the user's request. The user confirmed purchase, Pro unlock and restore on their iPhone. App Review notes were updated with enabled purchase navigation and those user-reported results. Product review evidence still needs updating; no new resubmission has occurred.",
+    "evidence": "../marketing/corrected-submission-verification.json",
+    "review_issues": "Apple reviewed build 1014 on 9 October: physical NFC demo (2.1), User-Generated Content age-rating selection (2.3.6), and locating functional purchases (2.1b). On 10 October the saved UGC selection was verified Yes. Build 1015 removes NFC, passed signed export verification, uploaded and processed as Ready to Submit, and replaced 1014 on version 1.0.0 with saved NFC-free review notes. Pro purchasing and verified Sandbox access were enabled on the backend for TestFlight testing at the user's request. The user confirmed purchase, Pro unlock and restore on their iPhone. App Review notes were updated with enabled purchase navigation and those user-reported results. Both product review notes were updated with enabled purchase instructions and both old disabled-paywall images were replaced by the unmodified native Creator-theme demo screenshot from the build-1015 UI run. Apple API read-back verified both notes, exact image hashes and COMPLETE delivery. The old submission was cancelled recoverably to unlock editing. A new combined submission containing build 1015, the subscription group and both plans was submitted on 10 October 2026 and verified Waiting for Review in both Apple API and App Store Connect. Release is manual so sandbox access and remaining release acceptance can be reconciled before public availability.",
     "replacement_build_id": "a8bedb4b-080e-432a-ae00-a55d850c4209",
     "replacement_archive_run": "https://github.com/lanray07/TapLead/actions/runs/38035251490",
-    "replacement_selection_evidence": "assets/build-1015-nfc-removed-selected.jpg"
+    "replacement_selection_evidence": "assets/build-1015-nfc-removed-selected.jpg",
+    "superseded_combined_submission": "220fdb82-3e1b-40f0-9cf3-ae29b2e38c75",
+    "release_type": "MANUAL",
+    "corrected_submission_run": "https://github.com/lanray07/TapLead/actions/runs/38043823268"
   }
 }
