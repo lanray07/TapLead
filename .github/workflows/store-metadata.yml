@@ -1,0 +1,36 @@
+name: TapLead storefront metadata
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        type: choice
+        options: [inspect, apply]
+        default: inspect
+        required: true
+permissions:
+  contents: read
+concurrency:
+  group: taplead-storefront-metadata
+  cancel-in-progress: false
+jobs:
+  metadata:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install cryptography
+      - name: Inspect or save explicitly authorized storefront metadata
+        env:
+          APP_STORE_CONNECT_API_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
+          APP_STORE_CONNECT_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+          APP_STORE_CONNECT_API_PRIVATE_KEY: ${{ secrets.APP_STORE_CONNECT_API_PRIVATE_KEY }}
+        run: python scripts/store-metadata.py '${{ inputs.mode }}'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: TapLead-storefront-metadata-report
+          path: artifacts/storefront/
+          retention-days: 14
