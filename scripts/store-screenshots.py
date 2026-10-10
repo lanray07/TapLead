@@ -17,10 +17,12 @@ placements={'APP_IPHONE_DUO':('duo-inner','duo-outer'),'APP_IPHONE_61':('iphone-
 def finish_picture(record,asset):
     data=(ROOT/asset['file']).read_bytes()
     assert hashlib.sha256(data).hexdigest()==asset['sha256'], 'Export integrity mismatch: '+asset['file']
-    fresh=api('/v1/appScreenshots/'+record['id'])['data']
+    fresh=api('/v1/appScreenshots/'+record['id']+'?fields[appScreenshots]=fileName,fileSize,sourceFileChecksum,uploadOperations,assetDeliveryState')['data']
     attrs=fresh['attributes']
     if attrs.get('sourceFileChecksum')==asset['md5'] and attrs.get('assetDeliveryState',{}).get('state')=='COMPLETE':return fresh
-    for operation in attrs.get('uploadOperations') or []:
+    operations=record['attributes'].get('uploadOperations') or attrs.get('uploadOperations') or []
+    assert operations, 'Apple returned no resumable upload operations for '+asset['file']
+    for operation in operations:
         parsed=urllib.parse.urlparse(operation['url']);host=parsed.hostname or ''
         assert parsed.scheme=='https' and any(host==domain or host.endswith('.'+domain) for domain in ['apple.com','icloud-content.com','mzstatic.com','amazonaws.com']), 'Unexpected Apple upload host'
         assert operation['method']=='PUT','Unexpected upload method'
