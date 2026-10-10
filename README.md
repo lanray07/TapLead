@@ -7,7 +7,7 @@
 - SwiftUI app targeting iOS 17+, with onboarding, local/demo exploration, profile editing, public-field controls, local photos, themes, section and social ordering, QR sharing and event mode.
 - Connections inbox with five statuses, search, tags, editable notes, timeline, follow-ups, local notifications, reviewed on-device speech transcription and a voice-command review screen.
 - Durable offline lead outbox with idempotent API writes and retry on connectivity/foreground changes.
-- Core NFC tag write plus read-back verification, capability checks and QR fallback.
+- QR and link sharing. NFC is deferred at the user’s request on 10 October 2026.
 - Small, medium and large QR widgets and four App Intents. Widgets contain no lead details.
 - Email authentication, Keychain session storage, server-verified Apple identity tokens, nonce challenges and encrypted Apple refresh credentials for deletion/revocation.
 - SQLite-backed HTTPS-ready service with private owner routes, consented public lead forms, vCards, measured events, data export and account deletion.
@@ -15,7 +15,7 @@
 - StoreKit purchase/restore adapter with server JWS verification, account binding, signed renewal/revocation notifications and Free/Pro limits; signed Wallet-pass client architecture. Purchase UI is deliberately disabled pending release configuration/verification.
 - English string catalogue and nine additional locale review queues; extraction and optional approved-gateway draft workflow.
 
-**This is an implementation baseline, not a verified production release.** GitHub Actions provides the Mac/Xcode build and simulator-test environment. Physical NFC/speech testing and production-service configuration remain necessary. See [release status](docs/RELEASE.md) for the exact remaining work.
+**This is an implementation baseline, not a verified production release.** GitHub Actions provides the Mac/Xcode build and simulator-test environment. Physical speech testing and production-service configuration remain necessary. See [release status](docs/RELEASE.md) for the exact remaining work.
 
 ## Xcode builds through GitHub
 
@@ -55,9 +55,9 @@ Open `http://localhost:8787/p/00000000-0000-4000-8000-000000000002`. This seed h
 
 1. Install Xcode and XcodeGen from their official distributions.
 2. Run `xcodegen generate` from the root, then open `TapLead.xcodeproj`.
-3. Select your Apple development team. Replace sample app/group identifiers consistently in `project.yml`, `AppStore.swift` and the widget provider. Register Sign in with Apple, NFC and the App Group.
+3. Select your Apple development team. Replace sample app/group identifiers consistently in `project.yml`, `AppStore.swift` and the widget provider. Register Sign in with Apple and the App Group.
 4. Set `TapLeadAPIURL`, `TapLeadPrivacyURL` and `TapLeadTermsURL` in `project.yml` to real HTTPS URLs and regenerate. The empty API setting deliberately prevents accidental publication to an invented domain.
-5. Run the TapLead scheme on an iPhone simulator. Use `--demo` as a launch argument for sample connections. NFC and speech availability require device testing.
+5. Run the TapLead scheme on an iPhone simulator. Use `--demo` as a launch argument for sample connections. Speech availability requires device testing.
 6. Run `TapLeadUITests`; capture screenshot attachments at real target simulator resolutions before creating App Store compositions.
 
 ```sh
@@ -70,7 +70,7 @@ Choose a simulator that actually exists in `xcrun simctl list devices available`
 
 ## Checks performed here
 
-Five Swift domain tests pass, including UTF-8 vCard folding, privacy and persistence. Twelve backend tests pass, including consent, owner isolation, idempotent writes, request limiting, measured events, cascading account deletion and subscription expiry/account/replay logic. `npm audit --omit=dev` reports zero known dependency vulnerabilities at build time. [GitHub Xcode run 37195819458](https://github.com/lanray07/TapLead/actions/runs/37195819458) compiled the native app and widget and passed all three simulator UI tests. Its artifacts include four native screenshots and the XCTest result bundle. NFC, speech and distribution signing require separate validation.
+Five Swift domain tests pass, including UTF-8 vCard folding, privacy and persistence. Twelve backend tests pass, including consent, owner isolation, idempotent writes, request limiting, measured events, cascading account deletion and subscription expiry/account/replay logic. `npm audit --omit=dev` reports zero known dependency vulnerabilities at build time. [GitHub Xcode run 37195819458](https://github.com/lanray07/TapLead/actions/runs/37195819458) compiled the native app and widget and passed all three simulator UI tests. Its artifacts include four native screenshots and the XCTest result bundle. Speech and distribution signing require separate validation.
 
 ```powershell
 swift test --scratch-path C:\Users\User\.codex\taplead-build
