@@ -43,7 +43,7 @@ def write(kind,attributes,existing=None,parent=None):
     return api('/v1/'+kind,'POST',{'data':data})['data']
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('mode',choices=['inspect','apply']);args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('mode',choices=['inspect','apply','inspect-assets']);args=parser.parse_args()
     copy=json.loads(Path('marketing/store-localizations.json').read_text(encoding='utf-8'))
     assert len(copy)==50
     for locale,item in copy.items():
@@ -68,6 +68,26 @@ def main():
     def save():Path('artifacts/storefront/metadata-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     save();print(json.dumps({k:v for k,v in report.items() if k not in ['updated','errors']}))
     if args.mode=='inspect':return
+    if args.mode=='inspect-assets':
+        expected=json.loads(Path('marketing/localized-assets/manifest.json').read_text(encoding='utf-8'))['assets']
+        hashes={digest:asset for asset in expected for digest in [asset['sha256'],asset.get('md5','')] if digest}
+        asset_report={'app_id':APP,'version_id':version['id'],'locales':[]}
+        for localization in version_locs:
+            locale=localization['attributes']['locale']
+            sets=listing('/v1/appStoreVersionLocalizations/'+localization['id']+'/appScreenshotSets?limit=200')
+            records=[]
+            for screenshot_set in sets:
+                screenshots=listing('/v1/appScreenshotSets/'+screenshot_set['id']+'/appScreenshots?limit=200')
+                pictures=[]
+                for screenshot in screenshots:
+                    a=screenshot['attributes'];checksum=a.get('sourceFileChecksum') or ''
+                    matched=hashes.get(checksum.lower())
+                    pictures.append({'id':screenshot['id'],'file_name':a.get('fileName'),'checksum':checksum,'delivery':a.get('assetDeliveryState'),'matched_export':matched['file'] if matched else None})
+                records.append({'id':screenshot_set['id'],'display_type':screenshot_set['attributes']['screenshotDisplayType'],'screenshots':pictures})
+            asset_report['locales'].append({'locale':locale,'sets':records})
+            Path('artifacts/storefront/screenshot-verification.json').write_text(json.dumps(asset_report,indent=2)+'\n',encoding='utf-8')
+            print('Inspected screenshot collections:',locale,flush=True)
+        return
     info_map={v['attributes']['locale']:v['id'] for v in info_locs};version_map={v['attributes']['locale']:v['id'] for v in version_locs}
     for locale,item in copy.items():
         try:

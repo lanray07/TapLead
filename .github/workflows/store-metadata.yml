@@ -4,7 +4,7 @@ on:
     inputs:
       mode:
         type: choice
-        options: [inspect, apply]
+        options: [inspect, apply, inspect-assets]
         default: inspect
         required: true
 permissions:
