@@ -251,12 +251,12 @@
   },
   "submission": {
     "version": "1.0.0",
-    "build": "1014",
+    "build": "1015",
     "status": "Unresolved Issues",
     "id": "220fdb82-3e1b-40f0-9cf3-ae29b2e38c75",
     "date_displayed_by_apple": "Oct 5, 2026 at 9:57 AM",
     "items": [
-      "App Version 1.0.0 (1014)",
+      "App Version 1.0.0 (1015 replacement selected; not resubmitted)",
       "TapLead Pro Subscription Group",
       "TapLead Pro Monthly (com.taplead.pro.monthly)",
       "TapLead Pro Annual (com.taplead.pro.yearly)"
@@ -267,6 +267,9 @@
     "resubmitted_on": "2026-10-07",
     "metadata_correction": "Apple's automated guideline 3.1.2 rejection identified a missing functional EULA link in the App Store description. Added the direct standard Apple EULA URL and GitHub privacy URL to the saved English (U.K.) description, updated review and resubmitted the same build and all four items. All show Waiting for Review. No custom license or purchase enablement change was made.",
     "evidence": "assets/eula-corrected-resubmitted.jpg",
-    "review_issues": "Apple reviewed build 1014 on 9 October: physical NFC demo (2.1), User-Generated Content age-rating selection (2.3.6), and locating functional purchases (2.1b). On 10 October the saved UGC selection was verified Yes. A replacement without NFC is being built; Pro purchases remain disabled and unresolved."
+    "review_issues": "Apple reviewed build 1014 on 9 October: physical NFC demo (2.1), User-Generated Content age-rating selection (2.3.6), and locating functional purchases (2.1b). On 10 October the saved UGC selection was verified Yes. Build 1015 removes NFC, passed signed export verification, uploaded and processed as Ready to Submit, and replaced 1014 on version 1.0.0 with saved NFC-free review notes. Pro purchases remain disabled and unresolved; no new resubmission has occurred.",
+    "replacement_build_id": "a8bedb4b-080e-432a-ae00-a55d850c4209",
+    "replacement_archive_run": "https://github.com/lanray07/TapLead/actions/runs/38035251490",
+    "replacement_selection_evidence": "assets/build-1015-nfc-removed-selected.jpg"
   }
 }

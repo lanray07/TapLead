@@ -1,6 +1,6 @@
 # Saved App Store Connect metadata
 
-TapLead (6818982306), iOS 1.0.0, English (U.K.). Updated 10 October 2026. Apple rejected build 1014 following review; the submission has Unresolved Issues. A replacement without NFC is being built at the user’s request. Pro purchase availability remains unresolved. No release is claimed.
+TapLead (6818982306), iOS 1.0.0, English (U.K.). Updated 10 October 2026. Apple rejected build 1014 following review; the submission has Unresolved Issues. Build 1015 without NFC is uploaded, processed and selected at the user’s request; review notes are saved. Pro purchase availability remains unresolved. No release is claimed.
 
 Name: TapLead. Subtitle: Business Cards & Connections. Categories: Business / Productivity. Age rating: 4+ with regional equivalents. Free download. Support URL: https://github.com/lanray07/TapLead/blob/main/docs/SUPPORT.md. Marketing URL: https://github.com/lanray07/TapLead.
 
@@ -55,4 +55,4 @@ Build 1014 (1.0.0) replaced 1013 and was submitted with the Pro group and monthl
 
 ## NFC scope correction — 10 October 2026
 
-The user explicitly authorized removing NFC. The replacement source has no NFC controls, reader/writer, permission or entitlement. QR and link sharing remain available. Update the saved review notes only after the replacement binary is selected: build 1014 still contains NFC. The existing Pro purchase issue remains unresolved.
+The user explicitly authorized removing NFC. The replacement source has no NFC controls, reader/writer, permission or entitlement. QR and link sharing remain available. Build 1015 is selected and the saved review notes explicitly disclose no NFC functionality. Build 1014 contained NFC. The existing Pro purchase issue remains unresolved.

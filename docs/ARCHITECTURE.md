@@ -4,9 +4,9 @@
 
 `SwiftUI → AppStore → protected local JSON + durable lead outbox → authenticated API → SQLite`
 
-`QR / NFC / source link → /p/:id → public-field projection → consented form → owner's lead inbox`
+`QR / source link → /p/:id → public-field projection → consented form → owner's lead inbox`
 
-Cards use stable UUID URLs. Updating a published card changes its web contents without changing the QR. NFC writes the same identity with an explicit `source=nfc` query; this is link attribution, not proof that a particular physical tag was tapped. Public views record only kind, source and time when the owner opts in. They do not store IPs, fingerprints, precise locations, email addresses or visitor identifiers. Request limiter buckets temporarily use IPs in memory for abuse protection and are not analytics records.
+Cards use stable UUID URLs. Updating a published card changes its web contents without changing the QR. Build 1015 removes native NFC functionality at the user's request on 10 October 2026. Historical server records and links may still carry `source=nfc`; this is legacy link attribution, not NFC reader/writer functionality or proof of a physical tap. Public views record only kind, source and time when the owner opts in. They do not store IPs, fingerprints, precise locations, email addresses or visitor identifiers. Request limiter buckets temporarily use IPs in memory for abuse protection and are not analytics records.
 
 ## Security boundaries
 
