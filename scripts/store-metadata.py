@@ -54,7 +54,7 @@ def main():
         assert not any(x in (item['description']+item['keywords']).lower() for x in ['nfc','unlimited','badge scan'])
     app=api('/v1/apps/'+APP)['data'];assert app['attributes']['bundleId']=='com.TapLead.app'
     if args.mode=='inspect-subscriptions':
-        report={'app_id':APP,'subscriptions':[]}
+        report={'app_id':APP,'notifications':{k:app['attributes'].get(k) for k in ['subscriptionStatusUrl','subscriptionStatusUrlVersion','subscriptionStatusUrlForSandbox','subscriptionStatusUrlVersionForSandbox']},'subscriptions':[]}
         for group in listing('/v1/apps/'+APP+'/subscriptionGroups?limit=200'):
             for subscription in listing('/v1/subscriptionGroups/'+group['id']+'/subscriptions?limit=200'):
                 report['subscriptions'].append({'id':subscription['id'],'group_id':group['id'],**subscription['attributes']})
