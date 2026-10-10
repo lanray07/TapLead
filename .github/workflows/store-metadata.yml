@@ -4,7 +4,7 @@ on:
     inputs:
       mode:
         type: choice
-        options: [inspect, apply, inspect-assets, inspect-subscriptions, update-pro-review]
+        options: [inspect, apply, inspect-assets, inspect-subscriptions, update-pro-review, submit-corrected-review]
         default: inspect
         required: true
 permissions:
@@ -30,6 +30,8 @@ jobs:
         run: |
           if [ '${{ inputs.mode }}' = 'update-pro-review' ]; then
             python scripts/update-pro-review.py
+          elif [ '${{ inputs.mode }}' = 'submit-corrected-review' ]; then
+            python scripts/submit-corrected-review.py
           else
             python scripts/store-metadata.py '${{ inputs.mode }}'
           fi
