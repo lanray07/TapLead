@@ -61,22 +61,6 @@ def locale_upload(localization):
         if found:collection=found[0]
         else:collection=api('/v1/appScreenshotSets','POST',{'data':{'type':'appScreenshotSets','attributes':{'screenshotDisplayType':display},'relationships':{'appStoreVersionLocalization':{'data':{'type':'appStoreVersionLocalizations','id':localization['version_localization_id']}}}}})['data']
         pictures=listing('/v1/appScreenshotSets/'+collection['id']+'/appScreenshots?limit=200')
-        # The fresh audit identified one extra copy created during this task's
-        # ambiguous POST retry. Keep the intended completed sibling unchanged.
-        if locale=='ta' and display=='APP_IPHONE_DUO':
-            duplicate_id='8f31d4f3-7c48-4b40-9849-1018644ba37b'
-            retained_id='01c00019-6716-89a2-803d-490d742601d7'
-            extra=next((p for p in pictures if p['id']==duplicate_id),None)
-            if extra:
-                retained=next(p for p in pictures if p['id']==retained_id)
-                expected_checksum=next(a['md5'] for a in expected if a['file']=='ta/duo-outer-02.jpg')
-                for p in (extra,retained):
-                    assert p['attributes']['fileName']=='ta__duo-outer-02.jpg'
-                    assert p['attributes'].get('sourceFileChecksum')==expected_checksum
-                    assert (p['attributes'].get('assetDeliveryState') or {}).get('state')=='COMPLETE'
-                api('/v1/appScreenshots/'+duplicate_id,'DELETE')
-                pictures=[p for p in pictures if p['id']!=duplicate_id]
-                print('Removed audited identical task-created duplicate:',locale,flush=True)
         expected_hashes={x['md5'] for x in expected}
         for existing in pictures:
             a=existing['attributes'];checksum=a.get('sourceFileChecksum')
