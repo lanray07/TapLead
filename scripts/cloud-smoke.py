@@ -57,7 +57,7 @@ else:
         a,b=f['tokenA'],f['tokenB'];cid=f['card']
         expect(401,request('api/cards'),'anonymous private access')
         plan=json.loads(expect(200,request('api/plan',token=a),'Free plan'))
-        assert not plan['pro'] and plan['cardLimit']==1 and not plan['purchasesEnabled']
+        assert not plan['pro'] and plan['cardLimit']==1 and plan['leadLimit']==50 and isinstance(plan['purchasesEnabled'],bool)
         card={'id':cid,'name':'Demo — Taylor Reed','preferredName':'Taylor','title':'Product designer','company':'Fictional cloud test','persona':'Test sample','headline':'A clear introduction. A real connection.','bio':'An original fictional profile used to verify TapLead cloud publishing.','email':'taylor@example.invalid','phone':'','website':'https://example.com','booking':'https://example.com/private-booking','publicFields':['email','website'],'cornerImageKind':'Logo','cornerImagePosition':'Bottom right','published':True,'analyticsEnabled':True,'theme':'Executive','accent':'6654D9'}
         expect(200,request('api/cards/'+cid,'PUT',card,a),'publish owned Free card')
         expect(404,request('api/cards/'+cid,'PUT',card,b),'cross-owner overwrite')

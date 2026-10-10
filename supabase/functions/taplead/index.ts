@@ -49,7 +49,11 @@ async function issue(owner:string) {
   check(await db.from('taplead_sessions').insert({hash:await hash(token),owner,expires:new Date(Date.now()+30*86400000).toISOString()}));
   return {token,userID:owner};
 }
-async function plan(owner:string){return {...check(await db.rpc('taplead_plan',{p_owner:owner})),purchasesEnabled:false,products};}
+async function plan(owner:string){return {...check(await db.rpc('taplead_plan',{p_owner:owner})),products};}
+async function subscriptionSettings(){
+  const settings=check(await db.from('taplead_subscription_settings').select('purchases_enabled,sandbox_enabled').eq('singleton',true).maybeSingle());
+  return {purchasesEnabled:settings?.purchases_enabled===true,subscriptionTesting:settings?.sandbox_enabled===true};
+}
 async function all(table:string,owner:string):Promise<Record<string,unknown>[]> {
   const rows:Record<string,unknown>[]=[];
   for(let offset=0;;offset+=500){const page=check(await db.from(table).select('*').eq('owner',owner).order('id').range(offset,offset+499))||[];rows.push(...page);if(page.length<500)return rows;}
@@ -75,7 +79,7 @@ async function handle(req:Request):Promise<Response> {
   const requestURL=new URL(req.url),path=requestURL.pathname.replace(/^\/taplead\/?/,'/').replace(/^\/functions\/v1\/taplead\/?/,'/');
   const method=req.method,source=sources.includes(requestURL.searchParams.get('source')||'')?requestURL.searchParams.get('source')!:'direct';
   await rate(req,'global',120,60);
-  if(path==='/health'&&method==='GET')return json({ok:true,service:'TapLead',purchasesEnabled:false});
+  if(path==='/health'&&method==='GET')return json({ok:true,service:'TapLead',...await subscriptionSettings()});
   if(['/api/auth/register','/api/auth/login','/api/auth/recover'].includes(path))throw new HTTPError(410,'Email accounts are no longer available. Continue with Apple or use guest mode on your iPhone.');
   if(path==='/api/auth/apple/challenge'&&method==='POST') {
     if(!apple)throw new HTTPError(503,'Apple sign-in is awaiting its production credential configuration.');

@@ -1,5 +1,6 @@
 -- Structural database checks only; no genuine receipt or purchase acceptance claim.
 begin;
+update public.taplead_subscription_settings set purchases_enabled=false,sandbox_enabled=false where singleton;
 do $$
 declare a uuid:=gen_random_uuid(); b uuid:=gen_random_uuid();
 begin

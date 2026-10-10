@@ -44,7 +44,7 @@ def write(kind,attributes,existing=None,parent=None):
     return api('/v1/'+kind,'POST',{'data':data})['data']
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('mode',choices=['inspect','apply','inspect-assets']);args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('mode',choices=['inspect','apply','inspect-assets','inspect-subscriptions']);args=parser.parse_args()
     copy=json.loads(Path('marketing/store-localizations.json').read_text(encoding='utf-8'))
     assert len(copy)==50
     for locale,item in copy.items():
@@ -53,6 +53,14 @@ def main():
         assert len('TapLead — '+', '.join(item['captions'])+'.')<=170,locale
         assert not any(x in (item['description']+item['keywords']).lower() for x in ['nfc','unlimited','badge scan'])
     app=api('/v1/apps/'+APP)['data'];assert app['attributes']['bundleId']=='com.TapLead.app'
+    if args.mode=='inspect-subscriptions':
+        report={'app_id':APP,'subscriptions':[]}
+        for group in listing('/v1/apps/'+APP+'/subscriptionGroups?limit=200'):
+            for subscription in listing('/v1/subscriptionGroups/'+group['id']+'/subscriptions?limit=200'):
+                report['subscriptions'].append({'id':subscription['id'],'group_id':group['id'],**subscription['attributes']})
+        Path('artifacts/storefront').mkdir(parents=True,exist_ok=True)
+        Path('artifacts/storefront/subscriptions-report.json').write_text(json.dumps(report,indent=2)+'\n')
+        print(json.dumps(report,indent=2));return
     infos=listing('/v1/apps/'+APP+'/appInfos?limit=200')
     versions=listing('/v1/apps/'+APP+'/appStoreVersions?filter[platform]=IOS&filter[versionString]=1.0.0&limit=200')
     editable={'PREPARE_FOR_SUBMISSION','REJECTED','METADATA_REJECTED','DEVELOPER_REJECTED'}
