@@ -241,7 +241,7 @@
       "section": 40,
       "title": "Free/Pro tiers and future Teams architecture",
       "status": "partial",
-      "evidence": "Free/Pro gates exist. Edge verifies Apple JWS receipts/notifications with official roots, enforces owner/product binding, stores Sandbox separately, prevents older receipt replay and handles verified signed grace. On 10 October the user requested Pro purchasing for TestFlight. Edge version 7 and administrative rollout flags enable purchase buttons and verified Sandbox Pro in build 1015. Ten Edge tests, rollback SQL expiry/refund/replay/environment/quota/permission checks and the live HTTPS smoke test passed; disposable fixtures were removed. Genuine device purchase/restore/renewal/refund acceptance and notification reconciliation remain pending. Teams architecture is documented."
+      "evidence": "Free/Pro gates exist. Edge verifies Apple JWS receipts/notifications with official roots, enforces owner/product binding, stores Sandbox separately, prevents older receipt replay and handles verified signed grace. On 10 October the user requested Pro purchasing for TestFlight. Edge version 7 and administrative rollout flags enable purchase buttons and verified Sandbox Pro in build 1015. Ten Edge tests, rollback SQL expiry/refund/replay/environment/quota/permission checks and the live HTTPS smoke test passed; disposable fixtures were removed. The user reported successful physical-iPhone TestFlight purchase, Pro unlock and restore on 10 October 2026. Renewal, expiration, refund notification acceptance and reconciliation remain unconfirmed. Teams architecture is documented."
     }
   ],
   "scope_overrides": {
@@ -263,13 +263,13 @@
     ],
     "pro_purchases_enabled": true,
     "pro_testflight_enabled_on": "2026-10-10",
-    "pro_device_acceptance": "Pending user's genuine TestFlight purchase, restore, renewal and refund tests; backend tests do not satisfy device acceptance.",
+    "pro_device_acceptance": "User-reported physical-iPhone TestFlight purchase, Pro unlock and Restore purchases passed on 10 October 2026. Codex did not independently observe these tests. Renewal, expiration and refund notification acceptance remain unconfirmed.",
     "superseded_app_only_submission": "79de4d3b-d644-435a-b9d6-a8b899083961",
     "pro_submission_authorization": "The user explicitly requested Pro be submitted too. The app-only submission was cancelled recoverably and the app version, subscription group and both products were submitted together. All four items show Waiting for Review; product review notes disclose disabled purchasing and outstanding purchase lifecycle acceptance.",
     "resubmitted_on": "2026-10-07",
     "metadata_correction": "Apple's automated guideline 3.1.2 rejection identified a missing functional EULA link in the App Store description. Added the direct standard Apple EULA URL and GitHub privacy URL to the saved English (U.K.) description, updated review and resubmitted the same build and all four items. All show Waiting for Review. No custom license or purchase enablement change was made.",
     "evidence": "assets/eula-corrected-resubmitted.jpg",
-    "review_issues": "Apple reviewed build 1014 on 9 October: physical NFC demo (2.1), User-Generated Content age-rating selection (2.3.6), and locating functional purchases (2.1b). On 10 October the saved UGC selection was verified Yes. Build 1015 removes NFC, passed signed export verification, uploaded and processed as Ready to Submit, and replaced 1014 on version 1.0.0 with saved NFC-free review notes. Pro purchasing and verified Sandbox access were enabled on the backend for TestFlight testing at the user's request. Genuine device acceptance and updated purchase review evidence remain outstanding; no new resubmission has occurred.",
+    "review_issues": "Apple reviewed build 1014 on 9 October: physical NFC demo (2.1), User-Generated Content age-rating selection (2.3.6), and locating functional purchases (2.1b). On 10 October the saved UGC selection was verified Yes. Build 1015 removes NFC, passed signed export verification, uploaded and processed as Ready to Submit, and replaced 1014 on version 1.0.0 with saved NFC-free review notes. Pro purchasing and verified Sandbox access were enabled on the backend for TestFlight testing at the user's request. The user confirmed purchase, Pro unlock and restore on their iPhone. App Review notes were updated with enabled purchase navigation and those user-reported results. Product review evidence still needs updating; no new resubmission has occurred.",
     "replacement_build_id": "a8bedb4b-080e-432a-ae00-a55d850c4209",
     "replacement_archive_run": "https://github.com/lanray07/TapLead/actions/runs/38035251490",
     "replacement_selection_evidence": "assets/build-1015-nfc-removed-selected.jpg"
