@@ -71,7 +71,14 @@ def main():
     info_map={v['attributes']['locale']:v['id'] for v in info_locs};version_map={v['attributes']['locale']:v['id'] for v in version_locs}
     for locale,item in copy.items():
         try:
-            ia={'name':'TapLead','subtitle':item['subtitle'],'privacyPolicyUrl':PRIVACY}
+            copy_locale=locale
+            # New UI languages use regional identifiers; derive these from saved
+            # Apple records rather than guessing or probing unsupported codes.
+            if locale not in info_map and locale in {'bn','gu','kn','ml','mr','or','pa','sl','ta','te','ur'}:
+                matches=[saved for saved in info_map if saved.split('-')[0]==locale]
+                assert len(matches)==1, 'Create this locale through App Store Connect first: '+locale
+                locale=matches[0]
+            ia={'name':'TapLead: Business Cards' if locale=='en-US' else 'TapLead','subtitle':item['subtitle'],'privacyPolicyUrl':PRIVACY}
             if locale not in info_map:ia['locale']=locale
             il=write('appInfoLocalizations',ia,info_map.get(locale),('appInfo','appInfos',info['id']))
             # Creating app info also creates the matching version localization.
@@ -83,7 +90,7 @@ def main():
             for kind,record,expected in [('appInfoLocalizations',il,ia),('appStoreVersionLocalizations',vl,va)]:
                 actual=api('/v1/'+kind+'/'+record['id'])['data']['attributes']
                 assert all(actual.get(k)==v for k,v in expected.items()),locale+' metadata read-back mismatch'
-            report['updated'].append({'locale':locale,'info_localization_id':il['id'],'version_localization_id':vl['id']});print('Saved and verified:',locale,flush=True)
+            report['updated'].append({'locale':locale,'copy_locale':copy_locale,'info_localization_id':il['id'],'version_localization_id':vl['id']});print('Saved and verified:',locale,flush=True)
         except Exception as error:report['errors'].append({'locale':locale,'message':str(error)});print('Failed:',locale,str(error),flush=True)
         save()
     if report['errors']:raise SystemExit('Some locales need correction; successful metadata was preserved.')
