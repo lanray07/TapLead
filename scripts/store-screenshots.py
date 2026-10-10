@@ -2,10 +2,12 @@
 Duo's display type was read from this app's saved Apple API collections.
 No screenshot deletion, binary upload, subscription change or review submission.
 """
-import hashlib,json,urllib.request,urllib.parse,urllib.error
+import hashlib,json,urllib.request,urllib.parse,urllib.error,importlib.util
 from concurrent.futures import ThreadPoolExecutor,as_completed
 from pathlib import Path
-from store_metadata import api,listing,APP
+helper_spec=importlib.util.spec_from_file_location('store_metadata',Path(__file__).with_name('store-metadata.py'))
+helper=importlib.util.module_from_spec(helper_spec);helper_spec.loader.exec_module(helper)
+api,listing,APP=helper.api,helper.listing,helper.APP
 
 ROOT=Path('artifacts/storefront-export')
 manifest=json.loads(Path('marketing/localized-assets/manifest.json').read_text(encoding='utf-8'))['assets']
