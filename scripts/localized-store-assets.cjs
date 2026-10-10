@@ -13,11 +13,11 @@ const native={'en-GB':'en','en-US':'en','en-AU':'en','en-CA':'en','es-ES':'es','
 const xml=x=>x.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 function source(prefix){const a=attachments.find(x=>x.suggestedHumanReadableName.startsWith(prefix));if(!a)throw Error('Missing actual capture '+prefix);return path.join(captureDir,a.exportedFileName)}
 function font(locale){
- if(['bn','gu','hi','kn','ml','mr','or','pa','ta','te','th'].includes(locale))return ['Nirmala UI',path.join(fonts,'Nirmala.ttc')];
+ if(['bn','gu','hi','kn','ml','mr','or','pa','ta','te'].includes(locale))return ['Nirmala UI',path.join(fonts,'Nirmala.ttc')];
  if(locale.startsWith('zh'))return ['Microsoft YaHei',path.join(fonts,'msyh.ttc')];
  if(locale==='ja')return ['MS Gothic',path.join(fonts,'msgothic.ttc')];
  if(locale==='ko')return ['Malgun Gothic',path.join(fonts,'malgun.ttf')];
- if(['ar-SA','ur','he'].includes(locale))return ['Tahoma',path.join(fonts,'tahoma.ttf')];
+ if(['ar-SA','ur','he','th'].includes(locale))return ['Tahoma',path.join(fonts,'tahoma.ttf')];
  return ['Segoe UI',path.join(fonts,'segoeui.ttf')];
 }
 async function text(value,locale,width,maxHeight,size,color='#FFFFFF'){

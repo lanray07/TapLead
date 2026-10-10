@@ -1,0 +1,252 @@
+[
+  {
+    "locale": "en-GB",
+    "font": "segoeui.ttf",
+    "missing": []
+  },
+  {
+    "locale": "ar-SA",
+    "font": "tahoma.ttf",
+    "missing": []
+  },
+  {
+    "locale": "bn",
+    "font": "Nirmala.ttc",
+    "missing": []
+  },
+  {
+    "locale": "ca",
+    "font": "segoeui.ttf",
+    "missing": []
+  },
+  {
+    "locale": "zh-Hans",
+    "font": "msyh.ttc",
+    "missing": []
+  },
+  {
+    "locale": "zh-Hant",
+    "font": "msyh.ttc",
+    "missing": []
+  },
+  {
+    "locale": "hr",
+    "font": "segoeui.ttf",
+    "missing": []
+  },
+  {
+    "locale": "cs",
+    "font": "segoeui.ttf",
+    "missing": []
+  },
+  {
+    "locale": "da",
+    "font": "segoeui.ttf",
+    "missing": []
+  },
+  {
+    "locale": "nl-NL",
+    "font": "segoeui.ttf",
+    "missing": []
+  },
+  {
+    "locale": "fi",
+    "font": "segoeui.ttf",
+    "missing": []
+  },
+  {
+    "locale": "fr-FR",
+    "font": "segoeui.ttf",
+    "missing": []
+  },
+  {
+    "locale": "de-DE",
+    "font": "segoeui.ttf",
+    "missing": []
+  },
+  {
+    "locale": "el",
+    "font": "segoeui.ttf",
+    "missing": []
+  },
+  {
+    "locale": "gu",
+    "font": "Nirmala.ttc",
+    "missing": []
+  },
+  {
+    "locale": "he",
+    "font": "tahoma.ttf",
+    "missing": []
+  },
+  {
+    "locale": "hi",
+    "font": "Nirmala.ttc",
+    "missing": []
+  },
+  {
+    "locale": "hu",
+    "font": "segoeui.ttf",
+    "missing": []
+  },
+  {
+    "locale": "id",
+    "font": "segoeui.ttf",
+    "missing": []
+  },
+  {
+    "locale": "it",
+    "font": "segoeui.ttf",
+    "missing": []
+  },
+  {
+    "locale": "ja",
+    "font": "msgothic.ttc",
+    "missing": []
+  },
+  {
+    "locale": "kn",
+    "font": "Nirmala.ttc",
+    "missing": []
+  },
+  {
+    "locale": "ko",
+    "font": "malgun.ttf",
+    "missing": []
+  },
+  {
+    "locale": "ms",
+    "font": "segoeui.ttf",
+    "missing": []
+  },
+  {
+    "locale": "ml",
+    "font": "Nirmala.ttc",
+    "missing": []
+  },
+  {
+    "locale": "mr",
+    "font": "Nirmala.ttc",
+    "missing": []
+  },
+  {
+    "locale": "no",
+    "font": "segoeui.ttf",
+    "missing": []
+  },
+  {
+    "locale": "or",
+    "font": "Nirmala.ttc",
+    "missing": []
+  },
+  {
+    "locale": "pl",
+    "font": "segoeui.ttf",
+    "missing": []
+  },
+  {
+    "locale": "pt-BR",
+    "font": "segoeui.ttf",
+    "missing": []
+  },
+  {
+    "locale": "pt-PT",
+    "font": "segoeui.ttf",
+    "missing": []
+  },
+  {
+    "locale": "pa",
+    "font": "Nirmala.ttc",
+    "missing": []
+  },
+  {
+    "locale": "ro",
+    "font": "segoeui.ttf",
+    "missing": []
+  },
+  {
+    "locale": "ru",
+    "font": "segoeui.ttf",
+    "missing": []
+  },
+  {
+    "locale": "sk",
+    "font": "segoeui.ttf",
+    "missing": []
+  },
+  {
+    "locale": "sl",
+    "font": "segoeui.ttf",
+    "missing": []
+  },
+  {
+    "locale": "es-MX",
+    "font": "segoeui.ttf",
+    "missing": []
+  },
+  {
+    "locale": "es-ES",
+    "font": "segoeui.ttf",
+    "missing": []
+  },
+  {
+    "locale": "sv",
+    "font": "segoeui.ttf",
+    "missing": []
+  },
+  {
+    "locale": "ta",
+    "font": "Nirmala.ttc",
+    "missing": []
+  },
+  {
+    "locale": "te",
+    "font": "Nirmala.ttc",
+    "missing": []
+  },
+  {
+    "locale": "th",
+    "font": "tahoma.ttf",
+    "missing": []
+  },
+  {
+    "locale": "tr",
+    "font": "segoeui.ttf",
+    "missing": []
+  },
+  {
+    "locale": "uk",
+    "font": "segoeui.ttf",
+    "missing": []
+  },
+  {
+    "locale": "ur",
+    "font": "tahoma.ttf",
+    "missing": []
+  },
+  {
+    "locale": "vi",
+    "font": "segoeui.ttf",
+    "missing": []
+  },
+  {
+    "locale": "en-AU",
+    "font": "segoeui.ttf",
+    "missing": []
+  },
+  {
+    "locale": "en-CA",
+    "font": "segoeui.ttf",
+    "missing": []
+  },
+  {
+    "locale": "en-US",
+    "font": "segoeui.ttf",
+    "missing": []
+  },
+  {
+    "locale": "fr-CA",
+    "font": "segoeui.ttf",
+    "missing": []
+  }
+]
