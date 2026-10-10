@@ -74,6 +74,8 @@ def main():
             ia={'name':'TapLead','subtitle':item['subtitle'],'privacyPolicyUrl':PRIVACY}
             if locale not in info_map:ia['locale']=locale
             il=write('appInfoLocalizations',ia,info_map.get(locale),('appInfo','appInfos',info['id']))
+            # Creating app info also creates the matching version localization.
+            version_map={v['attributes']['locale']:v['id'] for v in listing('/v1/appStoreVersions/'+version['id']+'/appStoreVersionLocalizations?limit=200')}
             va={'description':item['description']+'\n\nTerms of Use (EULA): '+EULA+'\nPrivacy Policy: '+PRIVACY,'keywords':item['keywords'],'promotionalText':'TapLead — '+', '.join(item['captions'])+'.','supportUrl':SUPPORT,'marketingUrl':'https://github.com/lanray07/TapLead'}
             if locale not in version_map:va['locale']=locale
             vl=write('appStoreVersionLocalizations',va,version_map.get(locale),('appStoreVersion','appStoreVersions',version['id']))
