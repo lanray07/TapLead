@@ -79,11 +79,17 @@ for sub_id in PRODUCTS:
         if (record.get('relationships', {}).get('subscription', {}).get('data') or {}).get('id') == sub_id:
             found.append(record)
     assert len(found) <= 1
-    record = found[0] if found else create('subscriptionVersions', {'subscription': ('subscriptions', sub_id)})
+    response = api('/v1/subscriptions/' + sub_id + '?include=versions')
+    versions = [v for v in response.get('included', []) if v['type'] == 'subscriptionVersions' and v['attributes']['state'] in {'PREPARE_FOR_SUBMISSION', 'READY_FOR_REVIEW', 'DEVELOPER_REJECTED', 'REJECTED'}]
+    latest = max(versions, key=lambda v: v['attributes']['version']) if versions else None
+    record = found[0] if found else latest or create('subscriptionVersions', {'subscription': ('subscriptions', sub_id)})
     add('subscriptionVersion', 'subscriptionVersions', record['id'])
 group_items = [i for i in existing if i.get('relationships', {}).get('subscriptionGroupVersion', {}).get('data')]
 assert len(group_items) <= 1
-group_version = group_items[0]['relationships']['subscriptionGroupVersion']['data'] if group_items else create('subscriptionGroupVersions', {'subscriptionGroup': ('subscriptionGroups', GROUP)})
+group_response = api('/v1/subscriptionGroups/' + GROUP + '?include=versions')
+group_versions = [v for v in group_response.get('included', []) if v['type'] == 'subscriptionGroupVersions' and v['attributes']['state'] in {'PREPARE_FOR_SUBMISSION', 'READY_FOR_REVIEW', 'DEVELOPER_REJECTED', 'REJECTED'}]
+latest_group = max(group_versions, key=lambda v: v['attributes']['version']) if group_versions else None
+group_version = group_items[0]['relationships']['subscriptionGroupVersion']['data'] if group_items else latest_group or create('subscriptionGroupVersions', {'subscriptionGroup': ('subscriptionGroups', GROUP)})
 add('subscriptionGroupVersion', 'subscriptionGroupVersions', group_version['id'])
 all_items = listing('/v1/reviewSubmissions/' + submission_id + '/items?include=appStoreVersion,subscriptionVersion,subscriptionGroupVersion&limit=200')
 assert len(all_items) == 4 and {i['id'] for i in all_items} == {i['id'] for i in report['items']}
