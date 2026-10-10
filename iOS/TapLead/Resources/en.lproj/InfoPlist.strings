@@ -1,3 +1,2 @@
 "NSSpeechRecognitionUsageDescription" = "Transcribe the voice notes you choose to record.";
 "NSMicrophoneUsageDescription" = "Record a voice note after a conversation.";
-"NFCReaderUsageDescription" = "Write your published TapLead link to an NFC card.";

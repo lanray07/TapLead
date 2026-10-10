@@ -9,8 +9,6 @@ struct CardsView: View {
     @Environment(AppStore.self) private var store
     @State private var editing: CardSelection?
     @State private var busy=false
-    @State private var nfc=false
-    @State private var paywall=false
     var body: some View {
         ScrollView {
             VStack(alignment:.leading,spacing:24) {
@@ -25,14 +23,13 @@ struct CardsView: View {
                     Button {Task {busy=true;defer{busy=false};do{try await store.publish(card)}catch{store.error=error.localizedDescription}} } label:{ Label(LocalizedStringKey(card.published ? "Update published card":"Publish my card"),systemImage:"globe") }.disabled(busy || card.name.trimmingCharacters(in:.whitespaces).isEmpty)
                     if card.published { Button("Make card private",role:.destructive){Task{do{try await store.unpublish(card)}catch{store.error=error.localizedDescription}}} }
                     Divider()
-                    Button {if store.pro || store.demo {nfc=true} else {paywall=true}} label:{Label("Set up NFC card",systemImage:"wave.3.right")}.frame(minHeight:44)
-                    Text("QR codes and NFC tags open your published profile. Recipients don’t need the app. Cached QR codes work offline; opening the website needs internet.").font(.caption).foregroundStyle(.secondary)
+                    Text("QR codes open your published profile. Recipients don’t need the app. Cached QR codes work offline; opening the website needs internet.").font(.caption).foregroundStyle(.secondary)
                     Text("Publishing includes your selected logo or photo. Choose None to publish without an image.").font(.caption).foregroundStyle(.secondary)
                 }
                 if store.demo || store.pro { Button("Add card persona"){var c=store.selectedCard ?? Card();c.id=UUID();c.published=false;c.persona="Conference";c.theme = .creator;store.saveCard(c);editing=CardSelection(card:c)} }
             }.padding(22)
         }.background(Palette.canvas).navigationTitle("My card").navigationBarTitleDisplayMode(.inline)
-        .sheet(item:$editing){selection in CardEditor(card:selection.card)}.sheet(isPresented:$nfc){NFCSetupView()}.sheet(isPresented:$paywall){PaywallView()}
+        .sheet(item:$editing){selection in CardEditor(card:selection.card)}
     }
 }
 struct CardEditor: View {

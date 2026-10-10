@@ -12,5 +12,6 @@ for kind,path,identifier in [('app',app,bundle),('widget',app/'PlugIns/TapLeadWi
     assert not entitlements.get('get-task-allow',False),kind+' unexpectedly allows debugging'
     if kind=='app':
         assert entitlements.get('com.apple.developer.applesignin')==['Default'],'Missing Apple sign-in entitlement'
-        assert entitlements.get('com.apple.developer.nfc.readersession.formats')==['TAG'],'Missing current NFC tag-reading entitlement'
+        assert not any('nfc' in key.lower() for key in entitlements),'NFC entitlement must be absent from this release'
+        assert 'NFCReaderUsageDescription' not in info,'Retired NFC permission must be absent'
     print('Verified distribution signature, bundle, build and capabilities:',kind)

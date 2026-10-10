@@ -12,7 +12,7 @@ struct OnboardingView: View {
             HStack { Label("TapLead",systemImage:"square.on.square").font(.title3.bold()); Spacer(); Button("Explore demo") {store.startDemo()}.font(.subheadline) }.padding(.horizontal,24)
             TabView(selection:$page) {
                 OnboardingPage(icon:"person.crop.rectangle",title:"Never lose a connection again",copy:"Create and share your professional identity instantly.").tag(0)
-                OnboardingPage(icon:"qrcode",title:"Tap or scan to connect",copy:"Share using QR, NFC or a simple link.").tag(1)
+                OnboardingPage(icon:"qrcode",title:"Scan to connect",copy:"Share using QR or a simple link.").tag(1)
                 OnboardingPage(icon:"waveform",title:"Remember every conversation",copy:"Capture notes using text or your voice.").tag(2)
                 OnboardingPage(icon:"arrow.up.forward.circle",title:"Follow up while you’re still remembered",copy:"Turn new contacts into actionable opportunities.").tag(3)
             }.tabViewStyle(.page(indexDisplayMode:.always))

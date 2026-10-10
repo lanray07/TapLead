@@ -1,3 +1,2 @@
 "NSSpeechRecognitionUsageDescription" = "녹음한 음성 메모를 텍스트로 변환하세요.";
 "NSMicrophoneUsageDescription" = "대화 후 음성 메모를 녹음하세요.";
-"NFCReaderUsageDescription" = "게시된 TapLead 링크를 NFC 카드에 기록하세요.";

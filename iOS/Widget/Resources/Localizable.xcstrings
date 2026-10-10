@@ -1,72 +1,6 @@
 {
   "sourceLanguage": "en",
   "strings": {
-    "1. Select the card you want to share.\n2. Prepare a compatible writable NDEF tag.\n3. Hold the top of your iPhone near the tag.\n4. Keep it in place while TapLead writes and verifies the link.\n5. Test your card with another phone.": {
-      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
-      "extractionState": "manual",
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "1. Wählen Sie die Karte aus, die Sie teilen möchten.\n2. Bereiten Sie einen kompatiblen, beschreibbaren NDEF-Tag vor.\n3. Halten Sie die Oberseite Ihres iPhones in die Nähe des Tags.\n4. Halten Sie es in dieser Position, während TapLead den Link schreibt und verifiziert.\n5. Testen Sie Ihre Karte mit einem anderen Telefon."
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "1. Select the card you want to share.\n2. Prepare a compatible writable NDEF tag.\n3. Hold the top of your iPhone near the tag.\n4. Keep it in place while TapLead writes and verifies the link.\n5. Test your card with another phone."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "1. Selecciona la tarjeta que quieras compartir.\n2. Prepara una etiqueta NDEF grabable compatible.\n3. Acerca la parte superior de tu iPhone a la etiqueta.\n4. Mantén la posición mientras TapLead escribe y verifica el enlace.\n5. Prueba tu tarjeta con otro teléfono."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "1. Sélectionnez la carte que vous souhaitez partager.\n2. Préparez un tag NDEF inscriptible compatible.\n3. Approchez le haut de votre iPhone du tag.\n4. Maintenez-le en place pendant que TapLead écrit et vérifie le lien.\n5. Testez votre carte avec un autre téléphone."
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "1. Seleziona la scheda che vuoi condividere.\n2. Prepara un tag NDEF scrivibile compatibile.\n3. Avvicina la parte superiore del tuo iPhone al tag.\n4. Mantieni la posizione mentre TapLead scrive e verifica il link.\n5. Testa la tua scheda con un altro telefono."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "1. 共有したいカードを選択します。\n2. 書き込み可能な対応NDEFタグを用意します。\n3. iPhoneの上部をタグに近づけます。\n4. TapLeadがリンクを書き込み、検証している間、そのままの位置に保持します。\n5. 別のスマートフォンでカードをテストします。"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "1. 공유할 카드를 선택하세요.\n2. 호환되는 쓰기 가능 NDEF 태그를 준비하세요.\n3. iPhone 상단을 태그 가까이에 대세요.\n4. TapLead가 링크를 기록하고 확인하는 동안 그대로 유지하세요.\n5. 다른 휴대폰으로 카드를 테스트해 보세요."
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "1. Selecteer de kaart die je wilt delen.\n2. Zorg voor een geschikte, beschrijfbare NDEF-tag.\n3. Houd de bovenkant van je iPhone bij de tag.\n4. Houd hem op zijn plaats terwijl TapLead de link schrijft en verifieert.\n5. Test je kaart met een andere telefoon."
-          }
-        },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "1. Selecione o cartão que deseja compartilhar.\n2. Prepare uma etiqueta NDEF regravável compatível.\n3. Aproxime a parte superior do seu iPhone da etiqueta.\n4. Mantenha-o nessa posição enquanto o TapLead grava e verifica o link.\n5. Teste seu cartão com outro telefone."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "1. 选择您想要分享的名片。\n2. 准备一个兼容的可写入 NDEF 标签。\n3. 将 iPhone 顶部靠近标签。\n4. 保持位置不动，直到 TapLead 完成链接写入与验证。\n5. 使用另一部手机测试您的名片。"
-          }
-        }
-      }
-    },
     "3 days": {
       "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
@@ -657,72 +591,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "无法下载已签名的 Wallet 凭证。"
-          }
-        }
-      }
-    },
-    "A small tap.\nA lasting connection.": {
-      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
-      "extractionState": "manual",
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ein kurzes Antippen.\nEine dauerhafte Verbindung."
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "A small tap.\nA lasting connection."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Un pequeño toque.\nUna conexión duradera."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Une simple tape.\nUne connexion durable."
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Un semplice tocco.\nUn legame duraturo."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "軽くタップするだけ。\n長く続くつながり。"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "가벼운 탭 한 번.\n오래 지속되는 연결."
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Even tikken.\nEen blijvende connectie."
-          }
-        },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Um toque rápido.\nUma conexão duradoura."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "轻轻一触。\n建立持久连接。"
           }
         }
       }
@@ -9373,72 +9241,6 @@
         }
       }
     },
-    "Hold the top of your iPhone near your writable NFC card.": {
-      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
-      "extractionState": "manual",
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Halte die Oberseite deines iPhones in die Nähe deiner beschreibbaren NFC-Karte."
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Hold the top of your iPhone near your writable NFC card."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Acerca la parte superior de tu iPhone a tu tarjeta NFC grabable."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Approchez le haut de votre iPhone de votre carte NFC inscriptible."
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Avvicina la parte superiore dell'iPhone alla tua scheda NFC scrivibile."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "書き込み可能なNFCカードに、iPhoneの上部を近づけてください。"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "iPhone 상단을 쓰기 가능한 NFC 카드 가까이에 대세요."
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Houd de bovenkant van je iPhone bij je beschrijfbare NFC-kaart."
-          }
-        },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aproxime a parte superior do seu iPhone do seu cartão NFC gravável."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "将 iPhone 顶部靠近您的可写入 NFC 卡。"
-          }
-        }
-      }
-    },
     "Identity": {
       "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
@@ -11947,72 +11749,6 @@
         }
       }
     },
-    "NFC writing is unavailable on this device. Use your QR code instead.": {
-      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
-      "extractionState": "manual",
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "NFC-Schreiben ist auf diesem Gerät nicht verfügbar. Verwende stattdessen deinen QR-Code."
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "NFC writing is unavailable on this device. Use your QR code instead."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "La escritura NFC no está disponible en este dispositivo. Usa tu código QR en su lugar."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "L'écriture NFC n'est pas disponible sur cet appareil. Utilisez plutôt votre code QR."
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "La scrittura NFC non è disponibile su questo dispositivo. Usa invece il tuo codice QR."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "このデバイスではNFC書き込みを利用できません。代わりにQRコードを使用してください。"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "이 기기에서는 NFC 쓰기를 사용할 수 없습니다. 대신 QR 코드를 사용하세요."
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "NFC-schrijven is niet beschikbaar op dit apparaat. Gebruik in plaats daarvan je QR-code."
-          }
-        },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "A gravação via NFC não está disponível neste dispositivo. Use seu código QR."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "此设备不支持 NFC 写入功能。请改用二维码。"
-          }
-        }
-      }
-    },
     "Name": {
       "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
@@ -14455,72 +14191,6 @@
         }
       }
     },
-    "Present one NFC tag at a time.": {
-      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
-      "extractionState": "manual",
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Halte immer nur einen NFC-Tag an das Gerät."
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Present one NFC tag at a time."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Acerca una etiqueta NFC a la vez."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Présentez un seul tag NFC à la fois."
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Avvicina un tag NFC alla volta."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "NFCタグは一度に1つずつかざしてください。"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "한 번에 하나의 NFC 태그만 인식시켜 주세요."
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Houd één NFC-tag tegelijk voor het apparaat."
-          }
-        },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aproxime uma etiqueta NFC de cada vez."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "每次仅限感应一张 NFC 标签。"
-          }
-        }
-      }
-    },
     "Primary action": {
       "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
@@ -15181,72 +14851,6 @@
         }
       }
     },
-    "Publish a card before setting up NFC.": {
-      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
-      "extractionState": "manual",
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Veröffentliche eine Karte, bevor du NFC einrichtest."
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Publish a card before setting up NFC."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Publica una tarjeta antes de configurar NFC."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Publiez une carte avant de configurer le NFC."
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Pubblica una scheda prima di configurare l'NFC."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "NFCを設定する前に、カードを公開してください。"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "NFC를 설정하기 전에 카드를 게시하세요."
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Publiceer een kaart voordat je NFC instelt."
-          }
-        },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Publique um cartão antes de configurar o NFC."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "请先发布名片，再设置 NFC 功能。"
-          }
-        }
-      }
-    },
     "Publish my card": {
       "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
@@ -15511,68 +15115,68 @@
         }
       }
     },
-    "QR codes and NFC tags open your published profile. Recipients don’t need the app. Cached QR codes work offline; opening the website needs internet.": {
+    "QR codes open your published profile. Recipients don’t need the app. Cached QR codes work offline; opening the website needs internet.": {
       "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "QR-Codes und NFC-Tags öffnen dein veröffentlichtes Profil. Empfänger benötigen die App nicht. Zwischengespeicherte QR-Codes funktionieren offline; zum Öffnen der Website ist eine Internetverbindung erforderlich."
+            "value": "QR-Codes öffnen dein veröffentlichtes Profil. Empfänger brauchen die App nicht. Gespeicherte QR-Codes funktionieren offline; zum Öffnen der Website brauchst du Internet."
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "QR codes and NFC tags open your published profile. Recipients don’t need the app. Cached QR codes work offline; opening the website needs internet."
+            "value": "QR codes open your published profile. Recipients don’t need the app. Cached QR codes work offline; opening the website needs internet."
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Los códigos QR y las etiquetas NFC abren tu perfil publicado. Los destinatarios no necesitan la aplicación. Los códigos QR almacenados en caché funcionan sin conexión; para abrir el sitio web se requiere Internet."
+            "value": "Los códigos QR abren tu perfil publicado. Los destinatarios no necesitan la app. Los códigos QR guardados funcionan sin conexión; abrir el sitio web requiere internet."
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Les QR codes et les tags NFC ouvrent votre profil publié. Les destinataires n'ont pas besoin de l'application. Les QR codes mis en cache fonctionnent hors ligne ; l'ouverture du site web nécessite une connexion Internet."
+            "value": "Les codes QR ouvrent votre profil publié. Les destinataires n’ont pas besoin de l’app. Les codes QR enregistrés fonctionnent hors ligne ; l’ouverture du site nécessite Internet."
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "I QR code e i tag NFC aprono il tuo profilo pubblicato. I destinatari non hanno bisogno dell'app. I QR code memorizzati nella cache funzionano offline; per aprire il sito web è necessaria una connessione internet."
+            "value": "I codici QR aprono il tuo profilo pubblicato. I destinatari non hanno bisogno dell’app. I codici QR salvati funzionano offline; per aprire il sito serve Internet."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "QRコードやNFCタグを読み取ると、公開されたプロフィールが開きます。相手がアプリをインストールしている必要はありません。キャッシュされたQRコードはオフラインでも機能しますが、ウェブサイトを開くにはインターネット接続が必要です。"
+            "value": "QRコードで公開プロフィールを開けます。受け取る側にアプリは不要です。保存済みのQRコードはオフラインでも表示できますが、ウェブサイトを開くにはインターネット接続が必要です。"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "QR 코드와 NFC 태그를 통해 게시된 프로필을 열 수 있습니다. 상대방은 앱이 없어도 됩니다. 캐시된 QR 코드는 오프라인에서도 작동하지만, 웹사이트를 열려면 인터넷 연결이 필요합니다."
+            "value": "QR 코드는 게시된 프로필을 엽니다. 받는 사람은 앱이 필요하지 않습니다. 저장된 QR 코드는 오프라인에서도 표시되지만 웹사이트를 열려면 인터넷이 필요합니다."
           }
         },
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "QR-codes en NFC-tags openen je gepubliceerde profiel. Ontvangers hebben de app niet nodig. Opgeslagen QR-codes werken offline; voor het openen van de website is internet nodig."
+            "value": "QR-codes openen je gepubliceerde profiel. Ontvangers hebben de app niet nodig. Opgeslagen QR-codes werken offline; voor het openen van de website is internet nodig."
           }
         },
         "pt": {
           "stringUnit": {
             "state": "translated",
-            "value": "Códigos QR e tags NFC abrem seu perfil publicado. Os destinatários não precisam do aplicativo. Códigos QR em cache funcionam offline; abrir o site requer internet."
+            "value": "Os códigos QR abrem seu perfil publicado. Os destinatários não precisam do app. Códigos QR salvos funcionam offline; abrir o site requer internet."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "二维码和 NFC 标签可打开您已发布的个人资料页面。接收方无需安装应用。已缓存的二维码支持离线使用，但访问网页需连接网络。"
+            "value": "二维码可打开您已发布的个人资料。接收者无需安装应用。已缓存的二维码可离线显示；打开网站需要联网。"
           }
         }
       }
@@ -17696,7 +17300,7 @@
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Zum Verbinden scannen"
+            "value": "Scannen und vernetzen"
           }
         },
         "en": {
@@ -17708,13 +17312,13 @@
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Escanear para conectar"
+            "value": "Escanea para conectar"
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Scanner pour se connecter"
+            "value": "Scannez pour échanger"
           }
         },
         "it": {
@@ -17726,31 +17330,31 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "スキャンして接続"
+            "value": "スキャンしてつながる"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "스캔하여 연결"
+            "value": "스캔하여 연결하기"
           }
         },
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Scannen om te verbinden"
+            "value": "Scan om contact te maken"
           }
         },
         "pt": {
           "stringUnit": {
             "state": "translated",
-            "value": "Escaneie para conectar"
+            "value": "Leia o código para se conectar"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "扫描以连接"
+            "value": "扫码建立联系"
           }
         }
       }
@@ -18147,72 +17751,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "服务"
-          }
-        }
-      }
-    },
-    "Set up NFC card": {
-      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
-      "extractionState": "manual",
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "NFC-Karte einrichten"
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Set up NFC card"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Configurar tarjeta NFC"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Configurer la carte NFC"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Configura scheda NFC"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "NFCカードを設定"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "NFC 카드 설정"
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "NFC-kaart instellen"
-          }
-        },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Configurar cartão NFC"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "设置 NFC 名片"
           }
         }
       }
@@ -19075,68 +18613,68 @@
         }
       }
     },
-    "Share using QR, NFC or a simple link.": {
+    "Share using QR or a simple link.": {
       "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
       "localizations": {
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "Über QR, NFC oder einen einfachen Link teilen."
+            "value": "Teile dein Profil per QR-Code oder Link."
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Share using QR, NFC or a simple link."
+            "value": "Share using QR or a simple link."
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Compartir mediante QR, NFC o un enlace sencillo."
+            "value": "Comparte con un código QR o un enlace."
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Partager via QR, NFC ou un simple lien."
+            "value": "Partagez avec un code QR ou un simple lien."
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Condividi tramite QR, NFC o un semplice link."
+            "value": "Condividi tramite QR o un semplice link."
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "QR、NFC、またはシンプルなリンクを使って共有します。"
+            "value": "QRコードまたはリンクで共有できます。"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "QR, NFC 또는 간단한 링크를 사용하여 공유하세요."
+            "value": "QR 코드나 링크로 공유하세요."
           }
         },
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Delen via QR, NFC of een eenvoudige link."
+            "value": "Deel via een QR-code of een link."
           }
         },
         "pt": {
           "stringUnit": {
             "state": "translated",
-            "value": "Compartilhe usando QR, NFC ou um link simples."
+            "value": "Compartilhe usando QR ou um link."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "通过二维码、NFC 或简单链接进行分享。"
+            "value": "通过二维码或链接分享。"
           }
         }
       }
@@ -21583,72 +21121,6 @@
         }
       }
     },
-    "Tap or scan to connect": {
-      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
-      "extractionState": "manual",
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tippen oder scannen, um zu verbinden"
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tap or scan to connect"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Toca o escanea para conectar"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Touchez ou scannez pour vous connecter"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tocca o scansiona per connetterti"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "タップまたはスキャンして接続"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "탭하거나 스캔하여 연결"
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tik of scan om te verbinden"
-          }
-        },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Toque ou escaneie para conectar"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "轻触或扫描以建立连接"
-          }
-        }
-      }
-    },
     "Tap to connect": {
       "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
@@ -22243,72 +21715,6 @@
         }
       }
     },
-    "The NFC write could not be verified.": {
-      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
-      "extractionState": "manual",
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Der NFC-Schreibvorgang konnte nicht verifiziert werden."
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "The NFC write could not be verified."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "No se pudo verificar la escritura NFC."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "L'écriture NFC n'a pas pu être vérifiée."
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Impossibile verificare la scrittura NFC."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "NFCへの書き込みを確認できませんでした。"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "NFC 쓰기 작업을 확인할 수 없습니다."
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Het schrijven naar NFC kon niet worden geverifieerd."
-          }
-        },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "A gravação NFC não pôde ser verificada."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "无法验证 NFC 写入操作。"
-          }
-        }
-      }
-    },
     "The QR could not be created. Please try again.": {
       "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
@@ -22437,72 +21843,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "麦克风不可用。"
-          }
-        }
-      }
-    },
-    "The profile link is invalid.": {
-      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
-      "extractionState": "manual",
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Der Profil-Link ist ungültig."
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "The profile link is invalid."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "El enlace del perfil no es válido."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Le lien du profil est invalide."
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Il link del profilo non è valido."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "プロフィールリンクが無効です。"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "프로필 링크가 유효하지 않습니다."
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "De profiellink is ongeldig."
-          }
-        },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "O link do perfil é inválido."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "个人资料链接无效。"
           }
         }
       }
@@ -22969,72 +22309,6 @@
         }
       }
     },
-    "This NFC tag is locked, unsupported or too small.": {
-      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
-      "extractionState": "manual",
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Dieser NFC-Tag ist gesperrt, wird nicht unterstützt oder ist zu klein."
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "This NFC tag is locked, unsupported or too small."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Esta etiqueta NFC está bloqueada, no es compatible o es demasiado pequeña."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ce tag NFC est verrouillé, non pris en charge ou trop petit."
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Questo tag NFC è bloccato, non supportato o troppo piccolo."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "このNFCタグはロックされているか、非対応であるか、またはサイズが小さすぎます。"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "이 NFC 태그는 잠겨 있거나, 지원되지 않거나, 크기가 너무 작습니다."
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Deze NFC-tag is vergrendeld, wordt niet ondersteund of is te klein."
-          }
-        },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Esta etiqueta NFC está bloqueada, não é compatível ou é muito pequena."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "此 NFC 标签已锁定、不受支持或容量太小。"
-          }
-        }
-      }
-    },
     "This action is unavailable for your account or plan.": {
       "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
       "extractionState": "manual",
@@ -23295,72 +22569,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "无法验证此购买。"
-          }
-        }
-      }
-    },
-    "This writes a URL to a physical tag. Your QR code remains available on every supported iPhone.": {
-      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
-      "extractionState": "manual",
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Hierbei wird eine URL auf einen physischen Tag geschrieben. Ihr QR-Code bleibt auf jedem unterstützten iPhone verfügbar."
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "This writes a URL to a physical tag. Your QR code remains available on every supported iPhone."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Esto escribe una URL en una etiqueta física. Tu código QR sigue estando disponible en todos los iPhone compatibles."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cette opération écrit une URL sur un tag physique. Votre QR code reste disponible sur tous les iPhone compatibles."
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Questa operazione scrive un URL su un tag fisico. Il tuo codice QR rimane disponibile su tutti gli iPhone supportati."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "これにより、物理的なタグにURLが書き込まれます。QRコードは、対応するすべてのiPhoneで引き続き利用可能です。"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "물리적 태그에 URL을 기록합니다. QR 코드는 지원되는 모든 iPhone에서 계속 사용할 수 있습니다."
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Hiermee wordt een URL naar een fysieke tag geschreven. Je QR-code blijft beschikbaar op elke ondersteunde iPhone."
-          }
-        },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Isso grava uma URL em uma etiqueta física. Seu código QR permanece disponível em todos os iPhones compatíveis."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "此操作会将 URL 写入实体标签。您的二维码在所有支持的 iPhone 上仍可继续使用。"
           }
         }
       }
@@ -25671,204 +24879,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "赢单"
-          }
-        }
-      }
-    },
-    "Write my profile link": {
-      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
-      "extractionState": "manual",
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Profil-Link schreiben"
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Write my profile link"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Escribir enlace de mi perfil"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Écrire le lien de mon profil"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Scrivi il link del mio profilo"
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "プロフィールリンクを書き込む"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "프로필 링크 작성"
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Profiellink wegschrijven"
-          }
-        },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Escrever link do meu perfil"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "写入个人资料链接"
-          }
-        }
-      }
-    },
-    "Write your published TapLead link to an NFC card.": {
-      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
-      "extractionState": "manual",
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Schreiben Sie Ihren veröffentlichten TapLead-Link auf eine NFC-Karte."
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Write your published TapLead link to an NFC card."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Escribe tu enlace de TapLead publicado en una tarjeta NFC."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Écrire votre lien TapLead publié sur une carte NFC."
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Scrivi il tuo link TapLead pubblicato su una scheda NFC."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "公開中のTapLeadリンクをNFCカードに書き込みます。"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "게시된 TapLead 링크를 NFC 카드에 기록하세요."
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Schrijf je gepubliceerde TapLead-link naar een NFC-kaart."
-          }
-        },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Gravar seu link publicado do TapLead em um cartão NFC."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "将您已发布的 TapLead 链接写入 NFC 卡。"
-          }
-        }
-      }
-    },
-    "Your NFC card is ready. Test it with another compatible phone.": {
-      "comment": "Public UI copy. Non-English translations are machine-assisted with agent corrections; human language review is pending. See docs/LOCALISATION.md.",
-      "extractionState": "manual",
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ihre NFC-Karte ist bereit. Testen Sie sie mit einem anderen kompatiblen Smartphone."
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Your NFC card is ready. Test it with another compatible phone."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tu tarjeta NFC está lista. Pruébala con otro teléfono compatible."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Votre carte NFC est prête. Testez-la avec un autre téléphone compatible."
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "La tua scheda NFC è pronta. Provala con un altro telefono compatibile."
-          }
-        },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "NFCカードの準備が完了しました。対応する別のスマートフォンで動作を確認してください。"
-          }
-        },
-        "ko": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "NFC 카드가 준비되었습니다. 호환되는 다른 휴대폰으로 테스트해 보세요."
-          }
-        },
-        "nl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Je NFC-kaart is klaar. Test hem met een andere compatibele telefoon."
-          }
-        },
-        "pt": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Seu cartão NFC está pronto. Teste-o com outro telefone compatível."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "您的 NFC 卡已准备就绪。请使用另一部兼容手机进行测试。"
           }
         }
       }

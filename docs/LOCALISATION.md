@@ -2,7 +2,7 @@
 
 Updated 5 October 2026. English plus Spanish, French, German, Italian, Portuguese, Dutch, Japanese, Korean and Simplified Chinese are bundled in both the app and widget.
 
-There are 424 catalog entries per language. The nine added languages have actual translations rather than English fallback copies. The three microphone, speech and NFC permission messages are also generated as localized InfoPlist.strings resources. Four App Shortcuts invocation phrases are localized separately in AppShortcuts.strings, preserving Apple's applicationName parameter. Dates and numbers use Apple's locale-aware formatters; user-entered names, notes, URLs and prices supplied by StoreKit remain untouched.
+The replacement without NFC has 409 catalog entries per language. The nine added languages have actual translations rather than English fallback copies. The two microphone and speech permission messages are also generated as localized InfoPlist.strings resources. Four App Shortcuts invocation phrases are localized separately in AppShortcuts.strings, preserving Apple's applicationName parameter. Dates and numbers use Apple's locale-aware formatters; user-entered names, notes, URLs and prices supplied by StoreKit remain untouched.
 
 Drafts were produced through the Google Translate website from public interface copy only, in indexed batches. Missing and duplicated row identifiers were detected and recovered individually before import. No customer data, secrets, runtime notes or recordings were submitted. There is no translation service or dependency in the shipped app. Task intermediates remain in the ignored artifacts/localization directory.
 

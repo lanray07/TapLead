@@ -1,6 +1,6 @@
 # Saved App Store Connect metadata
 
-TapLead (6818982306), iOS 1.0.0, English (U.K.). Updated 7 October 2026. Build 1014, the Pro subscription group and both Pro plans were resubmitted after correcting the missing EULA link; all four items show Waiting for Review. No release is claimed.
+TapLead (6818982306), iOS 1.0.0, English (U.K.). Updated 10 October 2026. Apple rejected build 1014 following review; the submission has Unresolved Issues. A replacement without NFC is being built at the user’s request. Pro purchase availability remains unresolved. No release is claimed.
 
 Name: TapLead. Subtitle: Business Cards & Connections. Categories: Business / Productivity. Age rating: 4+ with regional equivalents. Free download. Support URL: https://github.com/lanray07/TapLead/blob/main/docs/SUPPORT.md. Marketing URL: https://github.com/lanray07/TapLead.
 
@@ -37,7 +37,7 @@ Relevance-based selection; no keyword search-volume or ranking evidence is claim
 
 ## Review notes
 
-The app can be explored without signing in. Choose the demo option during onboarding to view clearly labelled sample cards and connections. Demo content is not uploaded to an account. NFC and live profile publication require a configured service and supported device. Purchase actions remain disabled until the production subscription service is configured and verified.
+The app can be explored without signing in. Choose the demo option during onboarding to view clearly labelled sample cards and connections. Demo content is not uploaded to an account. The replacement build removes NFC. Live profile publication requires Apple sign-in, a configured service and internet access. Purchase actions remain disabled until the production subscription service is configured and verified.
 
 ## Assets and subscriptions
 
@@ -52,3 +52,7 @@ Eleven published data types: name, email address, phone number, physical address
 Privacy and terms pages are hosted in this repository at `docs/PRIVACY.md` and `docs/TERMS.md`. The app configuration and GitHub archive variables use their public GitHub URLs. The privacy notice describes Supabase hosting in London, GitHub Pages, native Apple authentication, selected image publication, protected revocation credentials and provider retention limits. Email login and SMTP are removed at the operator's request. The operator confirmed no third-party content; that content-rights declaration is saved in App Store Connect. Accessibility support claims await device validation. Production and Sandbox server notification URLs are saved; real delivery testing remains. Optional routing, App Clip, iMessage, events and unsupported features are omitted.
 
 Build 1014 (1.0.0) replaced 1013 and was submitted with the Pro group and monthly/annual products on 5 October. Following Apple's automated guideline 3.1.2 rejection for a missing metadata EULA link, the description above was saved and all four items resubmitted on 7 October. The existing standard Apple EULA applies; no custom license was introduced. Distribution signing, shared App Group and NFC `TAG` entitlement are configured. Hosting and receipt verification are deployed. Purchases remain disabled until genuine Apple purchase/lifecycle checks and reconciliation are complete; native Apple authentication and physical-device acceptance also remain unverified. Free/paid agreements, banking, tax forms and listed compliance statuses were active at the previous check. See [release status](../docs/RELEASE.md).
+
+## NFC scope correction — 10 October 2026
+
+The user explicitly authorized removing NFC. The replacement source has no NFC controls, reader/writer, permission or entitlement. QR and link sharing remain available. Update the saved review notes only after the replacement binary is selected: build 1014 still contains NFC. The existing Pro purchase issue remains unresolved.

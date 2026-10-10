@@ -1,3 +1,2 @@
 "NSSpeechRecognitionUsageDescription" = "録音したボイスメモをテキストに書き起こします。";
 "NSMicrophoneUsageDescription" = "会話の後に音声メモを録音する";
-"NFCReaderUsageDescription" = "公開中のTapLeadリンクをNFCカードに書き込みます。";
