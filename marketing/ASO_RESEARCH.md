@@ -1,5 +1,11 @@
 # TapLead keyword and positioning research
 
+## 10 October update — build 1015 storefront assets
+
+The October 4 NFC candidates below are historical and must not be reused. NFC has been removed from build 1015. Current copy lives in `store-localizations.json` and covers all 50 storefront locales, with relevant translated category terms, no competitor names, and no unsupported NFC, scanner or purchase claims. Native app UI supports ten languages; other storefront screenshots honestly show its English fallback. Translations are agent-authored and have not had independent native-speaker review. Captions are feature-focused artwork, not a claim that image text guarantees search ranking.
+
+Source screenshots come from the successful native XCTest run [38035209175](https://github.com/lanray07/TapLead/actions/runs/38035209175). The renderer preserves the captured interface and adds translated headings; it does not invent a Duo-specific interface. Sizes follow Apple's [screenshot specifications](https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications) and [creative asset specifications](https://developer.apple.com/help/app-store-connect/reference/app-information/creative-assets-specifications). Storefront coverage follows [Apple's locale list](https://developer.apple.com/help/app-store-connect/reference/app-information/app-store-localizations).
+
 Research date: 4 October 2026. Primary sources: Apple's current metadata guidance and three US App Store publisher listings. This is qualitative search-intent and competitor-language research; no search-volume, keyword-difficulty or ranking estimate is claimed. Research does not authorize copying competitor content or assets.
 
 | Listing | Observed positioning | Implication for TapLead |

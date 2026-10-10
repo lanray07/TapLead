@@ -1,0 +1,306 @@
+{
+  "workflow": "https://github.com/lanray07/TapLead/actions/runs/38037913647",
+  "verified_localizations": [
+    {
+      "locale": "en-GB",
+      "copy_locale": "en-GB",
+      "info_localization_id": "a894d23e-40df-408a-a87b-086f1e4a77b2",
+      "version_localization_id": "bbe8eb88-8049-4055-b7b5-1de588607fb9"
+    },
+    {
+      "locale": "ar-SA",
+      "copy_locale": "ar-SA",
+      "info_localization_id": "bbc3a4c9-d5be-4783-9502-6dbbba25b0c6",
+      "version_localization_id": "e3024c77-45ce-4398-9075-d761c12f994b"
+    },
+    {
+      "locale": "bn-BD",
+      "copy_locale": "bn",
+      "info_localization_id": "d5ae7ff6-af8a-47fb-aeff-6165d9359932",
+      "version_localization_id": "49655873-588f-4941-a2de-c8f7c81953d7"
+    },
+    {
+      "locale": "ca",
+      "copy_locale": "ca",
+      "info_localization_id": "e38d2fde-bef9-4f50-ae61-858a033376dd",
+      "version_localization_id": "31db9b12-0fff-48a5-a268-7bb42bc0cf22"
+    },
+    {
+      "locale": "zh-Hans",
+      "copy_locale": "zh-Hans",
+      "info_localization_id": "abe0c35a-5e81-49aa-85c4-4ef75bf7979b",
+      "version_localization_id": "84eddbd6-2308-474d-b761-747589b4a9da"
+    },
+    {
+      "locale": "zh-Hant",
+      "copy_locale": "zh-Hant",
+      "info_localization_id": "f253d339-90cc-4cd6-b200-ca2f3848eb6e",
+      "version_localization_id": "e3fa7540-b5a4-4828-b817-337af2367420"
+    },
+    {
+      "locale": "hr",
+      "copy_locale": "hr",
+      "info_localization_id": "6a1f6be3-6b34-442d-83dc-bd044850a4e0",
+      "version_localization_id": "5a4691a5-49ef-4467-86ca-4d32a47b1ac1"
+    },
+    {
+      "locale": "cs",
+      "copy_locale": "cs",
+      "info_localization_id": "2d280dde-5195-488a-a82a-9e1043be155f",
+      "version_localization_id": "078ce205-a421-49ba-bc7a-77f4b5469fc9"
+    },
+    {
+      "locale": "da",
+      "copy_locale": "da",
+      "info_localization_id": "2115c391-6c29-4830-8c11-05aeaab1a080",
+      "version_localization_id": "9f5f1c1f-7904-4680-ac5b-616b3c4250bc"
+    },
+    {
+      "locale": "nl-NL",
+      "copy_locale": "nl-NL",
+      "info_localization_id": "768f5b8f-7165-4969-90d8-223248eb926e",
+      "version_localization_id": "c5f6bf20-5f4e-40d4-8877-1213e2d1fe4e"
+    },
+    {
+      "locale": "fi",
+      "copy_locale": "fi",
+      "info_localization_id": "4155f6bf-7e1c-41f9-a366-22fbe3bf40d5",
+      "version_localization_id": "1da7718b-3d86-4b5e-a017-65e7f3706726"
+    },
+    {
+      "locale": "fr-FR",
+      "copy_locale": "fr-FR",
+      "info_localization_id": "0f4c2724-cecd-46dc-a5ce-1e314b8cb8d8",
+      "version_localization_id": "4a7113eb-bd55-463f-9f4f-58c23f6a426d"
+    },
+    {
+      "locale": "de-DE",
+      "copy_locale": "de-DE",
+      "info_localization_id": "8bc73c47-c176-433d-b3e6-a068a2a591a3",
+      "version_localization_id": "a30ae978-6ca8-4573-b386-4f5deb01349e"
+    },
+    {
+      "locale": "el",
+      "copy_locale": "el",
+      "info_localization_id": "3ff72204-c8b9-47a4-9114-6a5ea25c415c",
+      "version_localization_id": "5c60cecd-685c-4370-a4be-65bcbe22e394"
+    },
+    {
+      "locale": "gu-IN",
+      "copy_locale": "gu",
+      "info_localization_id": "571fd8c6-3dd6-4198-9f93-f98d2fcd9464",
+      "version_localization_id": "ddd8805a-8f09-43c0-871d-75e5c8d690cf"
+    },
+    {
+      "locale": "he",
+      "copy_locale": "he",
+      "info_localization_id": "173febf6-9c70-4524-a302-23eca532a17e",
+      "version_localization_id": "0e64fcd8-69c4-473b-a84f-3d9362a7058e"
+    },
+    {
+      "locale": "hi",
+      "copy_locale": "hi",
+      "info_localization_id": "9f6213e7-5d26-414a-bf7a-649d7f42d1ad",
+      "version_localization_id": "2f94bf47-c6be-4a3c-bf48-40481369a76e"
+    },
+    {
+      "locale": "hu",
+      "copy_locale": "hu",
+      "info_localization_id": "9ebe50e5-4f56-4a8c-928a-1788d6878601",
+      "version_localization_id": "4fd2119b-0a63-40b3-91cd-7d3c0c67c361"
+    },
+    {
+      "locale": "id",
+      "copy_locale": "id",
+      "info_localization_id": "03765485-370e-4c17-a0a5-9ff56c330ecc",
+      "version_localization_id": "2b696954-f578-4baa-b58f-e9250ac4279f"
+    },
+    {
+      "locale": "it",
+      "copy_locale": "it",
+      "info_localization_id": "2e331ef1-639f-430b-a36a-726d3b2b0376",
+      "version_localization_id": "4363e390-c2f7-49bb-a828-dd6350369176"
+    },
+    {
+      "locale": "ja",
+      "copy_locale": "ja",
+      "info_localization_id": "3f17e4f3-9dff-4e6f-934e-1c356a3dcf58",
+      "version_localization_id": "0130120f-e4c5-40be-ba9a-6b1c151c618d"
+    },
+    {
+      "locale": "kn-IN",
+      "copy_locale": "kn",
+      "info_localization_id": "7bad59f7-46a2-4e54-85c9-956947a04f30",
+      "version_localization_id": "16a8bae7-686d-4876-8ed8-9f3a3e132c22"
+    },
+    {
+      "locale": "ko",
+      "copy_locale": "ko",
+      "info_localization_id": "4ba4185d-0522-4712-b8b6-f81b96e32486",
+      "version_localization_id": "5d9adb4e-d77d-4a00-96aa-2c130151c8d1"
+    },
+    {
+      "locale": "ms",
+      "copy_locale": "ms",
+      "info_localization_id": "a9f017c1-a881-4543-b3c6-648c0ef60bf7",
+      "version_localization_id": "65d0ac27-cdc8-4896-996b-d29edad2cbb7"
+    },
+    {
+      "locale": "ml-IN",
+      "copy_locale": "ml",
+      "info_localization_id": "7e7eadc2-00b8-41f5-a573-11f3fe592771",
+      "version_localization_id": "8e3d6b17-936a-4fab-838f-af73d5a9826c"
+    },
+    {
+      "locale": "mr-IN",
+      "copy_locale": "mr",
+      "info_localization_id": "e172ea21-4162-4323-96e6-7e8a67140d7a",
+      "version_localization_id": "897dd730-60e8-4a47-b78b-51af934e964c"
+    },
+    {
+      "locale": "no",
+      "copy_locale": "no",
+      "info_localization_id": "18e15052-cd59-47a5-b44d-fcf0d7058a50",
+      "version_localization_id": "34577ac4-31f7-4f16-9891-b553a0685d93"
+    },
+    {
+      "locale": "or-IN",
+      "copy_locale": "or",
+      "info_localization_id": "e6cfe266-a484-4871-a457-749dc129f48b",
+      "version_localization_id": "092bdb5f-56f8-4209-a177-b634f304bad0"
+    },
+    {
+      "locale": "pl",
+      "copy_locale": "pl",
+      "info_localization_id": "faf90f83-a5dc-44f2-8f0b-c1e73860bc47",
+      "version_localization_id": "463e3083-041c-4ba1-be1d-11d2d18ad9a9"
+    },
+    {
+      "locale": "pt-BR",
+      "copy_locale": "pt-BR",
+      "info_localization_id": "bec254ad-c09b-4862-9478-0c286886fda8",
+      "version_localization_id": "81541238-0dd5-4078-8128-2c7630ba8250"
+    },
+    {
+      "locale": "pt-PT",
+      "copy_locale": "pt-PT",
+      "info_localization_id": "6b254a54-6b78-4004-8321-0179ee29a75d",
+      "version_localization_id": "871a4f01-7b28-4517-b817-a7b1c37e1414"
+    },
+    {
+      "locale": "pa-IN",
+      "copy_locale": "pa",
+      "info_localization_id": "76b7547d-3280-468e-93be-0419a17ed813",
+      "version_localization_id": "9f89ce49-2195-40a1-b76e-7283bdb724d0"
+    },
+    {
+      "locale": "ro",
+      "copy_locale": "ro",
+      "info_localization_id": "a5f0e278-33f4-48ff-9556-a6aafa753cfc",
+      "version_localization_id": "08ce4bc2-21eb-48f9-b530-8d9226b3a0e1"
+    },
+    {
+      "locale": "ru",
+      "copy_locale": "ru",
+      "info_localization_id": "c5926a52-5660-4098-9e28-a23092991414",
+      "version_localization_id": "1d664bd9-94ce-4598-b0bb-b34f1b13614c"
+    },
+    {
+      "locale": "sk",
+      "copy_locale": "sk",
+      "info_localization_id": "da69e559-e0fb-4394-b296-107cbf0e29d9",
+      "version_localization_id": "73f3b819-bf0e-4cfb-95bd-aa073479a8e1"
+    },
+    {
+      "locale": "sl-SI",
+      "copy_locale": "sl",
+      "info_localization_id": "2f590f54-805d-4e31-82dd-24c289f0eba5",
+      "version_localization_id": "7bec72c7-bd2f-4adb-b35a-ab1e90bc2363"
+    },
+    {
+      "locale": "es-MX",
+      "copy_locale": "es-MX",
+      "info_localization_id": "995544e5-79aa-4974-a432-6159fee321f1",
+      "version_localization_id": "0f987ff7-87d4-4bf6-b85f-8a399f8ec720"
+    },
+    {
+      "locale": "es-ES",
+      "copy_locale": "es-ES",
+      "info_localization_id": "49450527-d4d5-4d8a-93b5-19795e71c46f",
+      "version_localization_id": "4eec72e4-2dc9-4b26-8b59-574f3502d30c"
+    },
+    {
+      "locale": "sv",
+      "copy_locale": "sv",
+      "info_localization_id": "0f063cf1-e61d-46da-ba27-51526423b659",
+      "version_localization_id": "68eeb228-0815-4315-aa91-6382d88c4af6"
+    },
+    {
+      "locale": "ta-IN",
+      "copy_locale": "ta",
+      "info_localization_id": "2afbb5fb-0ef8-42fd-a81a-4de17ae8c94d",
+      "version_localization_id": "a5fbd12d-879a-4a23-884d-9c9b242fcf07"
+    },
+    {
+      "locale": "te-IN",
+      "copy_locale": "te",
+      "info_localization_id": "da32a6d5-cb2e-44da-8ea5-b0c09d0a06cb",
+      "version_localization_id": "3993d6fc-da72-4d48-b471-c0b340254f96"
+    },
+    {
+      "locale": "th",
+      "copy_locale": "th",
+      "info_localization_id": "15efb09e-967b-4cf6-9438-67b612030c26",
+      "version_localization_id": "46d7da37-df24-4bd5-aa59-a65ae6d4eed8"
+    },
+    {
+      "locale": "tr",
+      "copy_locale": "tr",
+      "info_localization_id": "03122caf-2d11-4255-99d5-042618600834",
+      "version_localization_id": "47003dfe-1a8f-4afd-aa81-6bf8785f4c6c"
+    },
+    {
+      "locale": "uk",
+      "copy_locale": "uk",
+      "info_localization_id": "ca636854-124c-4813-8801-fdd4ed4dd1f9",
+      "version_localization_id": "cf68db08-4342-4b05-ba4b-a9056e8e521a"
+    },
+    {
+      "locale": "ur-PK",
+      "copy_locale": "ur",
+      "info_localization_id": "3a787b1a-a1e1-48d7-8ea3-5e412a20018a",
+      "version_localization_id": "ab9f8c8b-3319-4c9d-9a65-185f8a5d6a5f"
+    },
+    {
+      "locale": "vi",
+      "copy_locale": "vi",
+      "info_localization_id": "8d0b5836-3ff6-4c36-a286-6b284eb0a1ec",
+      "version_localization_id": "8fa557e1-c1b9-42de-badd-6e84f4f1b17d"
+    },
+    {
+      "locale": "en-AU",
+      "copy_locale": "en-AU",
+      "info_localization_id": "c7283352-e9e0-4ef6-bfcb-37b086f9ff22",
+      "version_localization_id": "fee31947-6be1-4309-ba79-8e62a89b7ae8"
+    },
+    {
+      "locale": "en-CA",
+      "copy_locale": "en-CA",
+      "info_localization_id": "517988a8-cb03-465f-ae47-522f362d54e0",
+      "version_localization_id": "68251377-71ce-4dd8-9872-c435cc5d64c1"
+    },
+    {
+      "locale": "en-US",
+      "copy_locale": "en-US",
+      "info_localization_id": "d182ec39-2622-4125-9f5c-0ec0b4594cb6",
+      "version_localization_id": "209e32fa-d855-4868-b16c-7c98dfa0e11c"
+    },
+    {
+      "locale": "fr-CA",
+      "copy_locale": "fr-CA",
+      "info_localization_id": "2fb31c8c-4afd-4324-879a-7320b4453089",
+      "version_localization_id": "b0b38c75-51d9-4465-a996-e02ecd8eceaf"
+    }
+  ],
+  "errors": []
+}

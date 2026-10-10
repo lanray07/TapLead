@@ -10,3 +10,6 @@ artifacts/
 .DS_Store
 __pycache__/
 *.pyc
+marketing/localized-assets/*/*.jpg
+marketing/localized-assets/*/*.png
+marketing/localized-assets/preview-manifest.json
