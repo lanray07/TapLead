@@ -27,7 +27,8 @@ def api(path,method='GET',data=None):
         try:
             with urllib.request.urlopen(req,timeout=60) as r:return json.load(r) if r.status!=204 else {}
         except urllib.error.HTTPError as e:
-            if e.code in [429,500,502,503,504] and attempt<3:time.sleep(2**attempt);continue
+            # A repeated POST can create a second resource after an ambiguous response.
+            if method!='POST' and e.code in [429,500,502,503,504] and attempt<3:time.sleep(2**attempt);continue
             details=json.loads(e.read()).get('errors',[])
             raise RuntimeError(f'{method} {path.split("?")[0]} HTTP {e.code}: '+ '; '.join(x.get('detail',x.get('title','Error')) for x in details)) from None
 def listing(path):
