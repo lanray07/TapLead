@@ -22,7 +22,7 @@ def verified_picture(picture_id,asset):
         a=picture['attributes'];state=(a.get('assetDeliveryState') or {}).get('state')
         if a.get('sourceFileChecksum')==asset['md5'] and state=='COMPLETE':return picture
         if state=='FAILED':raise RuntimeError('Apple screenshot processing failed: '+asset['file'])
-        if state=='COMPLETE':raise RuntimeError('Completed screenshot checksum differs: '+asset['file']+' expected '+asset['md5']+' received '+str(a.get('sourceFileChecksum')))
+        if state=='COMPLETE' and a.get('sourceFileChecksum'):raise RuntimeError('Completed screenshot checksum differs: '+asset['file']+' expected '+asset['md5']+' received '+str(a.get('sourceFileChecksum')))
         time.sleep(2)
     raise RuntimeError('Apple is still processing '+asset['file'])
 
