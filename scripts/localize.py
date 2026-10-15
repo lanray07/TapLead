@@ -12,7 +12,7 @@ parser.add_argument('--prepare', action='store_true', help='Prepare indexed publ
 parser.add_argument('--import-dir', type=pathlib.Path, help='Import indexed translations captured from the translation UI')
 args = parser.parse_args()
 catalog = json.loads(CATALOG.read_text(encoding='utf-8')) if CATALOG.exists() else {'sourceLanguage':'en','strings':{},'version':'1.0'}
-pattern = r'(?:Text|Label|Button|Section|Toggle|TextField|SecureField|Picker|DatePicker|ContentUnavailableView|navigationTitle|accessibilityLabel|alert|confirmationDialog|String\(localized:|title:|copy:|shortTitle:|configurationDisplayName|description|prompt:|policyLink|urlField)\s*\(?\s*"((?:[^"\\]|\\.)*)"'
+pattern = r'(?:Text|Label|Button|Section|Toggle|TextField|SecureField|Picker|DatePicker|ProgressView|ContentUnavailableView|navigationTitle|accessibilityLabel|alert|confirmationDialog|String\(localized:|title:|copy:|shortTitle:|configurationDisplayName|description|prompt:|policyLink|urlField)\s*\(?\s*"((?:[^"\\]|\\.)*)"'
 keys = set()
 for file in (ROOT/'iOS').rglob('*.swift'):
     if 'UITests' in str(file): continue

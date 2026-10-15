@@ -1,0 +1,65 @@
+name: Pro purchase loading regression
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  purchases:
+    runs-on: macos-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        device: [iPhone, iPad]
+    steps:
+      - uses: actions/checkout@v4
+      - run: brew install xcodegen
+      - name: Configure public API and select available device
+        env:
+          TAPLEAD_API_URL: ${{ vars.TAPLEAD_API_URL }}
+          DEVICE_FAMILY: ${{ matrix.device }}
+        run: |
+          python3 - <<'PY'
+          import json,os,subprocess
+          from pathlib import Path
+          # Replace only the empty local-development URL, preserving signing config.
+          p=Path('project.yml')
+          url=os.environ['TAPLEAD_API_URL']
+          assert url.startswith('https://')
+          p.write_text(p.read_text().replace("TapLeadAPIURL: ''",'TapLeadAPIURL: '+json.dumps(url)))
+          devices=json.loads(subprocess.check_output(['xcrun','simctl','list','devices','available','--json']))['devices']
+          for runtime,values in sorted(devices.items(),reverse=True):
+              candidates=[d for d in values if d.get('isAvailable') and os.environ['DEVICE_FAMILY'] in d['name']]
+              if 'iOS' in runtime and candidates:
+                  device=next((d for d in candidates if 'Pro' in d['name']),candidates[0])
+                  with open(os.environ['GITHUB_ENV'],'a') as f:f.write('SIMULATOR_ID='+device['udid']+'\n')
+                  print('Test device:',device['name'],runtime)
+                  break
+          else:raise SystemExit('No matching simulator installed')
+          PY
+      - run: xcodegen generate
+      - name: Test real StoreKit catalog with expired session and fresh guest UI
+        run: |
+          mkdir -p artifacts
+          set -o pipefail
+          xcodebuild -project TapLead.xcodeproj -scheme TapLead \
+            -destination "platform=iOS Simulator,id=$SIMULATOR_ID" \
+            -derivedDataPath DerivedData -parallel-testing-enabled NO \
+            -only-testing:TapLeadNativeTests/PurchaseLoadingTests \
+            -only-testing:TapLeadUITests/ProPurchaseUITests \
+            -resultBundlePath artifacts/Pro.xcresult CODE_SIGNING_ALLOWED=NO \
+            test 2>&1 | tee artifacts/pro-tests.log
+      - name: Export evidence
+        if: always()
+        run: |
+          xcodebuild -version > artifacts/xcode-version.txt
+          xcrun simctl list runtimes > artifacts/simulator-runtimes.txt
+          if [ -d artifacts/Pro.xcresult ]; then
+            xcrun xcresulttool export attachments --path artifacts/Pro.xcresult --output-path artifacts/screenshots || true
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Pro-regression-${{ matrix.device }}
+          path: artifacts/
+          retention-days: 14

@@ -69,13 +69,19 @@ targets:
   TapLeadUITests:
     type: bundle.ui-testing
     platform: iOS
-    sources: [iOS/UITests]
+    sources:
+      - iOS/UITests
+      - path: iOS/TestResources/TapLead.storekit
+        buildPhase: resources
     dependencies:
       - target: TapLead
   TapLeadNativeTests:
     type: bundle.unit-test
     platform: iOS
-    sources: [iOS/NativeTests]
+    sources:
+      - iOS/NativeTests
+      - path: iOS/TestResources/TapLead.storekit
+        buildPhase: resources
     dependencies:
       - target: TapLead
       - package: TapLeadCore
