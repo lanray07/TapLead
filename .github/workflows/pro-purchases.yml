@@ -20,23 +20,15 @@ jobs:
           DEVICE_FAMILY: ${{ matrix.device }}
         run: |
           python3 - <<'PY'
-          import json,os,subprocess
+          import json,os
           from pathlib import Path
           # Replace only the empty local-development URL, preserving signing config.
           p=Path('project.yml')
           url=os.environ['TAPLEAD_API_URL']
           assert url.startswith('https://')
           p.write_text(p.read_text().replace("TapLeadAPIURL: ''",'TapLeadAPIURL: '+json.dumps(url)))
-          devices=json.loads(subprocess.check_output(['xcrun','simctl','list','devices','available','--json']))['devices']
-          for runtime,values in sorted(devices.items(),reverse=True):
-              candidates=[d for d in values if d.get('isAvailable') and os.environ['DEVICE_FAMILY'] in d['name']]
-              if 'iOS' in runtime and candidates:
-                  device=next((d for d in candidates if 'Pro' in d['name']),candidates[0])
-                  with open(os.environ['GITHUB_ENV'],'a') as f:f.write('SIMULATOR_ID='+device['udid']+'\n')
-                  print('Test device:',device['name'],runtime)
-                  break
-          else:raise SystemExit('No matching simulator installed')
           PY
+          python3 scripts/select-storekit-simulator.py >> "$GITHUB_ENV"
       - run: xcodegen generate
       - name: Test real StoreKit catalog with expired session and fresh guest UI
         run: |

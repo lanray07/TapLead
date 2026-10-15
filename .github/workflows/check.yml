@@ -82,7 +82,10 @@ jobs:
             TEST_SELECTION=(-only-testing:TapLeadNativeTests)
           fi
           xcodebuild -project TapLead.xcodeproj -scheme TapLead \
-            "${TEST_SELECTION[@]}" -destination "platform=iOS Simulator,id=$SIMULATOR_ID" -derivedDataPath DerivedData \
+            "${TEST_SELECTION[@]}" \
+            -skip-testing:TapLeadNativeTests/PurchaseLoadingTests \
+            -skip-testing:TapLeadUITests/ProPurchaseUITests \
+            -destination "platform=iOS Simulator,id=$SIMULATOR_ID" -derivedDataPath DerivedData \
             -parallel-testing-enabled NO -resultBundlePath artifacts/UI.xcresult CODE_SIGNING_ALLOWED=NO \
             test 2>&1 | tee artifacts/ui-tests.log
       - name: Export screenshot attachments
