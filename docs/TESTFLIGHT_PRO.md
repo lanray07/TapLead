@@ -1,4 +1,16 @@
-# Pro purchase test â€” build 1015
+# Replacement Pro purchase test - build 1016
+
+Build 1016 is processed and assigned to the existing internal tester group as of 15 October 2026. Update to 1.0.0 (1016) in TestFlight. This fixes the expired-session catalog-loading bug found during Apple's iPad review. The earlier build-1015 iPhone result below does not establish acceptance of this replacement.
+
+1. Open **Settings > TapLead Pro** while signed out or with a session that needs sign-in. Confirm Monthly and Annual show Apple's actual localized prices. Do not delete existing local data merely to test a fresh install; use a spare device if available.
+2. Select a plan. Confirm native Apple sign-in opens from Pro, then return and verify both plans remain available. If already signed in, proceed to the purchase sheet.
+3. Complete a TestFlight sandbox purchase, confirm Pro features unlock, restart the app and use **Restore purchases** with the same TapLead and purchasing Apple accounts.
+4. If an iPad is available, repeat the same path there. CI passed on iOS 26.2 simulators; Apple's physical iPadOS 27.0 environment has not been independently tested.
+5. Report the build number, device/OS, whether both prices loaded, purchase/unlock/restore results, and any exact error. Real TestFlight acceptance for 1016 is pending; no replacement App Review submission has been made.
+
+## Historical build-1015 test and configuration
+
+### Pro purchase test â€” build 1015
 
 Pro purchasing was enabled on 10 October 2026 through the existing backend, so no replacement binary is needed. Install or open build 1015 in TestFlight, sign in with Apple inside TapLead, close any open Pro sheet, and reopen **Settings â†’ TapLead Pro**. Monthly and annual buttons use StoreKit's actual localized product names and prices. TestFlight purchases use Apple's sandbox and do not charge real money.
 

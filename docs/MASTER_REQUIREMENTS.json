@@ -284,8 +284,14 @@
       "symptom": "Pro subscriptions failed to load; attached screenshot shows Sign in again to continue.",
       "root_cause": "Authenticated plan failure prevented the StoreKit product request.",
       "correction": "Native catalog loading is independent of plan authentication; direct Pro sign-in, retries and session-refresh ordering added.",
-      "verification": "Local original-method reproduction failed before correction and passed after correction. Native StoreKit and UI regression runs are in progress; replacement build not yet uploaded or submitted.",
-      "details": "PRO_LOADING_REJECTION.md"
+      "verification": "Local red/green reproduction and real StoreKit local regression passed. Run 38766355029 passed six native tests plus one UI test on each of iPhone 17 Pro and iPad Pro 13-inch (M5), iOS 26.2, Xcode 26.6. This differs from the reviewer’s physical iPadOS 27.0 device. Signed build 1016 is uploaded, processed and available to the existing internal TestFlight group; real TestFlight acceptance remains pending.",
+      "details": "PRO_LOADING_REJECTION.md",
+      "regression_run": "https://github.com/lanray07/TapLead/actions/runs/38766355029",
+      "replacement_archive_run": "https://github.com/lanray07/TapLead/actions/runs/38767929689",
+      "replacement_build": "1016",
+      "resubmitted": false,
+      "replacement_build_id": "5b7fe41a-8227-4b1c-8aba-c45d8eb3d858",
+      "testflight_status": "Processed; existing TapLead Internal Testers group assigned; real-device acceptance pending"
     }
   }
 }

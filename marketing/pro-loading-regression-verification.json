@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-15",
+  "source_commit": "4078056",
+  "run": "https://github.com/lanray07/TapLead/actions/runs/38766355029",
+  "status": "success",
+  "xcode": "26.6 (17F113)",
+  "runtime": "iOS 26.2",
+  "devices": [
+    {
+      "device": "iPhone 17 Pro",
+      "native_tests_passed": 6,
+      "ui_tests_passed": 1,
+      "initial_ui_launch_timeout": false
+    },
+    {
+      "device": "iPad Pro 13-inch (M5)",
+      "native_tests_passed": 6,
+      "ui_tests_passed": 1,
+      "initial_ui_launch_timeout": true,
+      "retry_result": "passed"
+    }
+  ],
+  "catalog_environment": "Local SKTestSession with real StoreKit Product API; test products, not App Store sandbox purchases",
+  "limits": [
+    "Apple review used a physical iPad Pro 11-inch (M4) on iPadOS 27.0; this CI environment differs.",
+    "Genuine fresh/expired-session TestFlight catalog and purchase/restore acceptance for build 1016 remain pending."
+  ],
+  "archive_run": "https://github.com/lanray07/TapLead/actions/runs/38767929689",
+  "replacement_build": "1016",
+  "replacement_submission": "not submitted",
+  "archive_status": "success",
+  "archive_source_commit": "d9307bb",
+  "replacement_build_id": "5b7fe41a-8227-4b1c-8aba-c45d8eb3d858",
+  "testflight_status": "Processed; TapLead Internal Testers; one invite",
+  "signed_ipa_build": "1016",
+  "signed_ipa_local_storekit_resources": [],
+  "physical_testflight_acceptance": "pending"
+}
