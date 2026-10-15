@@ -252,7 +252,7 @@
   "submission": {
     "version": "1.0.0",
     "build": "1015",
-    "status": "Waiting for Review",
+    "status": "Unresolved Issues",
     "id": "4efb9bc9-9605-4f0c-9402-5885df42c110",
     "date_displayed_by_apple": "Oct 10, 2026 at 11:08 AM BST",
     "items": [
@@ -275,6 +275,17 @@
     "replacement_selection_evidence": "assets/build-1015-nfc-removed-selected.jpg",
     "superseded_combined_submission": "220fdb82-3e1b-40f0-9cf3-ae29b2e38c75",
     "release_type": "MANUAL",
-    "corrected_submission_run": "https://github.com/lanray07/TapLead/actions/runs/38043823268"
+    "corrected_submission_run": "https://github.com/lanray07/TapLead/actions/runs/38043823268",
+    "latest_rejection": {
+      "date": "2026-10-15",
+      "guideline": "2.1(a)",
+      "device": "iPad Pro 11-inch (M4), iPadOS 27.0",
+      "reviewed_build": "1015",
+      "symptom": "Pro subscriptions failed to load; attached screenshot shows Sign in again to continue.",
+      "root_cause": "Authenticated plan failure prevented the StoreKit product request.",
+      "correction": "Native catalog loading is independent of plan authentication; direct Pro sign-in, retries and session-refresh ordering added.",
+      "verification": "Local original-method reproduction failed before correction and passed after correction. Native StoreKit and UI regression runs are in progress; replacement build not yet uploaded or submitted.",
+      "details": "PRO_LOADING_REJECTION.md"
+    }
   }
 }

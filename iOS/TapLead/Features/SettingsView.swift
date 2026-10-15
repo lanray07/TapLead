@@ -87,7 +87,7 @@ struct PaywallView:View {
                 .toolbar{ToolbarItem(placement:.cancellationAction){Button("Close"){dismiss()}}}
                 .task(id:store.authenticated){await purchases.load()}
                 .onChange(of:scenePhase){_,phase in if phase == .active {Task{await purchases.load()}}}
-                .sheet(isPresented:$auth,onDismiss:{Task{await purchases.load()}}){AuthView()}
+                .sheet(isPresented:$auth,onDismiss:{Task{await purchases.load()}}){AuthView(allowGuest:false)}
         }
     }
     private func select(_ product:Product) async {

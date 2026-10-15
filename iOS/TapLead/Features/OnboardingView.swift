@@ -29,6 +29,7 @@ struct OnboardingPage: View {
     var body: some View { VStack(spacing:28) { Spacer(); Image(systemName:icon).font(.system(size:76,weight:.light)).foregroundStyle(Palette.accent).frame(width:180,height:180).background(Palette.accent.opacity(0.08),in:RoundedRectangle(cornerRadius:50)).accessibilityHidden(true); VStack(spacing:16) {Text(title).font(.system(.largeTitle,design:.rounded,weight:.bold)); Text(copy).font(.body).foregroundStyle(.secondary)}.multilineTextAlignment(.center); Spacer() }.padding(32) }
 }
 struct AuthView: View {
+    var allowGuest=true
     @Environment(AppStore.self) private var store
     @Environment(\.dismiss) private var dismiss
     @Environment(\.colorScheme) private var colorScheme
@@ -62,10 +63,10 @@ struct AuthView: View {
                     if !accountNotice.isEmpty {Text(verbatim:accountNotice).font(.subheadline).accessibilityAddTraits(.updatesFrequently)}
                     if nonce.isEmpty {Button("Try again"){Task{await loadChallenge()}}.disabled(busy)}
                 }
-                Section {
+                if allowGuest {Section {
                     Button("Continue on this iPhone") {store.beginLocal();dismiss()}
                     Text("Guest cards and notes stay on this iPhone. Sign in with Apple when you’re ready to publish and sync.").font(.caption).foregroundStyle(.secondary)
-                }
+                }}
             }.navigationTitle("Welcome to TapLead").toolbar {ToolbarItem(placement:.cancellationAction){Button("Close"){dismiss()}}}
             .task {await loadChallenge()}
         }
