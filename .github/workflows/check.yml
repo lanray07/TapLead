@@ -81,6 +81,8 @@ jobs:
           if [ "${{ inputs.native_only }}" = "true" ]; then
             TEST_SELECTION=(-only-testing:TapLeadNativeTests)
           fi
+          # Real StoreKit session tests run in pro-purchases.yml on a compatible
+          # runtime. iOS 26.3–26.5's CLI SKTestSession defect returns no products.
           xcodebuild -project TapLead.xcodeproj -scheme TapLead \
             "${TEST_SELECTION[@]}" \
             -skip-testing:TapLeadNativeTests/PurchaseLoadingTests \

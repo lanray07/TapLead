@@ -1,6 +1,26 @@
 name: Pro purchase loading regression
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - iOS/TapLead/Services/PurchaseService.swift
+      - iOS/TapLead/Features/SettingsView.swift
+      - iOS/TapLead/Features/OnboardingView.swift
+      - iOS/NativeTests/PurchaseLoadingTests.swift
+      - iOS/UITests/ProPurchaseUITests.swift
+      - iOS/TestResources/**
+      - scripts/select-storekit-simulator.py
+      - .github/workflows/pro-purchases.yml
+  pull_request:
+    paths:
+      - iOS/TapLead/Services/PurchaseService.swift
+      - iOS/TapLead/Features/SettingsView.swift
+      - iOS/TapLead/Features/OnboardingView.swift
+      - iOS/NativeTests/PurchaseLoadingTests.swift
+      - iOS/UITests/ProPurchaseUITests.swift
+      - iOS/TestResources/**
+      - scripts/select-storekit-simulator.py
+      - .github/workflows/pro-purchases.yml
 permissions:
   contents: read
 jobs:
