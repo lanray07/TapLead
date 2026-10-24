@@ -43,3 +43,9 @@ Both Pro review notes now describe enabled purchase navigation in build 1015 and
 ## Review resubmission — 10 October 2026
 
 The user instructed completion and resubmission after confirming their iPhone tests. Corrected submission `4efb9bc9-9605-4f0c-9402-5885df42c110` contains build 1015, the Pro group, Monthly and Annual. Apple returned WAITING_FOR_REVIEW at 10:08 UTC (11:08 BST), also confirmed for each item in App Store Connect. Release type is MANUAL. Sandbox Pro stays enabled for Apple review and TestFlight; turn it off and finish lifecycle acceptance/reconciliation before manually releasing to the public. The removed earlier submission retains its review-message history but no longer allows replying. The current version and both product notes include the issue resolutions and exact purchase navigation. [Submission verification](../marketing/corrected-submission-verification.json).
+
+## Build 1016 resubmission - 24 October 2026
+
+User confirmed purchase and Restore purchases both work on 24 October 2026. USB independently verified installed build 1016 on physical iPad11,6 running iPadOS 26.7. Transactions are user-reported, not independently observed. Renewal, expiration and refund acceptance remain unconfirmed.
+
+Selected build 1016, saved new App Review Information instructions and posted a reply explaining the authenticated-plan dependency fix. Resubmitted the existing combined submission at 1:20 PM BST. App Store Connect confirms Waiting for Review for build 1016, Monthly, Annual and the Pro group. Release remains MANUAL. [Verification](../marketing/build-1016-submission-verification.json). Earlier pending-test statements above describe the 15 October state.

@@ -1,6 +1,6 @@
 {
   "audited_on": "2026-10-05",
-  "selected_build": "1015",
+  "selected_build": "1016",
   "submission_authorized_only_after_gate_passes": false,
   "requirements": [
     {
@@ -251,27 +251,27 @@
   },
   "submission": {
     "version": "1.0.0",
-    "build": "1015",
-    "status": "Unresolved Issues",
+    "build": "1016",
+    "status": "Waiting for Review",
     "id": "4efb9bc9-9605-4f0c-9402-5885df42c110",
-    "date_displayed_by_apple": "Oct 10, 2026 at 11:08 AM BST",
+    "date_displayed_by_apple": "Oct 24, 2026 at 1:20 PM BST",
     "items": [
-      "App Version 1.0.0 (1015)",
+      "App Version 1.0.0 (1016)",
       "TapLead Pro Subscription Group",
       "TapLead Pro Monthly (com.taplead.pro.monthly)",
       "TapLead Pro Annual (com.taplead.pro.yearly)"
     ],
     "pro_purchases_enabled": true,
     "pro_testflight_enabled_on": "2026-10-10",
-    "pro_device_acceptance": "User-reported physical-iPhone TestFlight purchase, Pro unlock and Restore purchases passed on 10 October 2026. Codex did not independently observe these tests. Renewal, expiration and refund notification acceptance remain unconfirmed.",
+    "pro_device_acceptance": "User confirmed purchase and Restore purchases both work on 24 October 2026. USB independently verified installed build 1016 on physical iPad11,6 running iPadOS 26.7. Transactions are user-reported, not independently observed. Renewal, expiration and refund acceptance remain unconfirmed.",
     "superseded_app_only_submission": "79de4d3b-d644-435a-b9d6-a8b899083961",
     "pro_submission_authorization": "The user explicitly requested Pro be submitted too. The app-only submission was cancelled recoverably and the app version, subscription group and both products were submitted together. All four items show Waiting for Review; product review notes disclose disabled purchasing and outstanding purchase lifecycle acceptance.",
-    "resubmitted_on": "2026-10-10",
+    "resubmitted_on": "2026-10-24",
     "metadata_correction": "Apple's automated guideline 3.1.2 rejection identified a missing functional EULA link in the App Store description. Added the direct standard Apple EULA URL and GitHub privacy URL to the saved English (U.K.) description, updated review and resubmitted the same build and all four items. All show Waiting for Review. No custom license or purchase enablement change was made.",
-    "evidence": "../marketing/corrected-submission-verification.json",
-    "review_issues": "Apple reviewed build 1014 on 9 October: physical NFC demo (2.1), User-Generated Content age-rating selection (2.3.6), and locating functional purchases (2.1b). On 10 October the saved UGC selection was verified Yes. Build 1015 removes NFC, passed signed export verification, uploaded and processed as Ready to Submit, and replaced 1014 on version 1.0.0 with saved NFC-free review notes. Pro purchasing and verified Sandbox access were enabled on the backend for TestFlight testing at the user's request. The user confirmed purchase, Pro unlock and restore on their iPhone. App Review notes were updated with enabled purchase navigation and those user-reported results. Both product review notes were updated with enabled purchase instructions and both old disabled-paywall images were replaced by the unmodified native Creator-theme demo screenshot from the build-1015 UI run. Apple API read-back verified both notes, exact image hashes and COMPLETE delivery. The old submission was cancelled recoverably to unlock editing. A new combined submission containing build 1015, the subscription group and both plans was submitted on 10 October 2026 and verified Waiting for Review in both Apple API and App Store Connect. Release is manual so sandbox access and remaining release acceptance can be reconciled before public availability.",
-    "replacement_build_id": "a8bedb4b-080e-432a-ae00-a55d850c4209",
-    "replacement_archive_run": "https://github.com/lanray07/TapLead/actions/runs/38035251490",
+    "evidence": "../marketing/build-1016-submission-verification.json",
+    "review_issues": "Apple reviewed build 1014 on 9 October: physical NFC demo (2.1), User-Generated Content age-rating selection (2.3.6), and locating functional purchases (2.1b). On 10 October the saved UGC selection was verified Yes. Build 1015 removes NFC, passed signed export verification, uploaded and processed as Ready to Submit, and replaced 1014 on version 1.0.0 with saved NFC-free review notes. Pro purchasing and verified Sandbox access were enabled on the backend for TestFlight testing at the user's request. The user confirmed purchase, Pro unlock and restore on their iPhone. App Review notes were updated with enabled purchase navigation and those user-reported results. Both product review notes were updated with enabled purchase instructions and both old disabled-paywall images were replaced by the unmodified native Creator-theme demo screenshot from the build-1015 UI run. Apple API read-back verified both notes, exact image hashes and COMPLETE delivery. The old submission was cancelled recoverably to unlock editing. A new combined submission containing build 1015, the subscription group and both plans was submitted on 10 October 2026 and verified Waiting for Review in both Apple API and App Store Connect. Release is manual so sandbox access and remaining release acceptance can be reconciled before public availability. On 24 October 2026, after user-reported build-1016 purchase and restore acceptance on physical iPad, selected build 1016, saved corrected review notes, posted a review reply and resubmitted the existing combined submission. All four items visibly show Waiting for Review. Release remains MANUAL.",
+    "replacement_build_id": "5b7fe41a-8227-4b1c-8aba-c45d8eb3d858",
+    "replacement_archive_run": "https://github.com/lanray07/TapLead/actions/runs/38767929689",
     "replacement_selection_evidence": "assets/build-1015-nfc-removed-selected.jpg",
     "superseded_combined_submission": "220fdb82-3e1b-40f0-9cf3-ae29b2e38c75",
     "release_type": "MANUAL",
@@ -284,14 +284,15 @@
       "symptom": "Pro subscriptions failed to load; attached screenshot shows Sign in again to continue.",
       "root_cause": "Authenticated plan failure prevented the StoreKit product request.",
       "correction": "Native catalog loading is independent of plan authentication; direct Pro sign-in, retries and session-refresh ordering added.",
-      "verification": "Local red/green reproduction and real StoreKit local regression passed. Run 38766355029 passed six native tests plus one UI test on each of iPhone 17 Pro and iPad Pro 13-inch (M5), iOS 26.2, Xcode 26.6. This differs from the reviewer’s physical iPadOS 27.0 device. Signed build 1016 is uploaded, processed and available to the existing internal TestFlight group; real TestFlight acceptance remains pending.",
+      "verification": "Local red/green reproduction and real StoreKit local regression passed. Run 38766355029 passed six native tests plus one UI test on each of iPhone 17 Pro and iPad Pro 13-inch (M5), iOS 26.2, Xcode 26.6. This differs from the reviewer’s physical iPadOS 27.0 device. Signed build 1016 is uploaded, processed and available to the existing internal TestFlight group; User confirmed purchase and Restore purchases both work on 24 October 2026. USB independently verified installed build 1016 on physical iPad11,6 running iPadOS 26.7. Transactions are user-reported, not independently observed. Renewal, expiration and refund acceptance remain unconfirmed.",
       "details": "PRO_LOADING_REJECTION.md",
       "regression_run": "https://github.com/lanray07/TapLead/actions/runs/38766355029",
       "replacement_archive_run": "https://github.com/lanray07/TapLead/actions/runs/38767929689",
       "replacement_build": "1016",
-      "resubmitted": false,
+      "resubmitted": true,
       "replacement_build_id": "5b7fe41a-8227-4b1c-8aba-c45d8eb3d858",
-      "testflight_status": "Processed; existing TapLead Internal Testers group assigned; real-device acceptance pending"
+      "testflight_status": "User-reported purchase and restore passed; installed build independently verified over USB",
+      "resubmitted_on": "2026-10-24"
     }
   }
 }

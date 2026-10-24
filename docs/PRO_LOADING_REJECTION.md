@@ -38,3 +38,13 @@ Apple references: [StoreKit products](https://developer.apple.com/documentation/
 Signed build 1016 was uploaded successfully by [archive run 38767929689](https://github.com/lanray07/TapLead/actions/runs/38767929689). No replacement App Review submission has been made. A real TestFlight walkthrough is still required; simulator product prices are local test data.
 
 Apple completed processing on 15 October. Build 1016 (`5b7fe41a-8227-4b1c-8aba-c45d8eb3d858`) is assigned to the existing TapLead Internal Testers group with one invite. The downloaded signed IPA reports CFBundleVersion 1016 and contains no `.storekit` files or StoreKitTest framework. The App Store version remains on rejected build 1015 until replacement TestFlight acceptance.
+
+## Physical TestFlight acceptance - 24 October 2026
+
+The connected device was independently identified over USB as iPad11,6 on iPadOS 26.7, with TapLead 1.0.0 build 1016 installed. The user explicitly confirmed purchase and Restore purchases both worked and requested submission. These transaction results are user-reported; Codex did not operate or independently observe the Apple purchase UI. Renewal, expiration and refund acceptance remain unconfirmed.
+
+## Build 1016 resubmission - 24 October 2026
+
+User confirmed purchase and Restore purchases both work on 24 October 2026. USB independently verified installed build 1016 on physical iPad11,6 running iPadOS 26.7. Transactions are user-reported, not independently observed. Renewal, expiration and refund acceptance remain unconfirmed.
+
+Selected build 1016, saved new App Review Information instructions and posted a reply explaining the authenticated-plan dependency fix. Resubmitted the existing combined submission at 1:20 PM BST. App Store Connect confirms Waiting for Review for build 1016, Monthly, Annual and the Pro group. Release remains MANUAL. [Verification](../marketing/build-1016-submission-verification.json). Earlier pending-test statements above describe the 15 October state.

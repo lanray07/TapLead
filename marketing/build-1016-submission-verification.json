@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-24",
+  "apple_displayed_submission_time": "Oct 24, 2026 at 1:20 PM BST",
+  "submission_id": "4efb9bc9-9605-4f0c-9402-5885df42c110",
+  "url": "https://appstoreconnect.apple.com/apps/6818982306/distribution/reviewsubmissions/details/4efb9bc9-9605-4f0c-9402-5885df42c110",
+  "build": "1016",
+  "build_id": "5b7fe41a-8227-4b1c-8aba-c45d8eb3d858",
+  "status": "Waiting for Review",
+  "items": [
+    {
+      "name": "iOS App 1.0.0 (1016)",
+      "status": "Waiting for Review"
+    },
+    {
+      "name": "TapLead Pro Monthly",
+      "status": "Waiting for Review"
+    },
+    {
+      "name": "TapLead Pro Annual",
+      "status": "Waiting for Review"
+    },
+    {
+      "name": "TapLead Pro subscription group",
+      "status": "Waiting for Review"
+    }
+  ],
+  "release_type": "MANUAL",
+  "device_acceptance": "User confirmed purchase and Restore purchases both work on 24 October 2026. USB independently verified installed build 1016 on physical iPad11,6 running iPadOS 26.7. Transactions are user-reported, not independently observed. Renewal, expiration and refund acceptance remain unconfirmed.",
+  "review_notes_updated": true,
+  "review_reply_posted": true,
+  "confirmation": "App Store Connect UI read-back of all four items",
+  "local_screenshot": "artifacts/build-1016-waiting-for-review-20261024.png"
+}
