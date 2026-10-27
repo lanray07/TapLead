@@ -252,7 +252,7 @@
   "submission": {
     "version": "1.0.0",
     "build": "1016",
-    "status": "Waiting for Review",
+    "status": "Unresolved Issues",
     "id": "4efb9bc9-9605-4f0c-9402-5885df42c110",
     "date_displayed_by_apple": "Oct 24, 2026 at 1:20 PM BST",
     "items": [
@@ -277,22 +277,39 @@
     "release_type": "MANUAL",
     "corrected_submission_run": "https://github.com/lanray07/TapLead/actions/runs/38043823268",
     "latest_rejection": {
-      "date": "2026-10-15",
-      "guideline": "2.1(a)",
-      "device": "iPad Pro 11-inch (M4), iPadOS 27.0",
-      "reviewed_build": "1015",
-      "symptom": "Pro subscriptions failed to load; attached screenshot shows Sign in again to continue.",
-      "root_cause": "Authenticated plan failure prevented the StoreKit product request.",
-      "correction": "Native catalog loading is independent of plan authentication; direct Pro sign-in, retries and session-refresh ordering added.",
-      "verification": "Local red/green reproduction and real StoreKit local regression passed. Run 38766355029 passed six native tests plus one UI test on each of iPhone 17 Pro and iPad Pro 13-inch (M5), iOS 26.2, Xcode 26.6. This differs from the reviewer’s physical iPadOS 27.0 device. Signed build 1016 is uploaded, processed and available to the existing internal TestFlight group; User confirmed purchase and Restore purchases both work on 24 October 2026. USB independently verified installed build 1016 on physical iPad11,6 running iPadOS 26.7. Transactions are user-reported, not independently observed. Renewal, expiration and refund acceptance remain unconfirmed.",
-      "details": "PRO_LOADING_REJECTION.md",
-      "regression_run": "https://github.com/lanray07/TapLead/actions/runs/38766355029",
-      "replacement_archive_run": "https://github.com/lanray07/TapLead/actions/runs/38767929689",
-      "replacement_build": "1016",
-      "resubmitted": true,
-      "replacement_build_id": "5b7fe41a-8227-4b1c-8aba-c45d8eb3d858",
-      "testflight_status": "User-reported purchase and restore passed; installed build independently verified over USB",
-      "resubmitted_on": "2026-10-24"
-    }
+      "date": "2026-10-26",
+      "reviewed_build": "1016",
+      "guidelines": [
+        "4.3",
+        "4.2.6"
+      ],
+      "issue": "Originality, differentiation and app generation/service ownership clarification requested",
+      "response_posted_on": "2026-10-27",
+      "response_parts": 2,
+      "questions_answered": 9,
+      "user_confirmed": "Own standalone product and branding; no other account apps share code, artwork or networking/contact features",
+      "evidence": "../marketing/originality-response-verification.json",
+      "resubmitted": false
+    },
+    "rejection_history": [
+      {
+        "date": "2026-10-15",
+        "guideline": "2.1(a)",
+        "device": "iPad Pro 11-inch (M4), iPadOS 27.0",
+        "reviewed_build": "1015",
+        "symptom": "Pro subscriptions failed to load; attached screenshot shows Sign in again to continue.",
+        "root_cause": "Authenticated plan failure prevented the StoreKit product request.",
+        "correction": "Native catalog loading is independent of plan authentication; direct Pro sign-in, retries and session-refresh ordering added.",
+        "verification": "Local red/green reproduction and real StoreKit local regression passed. Run 38766355029 passed six native tests plus one UI test on each of iPhone 17 Pro and iPad Pro 13-inch (M5), iOS 26.2, Xcode 26.6. This differs from the reviewer’s physical iPadOS 27.0 device. Signed build 1016 is uploaded, processed and available to the existing internal TestFlight group; User confirmed purchase and Restore purchases both work on 24 October 2026. USB independently verified installed build 1016 on physical iPad11,6 running iPadOS 26.7. Transactions are user-reported, not independently observed. Renewal, expiration and refund acceptance remain unconfirmed.",
+        "details": "PRO_LOADING_REJECTION.md",
+        "regression_run": "https://github.com/lanray07/TapLead/actions/runs/38766355029",
+        "replacement_archive_run": "https://github.com/lanray07/TapLead/actions/runs/38767929689",
+        "replacement_build": "1016",
+        "resubmitted": true,
+        "replacement_build_id": "5b7fe41a-8227-4b1c-8aba-c45d8eb3d858",
+        "testflight_status": "User-reported purchase and restore passed; installed build independently verified over USB",
+        "resubmitted_on": "2026-10-24"
+      }
+    ]
   }
 }
